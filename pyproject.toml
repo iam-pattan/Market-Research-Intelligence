@@ -1,0 +1,13 @@
+[project]
+name = "banyan-screen"
+version = "0.1.0"
+description = "Agentic M&A market-research and target-screening pipeline for Banyan Software"
+requires-python = ">=3.11"
+dependencies = ["pyyaml>=6.0", "pandas>=2.0", "openpyxl>=3.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

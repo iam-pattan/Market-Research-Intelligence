@@ -1,0 +1,23 @@
+# GROWTH-thesis rubric — for scaling software/AI companies (NOT Banyan's thesis).
+# Profitability is NOT a gate here (growth companies may reinvest/burn); the
+# emphasis is on growth momentum, market size, and recurring revenue.
+# This is a FIRST-PASS weighting for review/tuning.
+weights:
+  revenue_growth: 0.25      # ARR/revenue growth rate — the headline growth signal
+  recurring_revenue: 0.20   # durable recurring base
+  market_size: 0.15         # large, expanding TAM
+  funding_momentum: 0.15    # recent raises / investor quality / runway
+  hiring_velocity: 0.10     # headcount growth as a scaling proxy
+  niche_leadership: 0.10    # product differentiation / category position
+  retention: 0.05           # net revenue retention
+gates:
+  reject_on_loss_evidence: false   # losses do NOT disqualify a growth-stage company
+  revenue_floor_usd: 0
+  revenue_below_floor_max_tier: null   # no revenue-floor cap under growth thesis
+scoring:
+  min_confidence_floor: 0.5
+  coverage_threshold: 0.4
+  min_signal_confidence: 0.3
+tiers:
+  a_threshold: 0.72
+  b_threshold: 0.50

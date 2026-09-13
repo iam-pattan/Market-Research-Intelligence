@@ -1,0 +1,7 @@
+# Runtime
+pyyaml>=6.0
+pandas>=2.0
+openpyxl>=3.1
+
+# Dev / test
+pytest>=7.0

@@ -1,0 +1,22 @@
+# Banyan-fit scoring rubric. Weights are DEFAULTS, tunable and defensible —
+# derived from Banyan's verified stated criteria (banyansoftware.com/faq,
+# 2026-09-11, self-reported). They are not ground truth; adjust with care.
+weights:
+  recurring_revenue: 0.25   # Banyan's hardest gate: "high contribution of recurring revenue"
+  profitability: 0.20       # "history of profitability and positive cash flow"
+  revenue_band: 0.10        # ">$2M in annual revenue"
+  niche_leadership: 0.20    # "vertical/enterprise B2B leading a defined niche"
+  retention: 0.10           # "high customer retention"
+  ownership_fit: 0.10       # founder/family "permanent home", not recently PE/VC-recapped
+  team_stability: 0.05      # "engaged team with low turnover"
+gates:
+  reject_on_loss_evidence: true
+  revenue_floor_usd: 2000000
+  revenue_below_floor_max_tier: C
+scoring:
+  min_confidence_floor: 0.5     # confidence discount never drops adjusted below this fraction of composite
+  coverage_threshold: 0.5       # fraction of criteria needing usable confidence to rank at all
+  min_signal_confidence: 0.3    # a criterion "counts" toward coverage above this confidence
+tiers:
+  a_threshold: 0.75
+  b_threshold: 0.55

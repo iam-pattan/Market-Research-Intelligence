@@ -1,0 +1,739 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banyan — Top-25 Lead Dossiers &amp; Outreach (Sales/BD view)</title>
+<style>
+:root{--ink:#0f1a2b;--mut:#5b6b82;--line:#e2e8f0;--bg:#f6f8fb;--card:#fff;
+--send:#12805c;--sendbg:#e7f6ef;--route:#9a6b00;--routebg:#fef6e3;--dnc:#a02533;--dncbg:#fbeaec;
+--brand:#0b4f6c;--red:#c0392b;}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 80px}
+header.top{border-bottom:3px solid var(--brand);padding-bottom:16px;margin-bottom:8px}
+header.top h1{margin:0 0 4px;font-size:26px;color:var(--brand)}
+.sub{color:var(--mut);font-size:14px}
+.gatebar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:#0b4f6c;color:#fff;border-radius:10px;padding:12px 16px;margin:16px 0;font-size:13.5px}
+.gatebar b{color:#bfe3f0} .gatebar code{background:rgba(255,255,255,.15);padding:1px 6px;border-radius:5px}
+.reality{background:#fff8e6;border:1px solid #f0d68a;border-left:5px solid var(--route);border-radius:10px;padding:14px 18px;margin:16px 0}
+.reality h2{margin:0 0 6px;font-size:16px;color:#8a5d00}
+.tallies{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px}
+.tal{font-size:13px} .tal b{font-size:22px;display:block}
+.tal.s b{color:var(--send)} .tal.r b{color:var(--route)} .tal.d b{color:var(--dnc)}
+h2.sec{margin:34px 0 4px;font-size:19px;border-bottom:2px solid var(--line);padding-bottom:6px}
+h2.sec small{font-weight:400;color:var(--mut);font-size:13px}
+/* access panel */
+.panel{background:#0e1c2b;color:#e7eef6;border-radius:14px;padding:20px 22px;margin:18px 0}
+.panel h2{margin:0 0 6px;font-size:18px;color:#fff}
+.panel .lead{color:#b9c6d6;font-size:13.5px;margin:0 0 14px} .panel code{background:rgba(255,255,255,.12);padding:1px 6px;border-radius:5px;color:#cfe6ff}
+.rolegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rolecol{background:#16283b;border:1px solid #24384f;border-radius:10px;padding:12px}
+.roletitle{font-weight:700;font-size:13.5px;display:flex;flex-direction:column;gap:3px}
+.roletitle code{font-weight:400;font-size:11px;color:#8fb6d6;background:none;padding:0}
+.roleblurb{color:#96a8bd;font-size:11.5px;margin:6px 0 8px;min-height:52px}
+.pitchflag{font-size:11.5px;font-weight:700;border-radius:6px;padding:3px 7px;display:inline-block;margin-bottom:8px}
+.pitchflag.ok{background:#123f2d;color:#5be3a7} .pitchflag.no{background:#3a1620;color:#ff9aa8}
+.reclist{font-size:11.5px} .kv{display:flex;justify-content:space-between;gap:8px;padding:2px 0;border-bottom:1px dotted #24384f}
+.kv .k{color:#8fb6d6} .kv .v{text-align:right;max-width:60%} .kv .v.red{color:#ff9aa8;font-style:italic}
+.refused{background:#3a1620;color:#ff9aa8;border-radius:8px;padding:14px;text-align:center;font-weight:700}
+.refused span{font-weight:400;font-size:11px}
+.panel .foot{color:#8ba0b6;font-size:11.5px;margin:14px 0 0}
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(16,32,60,.04)}
+.card.send{border-left:5px solid var(--send)} .card.route{border-left:5px solid var(--route)} .card.dnc{border-left:5px solid var(--dnc)}
+.cardhead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.ident h3{margin:0;font-size:18px} .meta{color:var(--mut);font-size:13px} .meta a{color:var(--brand)}
+.badges{display:flex;gap:8px;flex-wrap:wrap}
+.thesis,.rec{font-size:11.5px;font-weight:700;border-radius:20px;padding:3px 11px}
+.thesis.banyan-fit{background:var(--sendbg);color:var(--send)} .thesis.growth-thesis{background:#eef2f7;color:#4a5a70}
+.rec.send{background:var(--sendbg);color:var(--send)} .rec.route{background:var(--routebg);color:var(--route)} .rec.dnc{background:var(--dncbg);color:var(--dnc)}
+.scores{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 12px;font-size:12.5px;color:var(--mut)}
+.scores b{color:var(--ink)} .scores .withheld{color:#8a5d00;background:var(--routebg);border-radius:6px;padding:1px 8px}
+.dossier{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.card.route .dossier,.card.dnc .dossier{grid-template-columns:1fr}
+.dblk h4{margin:6px 0 2px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand)}
+.dblk p{margin:0;font-size:13px;color:#2b3a4f}
+.sources{grid-column:1/-1;margin-top:6px;font-size:11.5px;color:var(--mut)} .sources a{color:var(--brand);margin-right:2px}
+.pitch{margin-top:14px;border-radius:10px;padding:12px 14px}
+.pitch.send{background:var(--sendbg);border:1px solid #bfe6d5} .pitch.route{background:var(--routebg);border:1px solid #f0deb0} .pitch.dnc{background:var(--dncbg);border:1px solid #eecdd2}
+.pitchhead{font-weight:700;font-size:12.5px;margin-bottom:8px}
+.card.send .pitchhead{color:var(--send)} .card.route .pitchhead{color:var(--route)} .card.dnc .pitchhead{color:var(--dnc)}
+.subj{font-size:13px;margin-bottom:8px} .subj span{display:inline-block;font-size:10.5px;text-transform:uppercase;color:var(--mut);margin-right:8px}
+.pbody{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px;font-size:13px;line-height:1.6}
+.pnote{font-size:11.5px;color:var(--mut);margin-top:8px}
+footer{margin-top:40px;color:var(--mut);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+@media(max-width:820px){.rolegrid{grid-template-columns:1fr 1fr}.dossier{grid-template-columns:1fr}}
+@media(max-width:520px){.rolegrid{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+
+<header class="top">
+  <h1>Top-25 Lead Dossiers &amp; Outreach Pitches</h1>
+  <div class="sub">Banyan Software M&amp;A screening · deep web research (codex <code>web_search</code>) → thesis-branched pitches · generated 25 leads</div>
+</header>
+
+<div class="gatebar">
+  🔐 <b>Access:</b> this artifact was generated for role <code>sales_rep</code> —
+  <code>policy.pitch_visible("sales_rep")</code> = <b>True</b>.
+  A Data-Science request → <code>guard()</code> <b>refuses</b> per-record leads;
+  a Finance request → financials only, <b>no pitch</b>. See the enforcement panel below.
+</div>
+
+<div class="reality">
+  <h2>⚠ Strategic reality — read before working these leads</h2>
+  <p style="margin:0;font-size:13.5px">This is the top-25 by <b>best-of-both</b> rubrics, which is dominated by VC-backed,
+  &gt;$100M / unprofitable AI &amp; infra companies — the structural <b>opposite</b> of a Banyan buy-and-hold target.
+  The deep research confirms only <b>2 of 25</b> are sendable acquisition targets. For a genuine acquisition-outreach
+  list, re-run dossiers on the top-25 by the <b>Banyan rubric</b> (one flag).</p>
+  <div class="tallies">
+    <div class="tal s"><b>2</b>SEND (banyan-fit)</div>
+    <div class="tal r"><b>16</b>route → growth mandate</div>
+    <div class="tal d"><b>7</b>do-not-contact</div>
+  </div>
+</div>
+
+
+    <section class="panel" id="access">
+      <h2>🔒 IAM enforcement layer — live on this data</h2>
+      <p class="lead">The <em>same</em> internal record for <b>HawkSoft</b>, passed through
+      <code>banyan_screen.policy.guard(role, …)</code>. Each column is the actual output that role
+      receives — computed by the tested policy module (10 policy tests; 46/46 suite-wide), not mocked. Red = masked/redacted;
+      dropped fields are simply absent. This is the "layer on Claude's output": Data Science gets no PII and
+      no financials, and per-record lead output is refused outright.</p>
+      <div class="rolegrid"><div class="rolecol"><div class="roletitle">Sales / BD<code>sales_rep</code></div><div class="roleblurb">Identity + signals; PII masked; NO financials, NO deal-intent. Gets the pitch.</div><div class="pitchflag ok">✓ pitch delivered</div><div class="reclist"><div class="kv"><span class="k">name</span><span class="v ">HawkSoft</span></div><div class="kv"><span class="k">domain</span><span class="v ">hawksoft.com</span></div><div class="kv"><span class="k">vertical</span><span class="v ">Insurance agency management</span></div><div class="kv"><span class="k">region</span><span class="v ">US</span></div><div class="kv"><span class="k">niche_position</span><span class="v ">Vertical niche leader in the US independent insurance agency channel, strongest among small-to-mid agencies that value ease of use, service, and independence. End market is durable…</span></div><div class="kv"><span class="k">banyan_fit_score</span><span class="v ">0.631</span></div><div class="kv"><span class="k">growth_score</span><span class="v ">0.44</span></div><div class="kv"><span class="k">primary_contact_email</span><span class="v red">[REDACTED:PII]</span></div><div class="kv"><span class="k">decision_makers</span><span class="v red">[REDACTED:PII]</span></div></div></div><div class="rolecol"><div class="roletitle">Finance<code>finance_analyst</code></div><div class="roleblurb">Full financials; NO contact PII; NO deal-intent; NO pitch.</div><div class="pitchflag no">✕ pitch withheld</div><div class="reclist"><div class="kv"><span class="k">name</span><span class="v ">HawkSoft</span></div><div class="kv"><span class="k">domain</span><span class="v ">hawksoft.com</span></div><div class="kv"><span class="k">vertical</span><span class="v ">Insurance agency management</span></div><div class="kv"><span class="k">region</span><span class="v ">US</span></div><div class="kv"><span class="k">niche_position</span><span class="v ">Vertical niche leader in the US independent insurance agency channel, strongest among small-to-mid agencies that value ease of use, service, and independence. End market is durable…</span></div><div class="kv"><span class="k">banyan_fit_score</span><span class="v ">0.631</span></div><div class="kv"><span class="k">growth_score</span><span class="v ">0.44</span></div><div class="kv"><span class="k">revenue_est_usd</span><span class="v ">internal estimate — see Finance</span></div><div class="kv"><span class="k">margin_profitability</span><span class="v ">internal estimate — see Finance</span></div></div></div><div class="rolecol"><div class="roletitle">Data Science<code>ds_analyst</code></div><div class="roleblurb">Aggregate-only → per-record leads REFUSED. Never PII, never financials.</div><div class="pitchflag no">✕ pitch withheld</div><div class="reclist"><div class="refused">⛔ REFUSED<br><span>role is aggregate_only; per-record output denied</span></div></div></div><div class="rolecol"><div class="roletitle">C-Suite / Leadership<code>c_suite_leadership</code></div><div class="roleblurb">Deal-intent (MNPI) visible; PII &amp; financials masked; no raw pitch.</div><div class="pitchflag no">✕ pitch withheld</div><div class="reclist"><div class="kv"><span class="k">name</span><span class="v ">HawkSoft</span></div><div class="kv"><span class="k">domain</span><span class="v ">hawksoft.com</span></div><div class="kv"><span class="k">vertical</span><span class="v ">Insurance agency management</span></div><div class="kv"><span class="k">region</span><span class="v ">US</span></div><div class="kv"><span class="k">niche_position</span><span class="v ">Vertical niche leader in the US independent insurance agency channel, strongest among small-to-mid agencies that value ease of use, service, and independence. End market is durable…</span></div><div class="kv"><span class="k">banyan_fit_score</span><span class="v ">0.631</span></div><div class="kv"><span class="k">growth_score</span><span class="v ">0.44</span></div><div class="kv"><span class="k">revenue_est_usd</span><span class="v red">[REDACTED:FINANCIAL]</span></div><div class="kv"><span class="k">margin_profitability</span><span class="v red">[REDACTED:FINANCIAL]</span></div><div class="kv"><span class="k">primary_contact_email</span><span class="v red">[REDACTED:PII]</span></div><div class="kv"><span class="k">decision_makers</span><span class="v red">[REDACTED:PII]</span></div><div class="kv"><span class="k">deal_disposition</span><span class="v ">SEND</span></div><div class="kv"><span class="k">deal_intent_score</span><span class="v ">0.631</span></div></div></div></div>
+      <p class="foot">Field tiers via <code>policy.classify()</code>: identity/signals =
+      <b>INTERNAL</b> · revenue/margin = <b>CONFIDENTIAL_FINANCIAL</b> · contacts =
+      <b>RESTRICTED_PII</b> · deal-intent/disposition = <b>RESTRICTED_MNPI</b>.
+      Unknown fields default to CONFIDENTIAL_FINANCIAL (fail-closed) so new fields never auto-leak.</p>
+    </section>
+
+<h2 class="sec">✅ Ready-to-send — Banyan permanent-home targets <small>(2)</small></h2>
+
+    <article class="card send">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>HawkSoft (hawksoft.com)</h3>
+          <div class="meta">Insurance agency management · US · <a href="https://hawksoft.com" target="_blank" rel="noopener">hawksoft.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis banyan-fit">banyan-fit</span>
+          <span class="rec send">SEND</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.631</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.440</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>What they do</h4><p>Subscription SaaS/hosted agency management system (AMS) for independent US insurance agencies. Public pricing signals a base fee plus ~$94/user/month, bundled core features (client/policy management, personal + commercial lines workflows, ACORD forms, document storage, accounting/commissions, text/email comms, reporting, mobile/browser access), optional add-ons and a partner/API marketplace. Positioning is &#x27;AMS as agency backbone,&#x27; with explicit no-long-term-contracts and no-data-extraction-fee stances that reinforce recurring, retention-driven revenue.</p></div><div class="dblk"><h4>Niche position</h4><p>Vertical niche leader in the US independent insurance agency channel, strongest among small-to-mid agencies that value ease of use, service, and independence. End market is durable and meaningful (~39,000 US independent P&amp;C agencies in 2024; independents placed 62% of US P&amp;C premium in 2025). Not the enterprise incumbent — Applied Epic/Applied Systems and Vertafore/AMS360 hold large-broker positioning — but HawkSoft differentiates on customer support, founder/family ownership, and agency-centered workflows.</p></div><div class="dblk"><h4>Moat</h4><p>Vertical workflow depth plus trust. AMS platforms are sticky because they hold client records, policy data, documents, accounting, carrier downloads, and daily agency workflows — high switching costs. HawkSoft adds defensibility via service reputation, data-conversion capability, an API/partner marketplace, and &#x27;independent company for independent agents&#x27; positioning. The ~18-year average customer tenure claim is the strongest public retention signal.</p></div><div class="dblk"><h4>Personalization hook (public)</h4><p>Paul and Sean Hawkins&#x27; father-son origin story (starting on a Tandy 1000), Paul&#x27;s background as an independent insurance agent who built the software he needed, and the company&#x27;s public, repeated commitment to remaining independent with &#x27;no outside investors&#x27; — most explicitly the 2021 statement made amid AMS-market consolidation. These are all public and speak directly to legacy and permanence, the exact axis where Banyan differentiates from a PE flip. Secondary hooks: the 2026 wave of partnership/integration announcements as proof HawkSoft is staying open while staying independent.</p></div><div class="dblk"><h4>Key risks</h4><p>Founder-sale resistance — HawkSoft has publicly declined acquisition and committed to independence (a great personalization hook but a real M&amp;A obstacle, implying a long-relationship rather than transactional approach). Succession/key-person risk around founder/family culture. Competitive pressure from Applied/Vertafore&#x27;s larger AI/R&amp;D budgets. Architecture modernization risk from a hybrid desktop/cloud model vs. cloud-native rivals. Support-intensity that can cap margins if not automated. API-ecosystem paradox where open integrations can let adjacent tools capture workflow value over time. Revenue/size uncertainty (wide public estimate spread) requires diligence.</p></div><div class="dblk"><h4>Competitors</h4><p>Applied Epic / Applied Systems and Vertafore AMS360 (enterprise/large-broker incumbents with deeper AI/R&amp;D budgets); mid-market and SMB peers including EZLynx, QQCatalyst, NowCerts/Momentum AMP, Jenesis, Agency Matrix, AgencyBloc, Veruna, and legacy Applied TAM; plus adjacent CRM/automation tools that can become workflow layers around the AMS.</p></div><div class="sources"><h4>Sources</h4><a href="https://www.hawksoft.com/" target="_blank" rel="noopener">www.hawksoft.com</a> · <a href="https://www.hawksoft.com/agency-management-system/" target="_blank" rel="noopener">www.hawksoft.com</a> · <a href="https://hawksoft.com/about/story/" target="_blank" rel="noopener">hawksoft.com</a> · <a href="https://hawksoft.com/about/people/" target="_blank" rel="noopener">hawksoft.com</a> · <a href="https://hawksoft.com/news/" target="_blank" rel="noopener">hawksoft.com</a> · <a href="https://www.prnewswire.com/news-releases/hawksoft-commits-to-remaining-a-privately-owned-agency-management-system-301209394.html" target="_blank" rel="noopener">www.prnewswire.com</a> · <a href="https://www.linkedin.com/company/hawksoft-inc." target="_blank" rel="noopener">www.linkedin.com</a> · <a href="https://www.independentagent.com/news/big-i-and-future-one-release-2024-agency-universe-study/" target="_blank" rel="noopener">www.independentagent.com</a></div></div>
+      
+        <div class="pitch send">
+          <div class="pitchhead">✅ READY-TO-SEND · Permanent-Home pitch</div>
+          <div class="subj"><span>Subject</span>Building HawkSoft to last</div>
+          <div class="pbody">Paul — three decades on from that Tandy 1000, HawkSoft is still founder-owned with no outside investors, all while independent agents keep betting their agencies on your software. That independence is a rare thing to have protected, and it&#x27;s exactly what I&#x27;d want to preserve rather than unwind. At Banyan Software we acquire founder-built vertical software companies and hold them permanently — 120+ acquired to date, held forever, zero ever sold — keeping the brand, team, and roadmap intact. It&#x27;s a permanent home, not a PE flip. If you&#x27;re ever curious how permanence could look for HawkSoft&#x27;s next chapter, would a 20-minute call sometime be worth your while?</div>
+          <div class="pnote"><b>Personalization:</b> First line anchors on two public details from HawkSoft&#x27;s &#x27;Our Story&#x27; page and 2021 PR release — the father-son Tandy 1000 origin and the 30-year &#x27;no outside investors&#x27; independence — chosen because they map directly onto Banyan&#x27;s permanence-vs-PE differentiator. No financial figures about HawkSoft are quoted; the only numbers are Banyan&#x27;s own public proof point (120+ acquired, zero sold). Frame acknowledges, rather than ignores, HawkSoft&#x27;s public commitment to independence, positioning Banyan as the way to keep that promise, not break it.</div>
+        </div>
+    </article>
+    <article class="card send">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Rentec Direct (rentecdirect.com)</h3>
+          <div class="meta">Property management software · US · <a href="https://rentecdirect.com" target="_blank" rel="noopener">rentecdirect.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis banyan-fit">banyan-fit</span>
+          <span class="rec send">SEND</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.613</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.406</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>What they do</h4><p>Cloud property management SaaS for landlords and property managers. Tiered products: Rentec Pro (landlords), Rentec PM (property managers needing trust accounting), and Starter (small landlords). Transparent, low pricing — ~$2/unit (landlords), ~$2.50/unit (PMs), plans from ~$50/month, no contracts/setup fees. Revenue mixes subscriptions with ancillary streams (tenant screening, ACH/card/cash rent payments, partner products), so pure subscription ARR is likely below headline revenue. Broad feature set: property/tenant accounting, screening, payments, tenant/owner portals, listing syndication, maintenance, websites, mobile apps, open API, and integrations (Plaid, CSG Forte, PayNearMe, Dropbox Sign, PetScreening, ShowMojo, Realtor.com, Zumper, Dwellsy).</p></div><div class="dblk"><h4>Niche position</h4><p>US small-to-midmarket rental property management — independent landlords and professional property managers below enterprise scale (roughly 1-2,500 units). Serves 17,000+ landlords/property managers, cited as managing $200B+ in real estate assets. Inc. 5000 #4,520 (2026) on 40% three-year growth, 10th consecutive appearance. Self-described (and Inc-related copy) as the &#x27;third-largest&#x27; platform in its market — should be diligence-checked because category boundary matters. Competes best against SMB-focused tools on price, support, accounting/trust-accounting depth, and no-contract positioning; larger platforms outspend on enterprise breadth and AI/automation.</p></div><div class="dblk"><h4>Moat</h4><p>Moderate but real. Not deep proprietary tech — defensibility comes from accumulated workflow depth (accounting/trust accounting), payment and screening rails, support reputation, high review density, SEO/education content, integration breadth, and switching costs once property/ledger/tenant/owner/payment/maintenance data lives in the system. The bootstrapped, debt-free, no-hidden-fees brand is itself a trust signal in a market wary of aggressive tenant monetization.</p></div><div class="dblk"><h4>Personalization hook (public)</h4><p>Nathan Miller built Rentec to a 10th consecutive Inc. 5000 appearance without ever taking outside investors — bootstrapped, debt-free — and reinvested profits back into Southern Oregon (including a 10-year Tech Mastery scholarship / local workforce program). He was a landlord/investor who built the product after managing rentals manually, and writes for Inc., Entrepreneur, Forbes Real Estate Council and BiggerPockets. The natural angle: preserve the bootstrapped, customer-first, US-support culture and local-team legacy while giving Rentec resources to keep compounding — the opposite of a roll-up/flip.</p></div><div class="dblk"><h4>Key risks</h4><p>Intense competition from large incumbents and freemium/newer landlord tools; low pricing constrains ARPU expansion; likely meaningful founder/key-person dependence on Nathan Miller (a Banyan continuity diligence item); regulatory exposure (FCRA/tenant screening, fair housing, eviction workflows, data security, ACH/card payments, state landlord-tenant law); mobile app UX/security perceptions (some resident complaints in Google Play reviews); potential technical debt given 2007 product vintage. &#x27;Third-largest&#x27; claim needs verification.</p></div><div class="dblk"><h4>Competitors</h4><p>AppFolio, Buildium/RealPage, Yardi Breeze, Rent Manager, DoorLoop, Propertyware, MRI, Entrata, TenantCloud, RentRedi, TurboTenant, Avail, Innago, Hemlane, Rentvine. Large incumbents win on enterprise breadth/ecosystem/AI spend; newer freemium landlord tools pressure the low end.</p></div><div class="sources"><h4>Sources</h4><a href="https://www.rentecdirect.com/ — product, pricing, features, integrations, customer count, HQ, private/debt-free positioning" target="_blank" rel="noopener">www.rentecdirect.com</a> · <a href="https://www.inc.com/profile/rentec-direct — 2026 Inc. 5000 rank, 40% three-year growth, company size, location, leadership" target="_blank" rel="noopener">www.inc.com</a> · <a href="https://www.inc.com/author/nathan-miller — founder bio, 16,000+ customers, $226B+ assets managed, zero funding/debt claim" target="_blank" rel="noopener">www.inc.com</a> · <a href="https://www.rentecdirect.com/learn/property-management-software/ — market positioning, 17,000+ customers, target segment, bootstrapped statement, TrueRent mention" target="_blank" rel="noopener">www.rentecdirect.com</a> · <a href="https://app.dealroom.co/news/feed/rentec-direct-joins-elite-110-us-companies-with-10-inc-5000-appearances-generates-93m-revenue — 10th Inc. 5000, employee trend, $93M decade revenue, $46M local reinvestment" target="_blank" rel="noopener">app.dealroom.co</a> · <a href="https://www.rentecdirect.com/blog/rentec-direct-acquires-truerent-property-management-software/ — 2022 TrueRent acquisition" target="_blank" rel="noopener">www.rentecdirect.com</a> · <a href="https://www.rentecdirect.com/press — media presence and contributor hooks (Nathan Miller, Kaycee Miller, Brentnie Daggett)" target="_blank" rel="noopener">www.rentecdirect.com</a> · <a href="https://www.techradar.com/best/best-property-management-software — competitive market context / Rentec positioning" target="_blank" rel="noopener">www.techradar.com</a></div></div>
+      
+        <div class="pitch send">
+          <div class="pitchhead">✅ READY-TO-SEND · Permanent-Home pitch</div>
+          <div class="subj"><span>Subject</span>A permanent home for Rentec</div>
+          <div class="pbody">Nathan — reaching a 10th straight Inc. 5000 appearance without ever taking outside investors, and reinvesting profits back into Southern Oregon, is rare in property-management software. Most founders who get there eventually field calls from PE firms planning to flip the business in three to five years. Banyan is the opposite: we acquire vertical software companies to hold permanently — 120+ acquired, held permanently, zero ever sold. We keep the brand, the team, and the customer-first culture intact, and give founders a way to step back on their own terms rather than dismantle what they built. Would a 20-minute call be worth it to see whether that model fits what you want for Rentec&#x27;s next chapter?</div>
+          <div class="pnote"><b>Personalization:</b> Opens on a public, specific detail — Rentec&#x27;s 10th consecutive Inc. 5000 appearance built with no outside investors, plus Southern Oregon reinvestment (Dealroom 2026 / Inc.). Leads with Nathan and his achievement, not Banyan. No revenue or financial figures quoted; no MNPI implied; no false urgency. Single low-commitment CTA (20-minute call). Uses the permanence-vs-PE-flip differentiator and the &#x27;120+ acquired, held permanently, zero sold&#x27; proof point. Body ~115 words.</div>
+        </div>
+    </article>
+
+<h2 class="sec">↪ Route to growth mandate — not buy-and-hold targets <small>(16)</small></h2>
+
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>AlphaSense (alpha-sense.com)</h3>
+          <div class="meta">Market intelligence AI · US · <a href="https://alpha-sense.com" target="_blank" rel="noopener">alpha-sense.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.468</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.689</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Strong leader at the intersection of financial data terminals (Bloomberg, FactSet, S&amp;P Capital IQ, LSEG), private-market/investment research (PitchBook, CB Insights, Visible Alpha), expert networks/transcript libraries (AlphaSights, GLG, Third Bridge; Tegus now in-house), competitive/market-intelligence platforms (Crayon, Klue, Contify), and AI-native analyst tools (Hebbia, Rogo, Perplexity Enterprise). Disclosed reach: serves 90% of the S&amp;P 100 (Oct 2025) and 7,000+ enterprises (Jun 2026), including Adobe, Amazon, Amex, Cisco, J.P. Morgan, Microsoft, Nvidia, Pfizer, Salesforce. Named the only Leader in Forrester&#x27;s Q3 2026 Market and Competitive Intelligence Platforms Wave (Aug 2026).</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT banyan-fit. Screen best-thesis = growth (banyan_adj 0.468, growth_adj 0.689), and the research confirms it decisively. Disqualifiers: (1) Ownership — VC/growth-equity backed since 2016, ~$1.7B-$1.8B+ disclosed capital across 9+ rounds; not founder/family-owned or bootstrapped. (2) Size — &gt;$600M ARR is roughly 6x the $100M ceiling; ~2,500-3,500 employees; $7.5B valuation implies IPO-level expectations. (3) Profitability — not disclosed and signals point to heavy GTM/product/AI-compute investment with continued large financings, i.e. growth-stage economics, not the steady profitable cash flow Banyan requires. Even relative to a growth-equity acquisition mandate this is oversized and late-stage (IPO-track), so the practical read is closer to do-not-contact for any M&amp;A purpose; a light founder relationship note is the only appropriate touch.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Congrats on the Forrester nod</div>
+          <div class="pbody">Jack — saw AlphaSense was named the only Leader in Forrester&#x27;s Q3 Market and Competitive Intelligence Platforms Wave. Having read how a Morgan Stanley stint and frustration with analyst research workflows led you to build the company, that recognition reads like the original thesis paying off. I lead acquisitions at Banyan Software, where we back vertical B2B software companies for the long haul. You&#x27;re clearly on a different trajectory — scaling toward your next chapter, not looking for a home — so this isn&#x27;t a pitch. I just enjoy comparing notes with founders who&#x27;ve built a category-defining research platform from a real practitioner&#x27;s frustration. If you&#x27;re ever open to a 20-minute call to swap perspectives, I&#x27;d welcome it. Either way, congrats to you and the team.</div>
+          <div class="pnote"><b>Personalization:</b> Opens on a specific, recent, public detail (Aug 2026 Forrester &#x27;only Leader&#x27; Wave) and ties it to the documented founder origin story (Morgan Stanley background + analyst-workflow frustration, per the Colossus interview and press coverage). Leads with the recipient, explicitly disclaims any acquisition intent to stay honest about fit, quotes no financials, implies no non-public information, and carries no urgency.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Chainguard (chainguard.dev)</h3>
+          <div class="meta">Software supply-chain security · US · <a href="https://chainguard.dev" target="_blank" rel="noopener">chainguard.dev</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.519</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.669</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Vertical niche is software supply-chain security, specifically hardened container images and trusted OSS artifacts — deliberately not a CNAPP, SAST/SCA scanner, or runtime platform. Positioned as category leader in hardened open-source artifacts: 3,000+ projects, 520K+ images, 2M+ library versions, 1B+ build manifests (Sep 2026, doubled from 500M in ~6 months). Named a Leader in Gartner&#x27;s inaugural 2026 Magic Quadrant for Software Supply Chain Security. Key differentiator vs. competitors: sells pre-hardened artifacts that reduce vulnerabilities at the source rather than detecting/prioritizing/blocking them.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT a fit for Banyan&#x27;s permanent-home mandate. Disqualifiers, in order of severity: (1) Ownership — VC-backed with a top-tier late-stage cap table (Kleiner Perkins, IVP, Sequoia, Spark, Redpoint, Lightspeed, Salesforce Ventures, General Catalyst), not founder/family- or PE-owned. Founders retain leadership (Dan Lorenc CEO, Matt Moore CTO, Ville Aikas), but control sits with institutional investors carrying return expectations incompatible with a hold-forever exit. (2) Size — ~$100M ARR sits at or above Banyan&#x27;s ~$100M revenue ceiling and is still compounding fast. (3) Valuation — $3.5B last mark implies ~35x ARR; no buy-and-hold acquirer clears that. (4) Profitability — not disclosed; signals point to growth investment over near-term profit (offset partially by investor &#x27;strong unit economics&#x27; commentary, which is not audited profitability). It IS a genuine category leader (Gartner MQ Leader, 2026) in a real vertical niche, so the disqualifier is stage/ownership/scale, not quality. Route to a growth mandate if one exists; do not send a permanent-home pitch.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Chainguard&#x27;s AI-era trajectory</div>
+          <div class="pbody">Congratulations on the Gartner Magic Quadrant Leader placement in software supply-chain security — building trusted, pre-hardened open source from source, rather than scan-and-patch-later, is exactly the shift the AI-coding era demands, and the Cursor partnership shows it landing where developers actually work. I&#x27;m on the team at Banyan Software; we mostly partner with founder-owned vertical software companies, so Chainguard sits well outside our usual lane. I&#x27;ve followed the distroless-to-Sigstore lineage for years and simply wanted to introduce myself and say the category execution has been a pleasure to watch. If it&#x27;s ever useful to compare notes on where supply-chain security is heading, I&#x27;d welcome a 20-minute call — no agenda.</div>
+          <div class="pnote"><b>Personalization:</b> First line anchors on two public, non-financial milestones (Gartner MQ Leader placement, Jun 2026; Cursor partnership, Apr 2026) plus the founders&#x27; distroless/Sigstore heritage. Deliberately omits all ARR/valuation/funding figures (MNPI hygiene, and per rules), makes no permanence/acquisition pitch, and uses no urgency. Frames Banyan honestly as outside its usual lane so the note reads as relationship-building, not a mismatched buy approach.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Vanta (vanta.com)</h3>
+          <div class="meta">Security &amp; compliance automation · US · <a href="https://vanta.com" target="_blank" rel="noopener">vanta.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.432</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.667</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Sits at the intersection of cybersecurity, compliance automation, GRC, vendor risk, and customer-trust enablement. Self-described &quot;#1 Agentic Trust Platform,&quot; 16,000+ customers; named a Leader in IDC MarketScape GRC 2025 and Forrester Wave GRC Platforms Q2 2026 (analyst placements are also marketing, so weight accordingly). Strongest in B2B/tech-forward companies; strategy is to bridge startup-friendly compliance automation and enterprise-grade GRC.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT a Banyan buy-and-hold-forever fit. Disqualifiers, in order of decisiveness: (1) VC-backed with an active growth-capital trajectory ($150M Series D at $4.15B, Wellington-led, framed as optional growth capital, not distress) — the ownership profile Banyan explicitly excludes; (2) scale far beyond the ~$2M-$100M revenue band — ~$300M ARR is roughly 3x the ceiling; (3) valuation (~$4.15B, rich ARR multiple) is outside any buy-and-hold price discipline. Profitability is undisclosed but signals are capital-efficient — irrelevant here because the ownership and size disqualifiers are dispositive. This is an expensive strategic/late-stage asset, not a niche founder-owned leader. Correct handling: no permanent-home acquisition pitch; route to a growth/minority mandate and keep at most a light founder relationship touch.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Vanta&#x27;s trust infrastructure arc</div>
+          <div class="pbody">Christina — the way Vanta grew out of your own Dropbox Paper SOC 2 headache into what you now frame as trust infrastructure, rather than a compliance checklist, is one of the more disciplined category-building stories in B2B software. Getting to real scale before leaning on institutional capital is rare and worth respecting. I work on M&amp;A at Banyan Software, where we back vertical software companies for the long term. Vanta is well past the stage where we&#x27;d have anything relevant to offer, so this isn&#x27;t a pitch — just a note from someone who admires the build. If you&#x27;re ever open to comparing notes as long-term operators, I&#x27;d value 20 minutes whenever it suits you.</div>
+          <div class="pnote"><b>Personalization:</b> First line anchors on a public detail: Vanta&#x27;s origin in Cacioppo&#x27;s Dropbox Paper SOC 2 pain and the founder-led reframing from compliance-checklist to trust infrastructure. No financial figures quoted, no acquisition ask, no urgency — a founder-to-founder relationship touch only.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Grafana Labs (grafana.com)</h3>
+          <div class="meta">Observability / monitoring · US · <a href="https://grafana.com" target="_blank" rel="noopener">grafana.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.462</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.665</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Observability / DevOps infrastructure software. A scaled category leader, not a niche player: 2026 Gartner Magic Quadrant Leader for Observability Platforms (third consecutive year) and positioned furthest in Completeness of Vision (second year). 10,000+ customers, 18,000+ organizations using Grafana Assistant, marquee logos (Anthropic, Bloomberg, NVIDIA, Microsoft, Salesforce). &#x27;Grafana dashboard&#x27; is effectively a generic mental model for infrastructure teams. This is a broad horizontal platform, the opposite of the narrow vertical-B2B niche leader Banyan targets.</p></div><div class="dblk"><h4>Why not a target</h4><p>DO NOT SEND A PERMANENT-HOME ACQUISITION PITCH. This is the growth branch. Grafana is disqualified on ownership (VC-backed with premier institutional investors and active late-stage financing), size (~$600M+ ARR vs. Banyan&#x27;s ~$100M ceiling — roughly 6x over), and valuation ($6B-$9B implied). Banyan&#x27;s differentiators (permanence vs. PE flip, preserve brand/team, &quot;120+ acquired, held permanently, zero sold&quot;) are irrelevant to a company at this stage and are only credible to sub-$100M founder-owned targets. The appropriate action is route-to-growth-mandate for relationship purposes only, with the caveat that even a growth mandate is unlikely to transact at a $6B-$9B scale — realistically this is relationship/awareness, not a live deal. Any contact must be a light, no-ask relationship note that leads with them, quotes no financials, and explicitly is not a pitch.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Grafana&#x27;s big-tent approach</div>
+          <div class="pbody">Torkel&#x27;s original side project becoming the default dashboard layer for engineering teams everywhere — while keeping open source at the center — is one of the more remarkable trajectories in infrastructure software. What stands out even more is the willingness to trade near-term revenue for lower customer telemetry bills through Adaptive Telemetry; that kind of long-horizon thinking is rare. I lead acquisitions at Banyan Software, where we mostly partner with founders earlier in their journey, so this genuinely isn&#x27;t a pitch — you&#x27;re operating at a very different scale. I&#x27;d simply value 20 minutes to learn how you think about open-source monetization as it matures. Worth a short call sometime?</div>
+          <div class="pnote"><b>Personalization:</b> First line uses two public, founder-centric details from the research (Torkel Ödegaard&#x27;s side-project origin story and the Adaptive Telemetry revenue-quality tradeoff). Leads entirely with them, quotes no financials, makes no acquisition ask, and explicitly disclaims that this is a pitch — appropriate for a growth-thesis company outside Banyan&#x27;s mandate.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Linear (linear.app)</h3>
+          <div class="meta">Developer workflow / issue tracking · US · <a href="https://linear.app" target="_blank" rel="noopener">linear.app</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.518</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.656</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Developer-centric work management for modern product teams — fast-growing SaaS, AI, fintech, and enterprise engineering orgs. 40,000+ paying companies including OpenAI, Coinbase, Ramp, Salesforce, Figma, Cursor, and Cash App. Strongest where teams prize speed, craft, developer adoption, and AI-agent coordination over highly configurable legacy workflows. Increasingly positioning as the shared context/operating layer between product context, customer signals, code, and AI agents — not merely an issue tracker.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT BANYAN-FIT (growth-thesis). Banyan targets profitable, founder/family-owned OR bootstrapped, high-recurring-revenue vertical B2B software niche leaders at roughly $2M-$100M revenue, to hold forever. Linear meets the profitability, recurrence, and founder-led criteria but fails two hard gates: it is institutional VC-backed (not family-owned/bootstrapped) and its $100M+ ARR sits at/above the size ceiling, with a $2.5B valuation and explicit &quot;built to last&quot; independence stance that make it neither a realistic nor a thesis-appropriate acquisition. Screen data agrees (growth_adj 0.656 &gt; banyan_adj 0.518). Seller motivation is low: profitable, cash-flow positive, no need for outside capital. Treat as a relationship/network asset for the growth mandate, not a buy-and-hold deal.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Admiring Linear&#x27;s profitable path</div>
+          <div class="pbody">Karri — your &quot;profitable startup&quot; essay stuck with me. Building Linear with positive cash flow while most of the category chased growth-at-all-costs is a rare kind of discipline, and it shows in the craft your team is known for. I look after software at Banyan, and I spend most of my time with founders thinking about what durable, built-to-last companies actually look like over decades rather than fundraising cycles. No agenda and nothing transactional here — I&#x27;d simply value trading notes with someone building this deliberately for the long term. Would you be open to a 20-minute call in the coming weeks? Either way, genuinely rooting for what you&#x27;re building.</div>
+          <div class="pnote"><b>Personalization:</b> First line references Karri Saarinen&#x27;s public Feb 2025 essay &#x27;The profitable startup&#x27; and Linear&#x27;s craft/built-to-last philosophy — all founder-authored and public. Deliberately a light, non-acquisition relationship note: no acquisition ask, no permanence/&#x27;120+ acquired&#x27; pitch, no financial figures, no MNPI, no urgency, single low-commitment CTA.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Rogo (rogo.com)</h3>
+          <div class="meta">Finance / investment banking AI · US · <a href="https://rogo.com" target="_blank" rel="noopener">rogo.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.495</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.656</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Visible category leader in the fast-growing &#x27;AI for financial services / AI analyst for Wall Street&#x27; niche, with particular strength in investment banking and private markets. Claims 50,000+ bankers/investors and 350+ institutions as of Sept 2026 (up from 35,000+ and 250+ in April 2026). Named users/references include Rothschild &amp; Co, Jefferies, Lazard, Moelis, Nomura, Tiger Global, Truist, and Baird. Competes below much larger incumbents and foundation-model labs.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT banyan-fit. Rogo fails the buy-and-hold test on three independent grounds. (1) Ownership/funding: heavily VC- and strategic-backed — Seed ($7M, AlleyCorp), Series A ($18.5M, Khosla), Series B ($50M, Thrive), Series C ($75M, Sequoia), Series D ($160M, Kleiner Perkins), plus a ~$30M Sept-2026 strategic round from nine global banks; total funding &gt;$300M. This is a venture cap table oriented toward an eventual liquidity event, not a founder/family-owned business seeking a permanent home. (2) Scale/valuation: reported ~$2B valuation and enterprise deployment across 50,000+ users / 350+ institutions places it far above Banyan&#x27;s ~$2M-$100M revenue band in enterprise value terms; even if 2025 revenue (&gt;$15M reported) sits inside the revenue band, the valuation and trajectory disqualify it. (3) Profitability/posture: clearly optimizing for growth, not profit — aggressive hiring (doubling headcount to 150-200+), global office expansion (London, SF, Singapore, EMEA, APAC), and a string of roll-up acquisitions (Subset, Rivanna, Arvo, Offset). Banyan screen confirms: growth-adj 0.656 &gt; banyan-adj 0.495. Route to a growth mandate; do not send a permanent-home acquisition pitch.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Comparing notes on finance AI</div>
+          <div class="pbody">Gabe — Rogo&#x27;s arc from automating the junior-banker grind to becoming a real thought partner for senior dealmakers, and now extending Felix into wealth management, is one of the more interesting stories in vertical AI for finance. The Deal Room launch in particular reads like a bet on owning the whole transaction workflow, not just the analysis layer. I&#x27;m on the M&amp;A side at Banyan Software, and I&#x27;ll be upfront: this isn&#x27;t a pitch — you&#x27;re clearly building for scale and have the backing to do it. I&#x27;d simply value 20 minutes to compare notes on where finance-workflow AI is heading and keep a line open as things evolve. No agenda beyond that.</div>
+          <div class="pnote"><b>Personalization:</b> First line anchors on Rogo&#x27;s publicly reported product trajectory (junior-work automation to senior &#x27;thought partner&#x27;), the Aug-2026 Deal Room launch, and the Sept-2026 wealth-management expansion (WSJ / Rogo newsroom) — all public. This is a LIGHT RELATIONSHIP NOTE, not a permanent-home acquisition pitch, because Rogo is growth-thesis (VC-backed, ~$2B valuation, burn-for-growth). It explicitly disclaims any acquisition intent, leads with the founder, quotes no financial figures, implies no non-public information, and carries no false urgency. Single low-commitment CTA (20-minute call).</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>EvenUp (evenuplaw.com)</h3>
+          <div class="meta">Legal / personal injury · US · <a href="https://evenuplaw.com" target="_blank" rel="noopener">evenuplaw.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.490</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.646</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>One of the clear leaders in PI-specific legal AI — narrower but deeper than horizontal legal-AI vendors (Harvey, Legora, CoCounsel). Claims 2,000+ PI firm customers (including ~20% of top-100 US PI firms), 10,000+ cases processed weekly, 200,000+ resolved cases, $10B+ damages secured/claimed.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT BANYAN-FIT. EvenUp is a VC-backed, high-growth legal-AI unicorn valued at $2B+ with estimated ARR near/above the top of Banyan&#x27;s target range and no evidence of GAAP profitability. It is institutionally owned by a large syndicate of venture investors whose return model is an eventual IPO or strategic sale, not a founder liquidity event to a hold-forever acquirer. A permanent-home acquisition pitch would be both off-thesis and non-credible to the recipient. Correct action: route to a growth mandate and, at most, keep a light relationship line open. Do not send an acquisition offer.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Congrats on the LexisNexis alliance</div>
+          <div class="pbody">Rami — the LexisNexis alliance EvenUp announced this month is a real validation of what you&#x27;ve built in personal injury law; pairing your claims-intelligence data with their distribution is the kind of move most legal-AI companies only talk about. I&#x27;ve followed the arc from demand-package drafting to full case-lifecycle automation, and the vertical depth stands out against the horizontal legal-AI crowd. I lead acquisitions at Banyan Software, focused on vertical B2B software — to be upfront, EvenUp sits well beyond where our model fits, so this isn&#x27;t a pitch. But I&#x27;d genuinely value 20 minutes to compare notes on how vertical software scales and where PI-tech is heading. Worth a short call?</div>
+          <div class="pnote"><b>Personalization:</b> First line references the publicly announced September 2026 LexisNexis/EvenUp strategic alliance — recent, public, and non-financial. Note explicitly disclaims an acquisition pitch, consistent with the growth-thesis branch: NO permanent-home framing, NO revenue/valuation figures quoted, NO false urgency, and no implication of non-public information.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Modal (Modal Labs, Inc. — modal.com)</h3>
+          <div class="meta">AI/ML infrastructure / serverless compute · US · <a href="https://modal.com" target="_blank" rel="noopener">modal.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.429</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.645</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Serverless AI infrastructure / GPU cloud / AI developer platform. Narrower and more developer-native than hyperscalers, broader than single-purpose GPU rental, more infra-level than managed inference APIs. Explicitly &#x27;not a single-purpose GPU cloud&#x27; — platform for low-latency elastic inference, agent/RL runtimes, secure code-execution sandboxes, and massive batch. One of the breakout independent AI-infra platforms with strong developer-love brand and fast growth, but competing against very well-capitalized GPU clouds and hyperscalers. This is a HORIZONTAL infra category, not a vertical B2B software niche — outside Banyan&#x27;s target profile.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT A FIT for Banyan&#x27;s buy-and-hold-forever mandate. Disqualifiers, each independently sufficient: VC-backed with a rich, momentum-driven cap table and venture governance (opposite of founder/family-owned); revenue roughly 3x above the $100M upper bound; capital-intensive, usage-based economics with undisclosed profitability and a stated growth-over-profit posture; and a horizontal AI-infra category rather than a defensible vertical B2B software niche. Banyan cannot underwrite the valuation ($4.65B) or offer what this asset needs (capacity/distribution scale, continued growth capital). Route to a growth-equity mandate. Any contact should be a light, honest relationship note only — never a permanence/acquisition pitch, which would be off-thesis and would misrepresent Banyan&#x27;s model to a company on a clear independent growth path.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Modal&#x27;s systems-level bet</div>
+          <div class="pbody">Erik — the Modal engineering writing on building your own container runtime, scheduler, and filesystem rather than wrapping Kubernetes stands out, and the post on scaling to a million concurrent sandboxes in under a minute even more so. It&#x27;s rare to see an infra team go that deep on the primitives instead of stitching together the usual layers. I invest in vertical software at Banyan Software. Your stage and category sit well outside where we operate, so this isn&#x27;t a pitch of any kind — I just like keeping a standing line open with the strongest independent infra founders. If you ever want to compare notes on scaling operator teams or long-horizon company-building, I&#x27;d welcome a 20-minute call whenever it suits you.</div>
+          <div class="pnote"><b>Personalization:</b> First line cites a specific, public, founder-authored technical detail (custom runtime/scheduler/filesystem over Kubernetes; the 1M-concurrent-sandboxes post) and leads with Modal, not Banyan. No financial figures quoted, no non-public info implied, no false urgency, single low-commitment CTA (20-min call). The note is deliberately light and explicitly disclaims any acquisition/permanence framing — appropriate because Modal is off-thesis and a permanent-home pitch would be both misaligned and misleading.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Decagon (Decagon AI, Inc.) — decagon.ai</h3>
+          <div class="meta">Customer support AI agents · US · <a href="https://decagon.ai" target="_blank" rel="noopener">decagon.ai</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.427</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.636</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Competes in the fast-growing AI customer-support / CX agent market, targeting large enterprises with high-volume, complex, omnichannel support. Positions above simple chatbots by emphasizing business-logic execution, enterprise controls, and agents that take actions. Public logos include Avis Budget Group, Chime, Oura, 1-800-Flowers, Deutsche Telekom, American Airlines, Square/Cash App, Mercado Libre, Notion, Snap, Affirm, Hertz, Ticketmaster, Duolingo, Dropbox, Riot Games, Fanatics, and ID.me.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT a Banyan buy-and-hold target — off-thesis on every disqualifying axis. (1) Ownership: venture-backed, not founder/family-owned or bootstrapped — ~$481M raised across Seed through Series D from a16z, Accel, Bain Capital Ventures, Coatue, Index, BOND, Forerunner, Ribbit, and others. (2) Profitability: no public evidence of profitability; almost certainly in heavy-investment mode given hiring velocity (dozens in 2023 to several hundred by 2026), global expansion, large fundraises, enterprise implementation load, and AI inference costs. (3) Size: revenue is at or above the $100M ceiling — Sacra estimates ~$100M annualized as of July 2026 (up from ~$44M end-2025), and the company is valued at $4.5B (Jan 2026 Series D). (4) Profile: hyper-growth, capital-intensive, category-forming — the antithesis of a stable, cash-generative niche leader. This is a growth-mandate lead, not a permanent-home acquisition candidate. A Permanent-Home acquisition pitch would be inappropriate and off-thesis; route to a growth mandate instead.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Following Decagon&#x27;s CX shift</div>
+          <div class="pbody">Jesse — the way Decagon is reframing customer support from a ticket queue into a retention and revenue layer, with agents that actually take action instead of deflecting, is one of the sharper bets in the category, and watching you extend it into voice and proactive outbound over the past year has stood out. I lead software investing at Banyan; we typically back profitable, founder-led vertical software companies to hold long term, so Decagon&#x27;s stage sits outside our usual mandate. No pitch here — I&#x27;d just value 20 minutes sometime to trade notes on where enterprise CX is actually heading. Worth a short call?</div>
+          <div class="pnote"><b>Personalization:</b> First line draws on a public detail: Decagon&#x27;s stated positioning that it reframes support from a ticket cost center into a revenue/retention layer with action-taking agents, plus its public expansion into voice and proactive/outbound agents over the past ~12 months. Addressed to co-founder Jesse Zhang. Note deliberately and honestly states the stage/mandate mismatch rather than pitching a permanent-home acquisition, per thesis-branch rules for a growth-thesis lead.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Ambience Healthcare</h3>
+          <div class="meta">Clinical AI · US · <a href="https://ambiencehealthcare.com" target="_blank" rel="noopener">ambiencehealthcare.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.480</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.634</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Niche is ambient clinical AI for large health systems, with a differentiated push into complex specialties, inpatient/ED, chart-aware workflows, and coding/CDI ROI (vs. a &#x27;simple scribe&#x27;). Top-tier but not category-leading: Becker&#x27;s/Menlo-cited ambient-scribe share was Microsoft/Nuance 33%, Abridge 30%, Ambience 13%, Suki 10%. Marquee references include Cleveland Clinic, UCSF Health, Houston Methodist, Memorial Hermann, St. Luke&#x27;s, Ardent, John Muir.</p></div><div class="dblk"><h4>Why not a target</h4><p>Not a Banyan buy-and-hold target — fails the thesis on three independent, decisive grounds. (1) Ownership: VC-backed, not founder/family/bootstrapped/PE-owned (Kleiner Perkins, a16z, OpenAI Startup Fund, Oak HC/FT, Optum Ventures, etc.). (2) Size: latest public valuation ~$1.25B and $343M raised as of Sep 2025 — an order of magnitude above the ~$100M revenue ceiling and structurally un-acquirable by a permanent-home holder. (3) Profitability: profitability is explicitly not the priority given the $243M Series C, rapid hiring (mid-200s headcount), and forward-deployed implementation model. It does show real vertical-B2B-software characteristics Banyan likes (recurring enterprise SaaS/health-system contracts, deep EHR embedding, vertical niche in clinical AI), but the stage/ownership/scale make it a growth-mandate profile, not a buy-and-hold-forever profile. Screen agrees: growth_adj 0.634 &gt; banyan_adj 0.48.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Watching the Ambience Standard</div>
+          <div class="pbody">Nikhil — moving from ambient scribe to outcomes-tied clinical infrastructure with The Ambience Standard is one of the more interesting bets in health AI right now; tying fees to measurable results is a harder promise than most in the category are willing to make. I invest in and back durable vertical-software businesses at Banyan Software, and I like to stay in touch with founders building category infrastructure regardless of stage. No agenda here and nothing to sell — if you&#x27;re ever open to comparing notes on where clinical AI is heading, I&#x27;d value 20 minutes whenever it suits you. Either way, genuinely rooting for what you&#x27;re building.</div>
+          <div class="pnote"><b>Personalization:</b> First line references &#x27;The Ambience Standard,&#x27; Ambience&#x27;s Aug 2026 publicly announced outcomes-tied partnership model (company blog / BusinessWire), and the public repositioning from scribe to accountable clinical infrastructure. Addressed to Nikhil Buduma, publicly named CEO since Sep 2025. No financials, no non-public info, no urgency.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Tennr (tennr.com)</h3>
+          <div class="meta">Healthcare referrals AI · US · <a href="https://tennr.com" target="_blank" rel="noopener">tennr.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.468</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.613</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Emerging category leader / high-visibility VC-backed challenger in healthcare referral and pre-visit patient-processing automation, wedged on specialty-care referrals. Target verticals per its own site: DME/manufacturers, infusion providers, fertility clinics, physician groups, hospitals/health systems, specialty pharmacies. Scale signals: hundreds of provider customers, &#x27;millions&#x27; of patients processed, ~10M documents/month. Young (founded 2021, YC W23) but has expanded the narrative from a fax/intake wedge to a patient-orchestration network.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT a Banyan fit — classify as GROWTH. The only Banyan gate Tennr plausibly clears is the revenue band (preliminary $10M-$30M ARR estimate, low-medium confidence). Every other gate fails: (1) Ownership — private but institutionally VC-controlled (YC W23, ~$3.25M seed, $18M Series A led by a16z, $37M Series B led by Lightspeed, $101M Series C led by IVP), not founder/family-owned in the bootstrapped sense Banyan buys; (2) Profitability — no profitability disclosed and unlikely given rapid hiring, enterprise GTM expansion, and heavy R&amp;D; a $605M valuation on undisclosed ARR is underwriting growth, not current profit; (3) Valuation/stage — venture valuation and a 2021-founded, still-scaling company are structurally incompatible with buy-and-hold-forever economics. Screen confirms: banyan_adj 0.468 vs growth_adj 0.613. Recommendation: route to the growth mandate; do not send a permanence pitch.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>The referral black hole</div>
+          <div class="pbody">Trey — the origin story of watching referrals disappear into black holes through your mother&#x27;s family-medicine practice is a sharper problem statement than most healthcare AI ever lands on, and moving from a fax/intake wedge to the Tennr Network reads like you&#x27;re building the connective layer, not just point automation. Your &#x27;AI isn&#x27;t the point&#x27; framing is the part I keep coming back to. I spend my time tracking founders reshaping vertical healthcare workflows and would value comparing notes on where referral orchestration goes from here. If it&#x27;s useful, I&#x27;d welcome a 20-minute call — no agenda beyond learning how you&#x27;re thinking about the network. Either way, genuinely impressive trajectory.</div>
+          <div class="pnote"><b>Personalization:</b> First line uses two public details from the PR Newswire Series C release and Tennr&#x27;s site: the family-medicine origin of the &#x27;referral black holes&#x27; insight and the strategic shift from a fax wedge to the Tennr Network, plus the founders&#x27; stated &#x27;AI isn&#x27;t the point&#x27; philosophy. This is a LIGHT relationship note only — no permanence/buy-and-hold framing, no acquisition ask, and no financial figures quoted — because Tennr is a growth-thesis lead, not a Banyan buy-and-hold target.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Aikido Security (aikido.dev)</h3>
+          <div class="meta">Security / unified AppSec platform (SMB-focused) · Belgium · <a href="https://aikido.dev" target="_blank" rel="noopener">aikido.dev</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.469</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.611</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Developer-first Application Security Posture Management (ASPM) and AppSec consolidation for SaaS, cloud-native, and fast-shipping engineering teams. Claims 150k+ teams protected, 50k+ organizations, customers in 70+ countries (named references include Revolut, Deel, SoundCloud, Premier League, Tines, Niantic, n8n, Visma, Legora). Positioned as one of Europe&#x27;s fastest-growing cybersecurity companies and the &#x27;fastest European cybersecurity unicorn.&#x27; Recognized by Frost &amp; Sullivan in ASPM (Mar 2026). Strong brand and distribution, but the category is crowded with well-funded incumbents holding security budgets.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT a Banyan buy-and-hold fit — clear growth-thesis. Screen (banyan_adj 0.469 vs growth_adj 0.611) and research agree. Disqualifiers, any one of which is sufficient: VC/growth-equity backed (DST Global-led $60M Series B at $1B valuation, PSG, Notion, Singular, Connect Ventures, Heliad — founders no longer control the cap table); no profitability (Series B proceeds funding rapid hiring, new offices, and two 2025-2026 acquisitions = growth burn, not cash generation); scale/valuation (unicorn; third-party ARR estimates ~$13M-$25M and climbing on 5x YoY growth, headcount 280-350+). Banyan requires profitable, founder/family-owned, high-recurring-revenue vertical niche leaders in the ~$2M-$100M range held permanently — Aikido violates the ownership, profitability, and holdability tests simultaneously. A permanent-home (permanence-vs-PE-flip) pitch would be off-thesis and would not land with a founder team that just chose a growth-equity round; route to a growth mandate instead. Legitimate growth-mandate angle exists (category-leading developer-first ASPM brand, AI-pentest/remediation loop, PLG distribution) but that is a different Banyan vehicle, not buy-and-hold.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Admiring Aikido&#x27;s Infinite launch</div>
+          <div class="pbody">Willem — the anti-noise, &#x27;no BS security&#x27; stance you built Aikido around clearly struck a nerve; watching Infinite push from finding issues into autonomously proving and patching them has been one of the more interesting things to follow in AppSec this year. I lead software investing at Banyan Software, and I mostly wanted to introduce myself and say we&#x27;re paying attention to what you and the team are building out of Ghent. No agenda beyond that. If you&#x27;re ever open to comparing notes on where developer-first security is heading, I&#x27;d value 20 minutes whenever it suits you. Either way, congratulations on the momentum.</div>
+          <div class="pnote"><b>Personalization:</b> Opens on the founder&#x27;s own public brand language (&#x27;no BS security&#x27;, anti-noise) and the Feb 2026 Aikido Infinite &#x27;find, prove, patch, retest&#x27; launch — both public via Aikido&#x27;s blog/About page. Deliberately framed as a light relationship/introduction note, not a permanent-home acquisition pitch, because Aikido is a VC-backed unicorn (growth-thesis). No financial figures, no non-public detail, no urgency, single low-commitment CTA.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Infinite Campus (infinitecampus.com)</h3>
+          <div class="meta">K-12 student information system / district administration · US · <a href="https://infinitecampus.com" target="_blank" rel="noopener">infinitecampus.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis banyan-fit">banyan-fit</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.607</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.457</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>US public K-12 SIS and statewide K-12 data/reporting modernization. ListEdTech/Info-Tech place it at ~10% of identified K-12 SIS implementations, #3 behind PowerSchool (~23%) and FACTS (~15%) and ahead of Skyward (~7%). Scale cited publicly: 3,200+ districts, ~11M students, 46 states, 10 state education agencies. Distinctive as one of the few scaled SIS vendors that grew organically rather than by roll-up, in contrast to PowerSchool&#x27;s acquisition-heavy path (Bain took PowerSchool private in 2024).</p></div><div class="dblk"><h4>Why not a target</h4><p>Mixed / not a buy-and-hold fit despite a strong culture match. PRO-thesis signals: founder-led (Charlie Kratsch, founded 1993, still Founder &amp; CEO), employee-owned with 650+ employee-owners and no outside VC/PE investment, high recurring revenue (99%+ district renewal), and defensible vertical B2B niche leadership (~10% of identified K-12 SIS implementations, #3 behind PowerSchool and FACTS, ahead of Skyward; 3,200+ districts, 10 state education agencies). Profitability is indirect but positive (30+ years operating without outside capital). DISQUALIFIERS for the buy-and-hold mandate: (1) Revenue almost certainly exceeds the ~$100M ceiling — Growjo ~$100.8M and Latka ~$300M, and the research&#x27;s own underwriting view is &#x27;likely low-to-mid nine figures,&#x27; i.e. at or above the cap; $300M is flagged as aggressive but even the conservative estimate sits on the line. (2) Very low seller motivation — the company positions itself as explicitly &#x27;free from outside investors,&#x27; mission-over-profit (&#x27;make a difference, not money&#x27;), with 650+ employee-owners, a complex cap table rather than a single-founder sale. It is not a growth-thesis target either (profitable and bootstrapped, not VC-backed/unprofitable) — it is simply oversized and independent-by-design. Net: do NOT send a permanent-home acquisition pitch; route to the growth/larger-deal mandate and keep only a light relationship note. The screen&#x27;s banyan_adj (0.607) reflects the culture/model match but does not override the revenue-ceiling and seller-motivation gates.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Thirty years, still independent</div>
+          <div class="pbody">Charlie — North Dakota naming Infinite Campus its statewide SIS last year, becoming your tenth state education agency, caught my eye, especially reading how you built the company across three decades without ever taking outside investment so the team could stay focused on schools rather than shareholders. Independent, mission-first software companies that reach real scale on their own terms are genuinely rare, and it&#x27;s the kind of business I spend my time studying at Banyan Software. I&#x27;m not writing with any agenda — I&#x27;d simply value 20 minutes to hear how you&#x27;ve kept the culture intact at this size. Open to a short call in the coming weeks?</div>
+          <div class="pnote"><b>Personalization:</b> First line anchors on two verifiable public details: North Dakota&#x27;s November 2024 statewide SIS/data-modernization RFP win (making it the 10th SEA customer, from the company&#x27;s own news release) and the publicly stated 30+ years of building without outside investment. Both are in the research and on the company site — no non-public information implied. This is intentionally a light relationship note, not a permanent-home acquisition pitch: no acquisition ask, no permanence-vs-PE differentiator, no &#x27;120+ acquired&#x27; proof point, and no financial figures — consistent with the route-to-growth-mandate branch for an oversized, low-motivation, independent-by-design company.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Hippocratic AI (hippocraticai.com)</h3>
+          <div class="meta">Healthcare agent AI · US · <a href="https://hippocraticai.com" target="_blank" rel="noopener">hippocraticai.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.464</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.606</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Niche is patient-facing clinical voice AI — distinct from ambient physician-scribe vendors (Abridge, Nabla, Suki, Nuance). Positions as a category leader: claims 250M+ patient interactions, 300+ live clinical use cases, 50+ EMR integrations including Epic, 7 of 20 top pharma, and testing by 7,700+ U.S. licensed clinicians. Nov 2025 Series C cited 50+ health-system/payor/pharma clients across 6 countries, naming Cleveland Clinic, Northwestern Medicine, Ochsner, Cincinnati Children&#x27;s, UHS, WellSpan, Fraser Health, and Guy&#x27;s &amp; St Thomas&#x27; NHS Trust.</p></div><div class="dblk"><h4>Why not a target</h4><p>Fails Banyan&#x27;s buy-and-hold-forever criteria on three independent, disqualifying axes: (1) Ownership — VC-backed by a16z, General Catalyst, Kleiner Perkins, Premji, NVIDIA, Avenir, CapitalG; not bootstrapped, family- or PE-owned. (2) Profitability — no public ARR/profit; economics skew negative/growth-first (inference-heavy real-time voice + multi-model supervision, rapid 107% YoY headcount growth to ~300-350, international expansion, proceeds earmarked for expansion and acquisitions). (3) Size/valuation — $3.5B valuation and $444M raised put it an order of magnitude above the ~$2M-$100M revenue band Banyan targets; even the usage-based revenue estimate (tens to low-hundreds of millions, unverified) is at or above the ceiling. Revenue quality is also usage-based ($9/agent-hour, later de-emphasized) rather than the durable recurring SaaS ARR the thesis prefers. Verdict: route to a growth mandate; do not pursue as a permanent-home acquisition.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Following your healthcare mission</div>
+          <div class="pbody">Munjal - the throughline from the health scare after Like.com to building patient-facing, safety-first care agents is one of the more coherent founder-to-mission arcs I&#x27;ve come across, and the discipline of keeping the agents non-diagnostic is a big part of why it lands. I lead software investing at Banyan Software; we back and permanently home vertical B2B software companies, so Hippocratic sits outside our lane today given where you are on the growth curve. That said, I&#x27;d value 20 minutes sometime to compare notes on how patient-access and care-support workflows are consolidating - no agenda beyond learning from someone building at the frontier of it. Open to a short call in the coming weeks?</div>
+          <div class="pnote"><b>Personalization:</b> First line anchors on a fully public detail — Munjal Shah&#x27;s Business-Insider-reported arc from the post-Like.com health scare to founding a healthcare AI company, plus the public, deliberately-non-diagnostic product stance. No financials referenced.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Tailscale (tailscale.com)</h3>
+          <div class="meta">Networking / security infrastructure (WireGuard VPN) · Canada · <a href="https://tailscale.com" target="_blank" rel="noopener">tailscale.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.530</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.606</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Developer-first secure connectivity: mesh VPN, ZTNA, remote infrastructure access, identity-based private networking. Unusually strong bottom-up adoption among developers, DevOps, AI startups and distributed infra teams because setup is simple. Company cites 40,000 businesses; BetaKit reported ~10,000 paid business clients in early 2025 with rapid growth since. Named users include Instacart, Duolingo, SAP, Hugging Face, Cohere, Mistral, Groq, Perplexity, Mercury, Cribl, Retool, Netlify.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT a Banyan target. Banyan buys profitable, founder/family-owned, bootstrapped-style vertical B2B software niche leaders at ~$2M-$100M revenue to hold forever. Tailscale disqualifies on at least four independent grounds: (1) VC-backed, not founder/family-owned in the ownership sense Banyan requires — ~$275M raised across Seed through Series C from Accel, CRV, Insight, Heavybit, Uncork; (2) not proven profitable — CEO framed it as could become profitable &quot;when needed,&quot; i.e. controlled burn, not GAAP profit; (3) valuation ~$1.45B USD post-money (Apr 2025), an order of magnitude above Banyan&#x27;s revenue-scale zone and structurally incompatible with a buy-and-hold economics case; (4) explicit independence/IPO-track posture — founder has publicly said Tailscale received inbound acquisition interest but intends to stay independent. Growth signals (ARR reportedly growing 100%+ YoY, headcount 100 to ~250-370 in roughly a year, first-ever acquisition of Border0) reinforce that this is an acquirer/scaler, not an acquiree for a permanent home. Correct disposition: route to a growth/minority mandate if Banyan has one; otherwise light relationship touch only.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Following Tailscale&#x27;s Border0 move</div>
+          <div class="pbody">Congrats on the Border0 acquisition this spring — folding Andree Toonk&#x27;s team in to push Tailscale from &#x27;can I connect?&#x27; to &#x27;should I connect?&#x27; is a sharp extension of the identity layer you&#x27;ve built around WireGuard, and Aperture reads like the natural next step for the agentic-workload era. I&#x27;m with Banyan Software, where we spend our days close to vertical B2B software teams. This isn&#x27;t a pitch — just genuine respect for how you&#x27;ve turned developer-first adoption into an enterprise access fabric. If you&#x27;re ever open to trading notes on scaling product-led networking, I&#x27;d welcome a 20-minute call whenever it suits you.</div>
+          <div class="pnote"><b>Personalization:</b> First line references two public, recent, specific facts — the March 2026 Border0 acquisition (naming founder Andree Toonk and the &#x27;can I connect / should I connect&#x27; framing Tailscale itself used) and the Aperture AI-gateway launch. Leads entirely with Tailscale, mentions Banyan only as context, quotes no financial figures, implies no non-public information, and explicitly disclaims any sale intent.</div>
+        </div>
+    </article>
+    <article class="card route">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Aiven (aiven.io)</h3>
+          <div class="meta">Managed open-source data infrastructure · Finland · <a href="https://aiven.io" target="_blank" rel="noopener">aiven.io</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec route">ROUTE → GROWTH MANDATE</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.410</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.605</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Sits in the managed open-source data platform / DBaaS / event-streaming / cloud data-infrastructure market. Differentiator is breadth plus multi-cloud portability with an anti-lock-in message — one platform for many OSS engines. This is HORIZONTAL developer/data infrastructure, not a vertical industry SaaS niche. Positioning is strong but not category-dominant versus hyperscalers (AWS/GCP/Azure) or single-product specialists (Confluent, MongoDB Atlas, Elastic, ClickHouse Cloud). Strongest fit: mid-market-to-enterprise platform/data teams wanting OSS engines without operating them, especially where multi-cloud, data residency or lock-in avoidance matter.</p></div><div class="dblk"><h4>Why not a target</h4><p>Poor fit for Banyan&#x27;s permanent-home mandate; clear growth-equity profile. Not acquirable under a buy-and-hold model: a company with a $3B last-round valuation and $420M of venture capital in the cap table is priced and structured for a scale/IPO/strategic outcome, and existing institutional investors (Eurazeo, Atomico, IVP, BlackRock-managed funds, Salesforce Ventures, WiL) would drive any transaction. Unprofitability at the entity level and horizontal positioning against hyperscalers compound the mismatch. Even a growth mandate would find this too large and too well-capitalized to be a realistic target — hence the send recommendation is a routing/relationship action, not an acquisition approach. No permanent-home acquisition pitch is written, per thesis-branch rules.</p></div></div>
+      
+        <div class="pitch route">
+          <div class="pitchhead">↪ NOT a buy-and-hold target — relationship note only (route to growth mandate if one exists)</div>
+          <div class="subj"><span>Subject</span>Aiven&#x27;s data-plus-AI direction</div>
+          <div class="pbody">Oskari — the Flow AI acquisition and the Aiven MCP launch this summer read as a deliberate bet on production AI sitting next to governed data, rather than bolting AI onto the marketing page. Your &#x27;open-data-cloud champion&#x27; framing is one of the more coherent I&#x27;ve seen from the infrastructure side. I do relationship-building at Banyan Software; most of our work is with vertical software teams, so this isn&#x27;t a fit for what we typically do — but I like keeping a line open to European infrastructure founders building durable, independent businesses. If you ever want to compare notes on the European open-data landscape, I&#x27;d welcome a 20-minute call, no agenda. Either way, congratulations on the momentum.</div>
+          <div class="pnote"><b>Personalization:</b> First line references two verifiably public July/June 2026 events (Flow AI acquisition, Aiven MCP launch) and Aiven&#x27;s own public &#x27;open-data-cloud champion&#x27; / &#x27;production AI next to governed data&#x27; narrative — no financials, no non-public info, no false urgency. Leads with the founder and his strategy, explicitly disclaims fit, and makes only a light no-agenda relationship ask.</div>
+        </div>
+    </article>
+
+<h2 class="sec">⛔ Do not contact — outside every Banyan mandate <small>(7)</small></h2>
+
+    <article class="card dnc">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Harvey (harvey.ai) — Legal/professional-services AI, US</h3>
+          <div class="meta">Legal AI · US · <a href="https://harvey.ai" target="_blank" rel="noopener">harvey.ai</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec dnc">DO NOT CONTACT</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.525</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.743</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Category leader in enterprise legal AI. Public claims: 2,400+ customers, 200,000+ professionals, 70+ countries, 80% of Am Law 100, five Fortune 10 in-house teams, 25,000+ custom agents across M&amp;A/due diligence/drafting/review/fund formation. Positioned as the AI operating layer for legal work; closest AI-native peer is Legora, with Thomson Reuters (CoCounsel) and LexisNexis (Lexis+ AI) as incumbent content/distribution rivals.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT a Banyan fit — fails every core criterion of the buy-and-hold-forever thesis:</p></div></div>
+      
+        <div class="pitch dnc">
+          <div class="pitchhead">⛔ DO NOT CONTACT — no acquisition pitch appropriate</div>
+          <div class="pbody">Light relationship note only (do NOT send an acquisition pitch). If any contact ever occurs, keep it congratulatory and low-key, e.g.: &quot;Watching what Harvey has built in enterprise legal AI has been impressive — the pivot toward trusted, long-horizon legal agents (and the Benchmark and Guardrails additions) is a smart bet on defensibility. No ask here; just wanted to say congratulations on the momentum and wish the team well.&quot; No CTA, no acquisition framing, no Banyan permanent-home pitch — Harvey is far outside Banyan&#x27;s buy-and-hold mandate.</div>
+          <div class="pnote"><b>Rationale:</b> If a note is ever warranted, anchor on public strategy detail — the shift from AI assistant to trusted long-horizon legal agents, evidenced by the Benchmark (asset-management) and Guardrails AI (agent reliability) acquisitions. Never quote revenue/ARR/valuation figures and never imply non-public knowledge.</div>
+        </div>
+    </article>
+    <article class="card dnc">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Abridge (abridge.com)</h3>
+          <div class="meta">Clinical documentation AI · US · <a href="https://abridge.com" target="_blank" rel="noopener">abridge.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec dnc">DO NOT CONTACT</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.513</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.729</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Vertical niche: ambient clinical documentation / clinical AI / healthcare revenue intelligence. Strong #2 US position - ~30% ambient-scribe market share (Menlo Ventures via Becker&#x27;s), behind Microsoft/Nuance at 33%, ahead of Ambience 13%, Suki 10%, Freed/Nabla 4% each. Supports 55 specialties, 28 languages, expected 50M+ medical conversations in 2025; Best in KLAS 2025 and 2026. Deployed across 300+ health systems including Kaiser Permanente, Mayo Clinic, Johns Hopkins, Duke, UNC, Yale New Haven, UPMC, Sutter, Emory. A clear category leader - but a hypergrowth venture leader, not a bootstrapped niche leader.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT A FIT for Banyan&#x27;s permanent-home acquisition thesis. Banyan buys profitable, founder/family-owned, bootstrapped-or-modestly-capitalized vertical B2B SaaS niche leaders in the ~$2M-$100M revenue band and holds forever. Abridge violates the ownership gate (institutional VC control, seven priced rounds), the size gate (near-$100M ARR / $5.3B valuation, ~330-660 employees), and the profitability gate (growth-mode, no profit evidence). There is no realistic transaction path: a company raising $300M rounds at a $5.3B mark is not sellable to a buy-and-hold acquirer, and Banyan operates no growth/minority mandate to route this to. Recommendation: do-not-contact for acquisition purposes. Screen agrees (banyan_adj 0.513, growth_adj 0.729). Only a no-ask, light relationship note is appropriate if any touch is made at all.</p></div></div>
+      
+        <div class="pitch dnc">
+          <div class="pitchhead">⛔ DO NOT CONTACT — no acquisition pitch appropriate</div>
+          <div class="pbody">Congratulations on scaling Abridge enterprise-wide across UPMC - a genuine full-circle moment given the company&#x27;s roots in the Pittsburgh Health Data Alliance. The way you&#x27;ve framed the category &#x27;from the conversation up,&#x27; extending ambient documentation into revenue integrity and care intelligence, is one of the more coherent product arcs in healthcare AI right now. I follow this space closely and simply wanted to introduce myself and stay in touch as the category keeps maturing. No agenda on my end - just genuine respect for what you&#x27;re building.</div>
+          <div class="pnote"><b>Rationale:</b> First line references the publicly announced Oct 2025 UPMC enterprise-wide scaling and Abridge&#x27;s Pittsburgh Health Data Alliance origin - a distinctive, well-documented public detail. Leads with the recipient, quotes no financials, implies no non-public information, and makes no acquisition ask.</div>
+        </div>
+    </article>
+    <article class="card dnc">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Sierra (sierra.ai)</h3>
+          <div class="meta">Customer service AI agents · US · <a href="https://sierra.ai" target="_blank" rel="noopener">sierra.ai</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec dnc">DO NOT CONTACT</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.425</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.695</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Enterprise conversational AI / customer-experience AI agents — a hot, crowded, horizontal-leaning category rather than a defensible narrow vertical niche. Claims 40%+ of the Fortune 50 as customers, hundreds of customers across financial services, healthcare, telecom, retail, media, travel/hospitality and technology. Named customers: Rocket Mortgage, Singtel, Airtable, SoFi, Chime, Cigna, Ramp, Rivian, SiriusXM, Safelite, Sutter Health, Wayfair, CLEAR, Minted. Strength in regulated, high-volume, customer-facing workflows (SOC 2, HIPAA, GDPR, PCI, FedRAMP High, ISO 27001/42001).</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT a Banyan buy-and-hold target — disqualified on every axis. Banyan acquires profitable, founder/family-owned, high-recurring-revenue vertical B2B software niche leaders in the ~$2M–$100M revenue band and holds forever. Sierra fails this on: (1) SIZE — ~$200M ARR (nine quarters) is roughly 2x above Banyan&#x27;s revenue ceiling, at a &gt;$15B / ~$15.8B post-money valuation implying ~75–80x ARR; (2) OWNERSHIP — heavily VC-backed (Sequoia, Benchmark, Greenoaks, Tiger Global, GV, plus SoftBank Vision Fund 2), ~$1.58B raised, IPO-scale trajectory (new CFO from Pinterest, international offices, large SF lease) — not founder/family-owned and not for sale to a permanent-home acquirer; (3) PROFITABILITY — undisclosed, and the company is explicitly prioritizing growth (raised $950M in May 2026 with &quot;&gt;$1B to invest,&quot; heavy hiring, inference/implementation cost intensity), so it does not meet the &quot;PROFITABLE&quot; bar; (4) STAGE/CATEGORY — hyper-growth enterprise AI agents (horizontal-leaning CX platform across many verticals), the opposite of a stable, slow-growth niche leader. Screen agrees: banyan_adj 0.425 vs growth_adj 0.695. Only a hyperscaler, major CRM/contact-center platform, or very large strategic buyer could transact here — not Banyan.</p></div></div>
+      
+        <div class="pitch dnc">
+          <div class="pitchhead">⛔ DO NOT CONTACT — no acquisition pitch appropriate</div>
+          <div class="pbody">Clay — your Japan launch framing around omotenashi and &#x27;Unreasonable Hospitality&#x27; was a rare thing to read from an AI company: hospitality as the product, not a feature. It&#x27;s a sharp contrast to how most of the category talks about agents. I follow how the CX-agent space is consolidating and how teams keep product culture intact through fast scaling, and I&#x27;d value comparing notes with you sometime — no agenda on our end. Would a 20-minute call in the coming weeks be worth it? Happy to work around your schedule.</div>
+          <div class="pnote"><b>Rationale:</b> First line references a specific, public detail — Bavor&#x27;s omotenashi / &#x27;Unreasonable Hospitality&#x27; Japan-launch framing (sierra.ai/about and the Japan launch post). Leads with them, no financial figures, no MNPI, no urgency, one low-commitment CTA. This is a LIGHT RELATIONSHIP NOTE, not a permanent-home acquisition pitch — Sierra is VC-backed and ~2x above Banyan&#x27;s size ceiling, so no acquisition framing is used.</div>
+        </div>
+    </article>
+    <article class="card dnc">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>ClickHouse (clickhouse.com)</h3>
+          <div class="meta">Data infrastructure / OLAP database · US · <a href="https://clickhouse.com" target="_blank" rel="noopener">clickhouse.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec dnc">DO NOT CONTACT</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.448</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.694</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Real-time analytics / OLAP database / observability infrastructure. Positioned sharply on speed, scale, and cost efficiency for high-volume, high-concurrency analytical apps (product analytics, observability, security logs, fintech/fraud, AI/ML data apps, customer-facing analytics) rather than as a general enterprise data warehouse. Strong market signals: company-reported 3,000+ Cloud customers (Jan 2026) rising to ~4,000 (May 2026); marquee logos including Meta, Tesla, Sony, Lyft, Instacart, Anthropic, Vercel, Cloudflare, GitLab, Deutsche Bank; Forbes Cloud 100 (2025); deep technical mindshare among data engineers. Deliberately reframing from &#x27;fast OLAP database&#x27; to &#x27;data platform for AI-era workloads.&#x27;</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT A BANYAN TARGET. This is a clear growth/IPO-track asset, consistent with the screen (banyan_adj 0.448, growth_adj 0.694). It fails the Banyan thesis on multiple independent axes, any one of which is disqualifying: (1) VC-backed with $1B+ institutional equity and premium-growth investors expecting a liquidity event, not a permanent hold; (2) revenue ~$250M-$350M ARR, well above the ~$100M ceiling; (3) growth-over-profitability, with no public evidence of the durable profitability Banyan requires; (4) ~$15B reported valuation, orders of magnitude beyond a control acquisition Banyan would pursue. There is no realistic acquisition path for a bootstrapped-permanent-home acquirer, and no meaningful relationship value either given the scale gap. Recommend do-not-contact.</p></div></div>
+      
+        <div class="pitch dnc">
+          <div class="pitchhead">⛔ DO NOT CONTACT — no acquisition pitch appropriate</div>
+          <div class="pbody">No pitch drafted. ClickHouse is a VC-backed, ~$15B-valuation, $250M-$350M-ARR growth-stage data-infrastructure company on an IPO track — outside Banyan&#x27;s buy-and-hold-forever mandate on every axis (ownership, size, profitability posture, valuation). Banyan-branded permanent-home acquisition outreach is explicitly prohibited for a company of this profile, and there is no realistic acquisition or relationship path given the scale gap, so no acquisition pitch and no relationship note is warranted. If a growth-equity or strategic-investment mandate ever wants coverage of the real-time analytics category, this dossier documents the credible founder hooks (Alexey Milovidov&#x27;s Yandex.Metrica origin story; the &#x27;apps built on ClickHouse&#x27; acquisition pattern) — but that is a different mandate, not Banyan&#x27;s.</div>
+          <div class="pnote"><b>Rationale:</b> Deliberately omitted. Personalization hooks are recorded in the dossier for reference only; no message should be sent under a Banyan permanent-home banner to a company this size and stage.</div>
+        </div>
+    </article>
+    <article class="card dnc">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Clay (Clay Labs Inc.) — clay.com</h3>
+          <div class="meta">AI GTM / sales data · US · <a href="https://clay.com" target="_blank" rel="noopener">clay.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec dnc">DO NOT CONTACT</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.433</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.693</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Positioned at the intersection of sales intelligence, RevOps automation, AI SDR/outbound, and data enrichment. Strongest wedge is &#x27;GTM engineering&#x27; — technical RevOps/growth operators building repeatable revenue systems — a category Clay helped popularize. Claims 17k+ customers including ~80% of the Forbes AI 50 (OpenAI, Anthropic, Google, Stripe, Visa, Siemens, UPS). This is horizontal GTM infrastructure, not a vertical B2B niche — a key reason it is off Banyan&#x27;s thesis.</p></div><div class="dblk"><h4>Why not a target</h4><p>FAIL / not a Banyan target on every axis. (1) Ownership: venture-backed and venture-governed (Sequoia, CapitalG, a16z Perennial, Wellington, Meritech, First Round, Boldstart, etc.), not bootstrapped/founder-family-owned. (2) Size: crossed $100M ARR in Dec 2025 and is scaling fast — at or above the top of Banyan&#x27;s $2M-$100M revenue band. (3) Valuation: $7.1B post-money (Sep 2026 Series D) — orders of magnitude beyond a Banyan permanent-home deal. (4) Profile: horizontal GTM/RevOps orchestration tooling, not a vertical B2B niche leader; hypergrowth (2025 revenue 4x, NRR &gt;200%) rather than the stable, cash-generative maturity Banyan holds forever. (5) No public profitability evidence; ARR growth, not durability, is the story. The screen confirms this (growth_adj 0.693 vs banyan_adj 0.433). A permanent-home acquisition pitch would be off-thesis and would misread the company; do not send one.</p></div></div>
+      
+        <div class="pitch dnc">
+          <div class="pitchhead">⛔ DO NOT CONTACT — no acquisition pitch appropriate</div>
+          <div class="pbody">Kareem — the way Clay turned a broad no-code spreadsheet into the infrastructure behind the &#x27;GTM engineer&#x27; role has been an original build to watch, and Varun&#x27;s reverse-demo instinct of letting prospects drive the product live is a rare bit of category-making. I lead acquisitions at Banyan Software, where we permanently hold founder-owned vertical software companies — so Clay sits well outside what we acquire, and this isn&#x27;t a pitch. I mostly wanted to say the category work is impressive. If it&#x27;s ever useful to trade notes on GTM operating patterns, I&#x27;d welcome a 20-minute call, no agenda.</div>
+          <div class="pnote"><b>Rationale:</b> First line uses two public, non-financial hooks from the research: Clay&#x27;s evolution from a no-code spreadsheet into &#x27;GTM engineer&#x27; infrastructure, and co-founder Varun Anand&#x27;s public &#x27;reverse demo&#x27; approach. Leads with the company, quotes no revenue/valuation figures, implies no non-public information, and carries no false urgency.</div>
+        </div>
+    </article>
+    <article class="card dnc">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>Legora (formerly Leya) — legora.com, legal AI, Stockholm, Sweden</h3>
+          <div class="meta">Legal AI · Sweden · <a href="https://legora.com" target="_blank" rel="noopener">legora.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec dnc">DO NOT CONTACT</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.492</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.684</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Vertical AI for legal services (enterprise law firms + corporate legal departments). Positioned as the leading European-founded challenger in legal AI, generally seen as #2 globally behind Harvey (Harvey stronger in the US top-law-firm segment). Public traction: reported 1,000-1,500 customers across ~50 markets and fast global expansion.</p></div><div class="dblk"><h4>Why not a target</h4><p>DO-NOT-CONTACT for acquisition. The screen&#x27;s growth lean (banyan_adj 0.492, growth_adj 0.684) is confirmed and then some. Banyan targets profitable, founder/family-owned, high-recurring-revenue vertical B2B software niche leaders in the ~$2M-$100M revenue range, held permanently. Legora fails or exceeds every criterion: (1) OWNERSHIP — private but VC-backed through six rounds (Seed, A, B, C, D, D-extension) led by Benchmark, Redpoint, ICONIQ, General Catalyst, Bessemer, Accel, and NVentures/Nvidia; total funding reported ~$850M-$866M+. Not bootstrapped, not family-owned, no succession/exit-relief dynamic. (2) SIZE/VALUATION — ~$5.55B post-Series-D valuation with reported talks at $10B+; ARR ~$100M-$150M sits at or above Banyan&#x27;s revenue ceiling and the valuation is orders of magnitude beyond any buy-and-hold check. (3) PROFITABILITY — explicitly growth-first (40→650-700+ employees in ~12-18 months, target 1,500 by year-end 2026; office expansion; Wexler acquisition; heavy AI-inference and enterprise-implementation cost base); no public profitability and material margin/ARR-quality risk. This is a late-stage venture rocketship whose investor base is underwriting a continued-scaling or IPO/strategic-M&amp;A outcome, not a permanent quiet home. It is also unactionable for a growth mandate: at a $5.55B-$10B valuation it is beyond the reach of a growth-equity minority ticket of the kind Banyan-adjacent vehicles would write. Recommend do-not-contact for M&amp;A; an optional light, no-ask relationship note is drafted below purely for category-awareness optionality, not to be sent as any acquisition or investment approach.</p></div></div>
+      
+        <div class="pitch dnc">
+          <div class="pitchhead">⛔ DO NOT CONTACT — no acquisition pitch appropriate</div>
+          <div class="pbody">Max — the origin story of Legora starting with a junior associate spending a summer manually summarizing court cases, and you interviewing roughly 100 lawyers (and paying for their time) before building, is one of the more disciplined starts I&#x27;ve seen in legal AI. Watching the product move from point tools to an agentic legal operating system embedded in real matter workflows has been genuinely impressive from the outside. No ask here at all — just wanted to register admiration for how you&#x27;ve built with lawyers rather than at them, and to stay loosely in touch as the category keeps maturing. Congratulations to the whole team on the momentum.</div>
+          <div class="pnote"><b>Rationale:</b> First line uses two public, on-the-record details: (1) the widely reported founding anecdote of a junior associate manually summarizing court cases, and (2) Max Junestrand reportedly interviewing ~100 lawyers and paying for their time before building. Both are cited in Forbes and Legora&#x27;s own materials — no non-public information implied. Deliberately NO acquisition/investment framing, no financial figures, no CTA, and no urgency, consistent with a growth-thesis lead that is out of Banyan&#x27;s buy-and-hold mandate.</div>
+        </div>
+    </article>
+    <article class="card dnc">
+      <div class="cardhead">
+        <div class="ident">
+          <h3>LangChain (langchain.com)</h3>
+          <div class="meta">AI/ML infrastructure / LLM orchestration · US · <a href="https://langchain.com" target="_blank" rel="noopener">langchain.com</a></div>
+        </div>
+        <div class="badges">
+          <span class="thesis growth-thesis">growth-thesis</span>
+          <span class="rec dnc">DO NOT CONTACT</span>
+        </div>
+      </div>
+      <div class="scores">
+        <span title="Confidence-discounted Banyan buy-and-hold fit">Banyan-fit <b>0.460</b></span>
+        <span title="Confidence-discounted growth score">Growth <b>0.609</b></span>
+        <span class="withheld" title="Field-level enforcement: revenue/margin estimates are CONFIDENTIAL_FINANCIAL → Finance/Leadership only">💲 financials withheld from Sales</span>
+      </div>
+      <div class="dossier"><div class="dblk"><h4>Niche position</h4><p>Horizontal AI infrastructure — agent orchestration, eval/observability, deployment. A category leader in agent-framework developer mindshare: claims 350M+ monthly OSS downloads, 7K+ LangSmith customers, 5 of the Fortune 10, and 35% of the Fortune 500. Category is young and contested. This is horizontal, not the vertical B2B niche Banyan targets.</p></div><div class="dblk"><h4>Why not a target</h4><p>NOT A FIT for Banyan&#x27;s buy-and-hold-forever mandate. Disqualifiers: (1) VC-backed with top-tier investors and a fresh Oct-2025 $125M Series B — the opposite of a founder/family looking for a permanent home; (2) not yet profitable (SiliconANGLE at Series B); (3) $1.25B valuation vastly exceeds the ~$100M revenue/size band, and even at reported ~$12-16M ARR the ~78x multiple is strategic-buyer math, not buy-and-hold financial-buyer math; (4) horizontal LLMOps/agent-infrastructure, not a vertical B2B software niche leader. High developer mindshare makes it strategically interesting to a hyperscaler or platform acquirer, but none of that maps to Banyan&#x27;s model. Post-unicorn financing, the founders&#x27; revealed preference is independent growth. Recommendation: do-not-contact for the acquisition motion.</p></div></div>
+      
+        <div class="pitch dnc">
+          <div class="pitchhead">⛔ DO NOT CONTACT — no acquisition pitch appropriate</div>
+          <div class="pbody">Harrison — watching LangChain go from a late-2022 side project to agent infrastructure that roughly a third of the Fortune 500 now build on has been one of the more striking arcs in developer tooling. LangGraph and the eval and observability layer you&#x27;ve built around open-source adoption have set a real bar for what production agent engineering should look like. No agenda on my end — I follow the category closely and wanted to say the trajectory is genuinely impressive. If it&#x27;s ever useful to trade notes on where enterprise agent tooling is heading, I&#x27;m happy to grab 20 minutes. Congratulations on the momentum.</div>
+          <div class="pnote"><b>Rationale:</b> First line draws on the public origin story (Harrison Chase&#x27;s late-2022 side project growing into a platform used by ~35% of the Fortune 500) from the company&#x27;s own about/Series B materials. No non-public detail, no financial figures, no acquisition framing.</div>
+        </div>
+    </article>
+
+<footer>
+  Enforcement is real: every role view in the panel is computed by <code>banyan_screen.policy</code>
+  (<code>banyan_screen.policy</code>: 10 policy tests; full suite 46/46 passing). Narrative prose = public web research, Sales/BD-gated. Structured financial
+  estimates &amp; deal-intent = withheld from Sales (field classification). Banyan self-reported figures
+  ("120+ acquired, zero sold") are positioning, not third-party audited. Sources are public and cited per dossier.
+</footer>
+</div></body></html>

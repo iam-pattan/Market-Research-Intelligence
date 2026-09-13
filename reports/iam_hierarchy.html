@@ -1,0 +1,287 @@
+<title>IAM Hierarchy — M&A Platform</title>
+<style>
+:root{
+  --bg:#f6f8fa; --card:#fff; --ink:#1f2328; --muted:#57606a; --line:#d0d7de;
+  --t0:#1a7f37; --t1:#2da44e; --t2:#9a6700; --t3:#bc4c00; --t4:#cf222e;
+  --none:#ffebe9; --agg:#fff8c5; --own:#ddf4ff; --full:#dafbe1; --meta:#eaeef2;
+  --sev-c:#cf222e; --sev-h:#bc4c00; --sev-m:#9a6700; --sev-l:#6e7781;
+}
+*{box-sizing:border-box}
+body{font:14.5px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin:0;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 80px}
+h1{font-size:26px;margin:0 0 4px} h2{font-size:19px;margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:15px;margin:18px 0 8px}
+.sub{color:var(--muted);margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;gap:12px}
+.g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:820px){.g3,.g4,.g2{grid-template-columns:1fr}}
+.chip{display:inline-block;padding:2px 9px;border-radius:11px;font-size:12px;font-weight:600;color:#fff}
+.pill{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11.5px;font-weight:600;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:13px}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#f6f8fa;font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);position:sticky;top:0}
+code{background:#eff1f3;padding:1px 5px;border-radius:5px;font-size:12.5px}
+.tag{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--muted)}
+ul{margin:6px 0;padding-left:20px} li{margin:4px 0}
+details{margin:8px 0} summary{cursor:pointer;font-weight:600}
+.tree{font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.7;white-space:pre;overflow-x:auto}
+.note{font-size:12.5px;color:var(--muted)}
+.sev{font-weight:700} .sev.c{color:var(--sev-c)} .sev.h{color:var(--sev-h)} .sev.m{color:var(--sev-m)} .sev.l{color:var(--sev-l)}
+.kpi{display:flex;gap:18px;flex-wrap:wrap;margin:10px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 16px;min-width:120px}
+.kpi b{font-size:22px;display:block}
+nav a{color:#0969da;text-decoration:none;margin-right:14px;font-size:13px} nav{margin:10px 0 4px}
+.legend span{margin-right:10px;font-size:12px}
+</style>
+<div class="wrap">
+
+<h1>IAM Role Hierarchy — M&amp;A / Sales-Intelligence Platform</h1>
+<p class="sub">Conceptual, substrate-agnostic access-control model · RBAC ceiling + ABAC scope + dual-axis data classification · hardened by a 3-lens adversarial red-team. <span class="tag">v1 · 2026-09-12</span></p>
+
+<nav>
+<a href="#exec">Summary</a><a href="#class">Classification</a><a href="#attrs">Attributes</a><a href="#roles">Roles</a><a href="#matrix">Access matrix</a><a href="#principles">Principles</a><a href="#gov">Governance</a><a href="#policies">Policies</a><a href="#redteam">Red-team</a>
+</nav>
+
+<div class="kpi">
+  <div><b>5</b>classification tiers</div>
+  <div><b>15</b>roles (11 human + governance + 1 service)</div>
+  <div><b>8</b>data domains (D1–D8)</div>
+  <div><b>3</b>Critical findings fixed</div>
+  <div><b>24</b>revisions applied</div>
+</div>
+
+<h2 id="exec">Executive summary</h2>
+<div class="card">
+<p>A <b>deny-by-default</b>, two-axis model: <b>RBAC sets the capability ceiling</b> (what kind of data a job function may ever touch) and <b>ABAC predicates narrow to permitted rows/fields</b> (which vertical/region/account/deal). Sensitivity is a <b>dual axis</b> — confidentiality × regulatory category (none / Financial-SOX / PII-GDPR / MNPI-securities). Governance functions are mutually separated from each other and from data consumption.</p>
+<p>The red-team closed the model's most dangerous escalation paths. Two structural fixes dominate:</p>
+<ol>
+<li><b>MNPI is a property of the signal, not one domain.</b> Deal-intent-bearing fit-scores (D2) and active-deal dossiers (D3) are tagged <code>Restricted-MNPI</code> at write-time and inherit the full information-barrier — closing the sibling-domain side-channel that let un-cleared Finance/Sales infer non-public deal intent outside the wall.</li>
+<li><b>Single-party powers are broken up.</b> Classification downgrades, de-identification certs, and MNPI wall-crossings all require maker-checker with a second approver from the relevant control function (Compliance/MNPI, Finance/SOX, DPO/PII); no human self-approves or approves a same-family peer-admin grant. Person-level toxic-role aggregation is blocked by <b>mutually-exclusive role families</b> evaluated on <i>effective</i> permissions across a subject's whole role+attribute set.</li>
+</ol>
+</div>
+
+<h2 id="class">Data classification tiers</h2>
+<p class="legend">
+<span class="chip" style="background:var(--t0)">Public (post-scrub)</span>
+<span class="chip" style="background:var(--t1)">Internal</span>
+<span class="chip" style="background:var(--t2)">Confidential-Financial</span>
+<span class="chip" style="background:var(--t3)">Restricted-PII</span>
+<span class="chip" style="background:var(--t4)">Restricted-MNPI</span>
+</p>
+<table>
+<thead><tr><th>Tier</th><th>Regulatory</th><th>Domains</th><th>Core controls</th></tr></thead>
+<tbody>
+<tr><td><span class="chip" style="background:var(--t0)">Public</span></td><td>none</td><td>D7 pitches (after certified scrub)</td><td>Broadly readable only after maker-checker-certified scrub strips names/deal-context/financials; un-scrubbed = Internal.</td></tr>
+<tr><td><span class="chip" style="background:var(--t1)">Internal</span></td><td>none</td><td>D1 company records; D2 <i>non-deal-intent</i> signals; D8 de-identified aggregates</td><td>Readable per role; competitively scoped. D2 deal-intent fields escalate to MNPI at write-time.</td></tr>
+<tr><td><span class="chip" style="background:var(--t2)">Confidential-Financial</span></td><td>SOX</td><td>D3 dossiers (no active deal); D6 financials (revenue/TPV/margins)</td><td>Category grants, financial-column masking for non-Finance, free-text redaction, export step-up, SOX ITGC audit.</td></tr>
+<tr><td><span class="chip" style="background:var(--t3)">Restricted-PII</span></td><td>GDPR/CCPA</td><td>D4 contacts &amp; relationships</td><td>Masked/pseudonymized by default; unmask = step-up; hard residency predicate; DPO-owned DSAR/erasure; crypto-shreddable per-subject tokens.</td></tr>
+<tr><td><span class="chip" style="background:var(--t4)">Restricted-MNPI</span></td><td>securities</td><td>D5 deal/pipeline; D2 deal-intent fields; D3 active-deal dossiers</td><td>Ethical-wall overlay on top of ABAC: named deal-team need-to-know, Compliance-co-approved time-boxed wall-crossing, watch-list hard predicate, blackout gate, immutable per-access audit.</td></tr>
+</tbody>
+</table>
+
+<h2 id="attrs">ABAC attributes</h2>
+<div class="grid g3">
+<div class="card"><h3>Subject</h3><ul>
+<li>identity (IdP-authenticated)</li>
+<li>team / job function</li>
+<li><b>role_family</b> (mutually-exclusive — one consumer family per human)</li>
+<li>seniority / scope_width (drives ABAC width, not a role name)</li>
+<li>assigned_verticals (enumerated; wildcard forbidden for D3/D4/D5 ceilings)</li>
+<li>assigned_regions / assigned_accounts</li>
+<li>deal_team_memberships (enumerated deal ids)</li>
+<li>mnpi_clearance</li>
+<li>auth_strength (MFA / step-up)</li>
+<li>incentive_chain_for_deal (approver independence)</li>
+</ul></div>
+<div class="card"><h3>Resource</h3><ul>
+<li>data_domain (D1–D8)</li>
+<li>sensitivity_tier · regulatory_category</li>
+<li><b>mnpi_tag</b> (write-time; drives the wall for D2/D3)</li>
+<li>vertical / region / account (+ residency)</li>
+<li>owner (record / deal owner)</li>
+<li>granularity (raw-row / aggregate / field)</li>
+<li>derived_from (lineage → inherits MAX input tier)</li>
+<li>min_cell_count / bucket_membership_hash</li>
+<li>active_deal_flag · residency_zone</li>
+</ul></div>
+<div class="card"><h3>Environment</h3><ul>
+<li>access_time</li>
+<li><b>mnpi_blackout_window</b> (break-glass cannot override)</li>
+<li>device_posture / network</li>
+<li>operation_type (read / edit / <b>export</b> / <b>unmask-PII</b> — distinct step-ups)</li>
+<li>purpose_of_use (must resolve to a verifiable artifact)</li>
+<li>break_glass_flag (excludes MNPI)</li>
+<li>cell_size_satisfied (SDC service)</li>
+<li><b>effective_permission_set</b> (computed across all roles+attrs)</li>
+</ul></div>
+</div>
+
+<h2 id="roles">Role hierarchy</h2>
+<div class="card">
+<div class="tree">authenticated_user  (base — D1 identity + scrubbed D7 only; deny-by-default)
+│
+├─ Sales ─────────  sales_rep ──▶ sales_manager        (ABAC: own vertical/region/account; mnpi_tag=false)
+├─ Finance ───────  finance_analyst ──▶ finance_editor      (SOX: preparer ≠ reviewer)
+│                                   └─▶ finance_approver
+├─ Data Science ──  ds_analyst ──▶ ds_lead              (aggregate-only via SDC service)
+└─ Leadership ────  c_suite_leadership                  (enumerated active deals; D6 summaries only)
+
+GOVERNANCE — mutually separated, no business-data consumption (SoD):
+  compliance_officer   · owns MNPI wall + watch-list; co-approves wall-crossings
+  dpo_data_protection  · owns DSAR / erasure (dual-control); PII downgrade co-approver
+  data_steward         · PROPOSES classification (downgrades need 2nd approver)
+  access_admin         · grant/revoke (requester ≠ approver across all admins)
+  access_reviewer      · read-only audit + effective-permission recert
+  platform_admin       · substrate only; D1–D8 content DENIED (keys/WORM outside admin)
+
+NON-HUMAN:
+  etl_service_identity · least-privilege; reads D1 + non-MNPI D2 → writes D8 mart</div>
+</div>
+<details><summary>Role definitions (expand)</summary>
+<div class="grid g2" style="margin-top:10px">
+<div class="card"><h3>sales_rep → sales_manager</h3><p class="note">Rep reads D1, non-MNPI D2, non-active-deal D3, masked D4, and stage/owner of D5 <b>for own assigned accounts only</b> — no financials, no MNPI, no peers' pipelines. Manager adds a real capability: SoD-preserving deal-stage second-approval (approver ≠ owner, not in incentive chain). Seniority widens the row predicate, not the domain set.</p></div>
+<div class="card"><h3>finance_analyst / editor / approver</h3><p class="note">Analyst: read-only operational financials (D6) cross-territory + context. Editor: edits D6 rows but <b>cannot approve the rollup built from them</b>. Approver: certifies rollups after independent reconciliation, cannot edit the rows it certifies. Bulk export of raw D6 is a separate step-up.</p></div>
+<div class="card"><h3>ds_analyst → ds_lead</h3><p class="note">Reads <b>only</b> the SDC-governed de-identified aggregate layer (D8); zero grants on raw D4/D6; no row-level export. DS-aggregate family is mutually exclusive with Sales/Finance consumers to defeat aggregate-differencing. Lead may propose new views; dashboards publish only if no input carries an mnpi_tag.</p></div>
+<div class="card"><h3>c_suite_leadership</h3><p class="note">Reads D4 (masked; unmask = step-up) and MNPI-tagged D5/D2 on a <b>named, enumerated-deal need-to-know</b> (not row_scope=full), plus financial <b>summaries</b> (not raw D6). Purpose-bound, blackout-gated, heightened audit. Explicitly not a super-role.</p></div>
+<div class="card"><h3>compliance_officer &amp; dpo</h3><p class="note">Compliance owns the MNPI wall, watch-list (hard predicate), and co-approves every wall-crossing (the securities leg, distinct from IT). DPO owns DSAR/erasure under dual control, residency/lawful-basis, and token crypto-shred so erasure propagates downstream.</p></div>
+<div class="card"><h3>platform_admin &amp; etl_service_identity</h3><p class="note">Platform-admin SoD deny is <b>technically enforced</b> (keys in HSM outside admin control, audit on external WORM, masked diagnostic view; RLS-bypass paths alarmed). ETL identity is enumerated, least-privilege, rotated, fully audited, reads non-MNPI fields only.</p></div>
+</div>
+</details>
+
+<h2 id="matrix">Role × data-domain access matrix</h2>
+<p class="legend">row_scope:
+<span class="pill" style="background:var(--none)">none</span>
+<span class="pill" style="background:var(--agg)">aggregate</span>
+<span class="pill" style="background:var(--own)">own-scope</span>
+<span class="pill" style="background:var(--full)">full</span>
+<span class="pill" style="background:var(--meta)">metadata</span>
+</p>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Role</th><th>Data domain</th><th>Row scope</th><th>Field access</th></tr></thead>
+<tbody>
+<tr><td>authenticated_user</td><td>D1 company records</td><td style="background:var(--full)">full</td><td>identity/vertical/region only</td></tr>
+<tr><td>authenticated_user</td><td>D7 pitches (scrubbed)</td><td style="background:var(--full)">full</td><td>full</td></tr>
+<tr><td>authenticated_user</td><td>D2–D6, D8</td><td style="background:var(--none)">none</td><td>denied by default</td></tr>
+<tr><td>sales_rep</td><td>D1 company records</td><td style="background:var(--own)">own-scope</td><td>full (no wildcard)</td></tr>
+<tr><td>sales_rep</td><td>D2 signals (non-MNPI)</td><td style="background:var(--own)">own-scope</td><td>read non-MNPI fields; MNPI denied; fit-score edit denied (SoD)</td></tr>
+<tr><td>sales_rep</td><td>D3 dossiers (non-active)</td><td style="background:var(--own)">own-scope</td><td>read; financial redaction; quarantine on MNPI uncertainty</td></tr>
+<tr><td>sales_rep</td><td>D4 contacts</td><td style="background:var(--own)">own-scope</td><td>masked by default; unmask = step-up (deal artifact)</td></tr>
+<tr><td>sales_rep</td><td>D5 stage/owner (lower)</td><td style="background:var(--own)">own-scope</td><td>full on stage/owner; peers' pipelines NOT visible</td></tr>
+<tr><td>sales_rep</td><td>D5 impact/growth + MNPI D2</td><td style="background:var(--none)">none</td><td>denied unless enumerated deal-team (wall)</td></tr>
+<tr><td>sales_rep</td><td>D6 financials</td><td style="background:var(--none)">none</td><td>denied</td></tr>
+<tr><td>sales_manager</td><td>D1/D2/D3/D4-masked/D5-lower/D7</td><td style="background:var(--own)">team region</td><td>as rep; may second-approve deal stage when independent of deal</td></tr>
+<tr><td>finance_analyst</td><td>D6 financials</td><td style="background:var(--full)">full</td><td>read (cross-territory)</td></tr>
+<tr><td>finance_analyst</td><td>D1 / D2 (non-MNPI)</td><td style="background:var(--full)">full</td><td>read; MNPI-tagged D2 DENIED (closes sibling leak)</td></tr>
+<tr><td>finance_analyst</td><td>D4 / D5-MNPI</td><td style="background:var(--none)">none</td><td>denied unless deal-team-added</td></tr>
+<tr><td>finance_editor</td><td>D6 financials</td><td style="background:var(--full)">full</td><td>edit; cannot approve rollup (SOX); export = step-up</td></tr>
+<tr><td>finance_approver</td><td>D6 rollups / summaries</td><td style="background:var(--full)">full</td><td>approve/certify after independent reconciliation; cannot edit certified rows</td></tr>
+<tr><td>finance (bulk export)</td><td>D6 export</td><td style="background:var(--meta)">step-up</td><td>distinct op: throttled, justified, DLP, threshold approval, pre-alert</td></tr>
+<tr><td>ds_analyst</td><td>D8 aggregate mart</td><td style="background:var(--agg)">aggregate</td><td>safe columns; SDC: k≥5 + dominance + suppression + effective-k</td></tr>
+<tr><td>ds_analyst</td><td>D4/D6 raw · D5/MNPI</td><td style="background:var(--none)">none</td><td>denied; MNPI signals excluded from mart entirely</td></tr>
+<tr><td>ds_lead</td><td>D8 + view definition</td><td style="background:var(--agg)">aggregate</td><td>publish only if no mnpi_tag input; new views via SDC cert + steward</td></tr>
+<tr><td>c_suite_leadership</td><td>D4 contacts</td><td style="background:var(--own)">enumerated deals</td><td>masked; per-record unmask = step-up; residency enforced</td></tr>
+<tr><td>c_suite_leadership</td><td>D5 impact/growth + MNPI D2</td><td style="background:var(--own)">enumerated deal-team</td><td>read within wall; blackout-gated; watch-list-clear</td></tr>
+<tr><td>c_suite_leadership</td><td>D6 financials</td><td style="background:var(--agg)">aggregate</td><td>summaries only; raw operational denied</td></tr>
+<tr><td>c_suite_leadership</td><td>D8 aggregates</td><td style="background:var(--full)">full</td><td>full on published dashboards</td></tr>
+<tr><td>compliance_officer</td><td>MNPI wall + watch-list</td><td style="background:var(--meta)">metadata</td><td>co-approve wall-crossings; curate watch-list; MNPI downgrade 2nd-approver</td></tr>
+<tr><td>dpo_data_protection</td><td>D4 PII governance</td><td style="background:var(--meta)">DSAR-scoped</td><td>execute erasure (dual-control); PII downgrade 2nd-approver; token lineage</td></tr>
+<tr><td>platform_admin</td><td>D1–D8 content</td><td style="background:var(--none)">none</td><td>DENIED (keys/WORM outside admin); masked diagnostic view</td></tr>
+<tr><td>data_steward</td><td>classification metadata</td><td style="background:var(--meta)">metadata</td><td>propose tags; downgrades/de-id/retag need 2nd approver</td></tr>
+<tr><td>access_admin</td><td>entitlements</td><td style="background:var(--meta)">grants</td><td>grant/revoke; requester ≠ approver; deal-team adds need compliance co-approval</td></tr>
+<tr><td>access_reviewer_auditor</td><td>audit + entitlements</td><td style="background:var(--full)">full (logs)</td><td>read-only; NONE on D1–D8 business data</td></tr>
+<tr><td>etl_service_identity</td><td>D1 + non-MNPI D2 → D8</td><td style="background:var(--full)">source read (logged)</td><td>read non-MNPI; write mart under SDC; no interactive login</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="principles">Principles</h2>
+<div class="card"><ol>
+<li><b>Deny-by-default / fail-closed</b> — any unmatched request, new domain/column, or null scope → no access; new users sit in an alarmed provisioning-pending state.</li>
+<li><b>Least privilege + need-to-know</b> — even C-suite D4/D5 is predicate-scoped to enumerated active deals, never a de-facto super-role.</li>
+<li><b>Two-axis WHAT vs WHICH ROWS</b> — RBAC sets the ceiling; ABAC narrows rows. Scope &amp; seniority live in attributes, never role names.</li>
+<li><b>Effective-permission evaluation + mutually-exclusive role families</b> — authz &amp; recert computed across a subject's full role+attribute set; toxic role-pairs blocked pre-grant and at recert.</li>
+<li><b>MNPI is a property of the signal, not a domain</b> — deal-intent D2/D3 tagged MNPI at write-time; excluded from the DS mart entirely (signal lives in the score value, not a flag).</li>
+<li><b>Dual-control on classification</b> — every downgrade / de-id cert / threshold change / retag needs an independent second approver from the relevant control function.</li>
+<li><b>SoD across deal AND financial lifecycle</b> — block toxic combos (edit-fit-score+advance-deal; edit-financials+approve-rollup; own/comped-on-deal+approve-that-deal); admin, classification, MNPI-wall, PII, platform-ops, and audit each separated.</li>
+<li><b>MNPI information barriers, first-class</b> — walled to named deal team; Compliance-co-approved time-boxed wall-crossing; watch-list &amp; blackout as hard gates break-glass can't override.</li>
+<li><b>Minimum aggregation via a dedicated SDC layer</b> — k≥5, dominance/p-percent, complementary suppression, frozen buckets, effective-k inflation — enforced by a statistical-disclosure-control service, not row predicates.</li>
+<li><b>Two named enforcement layers</b> — (a) RLS/attribute-predicate engine for D1–D6 rows/fields; (b) separate SDC service for aggregate/query-set control; direct-datastore bypass alarmed.</li>
+<li><b>Export &amp; PII-unmask are distinct step-ups</b> — own grant, throttle, justification, DLP, threshold approval; dashboards re-classified to max input tier before sharing.</li>
+<li><b>Attribute integrity is in the trust boundary</b> — territory/deal-team assignment is privileged, SoD-controlled, requester ≠ approver; wildcard scope forbidden for D3/D4/D5 ceilings; no self-widening.</li>
+<li><b>Purpose limitation bound to evidence</b> — purpose_of_use must resolve to a verifiable artifact at decision time; self-asserted purpose is never the control.</li>
+<li><b>GDPR by construction</b> — masked-by-default PII, hard residency predicate, DPO-owned DSAR/erasure under dual control, per-subject crypto-shreddable tokens (Art. 17).</li>
+<li><b>Technically-enforced platform SoD</b> — keys outside platform_admin, PIP administration separated, audit on external WORM.</li>
+<li><b>Governed non-human principals</b> — the ETL/mart identity is enumerated, least-privilege, rotated, audited, in-scope for recert.</li>
+<li><b>Operability preserves the controls</b> — small-cohort DS appeal path, pre-authorized deal-team templates with SLA, minimum-viable-staffing compensating controls, provisioning-latency metrics.</li>
+</ol></div>
+
+<h2 id="gov">Governance</h2>
+<div class="grid g2">
+<div class="card"><h3>Provisioning</h3><p class="note">Group-based via corporate IdP → RBAC roles + ABAC attributes pushed to the authoritative PIP. One consumer family per human (enforced at grant). All grants request→approve→log via access_admin, requester ≠ approver across all admins, independent business-owner approval for territory, Compliance co-approval for every deal-team/MNPI wall-crossing. Unresolved attributes → alarmed provisioning-pending (deny + SLA). Same-day joiner/mover/leaver.</p></div>
+<div class="card"><h3>Access reviews</h3><p class="note">Quarterly recertification (MNPI/PII/financials first) on <b>effective</b> permissions across each subject's full role+attribute set; managers re-confirm scope + effective reachable company counts; toxic role-pair detection every identity; SOX recert on D6 editor/approver split; DPO GDPR retention/residency; Compliance re-attests deal rosters + watch-list. Exceptions are named, time-boxed, auto-expiring entitlements visible to a "who can see company X" simulator.</p></div>
+<div class="card"><h3>Audit</h3><p class="note">Immutable, tamper-evident logging on external WORM the platform_admin cannot alter — every domain, attributable, timestamped, recording purpose_of_use <b>and its backing artifact</b>. Heightened for MNPI/PII. Every classification change, wall-crossing, watch-list access, bulk export, PII unmask, cross-territory read, RLS-bypass attempt, and ETL source read logged and (where sensitive) real-time alerted. One stream serves SOX ITGC, GDPR Art. 30, insider-trading surveillance.</p></div>
+<div class="card"><h3>Break-glass</h3><p class="note">Independently-approved-to-engage, alarmed, time-boxed, domain-bounded. <b>Excludes Restricted-MNPI</b> (or requires in-line Compliance approver) and <b>cannot override an active blackout window or wall-crossing</b>. Distinct env attribute logged to WORM with synchronous alerting; auto-expires; recertified next review. Frequency tracked as a boundary-health signal.</p></div>
+</div>
+
+<h2 id="policies">Example policies (plain language)</h2>
+<div class="card"><ul>
+<li>A <b>finance_analyst</b> reading D2 gets only <code>mnpi_tag=false</code> fields; any deal-intent fit-score is denied and walled — the sibling-domain path that let un-cleared Finance infer deal intent is closed.</li>
+<li>A <b>data_steward</b> downgrading a D6 row or certifying de-identification has no effect until an independent second approver (finance_approver / compliance_officer / DPO) signs off; the change and approval hit the immutable stream and a downgrade alert fires.</li>
+<li>No single human can hold <b>finance + leadership</b> or <b>finance + sales-leader</b>: role families are mutually exclusive and the PDP evaluates effective permissions, so raw-D6 + named-D4-PII + MNPI can never accumulate via role stacking.</li>
+<li>A user who is both <b>DS-aggregate and Sales</b> is refused — structurally preventing the differencing attack (subtract 5 own-territory raw scores from a k=6 aggregate to isolate the 6th).</li>
+<li>A <b>sales_rep</b> declaring <code>purpose=deal-execution</code> to unmask D4 PII is denied unless that purpose resolves to an enumerated open deal they're on; unmask is then a per-record, independently-approved, logged step-up.</li>
+<li><b>access_admin</b> cannot set <code>assigned_verticals='*'</code> on a sales-leader: wildcard/parent scope is forbidden for any role whose ceiling includes D3/D4/D5.</li>
+<li>Adding anyone to a deal team requires <b>compliance_officer co-approval</b> plus access_admin execution, requester ≠ approver, blackout- &amp; watch-list-checked, time-boxed, alerted — IT alone can never grant MNPI access.</li>
+<li><b>break-glass</b> cannot reach Restricted-MNPI or override an active blackout window; an emergency MNPI need requires an in-line Compliance approver.</li>
+<li><b>platform_admin</b> operating the datastore still cannot read D1–D8: sensitive domains encrypted with keys outside admin control, audit on WORM; routine debugging uses a masked diagnostic view; any RLS-bypass read alarms.</li>
+</ul></div>
+
+<h2 id="redteam">Adversarial red-team — audit trail</h2>
+<p class="sub">Three independent lenses attacked the synthesized model; every Critical/High was fixed in the final. Severity: <span class="sev c">Critical</span> · <span class="sev h">High</span> · <span class="sev m">Medium</span> · <span class="sev l">Low</span></p>
+
+<h3>Critical findings (all fixed)</h3>
+<div class="card"><ul>
+<li><span class="sev c">Critical</span> — <b>D2 fit-scores were an unwalled MNPI side-channel.</b> Finance/Sales could infer non-public deal intent from scores outside the wall, un-audited. → <i>Fixed: write-time <code>mnpi_tag</code>, D2/D3 inherit the MNPI overlay, deal-intent signal excluded from the DS mart.</i></li>
+<li><span class="sev c">Critical</span> — <b>data_steward was an unchecked single-party root of trust</b> for every ABAC decision (could silently downgrade MNPI/financial tiers). → <i>Fixed: maker-checker on all downgrades/de-id/retag; propose ≠ approve; real-time downgrade alerts.</i></li>
+<li><span class="sev c">Critical</span> — <b>No person-level role mutual-exclusion</b> — toxic role aggregation defeated SoD (finance_lead + c_suite = near-total reach). → <i>Fixed: mutually-exclusive role families; authz/recert on effective permissions; toxic-pair detection.</i></li>
+</ul></div>
+
+<details><summary>All findings by lens (expand — 3 Critical, 12 High, 8 Medium, 1 Low across the three lenses)</summary>
+<div class="card">
+<h3>Lens 1 — Data-leakage &amp; privilege escalation</h3>
+<ul class="note">
+<li>D2 MNPI side-channel (C) · data_steward single-party trust (C) · no role mutual-exclusion (C)</li>
+<li>ds_analyst+sales_rep aggregate differencing (H) · self-declared purpose_of_use non-enforcing (H) · wildcard scope → enterprise PII reader (H) · access_admin silent scope escalation of confederates (H) · finance_lead bulk raw-D6 export uncontrolled (H) · ungoverned ETL super-principal (H)</li>
+<li>Confidential financials in D3 free-text leak to sales-leader (M) · break-glass unbounded vs MNPI/blackout (M) · c_suite D4 full enterprise PII on self-asserted need (M)</li>
+</ul>
+<h3>Lens 2 — Separation-of-duties &amp; regulatory (MNPI/SOX/GDPR)</h3>
+<ul class="note">
+<li>MNPI via D2 outside the barrier (C) · deal-team wall-crossing granted by IT with no compliance leg (C) · data_steward declassification without dual-control (C)</li>
+<li>No SOX maker-checker on financials (H) · platform_admin SoD only application-layer (H) · purpose_of_use unverified (H) · GDPR minimization inverted for leadership (H) · no DSAR/erasure owner + stable tokens block erasure (H) · unspecified ETL identity = SOX ITGC gap (H) · D3 dossiers MNPI-capable but only scanned (H)</li>
+<li>break-glass no MNPI/blackout wall (M) · weak deal-stage approval independence (M) · dashboards surface MNPI-in-signal to Internal (M)</li>
+</ul>
+<h3>Lens 3 — Operational feasibility</h3>
+<ul class="note">
+<li>Single RLS layer can't deliver aggregate/k-anonymity guarantees (H) · aggregate-only DS suppresses the small-cohort insights that are the mission (H) · steward can't classify what it can't read (H)</li>
+<li>Seniority-as-roles = role explosion vs own principle (M) · prose per-user exceptions erode RBAC (M) · self-declared purpose neither enforceable nor free (M) · fail-closed null-attribute = onboarding friction (M) · deal-team churn vs approval latency on critical path (M) · platform_admin zero-data forces break-glass for ops (M) · manager second-approval SoD gap (M)</li>
+<li>Four separated governance identities presume headcount (L)</li>
+</ul>
+</div>
+</details>
+
+<h3>Residual risks (accepted / monitored)</h3>
+<div class="card"><ul class="note">
+<li>Write-time MNPI tagging is only as good as the classifier — a mis-tagged deal-intent signal escapes the wall (detection gap; mitigate with red-team sampling + tag-on-uncertainty).</li>
+<li>Aggregate re-identification is bounded, not eliminated — the small-cohort appeal path deliberately reopens some surface as a per-query-audited accepted risk.</li>
+<li>purpose-bound-to-artifact raises the bar but doesn't prove intent — relies on sampled after-the-fact audit.</li>
+<li>Governance depends on genuinely independent, staffed control functions; thin-headcount compensating controls reduce but don't fully replace four-eyes.</li>
+<li>Collusion across distinct control functions remains possible — controls force a conspiracy; residual detection is immutable audit + approval-pattern surveillance.</li>
+<li>Crypto-shred erasure assumes complete token lineage — off-platform copies remain an Art. 17 residual.</li>
+<li>Technically-enforced platform SoD shifts trust to key/audit custodians and their own SoD.</li>
+<li>Field-level dual-classification of D2/D3 increases complexity — mislabeling is now a more likely failure mode (maker-checker + audit reduce, not remove).</li>
+</ul></div>
+
+<p class="note" style="margin-top:30px">Generated from a 9-agent workflow (4 research → synthesis → 3-lens red-team → finalize). Conceptual model — map to a concrete enforcement substrate (BigQuery RLS + policy tags, cloud IAM + IdP groups, or an OPA/Cedar policy engine) as a follow-on.</p>
+</div>
