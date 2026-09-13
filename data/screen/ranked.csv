@@ -1,0 +1,251 @@
+rank,best_thesis,best_adj,name,domain,vertical,region,banyan_tier,banyan_adj,banyan_conf,growth_tier,growth_adj,growth_conf,already_acquired_or_public
+1,growth,0.743,Harvey,harvey.ai,Legal AI,US,C,0.525,0.545,A,0.743,0.642,False
+2,growth,0.729,Abridge,abridge.com,Clinical documentation AI,US,C,0.513,0.530,A,0.729,0.620,False
+3,growth,0.695,Sierra,sierra.ai,Customer service AI agents,US,C,0.425,0.500,B,0.695,0.585,False
+4,growth,0.694,ClickHouse,clickhouse.com,Data infrastructure / OLAP database,US,C,0.448,0.493,B,0.694,0.568,False
+5,growth,0.693,Clay,clay.com,AI GTM / sales data,US,C,0.433,0.505,B,0.693,0.580,False
+6,growth,0.689,AlphaSense,alpha-sense.com,Market intelligence AI,US,C,0.468,0.562,B,0.689,0.620,False
+7,growth,0.684,Legora,legora.com,Legal AI,Sweden,C,0.492,0.515,B,0.684,0.595,False
+8,growth,0.669,Chainguard,chainguard.dev,Software supply-chain security,US,C,0.519,0.453,B,0.669,0.543,False
+9,growth,0.667,Vanta,vanta.com,Security & compliance automation,US,C,0.432,0.450,B,0.667,0.525,False
+10,growth,0.665,Grafana Labs,grafana.com,Observability / monitoring,US,C,0.462,0.497,B,0.665,0.547,False
+11,growth,0.656,Linear,linear.app,Developer workflow / issue tracking,US,C,0.518,0.527,B,0.656,0.557,False
+12,growth,0.656,Rogo,rogo.com,Finance / investment banking AI,US,C,0.495,0.450,B,0.656,0.530,False
+13,growth,0.646,EvenUp,evenuplaw.com,Legal / personal injury,US,C,0.490,0.507,B,0.646,0.565,False
+14,growth,0.645,Modal,modal.com,AI/ML infrastructure / serverless compute,US,rejected,0.429,0.440,B,0.645,0.505,False
+15,growth,0.636,Decagon,decagon.ai,Customer support AI agents,US,C,0.427,0.445,B,0.636,0.527,False
+16,growth,0.634,Ambience Healthcare,ambiencehealthcare.com,Clinical AI,US,C,0.480,0.428,B,0.634,0.518,False
+17,banyan,0.631,HawkSoft,hawksoft.com,Insurance agency management,US,B,0.631,0.520,C,0.440,0.430,False
+18,growth,0.613,Tennr,tennr.com,Healthcare referrals AI,US,C,0.468,0.428,B,0.613,0.510,False
+19,banyan,0.613,Rentec Direct,rentecdirect.com,Property management software,US,B,0.613,0.560,C,0.406,0.450,False
+20,growth,0.611,Aikido Security,aikido.dev,Security / unified AppSec platform (SMB-focused),Belgium,rejected,0.469,0.440,B,0.611,0.480,False
+21,growth,0.609,LangChain,langchain.com,AI/ML infrastructure / LLM orchestration,US,rejected,0.460,0.440,B,0.609,0.480,False
+22,banyan,0.607,Infinite Campus,infinitecampus.com,K-12 student information system / district administration,US,B,0.607,0.428,C,0.457,0.385,False
+23,growth,0.606,Hippocratic AI,hippocraticai.com,Healthcare agent AI,US,C,0.464,0.418,B,0.606,0.497,False
+24,growth,0.606,Tailscale,tailscale.com,Networking / security infrastructure (WireGuard VPN),Canada,C,0.530,0.505,B,0.606,0.515,False
+25,growth,0.605,Aiven,aiven.io,Managed open-source data infrastructure,Finland,C,0.410,0.428,B,0.605,0.498,False
+26,growth,0.601,Astronomer,astronomer.io,Data orchestration / managed Airflow,US,C,0.451,0.455,B,0.601,0.508,False
+27,banyan,0.600,Jane App,jane.app,Health/wellness practice management,Canada,B,0.600,0.500,B,0.555,0.447,False
+28,banyan,0.600,Skyward,skyward.com,K-12 SIS / school ERP,US,B,0.600,0.428,C,0.441,0.385,False
+29,banyan,0.597,ClassLink,classlink.com,K-12 identity / single sign-on / rostering,US,B,0.597,0.432,C,0.468,0.385,False
+30,growth,0.596,Nabla,nabla.com,Clinical assistant AI,France / US,C,0.489,0.475,B,0.596,0.527,False
+31,growth,0.595,Temporal,temporal.io,Workflow orchestration / durable execution,US,C,0.449,0.428,B,0.595,0.483,False
+32,banyan,0.595,Schedulefly,schedulefly.com,Restaurant scheduling,US,B,0.595,0.428,C,0.354,0.367,False
+33,growth,0.595,Freed,getfreed.ai,Medical scribe AI,US,C,0.489,0.475,B,0.595,0.520,False
+34,growth,0.594,Pinecone,pinecone.io,AI/ML infrastructure / vector database,US,rejected,0.476,0.460,B,0.594,0.475,False
+35,banyan,0.593,Edupoint,edupoint.com,K-12 SIS / LMS / administration (Synergy),US,B,0.593,0.432,C,0.449,0.385,False
+36,growth,0.590,Render,render.com,Cloud application hosting / PaaS infrastructure,US,rejected,0.474,0.475,B,0.590,0.490,False
+37,banyan,0.589,Corelation,corelationinc.com,Credit-union core banking,US,B,0.589,0.455,C,0.465,0.410,False
+38,growth,0.589,WorkOS,workos.com,Developer tools / enterprise auth infrastructure,US,C,0.524,0.495,B,0.589,0.500,False
+39,growth,0.588,Rad AI,radai.com,Radiology workflow AI,US,C,0.482,0.433,B,0.588,0.503,False
+40,growth,0.588,Socket,socket.dev,Open-source supply-chain security,US,C,0.459,0.385,B,0.588,0.465,False
+41,growth,0.587,BuildOps,buildops.com,Commercial contractor FSM,USA,rejected,0.489,0.460,B,0.587,0.450,False
+42,banyan,0.586,OwnerRez,ownerrez.com,Short-term rental PMS,US,B,0.586,0.495,C,0.386,0.415,False
+43,growth,0.584,Tines,tines.com,Security / no-code automation & orchestration (SOAR),Ireland,C,0.486,0.455,B,0.584,0.470,False
+44,growth,0.582,Semgrep,semgrep.dev,Security / static analysis (SAST),US,C,0.485,0.445,B,0.582,0.470,False
+45,growth,0.582,Hebbia,hebbia.com,Finance / legal document AI,US,C,0.549,0.500,B,0.582,0.508,False
+46,growth,0.582,Sardine,sardine.ai,Fintech infrastructure / fraud & compliance,US,C,0.464,0.425,B,0.582,0.450,False
+47,banyan,0.581,QT9 Software,qt9software.com,QMS + ERP for regulated manufacturers,US,B,0.581,0.458,C,0.433,0.398,False
+48,banyan,0.581,Rent Manager / LCS,rentmanager.com,Property management software,US,B,0.581,0.535,C,0.431,0.450,False
+49,growth,0.578,Clerk,clerk.com,Auth / developer identity platform,US,C,0.408,0.398,B,0.578,0.468,False
+50,growth,0.578,DoorLoop,doorloop.com,Property management software,US,C,0.474,0.510,B,0.578,0.510,False
+51,growth,0.578,Eudia,eudia.com,Corporate legal AI,US,C,0.466,0.445,B,0.578,0.500,False
+52,growth,0.577,Hostaway,hostaway.com,Short-term rental PMS,Canada,C,0.466,0.450,B,0.577,0.490,False
+53,growth,0.577,Railway,railway.com,Cloud application hosting / deployment infrastructure,US,rejected,0.448,0.440,B,0.577,0.460,False
+54,growth,0.576,Endor Labs,endorlabs.com,Security / software supply chain & SCA,US,rejected,0.456,0.410,B,0.576,0.445,False
+55,growth,0.576,Retool,retool.com,Developer tools / internal app builder,US,C,0.475,0.515,B,0.576,0.500,False
+56,growth,0.575,Spellbook,spellbook.com,Contract legal AI,Canada,C,0.474,0.430,B,0.575,0.492,False
+57,growth,0.573,Turbopuffer,turbopuffer.com,AI/ML infrastructure / vector + search database,Canada,C,0.504,0.390,B,0.573,0.420,False
+58,banyan,0.572,Aeries Software,aeries.com,K-12 student information system,US,B,0.572,0.418,C,0.423,0.380,False
+59,banyan,0.572,Advyzon,advyzon.com,Wealth/advisor all-in-one platform,US,B,0.572,0.430,C,0.438,0.370,False
+60,growth,0.572,Vantaca,vantaca.com,HOA/community management software,US,C,0.502,0.480,B,0.572,0.495,False
+61,banyan,0.569,Rediker Software,rediker.com,School administration / SIS,US,B,0.569,0.418,C,0.397,0.380,False
+62,growth,0.569,Alloy,alloy.com,Fintech infrastructure / identity & fraud decisioning,US,C,0.473,0.425,B,0.569,0.450,False
+63,growth,0.568,Docker,docker.com,Developer tools / containers,US,C,0.440,0.480,B,0.568,0.510,False
+64,growth,0.568,Panther Labs,panther.com,Security / cloud-native SIEM & detection,US,C,0.487,0.455,B,0.568,0.470,False
+65,growth,0.567,Trunk Tools,trunktools.com,Construction AI agents,US,C,0.454,0.408,B,0.567,0.473,False
+66,growth,0.566,Buildots,buildots.com,Construction progress AI,Israel / UK,C,0.482,0.433,B,0.566,0.495,False
+67,banyan,0.566,Cetec ERP,cetecerp.com,Manufacturing ERP/MRP/QMS,US,B,0.566,0.455,C,0.427,0.388,False
+68,growth,0.566,Modern Treasury,moderntreasury.com,Fintech infrastructure / payment operations,US,C,0.470,0.415,B,0.566,0.450,False
+69,growth,0.564,PermitFlow,permitflow.com,Construction permitting AI,US,C,0.466,0.423,B,0.564,0.470,False
+70,growth,0.562,7shifts,7shifts.com,Restaurant workforce management,Canada,C,0.522,0.510,B,0.562,0.495,False
+71,growth,0.562,Weaviate,weaviate.io,Vector database / AI infra,Netherlands,C,0.412,0.385,B,0.562,0.445,False
+72,growth,0.560,MotherDuck,motherduck.com,Data infrastructure / cloud analytics (DuckDB),US,rejected,0.457,0.435,B,0.560,0.465,False
+73,banyan,0.560,Vagaro,vagaro.com,Beauty/wellness SaaS,US,B,0.560,0.498,B,0.531,0.465,False
+74,growth,0.560,Limble CMMS,limblecmms.com,CMMS/EAM,US,rejected,0.472,0.468,B,0.560,0.487,False
+75,banyan,0.558,Cliniko,cliniko.com,Allied-health practice management,Australia,B,0.558,0.395,C,0.375,0.340,False
+76,banyan,0.558,Global Shop Solutions,globalshopsolutions.com,Manufacturing ERP,US,B,0.558,0.450,C,0.409,0.375,False
+77,growth,0.558,Airbyte,airbyte.com,Data integration / ELT,US,C,0.424,0.418,B,0.558,0.463,False
+78,growth,0.557,Incident IQ,incidentiq.com,K-12 IT asset / helpdesk / workflow management,US,C,0.532,0.458,B,0.557,0.458,False
+79,banyan,0.556,PayHOA,payhoa.com,HOA/community management software,US,B,0.556,0.550,B,0.530,0.515,False
+80,growth,0.555,Unit,unit.co,Fintech infrastructure / banking-as-a-service,US,rejected,0.437,0.405,B,0.555,0.445,False
+81,banyan,0.554,Populi,populi.co,Higher-ed SIS / LMS (small colleges),US,B,0.554,0.385,C,0.394,0.365,False
+82,banyan,0.554,TherapyNotes,therapynotes.com,Behavioral-health EHR,United States,B,0.554,0.443,B,0.505,0.407,False
+83,growth,0.553,LoanPro,loanpro.io,Loan servicing / lending core,US,C,0.540,0.510,B,0.553,0.515,False
+84,growth,0.553,Lithic,lithic.com,Fintech infrastructure / card issuing,US,C,0.454,0.420,B,0.553,0.450,False
+85,growth,0.552,11x,11x.ai,AI SDR / sales agents,US / UK,C,0.398,0.403,B,0.552,0.473,False
+86,banyan,0.551,Gradelink,gradelink.com,K-12 SIS / school administration,US,B,0.551,0.395,C,0.400,0.365,False
+87,growth,0.551,Katana,katanamrp.com,Inventory/MRP for SMB manufacturers,Estonia,rejected,0.484,0.463,B,0.551,0.485,False
+88,growth,0.551,Alvys,alvys.com,TMS for carriers/brokers,US,C,0.441,0.435,B,0.551,0.470,False
+89,banyan,0.550,Phorest,phorest.com,Salon/spa management,Ireland,C,0.550,0.483,B,0.531,0.465,False
+90,growth,0.548,Norm Ai,norm.ai,Regulatory / compliance AI,US,C,0.445,0.403,B,0.548,0.465,False
+91,growth,0.548,MarginEdge,marginedge.com,Restaurant back-office/AP,US,C,0.485,0.460,B,0.548,0.465,False
+92,banyan,0.547,Pagefreezer,pagefreezer.com,Public records / web & social archiving / compliance,Canada,C,0.547,0.390,C,0.441,0.372,False
+93,banyan,0.547,BS&A Software,bsasoftware.com,Local government ERP / financial / payments,US,C,0.547,0.425,C,0.484,0.410,False
+94,growth,0.547,DebtBook,debtbook.com,Government / nonprofit finance & debt compliance,US,C,0.530,0.467,B,0.547,0.465,False
+95,banyan,0.547,ServiceM8,servicem8.com,Trades FSM,Australia,C,0.547,0.420,C,0.402,0.385,False
+96,banyan,0.547,RMS Cloud,rmscloud.com,Hotel/property PMS,Australia,C,0.547,0.430,C,0.402,0.388,False
+97,growth,0.546,Gradient AI,gradientai.com,Insurance underwriting AI,US,C,0.506,0.487,B,0.546,0.508,False
+98,banyan,0.546,FundApps,fundapps.co,Investment compliance monitoring/reporting,UK,C,0.546,0.485,C,0.495,0.455,False
+99,growth,0.546,PlanetScale,planetscale.com,Serverless MySQL database,US,C,0.420,0.403,B,0.546,0.465,False
+100,banyan,0.544,CobbleStone Software,cobblestonesoftware.com,CLM / contract management,US,C,0.544,0.438,C,0.394,0.378,False
+101,growth,0.543,OpenSpace,openspace.ai,Construction reality capture,USA,rejected,0.487,0.455,B,0.543,0.430,False
+102,growth,0.543,ParentSquare,parentsquare.com,K-12 family/school communications,US,C,0.527,0.458,B,0.543,0.445,False
+103,banyan,0.542,Tripleseat,tripleseat.com,Hospitality events/catering,US,C,0.542,0.483,B,0.531,0.465,False
+104,growth,0.542,Hasura,hasura.io,GraphQL / API data layer,US,C,0.419,0.400,B,0.542,0.455,False
+105,growth,0.542,FarEye,getfareye.com,Last-mile delivery platform,India,rejected,0.439,0.460,B,0.542,0.495,False
+106,growth,0.542,Moov,moov.io,Fintech infrastructure / embedded payments & money movement,US,rejected,0.436,0.410,B,0.542,0.445,False
+107,banyan,0.541,Contractor Foreman,contractorforeman.com,Contractor project management,USA,C,0.541,0.415,C,0.419,0.385,False
+108,growth,0.540,DispatchTrack,dispatchtrack.com,Last-mile delivery management,US,C,0.475,0.445,B,0.540,0.475,False
+109,banyan,0.537,WebRezPro,webrezpro.com,Hotel PMS,Canada,C,0.537,0.420,C,0.385,0.383,False
+110,banyan,0.537,inFlow Inventory,inflowinventory.com,Inventory/order management for SMB distributors/manufacturers,Canada,C,0.537,0.430,C,0.400,0.372,False
+111,banyan,0.536,Veracross,veracross.com,Independent-school SIS / ERP,US,C,0.536,0.435,C,0.496,0.400,False
+112,growth,0.535,Material Security,material.security,Security / email & cloud workspace security,US,C,0.466,0.405,B,0.535,0.435,False
+113,banyan,0.534,One Step GPS,onestepgps.com,Fleet GPS tracking,US,C,0.534,0.458,C,0.434,0.412,False
+114,banyan,0.534,MRPeasy,mrpeasy.com,SMB manufacturing ERP/MRP,Estonia,C,0.534,0.405,C,0.426,0.375,False
+115,growth,0.534,Boulevard,joinblvd.com,Salon/spa/medspa,US,C,0.451,0.432,B,0.534,0.448,False
+116,banyan,0.533,Foundation Software,foundationsoft.com,Construction accounting/ERP,USA,C,0.533,0.470,C,0.436,0.395,False
+117,banyan,0.533,iWorQ Systems,iworq.com,Local government permitting / code enforcement / CMMS,US,C,0.533,0.408,C,0.417,0.375,False
+118,growth,0.532,Apptegy,apptegy.com,K-12 school websites / communications / brand,US,C,0.513,0.415,B,0.532,0.420,False
+119,banyan,0.532,ProShop ERP,proshoperp.com,ERP/MES/QMS for precision manufacturing,Canada,C,0.532,0.453,B,0.523,0.463,False
+120,growth,0.531,Increase,increase.com,Banking API / fintech infrastructure,US,C,0.390,0.370,B,0.531,0.435,False
+121,growth,0.531,CINC Systems,cincsystems.com,HOA/community management software,US,C,0.518,0.485,B,0.531,0.485,False
+122,banyan,0.530,Celerant Technology,celerant.com,Specialty retail POS,US,C,0.530,0.425,C,0.384,0.378,False
+123,growth,0.529,MyCarrier,mycarrier.io,LTL shipper TMS,US,C,0.451,0.435,B,0.529,0.455,False
+124,growth,0.528,Guidewheel,guidewheel.com,FactoryOps / OEE / machine monitoring,US,rejected,0.461,0.435,B,0.528,0.458,False
+125,growth,0.527,ShipHero,shiphero.com,WMS for ecommerce / 3PLs,US,C,0.451,0.440,B,0.527,0.460,False
+126,growth,0.527,Document Crunch,documentcrunch.com,Construction legal/risk AI,US,C,0.452,0.403,B,0.527,0.453,False
+127,growth,0.526,Sixfold,sixfold.ai,Insurance underwriting AI,US,C,0.445,0.403,B,0.526,0.468,False
+128,growth,0.526,Mangomint,mangomint.com,Salon/spa booking,US,C,0.481,0.443,B,0.526,0.445,False
+129,growth,0.525,Fracttal,fracttal.com,CMMS/EAM for asset-heavy industries,Spain,rejected,0.464,0.440,B,0.525,0.458,False
+130,growth,0.524,FieldPulse,fieldpulse.com,Field service management,USA,C,0.474,0.435,B,0.524,0.455,False
+131,growth,0.524,Deposco,deposco.com,WMS / OMS / fulfillment,US,C,0.471,0.440,B,0.524,0.460,False
+132,banyan,0.524,AroFlo,aroflo.com,Trades job management,Australia,C,0.524,0.415,C,0.402,0.385,False
+133,banyan,0.523,Envisio,envisio.com,Public-sector strategic / performance planning,Canada,C,0.523,0.365,C,0.427,0.365,False
+134,growth,0.523,splose,splose.com,Allied-health practice management,Australia,C,0.461,0.370,B,0.523,0.410,False
+135,growth,0.523,Dealpath,dealpath.com,Commercial real estate deal management,US,C,0.491,0.460,B,0.523,0.495,False
+136,growth,0.523,Patlytics,patlytics.ai,Patent / IP AI,US,C,0.445,0.403,B,0.523,0.453,False
+137,banyan,0.522,JobNimbus,jobnimbus.com,Roofing/contractor CRM,USA,C,0.522,0.430,C,0.465,0.400,False
+138,growth,0.521,UpKeep,upkeep.com,CMMS/EAM/frontline maintenance,US,rejected,0.457,0.443,B,0.521,0.453,False
+139,growth,0.521,PortPro,portpro.io,Drayage TMS,US,C,0.466,0.450,B,0.521,0.468,False
+140,banyan,0.518,Buildout,buildout.com,Commercial real estate brokerage software,US,C,0.518,0.485,C,0.489,0.470,False
+141,growth,0.518,Inngest,inngest.com,Durable workflow / background jobs platform,US,C,0.389,0.368,B,0.518,0.415,False
+142,growth,0.518,Trigger.dev,trigger.dev,Background jobs / AI workflow infrastructure,UK,C,0.390,0.372,B,0.518,0.415,False
+143,banyan,0.518,Tradify,tradifyhq.com,Trades job management,New Zealand,C,0.518,0.410,C,0.402,0.385,False
+144,banyan,0.518,Commusoft,commusoft.com,Plumbing/HVAC/electrical FSM,UK,C,0.518,0.410,C,0.402,0.385,False
+145,banyan,0.518,Agiloft,agiloft.com,CLM,US,C,0.518,0.470,C,0.452,0.430,False
+146,growth,0.518,FinQuery,finquery.com,Lease accounting software,US,C,0.493,0.450,B,0.518,0.480,False
+147,growth,0.517,DataBahn,databahn.ai,Security / data pipeline & telemetry management,US,rejected,0.410,0.340,B,0.517,0.365,False
+148,growth,0.517,Dagster Labs,dagster.io,Data orchestration,US,C,0.409,0.385,B,0.517,0.445,False
+149,banyan,0.517,StandardFusion,standardfusion.com,GRC,Canada,C,0.517,0.455,C,0.385,0.388,False
+150,banyan,0.516,Buildxact,buildxact.com,Residential estimating/job management,Australia,C,0.516,0.415,C,0.443,0.385,False
+151,banyan,0.516,Casepoint,casepoint.com,E-discovery / legal hold,US,C,0.516,0.422,C,0.410,0.378,False
+152,banyan,0.514,Nortridge Software,nortridge.com,Loan servicing,US,C,0.514,0.380,C,0.356,0.345,False
+153,growth,0.513,Rose Rocket,roserocket.com,TMS,Canada,C,0.441,0.435,B,0.513,0.455,False
+154,growth,0.513,Breezeway,breezeway.io,Short-term rental property operations,US,C,0.498,0.460,B,0.513,0.465,False
+155,banyan,0.512,Hospitable,hospitable.com,Short-term rental PMS,US/UK,C,0.512,0.465,C,0.461,0.430,False
+156,banyan,0.512,Curve Dental,curvedental.com,Cloud dental PMS,United States,C,0.512,0.403,C,0.498,0.388,False
+157,growth,0.511,CompanyCam,companycam.com,Contractor jobsite photo documentation,USA,C,0.499,0.425,B,0.511,0.400,False
+158,growth,0.511,Fleetio,fleetio.com,Fleet management for field/equipment ops,USA,C,0.499,0.425,B,0.511,0.400,False
+159,banyan,0.511,Meevo / Millennium Systems,meevo.com,Salon/spa SaaS,US,C,0.511,0.438,C,0.443,0.407,False
+160,growth,0.511,Bringg,bringg.com,Last-mile delivery orchestration,Israel,rejected,0.433,0.440,B,0.511,0.470,False
+161,banyan,0.511,LendingPad,lendingpad.com,Mortgage LOS,US,C,0.511,0.390,C,0.437,0.365,False
+162,banyan,0.510,HOA Express,hoa-express.com,HOA/community management software,US,C,0.510,0.385,C,0.328,0.365,False
+163,banyan,0.510,Planning Pod,planningpod.com,Venue/event management,US,C,0.510,0.398,C,0.372,0.372,False
+164,banyan,0.510,Edmunds GovTech,edmundsgovtech.com,Local government ERP / utility billing,US,C,0.510,0.410,C,0.495,0.403,False
+165,banyan,0.510,Wise Agent,wiseagent.com,Real-estate brokerage CRM,US,C,0.510,0.410,C,0.345,0.365,False
+166,banyan,0.509,Mortgage Automator,mortgageautomator.com,Private-lender mortgage LOS/servicing,Canada,C,0.509,0.385,C,0.416,0.365,False
+167,banyan,0.509,GovPilot,govpilot.com,Local government permitting / administration,US,C,0.509,0.375,C,0.412,0.362,False
+168,growth,0.508,Amenitiz,amenitiz.com,Hotel PMS,Spain,C,0.443,0.405,B,0.508,0.430,False
+169,growth,0.507,Logiwa,logiwa.com,Cloud WMS / fulfillment,US,C,0.442,0.435,B,0.507,0.455,False
+170,growth,0.507,Shipsy,shipsy.io,Logistics / delivery management,India,C,0.436,0.435,B,0.507,0.455,False
+171,banyan,0.507,Shaw Systems,shawsystems.com,Loan servicing,US,C,0.507,0.380,C,0.356,0.345,False
+172,banyan,0.506,Megaventory,megaventory.com,Inventory/production/order management,Greece,C,0.506,0.390,C,0.372,0.352,False
+173,banyan,0.506,LEAP Legal Software,leaplegalsoftware.com,Law practice management,Australia,C,0.506,0.430,C,0.453,0.405,False
+174,banyan,0.505,GOGov,gogovapps.com,Local government citizen engagement / 311,US,C,0.505,0.365,C,0.385,0.357,False
+175,growth,0.505,Archy,archy.com,Cloud dental practice management,United States,C,0.433,0.370,B,0.505,0.393,False
+176,growth,0.505,Nutrium,nutrium.com,Nutrition software / employee wellness,Portugal,insufficient_data,0.451,0.343,B,0.505,0.383,False
+177,banyan,0.504,Alma SIS,getalma.com,K-12 student information system,US,C,0.504,0.375,C,0.400,0.365,False
+178,growth,0.504,Greenspace Health,greenspacehealth.com,Measurement-based mental health care,Canada,C,0.458,0.363,B,0.504,0.390,False
+179,banyan,0.503,Pabau,pabau.com,Medspa/aesthetic clinic software,United Kingdom,C,0.503,0.393,C,0.417,0.367,False
+180,banyan,0.503,Zanda (formerly Power Diary),zandahealth.com,Allied-health practice management,Australia,C,0.503,0.345,C,0.376,0.312,False
+181,banyan,0.502,Campus Cafe,campuscafesoftware.com,Higher-ed SIS (small institutions),US,C,0.502,0.338,C,0.351,0.323,False
+182,banyan,0.502,Noterro,noterro.com,Massage/allied-health clinic management,Canada,C,0.502,0.343,C,0.352,0.310,False
+183,banyan,0.501,Cogitate,cogitate.com,P&C insurance core/back office,US,C,0.501,0.405,C,0.399,0.365,False
+184,banyan,0.500,Raken,rakenapp.com,Construction field reporting,USA,C,0.500,0.430,C,0.458,0.400,False
+185,banyan,0.499,Kuali,kuali.co,Higher-ed administration SaaS (research/compliance),US,C,0.499,0.423,C,0.471,0.403,False
+186,banyan,0.499,Prodio,getprodio.com,Production planning/MES-lite,Poland,C,0.499,0.380,C,0.384,0.352,False
+187,banyan,0.499,Statii,statii.co.uk,MRP/ERP for make-to-order manufacturers,UK,C,0.499,0.380,C,0.375,0.352,False
+188,banyan,0.499,BigChange,bigchange.com,Mobile workforce/FSM,UK,C,0.499,0.425,C,0.458,0.400,False
+189,banyan,0.498,MicroBiz,microbiz.com,Specialty retail POS,US,C,0.498,0.383,C,0.354,0.363,False
+190,growth,0.497,Zencity,zencity.io,Civic analytics / community engagement,Israel/US,C,0.475,0.380,C,0.497,0.388,False
+191,growth,0.497,Narmi,narmi.com,Digital banking platform,US,C,0.448,0.400,C,0.497,0.420,False
+192,banyan,0.497,STACK Construction Technologies,stackct.com,Takeoff/estimating,USA,C,0.497,0.440,C,0.458,0.400,False
+193,banyan,0.497,Zest AI,zest.ai,Credit underwriting AI,US,C,0.497,0.440,C,0.489,0.465,False
+194,growth,0.497,SafetyChain,safetychain.com,Food/CPG plant quality/compliance,US,C,0.491,0.430,C,0.497,0.445,False
+195,banyan,0.497,JOBSCOPE,jobscope.com,ETO/MTO manufacturing ERP,US,C,0.497,0.385,C,0.335,0.340,False
+196,growth,0.497,Lodgify,lodgify.com,Short-term rental PMS,Spain,C,0.451,0.420,C,0.497,0.450,False
+197,banyan,0.496,Rain Retail Software,rainpos.com,Specialty retail POS,US,C,0.496,0.398,C,0.385,0.380,False
+198,banyan,0.496,Total Party Planner,totalpartyplanner.com,Catering/event software,US,C,0.496,0.370,C,0.341,0.345,False
+199,growth,0.494,Method Financial,methodfi.com,Fintech infrastructure / liability & debt data connectivity,US,rejected,0.413,0.345,C,0.494,0.350,False
+200,growth,0.494,MachineMetrics,machinemetrics.com,Machine monitoring / industrial IoT,US,rejected,0.468,0.445,C,0.494,0.443,False
+201,growth,0.493,Svix,svix.com,Webhook API platform,US,C,0.441,0.368,C,0.493,0.415,False
+202,growth,0.493,Everlaw,everlaw.com,E-discovery / litigation,US,C,0.482,0.428,C,0.493,0.425,False
+203,banyan,0.493,ServiceTrade,servicetrade.com,Commercial service contractors,USA,C,0.493,0.430,C,0.469,0.400,False
+204,growth,0.493,Digitail,digitail.io,Veterinary practice management,United States/Romania,C,0.430,0.348,C,0.493,0.383,False
+205,banyan,0.492,Fergus,fergus.com,Trades job management,New Zealand,C,0.492,0.415,C,0.415,0.385,False
+206,banyan,0.491,Datex,datexcorp.com,3PL WMS,US,C,0.491,0.422,C,0.361,0.380,False
+207,growth,0.491,Practice Better,practicebetter.io,Wellness/nutrition practice management,Canada,C,0.478,0.370,C,0.491,0.392,False
+208,growth,0.491,Clariti,claritisoftware.com,Government permitting / licensing platform,Canada,C,0.483,0.365,C,0.491,0.380,False
+209,banyan,0.489,AssurX,assurx.com,QMS/regulatory compliance,US,C,0.489,0.390,C,0.370,0.350,False
+210,growth,0.489,Propel Software,propelsoftware.com,PLM/QMS/PIM on Salesforce,US,rejected,0.455,0.430,C,0.489,0.438,False
+211,banyan,0.488,Teslar Software,teslarsoftware.com,Community-bank lending workflows,US,C,0.488,0.385,C,0.431,0.380,False
+212,banyan,0.488,RealtyJuggler,realtyjuggler.com,Real-estate brokerage CRM,US,C,0.488,0.365,C,0.298,0.340,False
+213,banyan,0.488,Rezku,rezku.com,Restaurant POS,US,C,0.488,0.383,C,0.384,0.370,False
+214,growth,0.488,Fulcrum Pro,fulcrumpro.com,Cloud ERP/MRP/MES for job shops,US,rejected,0.450,0.415,C,0.488,0.435,False
+215,banyan,0.487,C3 Solutions,c3solutions.com,Yard / dock scheduling,Canada,C,0.487,0.390,C,0.392,0.380,False
+216,banyan,0.487,RoomRaccoon,roomraccoon.com,Hotel PMS,Netherlands,C,0.487,0.410,C,0.453,0.410,False
+217,banyan,0.486,PerformLine,performline.com,Marketing/partner compliance,US,C,0.486,0.400,C,0.442,0.380,False
+218,banyan,0.486,Cloudpermit,cloudpermit.com,Government permitting / licensing (e-permitting),Canada,C,0.486,0.365,C,0.470,0.380,False
+219,banyan,0.484,AscendTMS (InMotion Global),thefreetms.com,Free / paid TMS,US,C,0.484,0.400,C,0.385,0.380,False
+220,banyan,0.484,E-Max Systems,emax-systems.co.uk,ERP/MRP for manufacturing SMEs,UK,C,0.484,0.367,C,0.366,0.343,False
+221,growth,0.484,Whip Around,whiparound.com,Fleet inspection / maintenance,US,C,0.466,0.455,C,0.484,0.455,False
+222,banyan,0.484,LinkSquares,linksquares.com,CLM / legal AI,US,C,0.484,0.460,C,0.471,0.443,False
+223,banyan,0.484,Intellect,intellect.com,QMS/EHSQ/no-code quality apps,US,C,0.484,0.383,C,0.391,0.355,False
+224,banyan,0.483,Buildern,buildern.com,Construction management SaaS,Armenia / USA,C,0.483,0.360,C,0.356,0.355,False
+225,banyan,0.482,Total ETO,totaleto.com,ERP for engineer-to-order manufacturers,Canada,C,0.482,0.355,C,0.351,0.333,False
+226,banyan,0.481,Tenna,tenna.com,Construction equipment/fleet,USA,C,0.481,0.385,C,0.392,0.365,False
+227,banyan,0.480,Lawmatics,lawmatics.com,Law-firm CRM/intake,US,C,0.480,0.445,C,0.452,0.425,False
+228,banyan,0.480,Craftable,craftable.com,Hospitality back-office,US,C,0.480,0.430,C,0.465,0.410,False
+229,growth,0.480,IntelliShift,intellishift.com,Fleet intelligence / telematics,US,C,0.479,0.445,C,0.480,0.455,False
+230,banyan,0.479,PCS Software,pcssoft.com,Carrier / shipper TMS,US,C,0.479,0.445,C,0.475,0.455,False
+231,banyan,0.479,gWorks,gworks.com,Small local government ERP / utility billing / GIS,US,C,0.479,0.385,C,0.469,0.388,False
+232,growth,0.479,TurnKey Lender,turnkey-lender.com,Lending automation,Singapore / US,C,0.475,0.430,C,0.479,0.440,False
+233,growth,0.478,ComplyAdvantage,complyadvantage.com,AML / financial crime risk,UK,C,0.462,0.418,C,0.478,0.428,False
+234,banyan,0.478,BuildBook,buildbook.co,Residential construction management,USA,C,0.478,0.385,C,0.358,0.365,False
+235,banyan,0.478,Rastrac,rastrac.com,Fleet / asset tracking,US,C,0.478,0.412,C,0.358,0.385,False
+236,banyan,0.477,Actionstep,actionstep.com,Law practice management,New Zealand,C,0.477,0.413,C,0.435,0.415,False
+237,banyan,0.476,AssetBook,assetbook.com,RIA portfolio reporting/billing,US,C,0.476,0.380,C,0.335,0.340,False
+238,banyan,0.476,Parsec Automation / TrakSYS,parsec-corp.com,MES/MOM,US,C,0.476,0.422,C,0.450,0.417,False
+239,banyan,0.474,Workiz,workiz.com,Home services FSM,USA / Israel,C,0.474,0.435,C,0.463,0.415,False
+240,growth,0.473,FreightPOP,freightpop.com,Multimodal TMS / WMS,US,C,0.466,0.425,C,0.473,0.440,False
+241,banyan,0.473,ERPLY,erply.com,Retail POS/inventory,Estonia/US,C,0.473,0.415,C,0.423,0.402,False
+242,banyan,0.472,Nextpoint,nextpoint.com,E-discovery / litigation,US,C,0.472,0.400,C,0.391,0.385,False
+243,banyan,0.472,TEEPTRAK,teeptrak.com,OEE monitoring,France,C,0.472,0.362,C,0.374,0.343,False
+244,banyan,0.471,Condo Control,condocontrol.com,Condo/HOA management software,Canada,C,0.471,0.380,C,0.386,0.365,False
+245,growth,0.470,Ylopo,ylopo.com,Real-estate brokerage lead-gen/CRM,US,C,0.451,0.390,C,0.470,0.415,False
+246,banyan,0.470,Assignar,assignar.com,Construction workforce/equipment ops,Australia / USA,C,0.470,0.425,C,0.448,0.400,False
+247,growth,0.470,Sprinto,sprinto.com,Compliance automation,US/India,C,0.434,0.413,C,0.470,0.435,False
+248,banyan,0.470,innRoad,innroad.com,Hotel PMS,US,C,0.470,0.415,C,0.456,0.402,False
+249,banyan,0.469,OptimoRoute,optimoroute.com,Route planning / dispatch,US,C,0.469,0.415,C,0.427,0.410,False
+250,banyan,0.469,Kaizen Reporting,kaizenreporting.com,Regulatory reporting QA,UK,C,0.469,0.395,C,0.418,0.393,False

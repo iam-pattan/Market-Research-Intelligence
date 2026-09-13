@@ -1,0 +1,3037 @@
+{
+ "Legal, Risk & Compliance": {
+  "n": 34,
+  "banyan_fit_count": 0,
+  "banyan_fit_density": 0.0,
+  "regions": {
+   "US": 26,
+   "Canada": 3,
+   "UK": 3,
+   "Sweden": 1,
+   "US/India": 1
+  },
+  "top_by_banyan": [
+   "Hebbia (0.549, C)",
+   "Pagefreezer (0.547, C)",
+   "FundApps (0.546, C)",
+   "CobbleStone Software (0.544, C)",
+   "Contractor Foreman (0.541, C)",
+   "DebtBook (0.53, C)"
+  ],
+  "companies": [
+   {
+    "name": "Hebbia",
+    "domain": "hebbia.com",
+    "vertical": "Finance / legal document AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.549,
+    "banyan_conf": 0.5,
+    "growth_tier": "B",
+    "growth_adj": 0.582
+   },
+   {
+    "name": "Pagefreezer",
+    "domain": "pagefreezer.com",
+    "vertical": "Public records / web & social archiving / compliance",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.547,
+    "banyan_conf": 0.39,
+    "growth_tier": "C",
+    "growth_adj": 0.441
+   },
+   {
+    "name": "FundApps",
+    "domain": "fundapps.co",
+    "vertical": "Investment compliance monitoring/reporting",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.546,
+    "banyan_conf": 0.485,
+    "growth_tier": "C",
+    "growth_adj": 0.495
+   },
+   {
+    "name": "CobbleStone Software",
+    "domain": "cobblestonesoftware.com",
+    "vertical": "CLM / contract management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.544,
+    "banyan_conf": 0.438,
+    "growth_tier": "C",
+    "growth_adj": 0.394
+   },
+   {
+    "name": "Contractor Foreman",
+    "domain": "contractorforeman.com",
+    "vertical": "Contractor project management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.541,
+    "banyan_conf": 0.415,
+    "growth_tier": "C",
+    "growth_adj": 0.419
+   },
+   {
+    "name": "DebtBook",
+    "domain": "debtbook.com",
+    "vertical": "Government / nonprofit finance & debt compliance",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.53,
+    "banyan_conf": 0.467,
+    "growth_tier": "B",
+    "growth_adj": 0.547
+   },
+   {
+    "name": "Harvey",
+    "domain": "harvey.ai",
+    "vertical": "Legal AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.525,
+    "banyan_conf": 0.545,
+    "growth_tier": "A",
+    "growth_adj": 0.743
+   },
+   {
+    "name": "JobNimbus",
+    "domain": "jobnimbus.com",
+    "vertical": "Roofing/contractor CRM",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.522,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.465
+   },
+   {
+    "name": "Agiloft",
+    "domain": "agiloft.com",
+    "vertical": "CLM",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.518,
+    "banyan_conf": 0.47,
+    "growth_tier": "C",
+    "growth_adj": 0.452
+   },
+   {
+    "name": "StandardFusion",
+    "domain": "standardfusion.com",
+    "vertical": "GRC",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.517,
+    "banyan_conf": 0.455,
+    "growth_tier": "C",
+    "growth_adj": 0.385
+   },
+   {
+    "name": "Casepoint",
+    "domain": "casepoint.com",
+    "vertical": "E-discovery / legal hold",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.516,
+    "banyan_conf": 0.422,
+    "growth_tier": "C",
+    "growth_adj": 0.41
+   },
+   {
+    "name": "CompanyCam",
+    "domain": "companycam.com",
+    "vertical": "Contractor jobsite photo documentation",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.499,
+    "banyan_conf": 0.425,
+    "growth_tier": "B",
+    "growth_adj": 0.511
+   },
+   {
+    "name": "Kuali",
+    "domain": "kuali.co",
+    "vertical": "Higher-ed administration SaaS (research/compliance)",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.499,
+    "banyan_conf": 0.423,
+    "growth_tier": "C",
+    "growth_adj": 0.471
+   },
+   {
+    "name": "ServiceTrade",
+    "domain": "servicetrade.com",
+    "vertical": "Commercial service contractors",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.493,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.469
+   },
+   {
+    "name": "Legora",
+    "domain": "legora.com",
+    "vertical": "Legal AI",
+    "region": "Sweden",
+    "banyan_tier": "C",
+    "banyan_adj": 0.492,
+    "banyan_conf": 0.515,
+    "growth_tier": "B",
+    "growth_adj": 0.684
+   },
+   {
+    "name": "SafetyChain",
+    "domain": "safetychain.com",
+    "vertical": "Food/CPG plant quality/compliance",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.491,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.497
+   },
+   {
+    "name": "EvenUp",
+    "domain": "evenuplaw.com",
+    "vertical": "Legal / personal injury",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.49,
+    "banyan_conf": 0.507,
+    "growth_tier": "B",
+    "growth_adj": 0.646
+   },
+   {
+    "name": "BuildOps",
+    "domain": "buildops.com",
+    "vertical": "Commercial contractor FSM",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.489,
+    "banyan_conf": 0.46,
+    "growth_tier": "B",
+    "growth_adj": 0.587
+   },
+   {
+    "name": "AssurX",
+    "domain": "assurx.com",
+    "vertical": "QMS/regulatory compliance",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.489,
+    "banyan_conf": 0.39,
+    "growth_tier": "C",
+    "growth_adj": 0.37
+   },
+   {
+    "name": "PerformLine",
+    "domain": "performline.com",
+    "vertical": "Marketing/partner compliance",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.486,
+    "banyan_conf": 0.4,
+    "growth_tier": "C",
+    "growth_adj": 0.442
+   },
+   {
+    "name": "LinkSquares",
+    "domain": "linksquares.com",
+    "vertical": "CLM / legal AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.484,
+    "banyan_conf": 0.46,
+    "growth_tier": "C",
+    "growth_adj": 0.471
+   },
+   {
+    "name": "Everlaw",
+    "domain": "everlaw.com",
+    "vertical": "E-discovery / litigation",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.482,
+    "banyan_conf": 0.428,
+    "growth_tier": "C",
+    "growth_adj": 0.493
+   },
+   {
+    "name": "Lawmatics",
+    "domain": "lawmatics.com",
+    "vertical": "Law-firm CRM/intake",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.48,
+    "banyan_conf": 0.445,
+    "growth_tier": "C",
+    "growth_adj": 0.452
+   },
+   {
+    "name": "Spellbook",
+    "domain": "spellbook.com",
+    "vertical": "Contract legal AI",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.474,
+    "banyan_conf": 0.43,
+    "growth_tier": "B",
+    "growth_adj": 0.575
+   },
+   {
+    "name": "Nextpoint",
+    "domain": "nextpoint.com",
+    "vertical": "E-discovery / litigation",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.472,
+    "banyan_conf": 0.4,
+    "growth_tier": "C",
+    "growth_adj": 0.391
+   },
+   {
+    "name": "Kaizen Reporting",
+    "domain": "kaizenreporting.com",
+    "vertical": "Regulatory reporting QA",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.469,
+    "banyan_conf": 0.395,
+    "growth_tier": "C",
+    "growth_adj": 0.418
+   },
+   {
+    "name": "Eudia",
+    "domain": "eudia.com",
+    "vertical": "Corporate legal AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.466,
+    "banyan_conf": 0.445,
+    "growth_tier": "B",
+    "growth_adj": 0.578
+   },
+   {
+    "name": "Sardine",
+    "domain": "sardine.ai",
+    "vertical": "Fintech infrastructure / fraud & compliance",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.464,
+    "banyan_conf": 0.425,
+    "growth_tier": "B",
+    "growth_adj": 0.582
+   },
+   {
+    "name": "ComplyAdvantage",
+    "domain": "complyadvantage.com",
+    "vertical": "AML / financial crime risk",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.462,
+    "banyan_conf": 0.418,
+    "growth_tier": "C",
+    "growth_adj": 0.478
+   },
+   {
+    "name": "Document Crunch",
+    "domain": "documentcrunch.com",
+    "vertical": "Construction legal/risk AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.452,
+    "banyan_conf": 0.403,
+    "growth_tier": "B",
+    "growth_adj": 0.527
+   },
+   {
+    "name": "Norm Ai",
+    "domain": "norm.ai",
+    "vertical": "Regulatory / compliance AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.445,
+    "banyan_conf": 0.403,
+    "growth_tier": "B",
+    "growth_adj": 0.548
+   },
+   {
+    "name": "Patlytics",
+    "domain": "patlytics.ai",
+    "vertical": "Patent / IP AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.445,
+    "banyan_conf": 0.403,
+    "growth_tier": "B",
+    "growth_adj": 0.523
+   },
+   {
+    "name": "Sprinto",
+    "domain": "sprinto.com",
+    "vertical": "Compliance automation",
+    "region": "US/India",
+    "banyan_tier": "C",
+    "banyan_adj": 0.434,
+    "banyan_conf": 0.413,
+    "growth_tier": "C",
+    "growth_adj": 0.47
+   },
+   {
+    "name": "Vanta",
+    "domain": "vanta.com",
+    "vertical": "Security & compliance automation",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.432,
+    "banyan_conf": 0.45,
+    "growth_tier": "B",
+    "growth_adj": 0.667
+   }
+  ]
+ },
+ "Manufacturing & Industrial": {
+  "n": 30,
+  "banyan_fit_count": 4,
+  "banyan_fit_density": 0.13,
+  "regions": {
+   "US": 19,
+   "Canada": 3,
+   "Estonia": 2,
+   "UK": 2,
+   "Greece": 1
+  },
+  "top_by_banyan": [
+   "Skyward (0.6, B)",
+   "QT9 Software (0.581, B)",
+   "Cetec ERP (0.566, B)",
+   "Global Shop Solutions (0.558, B)",
+   "BS&A Software (0.547, C)",
+   "inFlow Inventory (0.537, C)"
+  ],
+  "companies": [
+   {
+    "name": "Skyward",
+    "domain": "skyward.com",
+    "vertical": "K-12 SIS / school ERP",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.6,
+    "banyan_conf": 0.428,
+    "growth_tier": "C",
+    "growth_adj": 0.441
+   },
+   {
+    "name": "QT9 Software",
+    "domain": "qt9software.com",
+    "vertical": "QMS + ERP for regulated manufacturers",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.581,
+    "banyan_conf": 0.458,
+    "growth_tier": "C",
+    "growth_adj": 0.433
+   },
+   {
+    "name": "Cetec ERP",
+    "domain": "cetecerp.com",
+    "vertical": "Manufacturing ERP/MRP/QMS",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.566,
+    "banyan_conf": 0.455,
+    "growth_tier": "C",
+    "growth_adj": 0.427
+   },
+   {
+    "name": "Global Shop Solutions",
+    "domain": "globalshopsolutions.com",
+    "vertical": "Manufacturing ERP",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.558,
+    "banyan_conf": 0.45,
+    "growth_tier": "C",
+    "growth_adj": 0.409
+   },
+   {
+    "name": "BS&A Software",
+    "domain": "bsasoftware.com",
+    "vertical": "Local government ERP / financial / payments",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.547,
+    "banyan_conf": 0.425,
+    "growth_tier": "C",
+    "growth_adj": 0.484
+   },
+   {
+    "name": "inFlow Inventory",
+    "domain": "inflowinventory.com",
+    "vertical": "Inventory/order management for SMB distributors/manufacturers",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.537,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.4
+   },
+   {
+    "name": "Veracross",
+    "domain": "veracross.com",
+    "vertical": "Independent-school SIS / ERP",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.536,
+    "banyan_conf": 0.435,
+    "growth_tier": "C",
+    "growth_adj": 0.496
+   },
+   {
+    "name": "MRPeasy",
+    "domain": "mrpeasy.com",
+    "vertical": "SMB manufacturing ERP/MRP",
+    "region": "Estonia",
+    "banyan_tier": "C",
+    "banyan_adj": 0.534,
+    "banyan_conf": 0.405,
+    "growth_tier": "C",
+    "growth_adj": 0.426
+   },
+   {
+    "name": "iWorQ Systems",
+    "domain": "iworq.com",
+    "vertical": "Local government permitting / code enforcement / CMMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.533,
+    "banyan_conf": 0.408,
+    "growth_tier": "C",
+    "growth_adj": 0.417
+   },
+   {
+    "name": "ProShop ERP",
+    "domain": "proshoperp.com",
+    "vertical": "ERP/MES/QMS for precision manufacturing",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.532,
+    "banyan_conf": 0.453,
+    "growth_tier": "B",
+    "growth_adj": 0.523
+   },
+   {
+    "name": "WorkOS",
+    "domain": "workos.com",
+    "vertical": "Developer tools / enterprise auth infrastructure",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.524,
+    "banyan_conf": 0.495,
+    "growth_tier": "B",
+    "growth_adj": 0.589
+   },
+   {
+    "name": "Edmunds GovTech",
+    "domain": "edmundsgovtech.com",
+    "vertical": "Local government ERP / utility billing",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.51,
+    "banyan_conf": 0.41,
+    "growth_tier": "C",
+    "growth_adj": 0.495
+   },
+   {
+    "name": "Megaventory",
+    "domain": "megaventory.com",
+    "vertical": "Inventory/production/order management",
+    "region": "Greece",
+    "banyan_tier": "C",
+    "banyan_adj": 0.506,
+    "banyan_conf": 0.39,
+    "growth_tier": "C",
+    "growth_adj": 0.372
+   },
+   {
+    "name": "Prodio",
+    "domain": "getprodio.com",
+    "vertical": "Production planning/MES-lite",
+    "region": "Poland",
+    "banyan_tier": "C",
+    "banyan_adj": 0.499,
+    "banyan_conf": 0.38,
+    "growth_tier": "C",
+    "growth_adj": 0.384
+   },
+   {
+    "name": "Statii",
+    "domain": "statii.co.uk",
+    "vertical": "MRP/ERP for make-to-order manufacturers",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.499,
+    "banyan_conf": 0.38,
+    "growth_tier": "C",
+    "growth_adj": 0.375
+   },
+   {
+    "name": "JOBSCOPE",
+    "domain": "jobscope.com",
+    "vertical": "ETO/MTO manufacturing ERP",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.497,
+    "banyan_conf": 0.385,
+    "growth_tier": "C",
+    "growth_adj": 0.335
+   },
+   {
+    "name": "Katana",
+    "domain": "katanamrp.com",
+    "vertical": "Inventory/MRP for SMB manufacturers",
+    "region": "Estonia",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.484,
+    "banyan_conf": 0.463,
+    "growth_tier": "B",
+    "growth_adj": 0.551
+   },
+   {
+    "name": "E-Max Systems",
+    "domain": "emax-systems.co.uk",
+    "vertical": "ERP/MRP for manufacturing SMEs",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.484,
+    "banyan_conf": 0.367,
+    "growth_tier": "C",
+    "growth_adj": 0.366
+   },
+   {
+    "name": "Intellect",
+    "domain": "intellect.com",
+    "vertical": "QMS/EHSQ/no-code quality apps",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.484,
+    "banyan_conf": 0.383,
+    "growth_tier": "C",
+    "growth_adj": 0.391
+   },
+   {
+    "name": "Total ETO",
+    "domain": "totaleto.com",
+    "vertical": "ERP for engineer-to-order manufacturers",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.482,
+    "banyan_conf": 0.355,
+    "growth_tier": "C",
+    "growth_adj": 0.351
+   },
+   {
+    "name": "gWorks",
+    "domain": "gworks.com",
+    "vertical": "Small local government ERP / utility billing / GIS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.479,
+    "banyan_conf": 0.385,
+    "growth_tier": "C",
+    "growth_adj": 0.469
+   },
+   {
+    "name": "Parsec Automation / TrakSYS",
+    "domain": "parsec-corp.com",
+    "vertical": "MES/MOM",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.476,
+    "banyan_conf": 0.422,
+    "growth_tier": "C",
+    "growth_adj": 0.45
+   },
+   {
+    "name": "Limble CMMS",
+    "domain": "limblecmms.com",
+    "vertical": "CMMS/EAM",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.472,
+    "banyan_conf": 0.468,
+    "growth_tier": "B",
+    "growth_adj": 0.56
+   },
+   {
+    "name": "TEEPTRAK",
+    "domain": "teeptrak.com",
+    "vertical": "OEE monitoring",
+    "region": "France",
+    "banyan_tier": "C",
+    "banyan_adj": 0.472,
+    "banyan_conf": 0.362,
+    "growth_tier": "C",
+    "growth_adj": 0.374
+   },
+   {
+    "name": "MachineMetrics",
+    "domain": "machinemetrics.com",
+    "vertical": "Machine monitoring / industrial IoT",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.468,
+    "banyan_conf": 0.445,
+    "growth_tier": "C",
+    "growth_adj": 0.494
+   },
+   {
+    "name": "Fracttal",
+    "domain": "fracttal.com",
+    "vertical": "CMMS/EAM for asset-heavy industries",
+    "region": "Spain",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.464,
+    "banyan_conf": 0.44,
+    "growth_tier": "B",
+    "growth_adj": 0.525
+   },
+   {
+    "name": "Guidewheel",
+    "domain": "guidewheel.com",
+    "vertical": "FactoryOps / OEE / machine monitoring",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.461,
+    "banyan_conf": 0.435,
+    "growth_tier": "B",
+    "growth_adj": 0.528
+   },
+   {
+    "name": "UpKeep",
+    "domain": "upkeep.com",
+    "vertical": "CMMS/EAM/frontline maintenance",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.457,
+    "banyan_conf": 0.443,
+    "growth_tier": "B",
+    "growth_adj": 0.521
+   },
+   {
+    "name": "Propel Software",
+    "domain": "propelsoftware.com",
+    "vertical": "PLM/QMS/PIM on Salesforce",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.455,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.489
+   },
+   {
+    "name": "Fulcrum Pro",
+    "domain": "fulcrumpro.com",
+    "vertical": "Cloud ERP/MRP/MES for job shops",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.45,
+    "banyan_conf": 0.415,
+    "growth_tier": "C",
+    "growth_adj": 0.488
+   }
+  ]
+ },
+ "Real Estate & Property": {
+  "n": 26,
+  "banyan_fit_count": 4,
+  "banyan_fit_density": 0.15,
+  "regions": {
+   "US": 17,
+   "Canada": 4,
+   "Spain": 2,
+   "Australia": 1,
+   "US/UK": 1
+  },
+  "top_by_banyan": [
+   "Rentec Direct (0.613, B)",
+   "OwnerRez (0.586, B)",
+   "Rent Manager / LCS (0.581, B)",
+   "PayHOA (0.556, B)",
+   "RMS Cloud (0.547, C)",
+   "WebRezPro (0.537, C)"
+  ],
+  "companies": [
+   {
+    "name": "Rentec Direct",
+    "domain": "rentecdirect.com",
+    "vertical": "Property management software",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.613,
+    "banyan_conf": 0.56,
+    "growth_tier": "C",
+    "growth_adj": 0.406
+   },
+   {
+    "name": "OwnerRez",
+    "domain": "ownerrez.com",
+    "vertical": "Short-term rental PMS",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.586,
+    "banyan_conf": 0.495,
+    "growth_tier": "C",
+    "growth_adj": 0.386
+   },
+   {
+    "name": "Rent Manager / LCS",
+    "domain": "rentmanager.com",
+    "vertical": "Property management software",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.581,
+    "banyan_conf": 0.535,
+    "growth_tier": "C",
+    "growth_adj": 0.431
+   },
+   {
+    "name": "PayHOA",
+    "domain": "payhoa.com",
+    "vertical": "HOA/community management software",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.556,
+    "banyan_conf": 0.55,
+    "growth_tier": "B",
+    "growth_adj": 0.53
+   },
+   {
+    "name": "RMS Cloud",
+    "domain": "rmscloud.com",
+    "vertical": "Hotel/property PMS",
+    "region": "Australia",
+    "banyan_tier": "C",
+    "banyan_adj": 0.547,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.402
+   },
+   {
+    "name": "WebRezPro",
+    "domain": "webrezpro.com",
+    "vertical": "Hotel PMS",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.537,
+    "banyan_conf": 0.42,
+    "growth_tier": "C",
+    "growth_adj": 0.385
+   },
+   {
+    "name": "CINC Systems",
+    "domain": "cincsystems.com",
+    "vertical": "HOA/community management software",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.518,
+    "banyan_conf": 0.485,
+    "growth_tier": "B",
+    "growth_adj": 0.531
+   },
+   {
+    "name": "Buildout",
+    "domain": "buildout.com",
+    "vertical": "Commercial real estate brokerage software",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.518,
+    "banyan_conf": 0.485,
+    "growth_tier": "C",
+    "growth_adj": 0.489
+   },
+   {
+    "name": "Hospitable",
+    "domain": "hospitable.com",
+    "vertical": "Short-term rental PMS",
+    "region": "US/UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.512,
+    "banyan_conf": 0.465,
+    "growth_tier": "C",
+    "growth_adj": 0.461
+   },
+   {
+    "name": "LendingPad",
+    "domain": "lendingpad.com",
+    "vertical": "Mortgage LOS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.511,
+    "banyan_conf": 0.39,
+    "growth_tier": "C",
+    "growth_adj": 0.437
+   },
+   {
+    "name": "HOA Express",
+    "domain": "hoa-express.com",
+    "vertical": "HOA/community management software",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.51,
+    "banyan_conf": 0.385,
+    "growth_tier": "C",
+    "growth_adj": 0.328
+   },
+   {
+    "name": "Wise Agent",
+    "domain": "wiseagent.com",
+    "vertical": "Real-estate brokerage CRM",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.51,
+    "banyan_conf": 0.41,
+    "growth_tier": "C",
+    "growth_adj": 0.345
+   },
+   {
+    "name": "Mortgage Automator",
+    "domain": "mortgageautomator.com",
+    "vertical": "Private-lender mortgage LOS/servicing",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.509,
+    "banyan_conf": 0.385,
+    "growth_tier": "C",
+    "growth_adj": 0.416
+   },
+   {
+    "name": "Vantaca",
+    "domain": "vantaca.com",
+    "vertical": "HOA/community management software",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.502,
+    "banyan_conf": 0.48,
+    "growth_tier": "B",
+    "growth_adj": 0.572
+   },
+   {
+    "name": "Breezeway",
+    "domain": "breezeway.io",
+    "vertical": "Short-term rental property operations",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.498,
+    "banyan_conf": 0.46,
+    "growth_tier": "B",
+    "growth_adj": 0.513
+   },
+   {
+    "name": "FinQuery",
+    "domain": "finquery.com",
+    "vertical": "Lease accounting software",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.493,
+    "banyan_conf": 0.45,
+    "growth_tier": "B",
+    "growth_adj": 0.518
+   },
+   {
+    "name": "Dealpath",
+    "domain": "dealpath.com",
+    "vertical": "Commercial real estate deal management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.491,
+    "banyan_conf": 0.46,
+    "growth_tier": "B",
+    "growth_adj": 0.523
+   },
+   {
+    "name": "RealtyJuggler",
+    "domain": "realtyjuggler.com",
+    "vertical": "Real-estate brokerage CRM",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.488,
+    "banyan_conf": 0.365,
+    "growth_tier": "C",
+    "growth_adj": 0.298
+   },
+   {
+    "name": "RoomRaccoon",
+    "domain": "roomraccoon.com",
+    "vertical": "Hotel PMS",
+    "region": "Netherlands",
+    "banyan_tier": "C",
+    "banyan_adj": 0.487,
+    "banyan_conf": 0.41,
+    "growth_tier": "C",
+    "growth_adj": 0.453
+   },
+   {
+    "name": "DoorLoop",
+    "domain": "doorloop.com",
+    "vertical": "Property management software",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.474,
+    "banyan_conf": 0.51,
+    "growth_tier": "B",
+    "growth_adj": 0.578
+   },
+   {
+    "name": "Condo Control",
+    "domain": "condocontrol.com",
+    "vertical": "Condo/HOA management software",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.471,
+    "banyan_conf": 0.38,
+    "growth_tier": "C",
+    "growth_adj": 0.386
+   },
+   {
+    "name": "innRoad",
+    "domain": "innroad.com",
+    "vertical": "Hotel PMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.47,
+    "banyan_conf": 0.415,
+    "growth_tier": "C",
+    "growth_adj": 0.456
+   },
+   {
+    "name": "Hostaway",
+    "domain": "hostaway.com",
+    "vertical": "Short-term rental PMS",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.466,
+    "banyan_conf": 0.45,
+    "growth_tier": "B",
+    "growth_adj": 0.577
+   },
+   {
+    "name": "Lodgify",
+    "domain": "lodgify.com",
+    "vertical": "Short-term rental PMS",
+    "region": "Spain",
+    "banyan_tier": "C",
+    "banyan_adj": 0.451,
+    "banyan_conf": 0.42,
+    "growth_tier": "C",
+    "growth_adj": 0.497
+   },
+   {
+    "name": "Ylopo",
+    "domain": "ylopo.com",
+    "vertical": "Real-estate brokerage lead-gen/CRM",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.451,
+    "banyan_conf": 0.39,
+    "growth_tier": "C",
+    "growth_adj": 0.47
+   },
+   {
+    "name": "Amenitiz",
+    "domain": "amenitiz.com",
+    "vertical": "Hotel PMS",
+    "region": "Spain",
+    "banyan_tier": "C",
+    "banyan_adj": 0.443,
+    "banyan_conf": 0.405,
+    "growth_tier": "B",
+    "growth_adj": 0.508
+   }
+  ]
+ },
+ "Healthcare & Life Sciences": {
+  "n": 24,
+  "banyan_fit_count": 4,
+  "banyan_fit_density": 0.17,
+  "regions": {
+   "US": 11,
+   "Canada": 4,
+   "Australia": 4,
+   "UK": 1,
+   "France / US": 1
+  },
+  "top_by_banyan": [
+   "Jane App (0.6, B)",
+   "Vagaro (0.56, B)",
+   "Cliniko (0.558, B)",
+   "TherapyNotes (0.554, B)",
+   "Abridge (0.513, C)",
+   "Curve Dental (0.512, C)"
+  ],
+  "companies": [
+   {
+    "name": "Jane App",
+    "domain": "jane.app",
+    "vertical": "Health/wellness practice management",
+    "region": "Canada",
+    "banyan_tier": "B",
+    "banyan_adj": 0.6,
+    "banyan_conf": 0.5,
+    "growth_tier": "B",
+    "growth_adj": 0.555
+   },
+   {
+    "name": "Vagaro",
+    "domain": "vagaro.com",
+    "vertical": "Beauty/wellness SaaS",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.56,
+    "banyan_conf": 0.498,
+    "growth_tier": "B",
+    "growth_adj": 0.531
+   },
+   {
+    "name": "Cliniko",
+    "domain": "cliniko.com",
+    "vertical": "Allied-health practice management",
+    "region": "Australia",
+    "banyan_tier": "B",
+    "banyan_adj": 0.558,
+    "banyan_conf": 0.395,
+    "growth_tier": "C",
+    "growth_adj": 0.375
+   },
+   {
+    "name": "TherapyNotes",
+    "domain": "therapynotes.com",
+    "vertical": "Behavioral-health EHR",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.554,
+    "banyan_conf": 0.443,
+    "growth_tier": "B",
+    "growth_adj": 0.505
+   },
+   {
+    "name": "Abridge",
+    "domain": "abridge.com",
+    "vertical": "Clinical documentation AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.513,
+    "banyan_conf": 0.53,
+    "growth_tier": "A",
+    "growth_adj": 0.729
+   },
+   {
+    "name": "Curve Dental",
+    "domain": "curvedental.com",
+    "vertical": "Cloud dental PMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.512,
+    "banyan_conf": 0.403,
+    "growth_tier": "C",
+    "growth_adj": 0.498
+   },
+   {
+    "name": "LEAP Legal Software",
+    "domain": "leaplegalsoftware.com",
+    "vertical": "Law practice management",
+    "region": "Australia",
+    "banyan_tier": "C",
+    "banyan_adj": 0.506,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.453
+   },
+   {
+    "name": "Pabau",
+    "domain": "pabau.com",
+    "vertical": "Medspa/aesthetic clinic software",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.503,
+    "banyan_conf": 0.393,
+    "growth_tier": "C",
+    "growth_adj": 0.417
+   },
+   {
+    "name": "Zanda (formerly Power Diary)",
+    "domain": "zandahealth.com",
+    "vertical": "Allied-health practice management",
+    "region": "Australia",
+    "banyan_tier": "C",
+    "banyan_adj": 0.503,
+    "banyan_conf": 0.345,
+    "growth_tier": "C",
+    "growth_adj": 0.376
+   },
+   {
+    "name": "Noterro",
+    "domain": "noterro.com",
+    "vertical": "Massage/allied-health clinic management",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.502,
+    "banyan_conf": 0.343,
+    "growth_tier": "C",
+    "growth_adj": 0.352
+   },
+   {
+    "name": "Nabla",
+    "domain": "nabla.com",
+    "vertical": "Clinical assistant AI",
+    "region": "France / US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.489,
+    "banyan_conf": 0.475,
+    "growth_tier": "B",
+    "growth_adj": 0.596
+   },
+   {
+    "name": "Freed",
+    "domain": "getfreed.ai",
+    "vertical": "Medical scribe AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.489,
+    "banyan_conf": 0.475,
+    "growth_tier": "B",
+    "growth_adj": 0.595
+   },
+   {
+    "name": "Rad AI",
+    "domain": "radai.com",
+    "vertical": "Radiology workflow AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.482,
+    "banyan_conf": 0.433,
+    "growth_tier": "B",
+    "growth_adj": 0.588
+   },
+   {
+    "name": "Ambience Healthcare",
+    "domain": "ambiencehealthcare.com",
+    "vertical": "Clinical AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.48,
+    "banyan_conf": 0.428,
+    "growth_tier": "B",
+    "growth_adj": 0.634
+   },
+   {
+    "name": "Practice Better",
+    "domain": "practicebetter.io",
+    "vertical": "Wellness/nutrition practice management",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.478,
+    "banyan_conf": 0.37,
+    "growth_tier": "C",
+    "growth_adj": 0.491
+   },
+   {
+    "name": "Actionstep",
+    "domain": "actionstep.com",
+    "vertical": "Law practice management",
+    "region": "New Zealand",
+    "banyan_tier": "C",
+    "banyan_adj": 0.477,
+    "banyan_conf": 0.413,
+    "growth_tier": "C",
+    "growth_adj": 0.435
+   },
+   {
+    "name": "Tennr",
+    "domain": "tennr.com",
+    "vertical": "Healthcare referrals AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.468,
+    "banyan_conf": 0.428,
+    "growth_tier": "B",
+    "growth_adj": 0.613
+   },
+   {
+    "name": "Hippocratic AI",
+    "domain": "hippocraticai.com",
+    "vertical": "Healthcare agent AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.464,
+    "banyan_conf": 0.418,
+    "growth_tier": "B",
+    "growth_adj": 0.606
+   },
+   {
+    "name": "splose",
+    "domain": "splose.com",
+    "vertical": "Allied-health practice management",
+    "region": "Australia",
+    "banyan_tier": "C",
+    "banyan_adj": 0.461,
+    "banyan_conf": 0.37,
+    "growth_tier": "B",
+    "growth_adj": 0.523
+   },
+   {
+    "name": "Greenspace Health",
+    "domain": "greenspacehealth.com",
+    "vertical": "Measurement-based mental health care",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.458,
+    "banyan_conf": 0.363,
+    "growth_tier": "B",
+    "growth_adj": 0.504
+   },
+   {
+    "name": "Boulevard",
+    "domain": "joinblvd.com",
+    "vertical": "Salon/spa/medspa",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.451,
+    "banyan_conf": 0.432,
+    "growth_tier": "B",
+    "growth_adj": 0.534
+   },
+   {
+    "name": "Nutrium",
+    "domain": "nutrium.com",
+    "vertical": "Nutrition software / employee wellness",
+    "region": "Portugal",
+    "banyan_tier": "insufficient_data",
+    "banyan_adj": 0.451,
+    "banyan_conf": 0.343,
+    "growth_tier": "B",
+    "growth_adj": 0.505
+   },
+   {
+    "name": "Archy",
+    "domain": "archy.com",
+    "vertical": "Cloud dental practice management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.433,
+    "banyan_conf": 0.37,
+    "growth_tier": "B",
+    "growth_adj": 0.505
+   },
+   {
+    "name": "Digitail",
+    "domain": "digitail.io",
+    "vertical": "Veterinary practice management",
+    "region": "United States/Romania",
+    "banyan_tier": "C",
+    "banyan_adj": 0.43,
+    "banyan_conf": 0.348,
+    "growth_tier": "C",
+    "growth_adj": 0.493
+   }
+  ]
+ },
+ "Dev Tools, Data & AI Infrastructure": {
+  "n": 24,
+  "banyan_fit_count": 0,
+  "banyan_fit_density": 0.0,
+  "regions": {
+   "US": 20,
+   "Canada": 1,
+   "Netherlands": 1,
+   "Finland": 1,
+   "UK": 1
+  },
+  "top_by_banyan": [
+   "Linear (0.518, C)",
+   "Turbopuffer (0.504, C)",
+   "Pinecone (0.476, rejected)",
+   "Retool (0.475, C)",
+   "Render (0.474, rejected)",
+   "Grafana Labs (0.462, C)"
+  ],
+  "companies": [
+   {
+    "name": "Linear",
+    "domain": "linear.app",
+    "vertical": "Developer workflow / issue tracking",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.518,
+    "banyan_conf": 0.527,
+    "growth_tier": "B",
+    "growth_adj": 0.656
+   },
+   {
+    "name": "Turbopuffer",
+    "domain": "turbopuffer.com",
+    "vertical": "AI/ML infrastructure / vector + search database",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.504,
+    "banyan_conf": 0.39,
+    "growth_tier": "B",
+    "growth_adj": 0.573
+   },
+   {
+    "name": "Pinecone",
+    "domain": "pinecone.io",
+    "vertical": "AI/ML infrastructure / vector database",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.476,
+    "banyan_conf": 0.46,
+    "growth_tier": "B",
+    "growth_adj": 0.594
+   },
+   {
+    "name": "Retool",
+    "domain": "retool.com",
+    "vertical": "Developer tools / internal app builder",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.475,
+    "banyan_conf": 0.515,
+    "growth_tier": "B",
+    "growth_adj": 0.576
+   },
+   {
+    "name": "Render",
+    "domain": "render.com",
+    "vertical": "Cloud application hosting / PaaS infrastructure",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.474,
+    "banyan_conf": 0.475,
+    "growth_tier": "B",
+    "growth_adj": 0.59
+   },
+   {
+    "name": "Grafana Labs",
+    "domain": "grafana.com",
+    "vertical": "Observability / monitoring",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.462,
+    "banyan_conf": 0.497,
+    "growth_tier": "B",
+    "growth_adj": 0.665
+   },
+   {
+    "name": "LangChain",
+    "domain": "langchain.com",
+    "vertical": "AI/ML infrastructure / LLM orchestration",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.46,
+    "banyan_conf": 0.44,
+    "growth_tier": "B",
+    "growth_adj": 0.609
+   },
+   {
+    "name": "MotherDuck",
+    "domain": "motherduck.com",
+    "vertical": "Data infrastructure / cloud analytics (DuckDB)",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.457,
+    "banyan_conf": 0.435,
+    "growth_tier": "B",
+    "growth_adj": 0.56
+   },
+   {
+    "name": "Astronomer",
+    "domain": "astronomer.io",
+    "vertical": "Data orchestration / managed Airflow",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.451,
+    "banyan_conf": 0.455,
+    "growth_tier": "B",
+    "growth_adj": 0.601
+   },
+   {
+    "name": "Temporal",
+    "domain": "temporal.io",
+    "vertical": "Workflow orchestration / durable execution",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.449,
+    "banyan_conf": 0.428,
+    "growth_tier": "B",
+    "growth_adj": 0.595
+   },
+   {
+    "name": "ClickHouse",
+    "domain": "clickhouse.com",
+    "vertical": "Data infrastructure / OLAP database",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.448,
+    "banyan_conf": 0.493,
+    "growth_tier": "B",
+    "growth_adj": 0.694
+   },
+   {
+    "name": "Railway",
+    "domain": "railway.com",
+    "vertical": "Cloud application hosting / deployment infrastructure",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.448,
+    "banyan_conf": 0.44,
+    "growth_tier": "B",
+    "growth_adj": 0.577
+   },
+   {
+    "name": "Svix",
+    "domain": "svix.com",
+    "vertical": "Webhook API platform",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.441,
+    "banyan_conf": 0.368,
+    "growth_tier": "C",
+    "growth_adj": 0.493
+   },
+   {
+    "name": "Docker",
+    "domain": "docker.com",
+    "vertical": "Developer tools / containers",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.44,
+    "banyan_conf": 0.48,
+    "growth_tier": "B",
+    "growth_adj": 0.568
+   },
+   {
+    "name": "Modal",
+    "domain": "modal.com",
+    "vertical": "AI/ML infrastructure / serverless compute",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.429,
+    "banyan_conf": 0.44,
+    "growth_tier": "B",
+    "growth_adj": 0.645
+   },
+   {
+    "name": "Airbyte",
+    "domain": "airbyte.com",
+    "vertical": "Data integration / ELT",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.424,
+    "banyan_conf": 0.418,
+    "growth_tier": "B",
+    "growth_adj": 0.558
+   },
+   {
+    "name": "PlanetScale",
+    "domain": "planetscale.com",
+    "vertical": "Serverless MySQL database",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.42,
+    "banyan_conf": 0.403,
+    "growth_tier": "B",
+    "growth_adj": 0.546
+   },
+   {
+    "name": "Hasura",
+    "domain": "hasura.io",
+    "vertical": "GraphQL / API data layer",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.419,
+    "banyan_conf": 0.4,
+    "growth_tier": "B",
+    "growth_adj": 0.542
+   },
+   {
+    "name": "Weaviate",
+    "domain": "weaviate.io",
+    "vertical": "Vector database / AI infra",
+    "region": "Netherlands",
+    "banyan_tier": "C",
+    "banyan_adj": 0.412,
+    "banyan_conf": 0.385,
+    "growth_tier": "B",
+    "growth_adj": 0.562
+   },
+   {
+    "name": "Aiven",
+    "domain": "aiven.io",
+    "vertical": "Managed open-source data infrastructure",
+    "region": "Finland",
+    "banyan_tier": "C",
+    "banyan_adj": 0.41,
+    "banyan_conf": 0.428,
+    "growth_tier": "B",
+    "growth_adj": 0.605
+   },
+   {
+    "name": "Dagster Labs",
+    "domain": "dagster.io",
+    "vertical": "Data orchestration",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.409,
+    "banyan_conf": 0.385,
+    "growth_tier": "B",
+    "growth_adj": 0.517
+   },
+   {
+    "name": "Clerk",
+    "domain": "clerk.com",
+    "vertical": "Auth / developer identity platform",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.408,
+    "banyan_conf": 0.398,
+    "growth_tier": "B",
+    "growth_adj": 0.578
+   },
+   {
+    "name": "Trigger.dev",
+    "domain": "trigger.dev",
+    "vertical": "Background jobs / AI workflow infrastructure",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.39,
+    "banyan_conf": 0.372,
+    "growth_tier": "B",
+    "growth_adj": 0.518
+   },
+   {
+    "name": "Inngest",
+    "domain": "inngest.com",
+    "vertical": "Durable workflow / background jobs platform",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.389,
+    "banyan_conf": 0.368,
+    "growth_tier": "B",
+    "growth_adj": 0.518
+   }
+  ]
+ },
+ "Logistics & Supply Chain": {
+  "n": 23,
+  "banyan_fit_count": 0,
+  "banyan_fit_density": 0.0,
+  "regions": {
+   "US": 17,
+   "Canada": 2,
+   "India": 2,
+   "Estonia/US": 1,
+   "Israel": 1
+  },
+  "top_by_banyan": [
+   "One Step GPS (0.534, C)",
+   "Fleetio (0.499, C)",
+   "Datex (0.491, C)",
+   "C3 Solutions (0.487, C)",
+   "AscendTMS (InMotion Global) (0.484, C)",
+   "IntelliShift (0.479, C)"
+  ],
+  "companies": [
+   {
+    "name": "One Step GPS",
+    "domain": "onestepgps.com",
+    "vertical": "Fleet GPS tracking",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.534,
+    "banyan_conf": 0.458,
+    "growth_tier": "C",
+    "growth_adj": 0.434
+   },
+   {
+    "name": "Fleetio",
+    "domain": "fleetio.com",
+    "vertical": "Fleet management for field/equipment ops",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.499,
+    "banyan_conf": 0.425,
+    "growth_tier": "B",
+    "growth_adj": 0.511
+   },
+   {
+    "name": "Datex",
+    "domain": "datexcorp.com",
+    "vertical": "3PL WMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.491,
+    "banyan_conf": 0.422,
+    "growth_tier": "C",
+    "growth_adj": 0.361
+   },
+   {
+    "name": "C3 Solutions",
+    "domain": "c3solutions.com",
+    "vertical": "Yard / dock scheduling",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.487,
+    "banyan_conf": 0.39,
+    "growth_tier": "C",
+    "growth_adj": 0.392
+   },
+   {
+    "name": "AscendTMS (InMotion Global)",
+    "domain": "thefreetms.com",
+    "vertical": "Free / paid TMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.484,
+    "banyan_conf": 0.4,
+    "growth_tier": "C",
+    "growth_adj": 0.385
+   },
+   {
+    "name": "IntelliShift",
+    "domain": "intellishift.com",
+    "vertical": "Fleet intelligence / telematics",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.479,
+    "banyan_conf": 0.445,
+    "growth_tier": "C",
+    "growth_adj": 0.48
+   },
+   {
+    "name": "PCS Software",
+    "domain": "pcssoft.com",
+    "vertical": "Carrier / shipper TMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.479,
+    "banyan_conf": 0.445,
+    "growth_tier": "C",
+    "growth_adj": 0.475
+   },
+   {
+    "name": "Rastrac",
+    "domain": "rastrac.com",
+    "vertical": "Fleet / asset tracking",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.478,
+    "banyan_conf": 0.412,
+    "growth_tier": "C",
+    "growth_adj": 0.358
+   },
+   {
+    "name": "DispatchTrack",
+    "domain": "dispatchtrack.com",
+    "vertical": "Last-mile delivery management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.475,
+    "banyan_conf": 0.445,
+    "growth_tier": "B",
+    "growth_adj": 0.54
+   },
+   {
+    "name": "ERPLY",
+    "domain": "erply.com",
+    "vertical": "Retail POS/inventory",
+    "region": "Estonia/US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.473,
+    "banyan_conf": 0.415,
+    "growth_tier": "C",
+    "growth_adj": 0.423
+   },
+   {
+    "name": "Deposco",
+    "domain": "deposco.com",
+    "vertical": "WMS / OMS / fulfillment",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.471,
+    "banyan_conf": 0.44,
+    "growth_tier": "B",
+    "growth_adj": 0.524
+   },
+   {
+    "name": "OptimoRoute",
+    "domain": "optimoroute.com",
+    "vertical": "Route planning / dispatch",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.469,
+    "banyan_conf": 0.415,
+    "growth_tier": "C",
+    "growth_adj": 0.427
+   },
+   {
+    "name": "PortPro",
+    "domain": "portpro.io",
+    "vertical": "Drayage TMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.466,
+    "banyan_conf": 0.45,
+    "growth_tier": "B",
+    "growth_adj": 0.521
+   },
+   {
+    "name": "Whip Around",
+    "domain": "whiparound.com",
+    "vertical": "Fleet inspection / maintenance",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.466,
+    "banyan_conf": 0.455,
+    "growth_tier": "C",
+    "growth_adj": 0.484
+   },
+   {
+    "name": "FreightPOP",
+    "domain": "freightpop.com",
+    "vertical": "Multimodal TMS / WMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.466,
+    "banyan_conf": 0.425,
+    "growth_tier": "C",
+    "growth_adj": 0.473
+   },
+   {
+    "name": "MyCarrier",
+    "domain": "mycarrier.io",
+    "vertical": "LTL shipper TMS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.451,
+    "banyan_conf": 0.435,
+    "growth_tier": "B",
+    "growth_adj": 0.529
+   },
+   {
+    "name": "ShipHero",
+    "domain": "shiphero.com",
+    "vertical": "WMS for ecommerce / 3PLs",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.451,
+    "banyan_conf": 0.44,
+    "growth_tier": "B",
+    "growth_adj": 0.527
+   },
+   {
+    "name": "Logiwa",
+    "domain": "logiwa.com",
+    "vertical": "Cloud WMS / fulfillment",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.442,
+    "banyan_conf": 0.435,
+    "growth_tier": "B",
+    "growth_adj": 0.507
+   },
+   {
+    "name": "Alvys",
+    "domain": "alvys.com",
+    "vertical": "TMS for carriers/brokers",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.441,
+    "banyan_conf": 0.435,
+    "growth_tier": "B",
+    "growth_adj": 0.551
+   },
+   {
+    "name": "Rose Rocket",
+    "domain": "roserocket.com",
+    "vertical": "TMS",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.441,
+    "banyan_conf": 0.435,
+    "growth_tier": "B",
+    "growth_adj": 0.513
+   },
+   {
+    "name": "FarEye",
+    "domain": "getfareye.com",
+    "vertical": "Last-mile delivery platform",
+    "region": "India",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.439,
+    "banyan_conf": 0.46,
+    "growth_tier": "B",
+    "growth_adj": 0.542
+   },
+   {
+    "name": "Shipsy",
+    "domain": "shipsy.io",
+    "vertical": "Logistics / delivery management",
+    "region": "India",
+    "banyan_tier": "C",
+    "banyan_adj": 0.436,
+    "banyan_conf": 0.435,
+    "growth_tier": "B",
+    "growth_adj": 0.507
+   },
+   {
+    "name": "Bringg",
+    "domain": "bringg.com",
+    "vertical": "Last-mile delivery orchestration",
+    "region": "Israel",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.433,
+    "banyan_conf": 0.44,
+    "growth_tier": "B",
+    "growth_adj": 0.511
+   }
+  ]
+ },
+ "Fintech & Financial Infrastructure": {
+  "n": 20,
+  "banyan_fit_count": 2,
+  "banyan_fit_density": 0.1,
+  "regions": {
+   "US": 19,
+   "Singapore / US": 1
+  },
+  "top_by_banyan": [
+   "Corelation (0.589, B)",
+   "Advyzon (0.572, B)",
+   "LoanPro (0.54, C)",
+   "Nortridge Software (0.514, C)",
+   "Shaw Systems (0.507, C)",
+   "Gradient AI (0.506, C)"
+  ],
+  "companies": [
+   {
+    "name": "Corelation",
+    "domain": "corelationinc.com",
+    "vertical": "Credit-union core banking",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.589,
+    "banyan_conf": 0.455,
+    "growth_tier": "C",
+    "growth_adj": 0.465
+   },
+   {
+    "name": "Advyzon",
+    "domain": "advyzon.com",
+    "vertical": "Wealth/advisor all-in-one platform",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.572,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.438
+   },
+   {
+    "name": "LoanPro",
+    "domain": "loanpro.io",
+    "vertical": "Loan servicing / lending core",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.54,
+    "banyan_conf": 0.51,
+    "growth_tier": "B",
+    "growth_adj": 0.553
+   },
+   {
+    "name": "Nortridge Software",
+    "domain": "nortridge.com",
+    "vertical": "Loan servicing",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.514,
+    "banyan_conf": 0.38,
+    "growth_tier": "C",
+    "growth_adj": 0.356
+   },
+   {
+    "name": "Shaw Systems",
+    "domain": "shawsystems.com",
+    "vertical": "Loan servicing",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.507,
+    "banyan_conf": 0.38,
+    "growth_tier": "C",
+    "growth_adj": 0.356
+   },
+   {
+    "name": "Gradient AI",
+    "domain": "gradientai.com",
+    "vertical": "Insurance underwriting AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.506,
+    "banyan_conf": 0.487,
+    "growth_tier": "B",
+    "growth_adj": 0.546
+   },
+   {
+    "name": "Zest AI",
+    "domain": "zest.ai",
+    "vertical": "Credit underwriting AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.497,
+    "banyan_conf": 0.44,
+    "growth_tier": "C",
+    "growth_adj": 0.489
+   },
+   {
+    "name": "Rogo",
+    "domain": "rogo.com",
+    "vertical": "Finance / investment banking AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.495,
+    "banyan_conf": 0.45,
+    "growth_tier": "B",
+    "growth_adj": 0.656
+   },
+   {
+    "name": "Teslar Software",
+    "domain": "teslarsoftware.com",
+    "vertical": "Community-bank lending workflows",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.488,
+    "banyan_conf": 0.385,
+    "growth_tier": "C",
+    "growth_adj": 0.431
+   },
+   {
+    "name": "AssetBook",
+    "domain": "assetbook.com",
+    "vertical": "RIA portfolio reporting/billing",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.476,
+    "banyan_conf": 0.38,
+    "growth_tier": "C",
+    "growth_adj": 0.335
+   },
+   {
+    "name": "TurnKey Lender",
+    "domain": "turnkey-lender.com",
+    "vertical": "Lending automation",
+    "region": "Singapore / US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.475,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.479
+   },
+   {
+    "name": "Alloy",
+    "domain": "alloy.com",
+    "vertical": "Fintech infrastructure / identity & fraud decisioning",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.473,
+    "banyan_conf": 0.425,
+    "growth_tier": "B",
+    "growth_adj": 0.569
+   },
+   {
+    "name": "Modern Treasury",
+    "domain": "moderntreasury.com",
+    "vertical": "Fintech infrastructure / payment operations",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.47,
+    "banyan_conf": 0.415,
+    "growth_tier": "B",
+    "growth_adj": 0.566
+   },
+   {
+    "name": "Lithic",
+    "domain": "lithic.com",
+    "vertical": "Fintech infrastructure / card issuing",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.454,
+    "banyan_conf": 0.42,
+    "growth_tier": "B",
+    "growth_adj": 0.553
+   },
+   {
+    "name": "Narmi",
+    "domain": "narmi.com",
+    "vertical": "Digital banking platform",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.448,
+    "banyan_conf": 0.4,
+    "growth_tier": "C",
+    "growth_adj": 0.497
+   },
+   {
+    "name": "Sixfold",
+    "domain": "sixfold.ai",
+    "vertical": "Insurance underwriting AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.445,
+    "banyan_conf": 0.403,
+    "growth_tier": "B",
+    "growth_adj": 0.526
+   },
+   {
+    "name": "Unit",
+    "domain": "unit.co",
+    "vertical": "Fintech infrastructure / banking-as-a-service",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.437,
+    "banyan_conf": 0.405,
+    "growth_tier": "B",
+    "growth_adj": 0.555
+   },
+   {
+    "name": "Moov",
+    "domain": "moov.io",
+    "vertical": "Fintech infrastructure / embedded payments & money movement",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.436,
+    "banyan_conf": 0.41,
+    "growth_tier": "B",
+    "growth_adj": 0.542
+   },
+   {
+    "name": "Method Financial",
+    "domain": "methodfi.com",
+    "vertical": "Fintech infrastructure / liability & debt data connectivity",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.413,
+    "banyan_conf": 0.345,
+    "growth_tier": "C",
+    "growth_adj": 0.494
+   },
+   {
+    "name": "Increase",
+    "domain": "increase.com",
+    "vertical": "Banking API / fintech infrastructure",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.39,
+    "banyan_conf": 0.37,
+    "growth_tier": "B",
+    "growth_adj": 0.531
+   }
+  ]
+ },
+ "Construction & Field Service": {
+  "n": 19,
+  "banyan_fit_count": 0,
+  "banyan_fit_density": 0.0,
+  "regions": {
+   "US": 8,
+   "Australia": 3,
+   "New Zealand": 2,
+   "UK": 2,
+   "Armenia / USA": 1
+  },
+  "top_by_banyan": [
+   "ServiceM8 (0.547, C)",
+   "Foundation Software (0.533, C)",
+   "AroFlo (0.524, C)",
+   "Tradify (0.518, C)",
+   "Commusoft (0.518, C)",
+   "Buildxact (0.516, C)"
+  ],
+  "companies": [
+   {
+    "name": "ServiceM8",
+    "domain": "servicem8.com",
+    "vertical": "Trades FSM",
+    "region": "Australia",
+    "banyan_tier": "C",
+    "banyan_adj": 0.547,
+    "banyan_conf": 0.42,
+    "growth_tier": "C",
+    "growth_adj": 0.402
+   },
+   {
+    "name": "Foundation Software",
+    "domain": "foundationsoft.com",
+    "vertical": "Construction accounting/ERP",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.533,
+    "banyan_conf": 0.47,
+    "growth_tier": "C",
+    "growth_adj": 0.436
+   },
+   {
+    "name": "AroFlo",
+    "domain": "aroflo.com",
+    "vertical": "Trades job management",
+    "region": "Australia",
+    "banyan_tier": "C",
+    "banyan_adj": 0.524,
+    "banyan_conf": 0.415,
+    "growth_tier": "C",
+    "growth_adj": 0.402
+   },
+   {
+    "name": "Tradify",
+    "domain": "tradifyhq.com",
+    "vertical": "Trades job management",
+    "region": "New Zealand",
+    "banyan_tier": "C",
+    "banyan_adj": 0.518,
+    "banyan_conf": 0.41,
+    "growth_tier": "C",
+    "growth_adj": 0.402
+   },
+   {
+    "name": "Commusoft",
+    "domain": "commusoft.com",
+    "vertical": "Plumbing/HVAC/electrical FSM",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.518,
+    "banyan_conf": 0.41,
+    "growth_tier": "C",
+    "growth_adj": 0.402
+   },
+   {
+    "name": "Buildxact",
+    "domain": "buildxact.com",
+    "vertical": "Residential estimating/job management",
+    "region": "Australia",
+    "banyan_tier": "C",
+    "banyan_adj": 0.516,
+    "banyan_conf": 0.415,
+    "growth_tier": "C",
+    "growth_adj": 0.443
+   },
+   {
+    "name": "Raken",
+    "domain": "rakenapp.com",
+    "vertical": "Construction field reporting",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.5,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.458
+   },
+   {
+    "name": "BigChange",
+    "domain": "bigchange.com",
+    "vertical": "Mobile workforce/FSM",
+    "region": "UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.499,
+    "banyan_conf": 0.425,
+    "growth_tier": "C",
+    "growth_adj": 0.458
+   },
+   {
+    "name": "STACK Construction Technologies",
+    "domain": "stackct.com",
+    "vertical": "Takeoff/estimating",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.497,
+    "banyan_conf": 0.44,
+    "growth_tier": "C",
+    "growth_adj": 0.458
+   },
+   {
+    "name": "Fergus",
+    "domain": "fergus.com",
+    "vertical": "Trades job management",
+    "region": "New Zealand",
+    "banyan_tier": "C",
+    "banyan_adj": 0.492,
+    "banyan_conf": 0.415,
+    "growth_tier": "C",
+    "growth_adj": 0.415
+   },
+   {
+    "name": "OpenSpace",
+    "domain": "openspace.ai",
+    "vertical": "Construction reality capture",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.487,
+    "banyan_conf": 0.455,
+    "growth_tier": "B",
+    "growth_adj": 0.543
+   },
+   {
+    "name": "Buildern",
+    "domain": "buildern.com",
+    "vertical": "Construction management SaaS",
+    "region": "Armenia / USA",
+    "banyan_tier": "C",
+    "banyan_adj": 0.483,
+    "banyan_conf": 0.36,
+    "growth_tier": "C",
+    "growth_adj": 0.356
+   },
+   {
+    "name": "Buildots",
+    "domain": "buildots.com",
+    "vertical": "Construction progress AI",
+    "region": "Israel / UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.482,
+    "banyan_conf": 0.433,
+    "growth_tier": "B",
+    "growth_adj": 0.566
+   },
+   {
+    "name": "Tenna",
+    "domain": "tenna.com",
+    "vertical": "Construction equipment/fleet",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.481,
+    "banyan_conf": 0.385,
+    "growth_tier": "C",
+    "growth_adj": 0.392
+   },
+   {
+    "name": "BuildBook",
+    "domain": "buildbook.co",
+    "vertical": "Residential construction management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.478,
+    "banyan_conf": 0.385,
+    "growth_tier": "C",
+    "growth_adj": 0.358
+   },
+   {
+    "name": "FieldPulse",
+    "domain": "fieldpulse.com",
+    "vertical": "Field service management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.474,
+    "banyan_conf": 0.435,
+    "growth_tier": "B",
+    "growth_adj": 0.524
+   },
+   {
+    "name": "Workiz",
+    "domain": "workiz.com",
+    "vertical": "Home services FSM",
+    "region": "USA / Israel",
+    "banyan_tier": "C",
+    "banyan_adj": 0.474,
+    "banyan_conf": 0.435,
+    "growth_tier": "C",
+    "growth_adj": 0.463
+   },
+   {
+    "name": "Assignar",
+    "domain": "assignar.com",
+    "vertical": "Construction workforce/equipment ops",
+    "region": "Australia / USA",
+    "banyan_tier": "C",
+    "banyan_adj": 0.47,
+    "banyan_conf": 0.425,
+    "growth_tier": "C",
+    "growth_adj": 0.448
+   },
+   {
+    "name": "PermitFlow",
+    "domain": "permitflow.com",
+    "vertical": "Construction permitting AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.466,
+    "banyan_conf": 0.423,
+    "growth_tier": "B",
+    "growth_adj": 0.564
+   }
+  ]
+ },
+ "Hospitality, Restaurant & Personal Services": {
+  "n": 15,
+  "banyan_fit_count": 1,
+  "banyan_fit_density": 0.07,
+  "regions": {
+   "US": 13,
+   "Ireland": 1,
+   "Canada": 1
+  },
+  "top_by_banyan": [
+   "Schedulefly (0.595, B)",
+   "Phorest (0.55, C)",
+   "Tripleseat (0.542, C)",
+   "Celerant Technology (0.53, C)",
+   "7shifts (0.522, C)",
+   "Meevo / Millennium Systems (0.511, C)"
+  ],
+  "companies": [
+   {
+    "name": "Schedulefly",
+    "domain": "schedulefly.com",
+    "vertical": "Restaurant scheduling",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.595,
+    "banyan_conf": 0.428,
+    "growth_tier": "C",
+    "growth_adj": 0.354
+   },
+   {
+    "name": "Phorest",
+    "domain": "phorest.com",
+    "vertical": "Salon/spa management",
+    "region": "Ireland",
+    "banyan_tier": "C",
+    "banyan_adj": 0.55,
+    "banyan_conf": 0.483,
+    "growth_tier": "B",
+    "growth_adj": 0.531
+   },
+   {
+    "name": "Tripleseat",
+    "domain": "tripleseat.com",
+    "vertical": "Hospitality events/catering",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.542,
+    "banyan_conf": 0.483,
+    "growth_tier": "B",
+    "growth_adj": 0.531
+   },
+   {
+    "name": "Celerant Technology",
+    "domain": "celerant.com",
+    "vertical": "Specialty retail POS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.53,
+    "banyan_conf": 0.425,
+    "growth_tier": "C",
+    "growth_adj": 0.384
+   },
+   {
+    "name": "7shifts",
+    "domain": "7shifts.com",
+    "vertical": "Restaurant workforce management",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.522,
+    "banyan_conf": 0.51,
+    "growth_tier": "B",
+    "growth_adj": 0.562
+   },
+   {
+    "name": "Meevo / Millennium Systems",
+    "domain": "meevo.com",
+    "vertical": "Salon/spa SaaS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.511,
+    "banyan_conf": 0.438,
+    "growth_tier": "C",
+    "growth_adj": 0.443
+   },
+   {
+    "name": "Planning Pod",
+    "domain": "planningpod.com",
+    "vertical": "Venue/event management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.51,
+    "banyan_conf": 0.398,
+    "growth_tier": "C",
+    "growth_adj": 0.372
+   },
+   {
+    "name": "MicroBiz",
+    "domain": "microbiz.com",
+    "vertical": "Specialty retail POS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.498,
+    "banyan_conf": 0.383,
+    "growth_tier": "C",
+    "growth_adj": 0.354
+   },
+   {
+    "name": "Rain Retail Software",
+    "domain": "rainpos.com",
+    "vertical": "Specialty retail POS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.496,
+    "banyan_conf": 0.398,
+    "growth_tier": "C",
+    "growth_adj": 0.385
+   },
+   {
+    "name": "Total Party Planner",
+    "domain": "totalpartyplanner.com",
+    "vertical": "Catering/event software",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.496,
+    "banyan_conf": 0.37,
+    "growth_tier": "C",
+    "growth_adj": 0.341
+   },
+   {
+    "name": "Rezku",
+    "domain": "rezku.com",
+    "vertical": "Restaurant POS",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.488,
+    "banyan_conf": 0.383,
+    "growth_tier": "C",
+    "growth_adj": 0.384
+   },
+   {
+    "name": "MarginEdge",
+    "domain": "marginedge.com",
+    "vertical": "Restaurant back-office/AP",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.485,
+    "banyan_conf": 0.46,
+    "growth_tier": "B",
+    "growth_adj": 0.548
+   },
+   {
+    "name": "Mangomint",
+    "domain": "mangomint.com",
+    "vertical": "Salon/spa booking",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.481,
+    "banyan_conf": 0.443,
+    "growth_tier": "B",
+    "growth_adj": 0.526
+   },
+   {
+    "name": "Craftable",
+    "domain": "craftable.com",
+    "vertical": "Hospitality back-office",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.48,
+    "banyan_conf": 0.43,
+    "growth_tier": "C",
+    "growth_adj": 0.465
+   },
+   {
+    "name": "Material Security",
+    "domain": "material.security",
+    "vertical": "Security / email & cloud workspace security",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.466,
+    "banyan_conf": 0.405,
+    "growth_tier": "B",
+    "growth_adj": 0.535
+   }
+  ]
+ },
+ "Education": {
+  "n": 13,
+  "banyan_fit_count": 7,
+  "banyan_fit_density": 0.54,
+  "regions": {
+   "US": 13
+  },
+  "top_by_banyan": [
+   "Infinite Campus (0.607, B)",
+   "ClassLink (0.597, B)",
+   "Edupoint (0.593, B)",
+   "Aeries Software (0.572, B)",
+   "Rediker Software (0.569, B)",
+   "Populi (0.554, B)"
+  ],
+  "companies": [
+   {
+    "name": "Infinite Campus",
+    "domain": "infinitecampus.com",
+    "vertical": "K-12 student information system / district administration",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.607,
+    "banyan_conf": 0.428,
+    "growth_tier": "C",
+    "growth_adj": 0.457
+   },
+   {
+    "name": "ClassLink",
+    "domain": "classlink.com",
+    "vertical": "K-12 identity / single sign-on / rostering",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.597,
+    "banyan_conf": 0.432,
+    "growth_tier": "C",
+    "growth_adj": 0.468
+   },
+   {
+    "name": "Edupoint",
+    "domain": "edupoint.com",
+    "vertical": "K-12 SIS / LMS / administration (Synergy)",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.593,
+    "banyan_conf": 0.432,
+    "growth_tier": "C",
+    "growth_adj": 0.449
+   },
+   {
+    "name": "Aeries Software",
+    "domain": "aeries.com",
+    "vertical": "K-12 student information system",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.572,
+    "banyan_conf": 0.418,
+    "growth_tier": "C",
+    "growth_adj": 0.423
+   },
+   {
+    "name": "Rediker Software",
+    "domain": "rediker.com",
+    "vertical": "School administration / SIS",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.569,
+    "banyan_conf": 0.418,
+    "growth_tier": "C",
+    "growth_adj": 0.397
+   },
+   {
+    "name": "Populi",
+    "domain": "populi.co",
+    "vertical": "Higher-ed SIS / LMS (small colleges)",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.554,
+    "banyan_conf": 0.385,
+    "growth_tier": "C",
+    "growth_adj": 0.394
+   },
+   {
+    "name": "Gradelink",
+    "domain": "gradelink.com",
+    "vertical": "K-12 SIS / school administration",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.551,
+    "banyan_conf": 0.395,
+    "growth_tier": "C",
+    "growth_adj": 0.4
+   },
+   {
+    "name": "Incident IQ",
+    "domain": "incidentiq.com",
+    "vertical": "K-12 IT asset / helpdesk / workflow management",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.532,
+    "banyan_conf": 0.458,
+    "growth_tier": "B",
+    "growth_adj": 0.557
+   },
+   {
+    "name": "ParentSquare",
+    "domain": "parentsquare.com",
+    "vertical": "K-12 family/school communications",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.527,
+    "banyan_conf": 0.458,
+    "growth_tier": "B",
+    "growth_adj": 0.543
+   },
+   {
+    "name": "Apptegy",
+    "domain": "apptegy.com",
+    "vertical": "K-12 school websites / communications / brand",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.513,
+    "banyan_conf": 0.415,
+    "growth_tier": "B",
+    "growth_adj": 0.532
+   },
+   {
+    "name": "Alma SIS",
+    "domain": "getalma.com",
+    "vertical": "K-12 student information system",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.504,
+    "banyan_conf": 0.375,
+    "growth_tier": "C",
+    "growth_adj": 0.4
+   },
+   {
+    "name": "Campus Cafe",
+    "domain": "campuscafesoftware.com",
+    "vertical": "Higher-ed SIS (small institutions)",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.502,
+    "banyan_conf": 0.338,
+    "growth_tier": "C",
+    "growth_adj": 0.351
+   },
+   {
+    "name": "Semgrep",
+    "domain": "semgrep.dev",
+    "vertical": "Security / static analysis (SAST)",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.485,
+    "banyan_conf": 0.445,
+    "growth_tier": "B",
+    "growth_adj": 0.582
+   }
+  ]
+ },
+ "Security": {
+  "n": 8,
+  "banyan_fit_count": 0,
+  "banyan_fit_density": 0.0,
+  "regions": {
+   "US": 5,
+   "Canada": 1,
+   "Ireland": 1,
+   "Belgium": 1
+  },
+  "top_by_banyan": [
+   "Tailscale (0.53, C)",
+   "Chainguard (0.519, C)",
+   "Panther Labs (0.487, C)",
+   "Tines (0.486, C)",
+   "Aikido Security (0.469, rejected)",
+   "Socket (0.459, C)"
+  ],
+  "companies": [
+   {
+    "name": "Tailscale",
+    "domain": "tailscale.com",
+    "vertical": "Networking / security infrastructure (WireGuard VPN)",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.53,
+    "banyan_conf": 0.505,
+    "growth_tier": "B",
+    "growth_adj": 0.606
+   },
+   {
+    "name": "Chainguard",
+    "domain": "chainguard.dev",
+    "vertical": "Software supply-chain security",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.519,
+    "banyan_conf": 0.453,
+    "growth_tier": "B",
+    "growth_adj": 0.669
+   },
+   {
+    "name": "Panther Labs",
+    "domain": "panther.com",
+    "vertical": "Security / cloud-native SIEM & detection",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.487,
+    "banyan_conf": 0.455,
+    "growth_tier": "B",
+    "growth_adj": 0.568
+   },
+   {
+    "name": "Tines",
+    "domain": "tines.com",
+    "vertical": "Security / no-code automation & orchestration (SOAR)",
+    "region": "Ireland",
+    "banyan_tier": "C",
+    "banyan_adj": 0.486,
+    "banyan_conf": 0.455,
+    "growth_tier": "B",
+    "growth_adj": 0.584
+   },
+   {
+    "name": "Aikido Security",
+    "domain": "aikido.dev",
+    "vertical": "Security / unified AppSec platform (SMB-focused)",
+    "region": "Belgium",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.469,
+    "banyan_conf": 0.44,
+    "growth_tier": "B",
+    "growth_adj": 0.611
+   },
+   {
+    "name": "Socket",
+    "domain": "socket.dev",
+    "vertical": "Open-source supply-chain security",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.459,
+    "banyan_conf": 0.385,
+    "growth_tier": "B",
+    "growth_adj": 0.588
+   },
+   {
+    "name": "Endor Labs",
+    "domain": "endorlabs.com",
+    "vertical": "Security / software supply chain & SCA",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.456,
+    "banyan_conf": 0.41,
+    "growth_tier": "B",
+    "growth_adj": 0.576
+   },
+   {
+    "name": "DataBahn",
+    "domain": "databahn.ai",
+    "vertical": "Security / data pipeline & telemetry management",
+    "region": "US",
+    "banyan_tier": "rejected",
+    "banyan_adj": 0.41,
+    "banyan_conf": 0.34,
+    "growth_tier": "B",
+    "growth_adj": 0.517
+   }
+  ]
+ },
+ "Horizontal AI Applications": {
+  "n": 6,
+  "banyan_fit_count": 0,
+  "banyan_fit_density": 0.0,
+  "regions": {
+   "US": 5,
+   "US / UK": 1
+  },
+  "top_by_banyan": [
+   "AlphaSense (0.468, C)",
+   "Trunk Tools (0.454, C)",
+   "Clay (0.433, C)",
+   "Decagon (0.427, C)",
+   "Sierra (0.425, C)",
+   "11x (0.398, C)"
+  ],
+  "companies": [
+   {
+    "name": "AlphaSense",
+    "domain": "alpha-sense.com",
+    "vertical": "Market intelligence AI",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.468,
+    "banyan_conf": 0.562,
+    "growth_tier": "B",
+    "growth_adj": 0.689
+   },
+   {
+    "name": "Trunk Tools",
+    "domain": "trunktools.com",
+    "vertical": "Construction AI agents",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.454,
+    "banyan_conf": 0.408,
+    "growth_tier": "B",
+    "growth_adj": 0.567
+   },
+   {
+    "name": "Clay",
+    "domain": "clay.com",
+    "vertical": "AI GTM / sales data",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.433,
+    "banyan_conf": 0.505,
+    "growth_tier": "B",
+    "growth_adj": 0.693
+   },
+   {
+    "name": "Decagon",
+    "domain": "decagon.ai",
+    "vertical": "Customer support AI agents",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.427,
+    "banyan_conf": 0.445,
+    "growth_tier": "B",
+    "growth_adj": 0.636
+   },
+   {
+    "name": "Sierra",
+    "domain": "sierra.ai",
+    "vertical": "Customer service AI agents",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.425,
+    "banyan_conf": 0.5,
+    "growth_tier": "B",
+    "growth_adj": 0.695
+   },
+   {
+    "name": "11x",
+    "domain": "11x.ai",
+    "vertical": "AI SDR / sales agents",
+    "region": "US / UK",
+    "banyan_tier": "C",
+    "banyan_adj": 0.398,
+    "banyan_conf": 0.403,
+    "growth_tier": "B",
+    "growth_adj": 0.552
+   }
+  ]
+ },
+ "Government & Public Sector": {
+  "n": 6,
+  "banyan_fit_count": 0,
+  "banyan_fit_density": 0.0,
+  "regions": {
+   "Canada": 3,
+   "US": 2,
+   "Israel/US": 1
+  },
+  "top_by_banyan": [
+   "Envisio (0.523, C)",
+   "GovPilot (0.509, C)",
+   "GOGov (0.505, C)",
+   "Cloudpermit (0.486, C)",
+   "Clariti (0.483, C)",
+   "Zencity (0.475, C)"
+  ],
+  "companies": [
+   {
+    "name": "Envisio",
+    "domain": "envisio.com",
+    "vertical": "Public-sector strategic / performance planning",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.523,
+    "banyan_conf": 0.365,
+    "growth_tier": "C",
+    "growth_adj": 0.427
+   },
+   {
+    "name": "GovPilot",
+    "domain": "govpilot.com",
+    "vertical": "Local government permitting / administration",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.509,
+    "banyan_conf": 0.375,
+    "growth_tier": "C",
+    "growth_adj": 0.412
+   },
+   {
+    "name": "GOGov",
+    "domain": "gogovapps.com",
+    "vertical": "Local government citizen engagement / 311",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.505,
+    "banyan_conf": 0.365,
+    "growth_tier": "C",
+    "growth_adj": 0.385
+   },
+   {
+    "name": "Cloudpermit",
+    "domain": "cloudpermit.com",
+    "vertical": "Government permitting / licensing (e-permitting)",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.486,
+    "banyan_conf": 0.365,
+    "growth_tier": "C",
+    "growth_adj": 0.47
+   },
+   {
+    "name": "Clariti",
+    "domain": "claritisoftware.com",
+    "vertical": "Government permitting / licensing platform",
+    "region": "Canada",
+    "banyan_tier": "C",
+    "banyan_adj": 0.483,
+    "banyan_conf": 0.365,
+    "growth_tier": "C",
+    "growth_adj": 0.491
+   },
+   {
+    "name": "Zencity",
+    "domain": "zencity.io",
+    "vertical": "Civic analytics / community engagement",
+    "region": "Israel/US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.475,
+    "banyan_conf": 0.38,
+    "growth_tier": "C",
+    "growth_adj": 0.497
+   }
+  ]
+ },
+ "Other Vertical SaaS": {
+  "n": 2,
+  "banyan_fit_count": 1,
+  "banyan_fit_density": 0.5,
+  "regions": {
+   "US": 2
+  },
+  "top_by_banyan": [
+   "HawkSoft (0.631, B)",
+   "Cogitate (0.501, C)"
+  ],
+  "companies": [
+   {
+    "name": "HawkSoft",
+    "domain": "hawksoft.com",
+    "vertical": "Insurance agency management",
+    "region": "US",
+    "banyan_tier": "B",
+    "banyan_adj": 0.631,
+    "banyan_conf": 0.52,
+    "growth_tier": "C",
+    "growth_adj": 0.44
+   },
+   {
+    "name": "Cogitate",
+    "domain": "cogitate.com",
+    "vertical": "P&C insurance core/back office",
+    "region": "US",
+    "banyan_tier": "C",
+    "banyan_adj": 0.501,
+    "banyan_conf": 0.405,
+    "growth_tier": "C",
+    "growth_adj": 0.399
+   }
+  ]
+ }
+}

@@ -1,0 +1,2620 @@
+{
+ "angles": [
+  {
+   "angle": "constellation-adjacency",
+   "companies": [
+    {
+     "name": "GIRO Inc.",
+     "domain": "giro.ca",
+     "vertical": "Public-transit and postal scheduling/optimization software (HASTUS platform)",
+     "region": "Canada (Montreal); global",
+     "ownership": "Private, closely held (founder/employee-owned type; no VC/public listing)",
+     "size_signal": "Global niche leader; HASTUS used by major transit authorities worldwide (revenue not disclosed, mid-size)",
+     "banyan_fit_note": "Strongest fit of the set: private, closely-held, mission-critical niche VMS leader with sticky multi-year transit-authority contracts and high recurring revenue."
+    },
+    {
+     "name": "Maptek",
+     "domain": "maptek.com",
+     "vertical": "Mine planning, geology, survey and fleet-management software for the mining sector",
+     "region": "Australia (Adelaide); global",
+     "ownership": "Private, family-led",
+     "size_signal": "~20,000 users across ~2,500 mines in ~80 countries",
+     "banyan_fit_note": "Family-owned, entrenched mining-software leader with high recurring/maintenance revenue; good fit though likely sits at the upper end of Banyan's size range."
+    },
+    {
+     "name": "Aegis Software (Aegis Industrial Software / AIS)",
+     "domain": "aiscorp.com",
+     "vertical": "Manufacturing MES/MOM software (FactoryLogix)",
+     "region": "United States (Horsham, PA)",
+     "ownership": "PE-backed (Peak Rock Capital) \u2014 lower-middle-market / PE-light",
+     "size_signal": "~190 employees; est. ~$30M-$36M revenue",
+     "banyan_fit_note": "Profitable niche MES leader squarely in Banyan's revenue band; PE-owned, so a secondary-buyout candidate rather than a founder deal."
+    },
+    {
+     "name": "Azalea Health",
+     "domain": "azaleahealth.com",
+     "vertical": "Rural-hospital and ambulatory EHR / patient accounting / medical billing",
+     "region": "United States (Atlanta, GA)",
+     "ownership": "PE-backed (LLR Partners) \u2014 lower-middle-market growth PE",
+     "size_signal": "Rural/community-hospital EHR niche; lower-middle-market scale (revenue not disclosed)",
+     "banyan_fit_note": "Under-the-radar niche healthcare-IT leader with high recurring SaaS revenue; PE-owned (LLR) so a secondary opportunity \u2014 confirm profitability and that revenue is under ~$100M."
+    },
+    {
+     "name": "Quartex",
+     "domain": "quartexsoftware.com",
+     "vertical": "Mining / high-risk-industry GRC, safety and workforce-operations software",
+     "region": "Australia; global",
+     "ownership": "PE-backed (Accel-KKR); platform formed from INX Software + K2fly",
+     "size_signal": "Combined INX Software + K2fly customer base across mining/resources; mid-size",
+     "banyan_fit_note": "Niche resources-sector compliance/safety software leader with recurring revenue; recently PE-assembled by Accel-KKR, so less a classic founder deal \u2014 weakest of the qualifying set, include as an adjacency watchlist name."
+    }
+   ]
+  },
+  {
+   "angle": "valsoft-everfield-banyan",
+   "companies": [
+    {
+     "name": "HawkSoft",
+     "domain": "hawksoft.com",
+     "vertical": "Insurance agency management systems (independent P&C agencies)",
+     "region": "Oregon, US",
+     "ownership": "Founder/family-owned, bootstrapped, no outside investors",
+     "size_signal": "Powers thousands of independent agencies",
+     "banyan_fit_note": "Bootstrapped family-owned category vendor that has publicly declined acquisition; textbook profitable, sticky niche leader."
+    },
+    {
+     "name": "Planning Center",
+     "domain": "planningcenter.com",
+     "vertical": "Church / congregation management software (ChMS)",
+     "region": "US",
+     "ownership": "Bootstrapped, privately held ('not for sale')",
+     "size_signal": "~228 employees",
+     "banyan_fit_note": "Debt-free bootstrapped ChMS leader; recurring subscriptions and high retention in a sticky faith vertical."
+    },
+    {
+     "name": "Open Dental",
+     "domain": "opendental.com",
+     "vertical": "Dental practice management software",
+     "region": "Oregon, US",
+     "ownership": "Privately owned (Open Dental Software, Inc.)",
+     "size_signal": "Operating since 2003; large installed base",
+     "banyan_fit_note": "Independent dental PMS with recurring support revenue and no outside capital \u2014 durable buy-and-hold profile."
+    },
+    {
+     "name": "Dental Lab Guru",
+     "domain": "dentallabguru.com",
+     "vertical": "Dental laboratory workflow/management SaaS",
+     "region": "US",
+     "ownership": "Private niche SaaS",
+     "size_signal": "Browser-based dental-lab platform (small)",
+     "banyan_fit_note": "Distinct dental-lab niche (not practice mgmt); small but sticky recurring SaaS \u2014 classic tuck-in. May be near/below the $2M floor."
+    },
+    {
+     "name": "funeralOne",
+     "domain": "funeralone.com",
+     "vertical": "Funeral home websites & tribute technology",
+     "region": "Michigan, US",
+     "ownership": "Founder-led, private",
+     "size_signal": "Death-care vertical specialist",
+     "banyan_fit_note": "Founder-owned death-care software; recurring web/tribute subscriptions in a fragmented, recession-resistant vertical."
+    },
+    {
+     "name": "Osiris Software",
+     "domain": "osirissoftware.com",
+     "vertical": "Funeral home, cemetery & crematory management",
+     "region": "Oklahoma, US",
+     "ownership": "Funeral-director owned/operated, private",
+     "size_signal": "Death-care management suite",
+     "banyan_fit_note": "Owner-operator death-care back-office software; recurring, mission-critical, under-the-radar."
+    },
+    {
+     "name": "CCStorage",
+     "domain": "ccstorage.com",
+     "vertical": "Self-storage facility management software",
+     "region": "US",
+     "ownership": "Private, independent operator",
+     "size_signal": "Self-storage PMS (no-monthly-fee model)",
+     "banyan_fit_note": "Independent self-storage vertical software; recurring facility subscriptions in a Banyan-favored asset niche."
+    },
+    {
+     "name": "Scribble Software",
+     "domain": "scribblesoftware.com",
+     "vertical": "Marina & marine facility management (MarinaOffice)",
+     "region": "Canada",
+     "ownership": "Privately held",
+     "size_signal": "Marina management software developer",
+     "banyan_fit_note": "Niche marina-ops software; recurring, tiny TAM \u2014 exactly the fragmented vertical roll-ups target."
+    },
+    {
+     "name": "Golf Genius",
+     "domain": "golfgenius.com",
+     "vertical": "Golf tournament & club operations software",
+     "region": "Pennsylvania, US",
+     "ownership": "Private (growth-equity backed; not public/unicorn)",
+     "size_signal": "~$60M ARR; 11,000 clubs",
+     "banyan_fit_note": "Dominant golf-ops niche leader with high recurring revenue. Upper end of range and PE-backed \u2014 likely above a typical Banyan bite; confirm valuation."
+    },
+    {
+     "name": "The 5th Ingredient (Beer30)",
+     "domain": "the5thingredient.com",
+     "vertical": "Brewery production & management software",
+     "region": "Florida, US",
+     "ownership": "Founder/CEO-led, private",
+     "size_signal": "~18 employees",
+     "banyan_fit_note": "Founder-led brewery vertical SaaS; small but category-specific recurring product. May be near the $2M floor."
+    },
+    {
+     "name": "Farmbrite",
+     "domain": "farmbrite.com",
+     "vertical": "Farm / agriculture operations management",
+     "region": "Colorado, US",
+     "ownership": "Private niche SaaS",
+     "size_signal": "7,000+ farms across 125+ countries",
+     "banyan_fit_note": "Bootstrapped-looking ag vertical SaaS; broad small-farm base on recurring subscriptions."
+    },
+    {
+     "name": "Gradelink",
+     "domain": "gradelink.com",
+     "vertical": "Private/charter K-12 school SIS & administration",
+     "region": "California, US",
+     "ownership": "Private niche education software",
+     "size_signal": "K-12 private/charter SIS",
+     "banyan_fit_note": "Independent school-admin SIS; sticky annual contracts in the fragmented private-education niche."
+    },
+    {
+     "name": "PayHOA",
+     "domain": "payhoa.com",
+     "vertical": "Self-managed HOA / community-association software",
+     "region": "Kentucky, US",
+     "ownership": "Private (has raised growth capital; not unicorn/public)",
+     "size_signal": "6,000+ communities",
+     "banyan_fit_note": "HOA management niche leader on recurring SaaS. Growth-capital backed \u2014 confirm valuation still fits."
+    },
+    {
+     "name": "MuniBilling",
+     "domain": "munibilling.com",
+     "vertical": "Utility / municipal billing software",
+     "region": "North Carolina, US",
+     "ownership": "Private niche vendor",
+     "size_signal": "Bills 10-50,000 accounts per client",
+     "banyan_fit_note": "Municipal/utility billing vertical; recurring, mission-critical, sticky government-adjacent revenue."
+    },
+    {
+     "name": "Liberty Software",
+     "domain": "libertysoftware.com",
+     "vertical": "Independent community pharmacy management",
+     "region": "Texas, US",
+     "ownership": "Independent, private",
+     "size_signal": "Used by thousands of pharmacies",
+     "banyan_fit_note": "Long-running independent-pharmacy POS/management vendor; recurring support in a defensible niche."
+    },
+    {
+     "name": "LabLynx",
+     "domain": "lablynx.com",
+     "vertical": "LIMS / laboratory informatics",
+     "region": "Georgia, US",
+     "ownership": "Independently owned (founder-led)",
+     "size_signal": "~$10-25M revenue; 51-200 employees",
+     "banyan_fit_note": "Founder-owned LIMS squarely in the ideal revenue band; recurring lab-software subscriptions."
+    },
+    {
+     "name": "GorillaDesk",
+     "domain": "gorilladesk.com",
+     "vertical": "Pest control & lawn-care field service software",
+     "region": "Florida, US",
+     "ownership": "Founder-led, private",
+     "size_signal": "Thousands of service-business users",
+     "banyan_fit_note": "Founder-built pest/lawn field-service SaaS; recurring SMB subscriptions in a fragmented trades niche."
+    },
+    {
+     "name": "LMN",
+     "domain": "golmn.com",
+     "vertical": "Landscaping business management software",
+     "region": "Ontario, Canada",
+     "ownership": "Founder-led, private",
+     "size_signal": "~$11.6M revenue; 105 employees",
+     "banyan_fit_note": "Category-leading landscaping vertical SaaS right in the revenue band on recurring subscriptions."
+    },
+    {
+     "name": "Pool Office Manager",
+     "domain": "poolofficemanager.com",
+     "vertical": "Pool service company management software",
+     "region": "US",
+     "ownership": "Industry-built, private",
+     "size_signal": "Subscriptions from ~$125/month",
+     "banyan_fit_note": "Niche pool-service SaaS; recurring SMB subscriptions, small under-the-radar target. Likely low-single-digit revenue."
+    },
+    {
+     "name": "Jackrabbit Technologies",
+     "domain": "jackrabbittech.com",
+     "vertical": "Youth activity / class management (gymnastics, dance, swim)",
+     "region": "North Carolina, US",
+     "ownership": "Founder-led, private",
+     "size_signal": "~128 employees",
+     "banyan_fit_note": "Founder-owned class-management leader for youth-activity centers; recurring, sticky, in-band."
+    },
+    {
+     "name": "Flight Schedule Pro",
+     "domain": "flightschedulepro.com",
+     "vertical": "Flight school & FBO scheduling / operations",
+     "region": "Kansas, US",
+     "ownership": "Private (PE-backed)",
+     "size_signal": "~75 employees",
+     "banyan_fit_note": "Aviation training/FBO vertical leader on recurring subscriptions. PE-backed \u2014 fits PE-light profile."
+    },
+    {
+     "name": "Frazer",
+     "domain": "frazer.com",
+     "vertical": "Used-car dealership management system (DMS)",
+     "region": "New York, US",
+     "ownership": "Founder-highlighted, private",
+     "size_signal": "22,000+ independent used-car dealers",
+     "banyan_fit_note": "Dominant independent used-car DMS with a huge sticky base and recurring revenue \u2014 textbook durable niche vendor."
+    },
+    {
+     "name": "MoveitPro",
+     "domain": "moveitpro.com",
+     "vertical": "Moving company CRM & dispatch software",
+     "region": "Florida, US",
+     "ownership": "Founder/CEO-led, private",
+     "size_signal": "$5M+ ARR",
+     "banyan_fit_note": "Founder-led moving-industry SaaS in the sweet-spot size; recurring dispatch/CRM subscriptions."
+    },
+    {
+     "name": "Trash Flow (Ivy Computer)",
+     "domain": "trashflow.com",
+     "vertical": "Waste hauler & recycling management software",
+     "region": "Vermont, US",
+     "ownership": "Privately owned since 1985",
+     "size_signal": "30+ years operating history",
+     "banyan_fit_note": "Decades-old owner-run waste/recycling vertical software; recurring, entrenched \u2014 classic buy-and-hold profile."
+    },
+    {
+     "name": "Smart Service",
+     "domain": "smartservice.com",
+     "vertical": "Field-service trades software (QuickBooks-integrated)",
+     "region": "Ohio, US",
+     "ownership": "Private niche vendor",
+     "size_signal": "Long-running field-service suite",
+     "banyan_fit_note": "Established trades field-service vendor; recurring, integrated, defensible SMB niche."
+    },
+    {
+     "name": "GymMaster (Treshna)",
+     "domain": "gymmaster.com",
+     "vertical": "Gym management & 24/7 access-control software",
+     "region": "New Zealand",
+     "ownership": "Privately held (Treshna Enterprises)",
+     "size_signal": "Used in 75+ countries",
+     "banyan_fit_note": "Independent gym-management plus hardware/access niche; recurring global subscriptions."
+    },
+    {
+     "name": "Rezku",
+     "domain": "rezku.com",
+     "vertical": "Restaurant / bar POS & hospitality management",
+     "region": "California, US",
+     "ownership": "Founder-led, private, not PE-backed",
+     "size_signal": "Restaurant/bar POS platform",
+     "banyan_fit_note": "Founder-owned restaurant POS; recurring SaaS plus payments attach in a fragmented hospitality niche."
+    },
+    {
+     "name": "Rentec Direct",
+     "domain": "rentecdirect.com",
+     "vertical": "Property management software (landlords / PMs)",
+     "region": "Oregon, US",
+     "ownership": "Privately held, independently owned, debt-free, no outside investors",
+     "size_signal": "Founded 2007; 14,000+ reviews signal scale",
+     "banyan_fit_note": "Debt-free bootstrapped property-management leader on recurring subscriptions \u2014 near-perfect Banyan profile."
+    },
+    {
+     "name": "Little Green Light",
+     "domain": "littlegreenlight.com",
+     "vertical": "Nonprofit donor management / CRM",
+     "region": "Washington, US",
+     "ownership": "Founder-started, bootstrapped, private",
+     "size_signal": "10,000+ nonprofit organizations",
+     "banyan_fit_note": "Bootstrapped nonprofit-CRM niche leader; recurring subscriptions, high retention, small and profitable-looking."
+    },
+    {
+     "name": "RunSignup / TicketSignup",
+     "domain": "runsignup.com",
+     "vertical": "Race / event registration & ticketing",
+     "region": "New Jersey, US",
+     "ownership": "Employee-owned, debt-free, profitable",
+     "size_signal": "~$21M 2025 revenue",
+     "banyan_fit_note": "Employee-owned, profitable, debt-free event-registration leader squarely in the band; recurring plus transaction revenue."
+    },
+    {
+     "name": "TaxSlayer Pro",
+     "domain": "taxslayerpro.com",
+     "vertical": "Professional tax-preparation software",
+     "region": "Georgia, US",
+     "ownership": "Privately held (family-owned lineage)",
+     "size_signal": "Major IRS VITA/TCE software provider",
+     "banyan_fit_note": "Private professional tax-prep vertical; recurring seasonal subscriptions. Confirm the Pro segment's standalone size fits the range."
+    },
+    {
+     "name": "Naranga",
+     "domain": "naranga.com",
+     "vertical": "Franchise management software",
+     "region": "Georgia, US",
+     "ownership": "Private franchise-management vendor",
+     "size_signal": "Franchise ops/training/compliance platform",
+     "banyan_fit_note": "Independent franchise-operations SaaS; recurring multi-unit subscriptions in a niche vertical."
+    },
+    {
+     "name": "StringSoft",
+     "domain": "stringsoft.com",
+     "vertical": "Veterinary practice management software",
+     "region": "US",
+     "ownership": "Private niche vendor",
+     "size_signal": "Listed veterinary PMS solution",
+     "banyan_fit_note": "Independent veterinary PMS; recurring practice subscriptions in a prime consolidation vertical (vet)."
+    },
+    {
+     "name": "RXNT",
+     "domain": "rxnt.com",
+     "vertical": "Ambulatory EHR, e-prescribing & practice management",
+     "region": "US",
+     "ownership": "Privately held, founder-led",
+     "size_signal": "130M+ prescriptions; $8B+ claims processed",
+     "banyan_fit_note": "Founder-led ambulatory-healthcare software suite; recurring SaaS across small medical practices."
+    },
+    {
+     "name": "Actionstep",
+     "domain": "actionstep.com",
+     "vertical": "Legal practice management software",
+     "region": "New Zealand / global",
+     "ownership": "PE-backed (Serent Capital), private",
+     "size_signal": "Serent-backed global legal PMS",
+     "banyan_fit_note": "Legal PMS niche leader on recurring subscriptions. PE-backed (fits PE-light) \u2014 confirm valuation band."
+    },
+    {
+     "name": "Rent Manager (LCS)",
+     "domain": "rentmanager.com",
+     "vertical": "Property management software",
+     "region": "US",
+     "ownership": "Family/founder-led, private",
+     "size_signal": "30+ years operating history",
+     "banyan_fit_note": "Family-owned property-management vendor with decades of recurring revenue; durable buy-and-hold profile."
+    },
+    {
+     "name": "Contractor Foreman",
+     "domain": "contractorforeman.com",
+     "vertical": "SMB construction management software",
+     "region": "US",
+     "ownership": "Bootstrapped, founder-led, no parent",
+     "size_signal": "Low-cost SMB construction suite",
+     "banyan_fit_note": "Bootstrapped construction-management SaaS for SMBs; recurring low-cost subscriptions, under-the-radar."
+    },
+    {
+     "name": "ServiceM8",
+     "domain": "servicem8.com",
+     "vertical": "Field-service job management for small trades",
+     "region": "Australia",
+     "ownership": "Founder/family, private",
+     "size_signal": "~11-50 employees",
+     "banyan_fit_note": "Founder-owned small-trades field-service app; recurring SMB subscriptions, lean and profitable-looking."
+    },
+    {
+     "name": "Tekmetric",
+     "domain": "tekmetric.com",
+     "vertical": "Auto repair shop management software",
+     "region": "US",
+     "ownership": "Private; single growth-equity round (Susquehanna Growth)",
+     "size_signal": "Bootstrapped until first outside investment",
+     "banyan_fit_note": "Auto-repair shop-management leader, bootstrapped until one growth round; recurring SaaS. Note growth-equity backing may push valuation up."
+    },
+    {
+     "name": "RMS Cloud",
+     "domain": "rmscloud.com",
+     "vertical": "Hospitality / property management system (PMS)",
+     "region": "Australia",
+     "ownership": "Family business with PE minority investment",
+     "size_signal": "6,000+ properties across 70+ countries",
+     "banyan_fit_note": "Family-owned hospitality PMS with PE minority; recurring global subscriptions in a Banyan-style vertical."
+    },
+    {
+     "name": "Spoonity",
+     "domain": "spoonity.com",
+     "vertical": "QSR / restaurant loyalty & digital ordering",
+     "region": "Canada",
+     "ownership": "Private",
+     "size_signal": "5,000+ locations in 30+ countries",
+     "banyan_fit_note": "Independent restaurant loyalty/ordering SaaS; recurring multi-location subscriptions, small niche player."
+    },
+    {
+     "name": "Phorest",
+     "domain": "phorest.com",
+     "vertical": "Salon, spa & aesthetics-clinic management",
+     "region": "Ireland",
+     "ownership": "Founder-led, growth-equity backed, private",
+     "size_signal": "12,000+ salons; 155k+ professionals",
+     "banyan_fit_note": "Founder-led salon/spa vertical leader; recurring SaaS plus payments. Growth-backed and sizable \u2014 confirm it fits the bite size."
+    }
+   ]
+  },
+  {
+   "angle": "education",
+   "companies": [
+    {
+     "name": "Infinite Campus",
+     "domain": "infinitecampus.com",
+     "vertical": "K-12 Student Information Systems (SIS)",
+     "region": "US",
+     "ownership": "Private, founder-led (never took VC)",
+     "size_signal": "3,200+ districts; 650+ employees; revenue likely ~$100M+ (unconfirmed)",
+     "banyan_fit_note": "Archetypal founder-owned, bootstrapped K-12 SIS niche leader with deep recurring revenue; excellent ownership fit but size likely sits at/above Banyan's ~$100M ceiling and founder is known as not-for-sale - verify."
+    },
+    {
+     "name": "Skyward",
+     "domain": "skyward.com",
+     "vertical": "K-12 SIS + ERP (student, finance, HR)",
+     "region": "US",
+     "ownership": "Private, founder-origin",
+     "size_signal": "2,500+ districts; founded 1980; revenue likely near/above $100M (unconfirmed)",
+     "banyan_fit_note": "Long-established, profitable founder-origin K-12 SIS/ERP niche leader; strong ownership/recurring-revenue fit but size may be at/above the $100M ceiling - verify."
+    },
+    {
+     "name": "Aeries",
+     "domain": "aeries.com",
+     "vertical": "K-12 SIS (California-strong)",
+     "region": "US",
+     "ownership": "Private, Lloyd-family founded; took growth investment in 2025",
+     "size_signal": "~101 employees; revenue est. low-tens of $M",
+     "banyan_fit_note": "Family-founded K-12 SIS niche leader in the right size band; a 2025 growth investment means ownership is shifting - confirm whether a controlling stake is still available."
+    },
+    {
+     "name": "Focus School Software",
+     "domain": "focusschoolsoftware.com",
+     "vertical": "K-12 SIS / ERP",
+     "region": "US",
+     "ownership": "Private",
+     "size_signal": "~180 professionals",
+     "banyan_fit_note": "Private mid-size K-12 SIS/ERP niche player with recurring district revenue; fits size and ownership profile - confirm founder control and profitability."
+    },
+    {
+     "name": "Rediker",
+     "domain": "rediker.com",
+     "vertical": "Private/Catholic/charter K-12 SIS",
+     "region": "US",
+     "ownership": "Private, founder-origin",
+     "size_signal": "~100 employees; est. ~$8M ARR",
+     "banyan_fit_note": "Classic 'boring', profitable founder-owned SIS for private/faith-based schools; small and high-recurring - strong core Banyan fit."
+    },
+    {
+     "name": "Gradelink",
+     "domain": "gradelink.com",
+     "vertical": "Small/private school SIS",
+     "region": "US",
+     "ownership": "Private",
+     "size_signal": "11-50 employees; est. $10M-$25M revenue",
+     "banyan_fit_note": "Under-the-radar small-school SIS with recurring subscriptions in the ideal size band - strong fit; verify ownership."
+    },
+    {
+     "name": "QuickSchools",
+     "domain": "quickschools.com",
+     "vertical": "Small-school cloud SIS",
+     "region": "US / Malaysia roots",
+     "ownership": "Privately held",
+     "size_signal": "Revenue undisclosed (small)",
+     "banyan_fit_note": "Bootstrapped-profile niche small-school SIS; likely small and recurring - fits, but size undisclosed, verify it clears the ~$2M floor."
+    },
+    {
+     "name": "SchoolCues",
+     "domain": "schoolcues.com",
+     "vertical": "Small-school SIS, payments & communications",
+     "region": "US",
+     "ownership": "Private",
+     "size_signal": "est. $1M-$10M revenue",
+     "banyan_fit_note": "Niche small-school all-in-one with recurring SaaS + payments; fits ownership profile - confirm it clears the ~$2M revenue floor."
+    },
+    {
+     "name": "ParentLocker",
+     "domain": "parentlocker.com",
+     "vertical": "K-12 private-school management & communications",
+     "region": "US",
+     "ownership": "Private, founder-led",
+     "size_signal": "Very small team",
+     "banyan_fit_note": "Founder-led niche private-school platform with the right profile but likely sub-scale - verify revenue clears Banyan's floor."
+    },
+    {
+     "name": "Bromcom",
+     "domain": "bromcom.com",
+     "vertical": "Cloud school MIS + finance",
+     "region": "UK",
+     "ownership": "Private, founder-origin",
+     "size_signal": "5,600+ schools; FY25 MIS revenue ~\u00a329.5M (~$37M)",
+     "banyan_fit_note": "Profitable, founder-origin UK school MIS niche leader at ideal size with high recurring revenue - strong fit."
+    },
+    {
+     "name": "Ed-admin",
+     "domain": "ed-admin.com",
+     "vertical": "Independent-school operating system (SIS/admin)",
+     "region": "South Africa / Mauritius",
+     "ownership": "Private, founder-led",
+     "size_signal": "Claims ~70% of South African premium independent schools",
+     "banyan_fit_note": "Founder-led niche leader dominating a defensible regional segment; likely small-mid and recurring - good international fit; verify revenue band."
+    },
+    {
+     "name": "Entab CampusCare",
+     "domain": "entab.in",
+     "vertical": "K-12 school ERP",
+     "region": "India",
+     "ownership": "Private, founder-led",
+     "size_signal": "~900 schools; ~300 employees; \u20b935 crore FY20 revenue (~$4-5M)",
+     "banyan_fit_note": "Founder-led Indian K-12 ERP niche leader; small and recurring - fits, though India-scale revenue is at the low end of the band."
+    },
+    {
+     "name": "MyClassboard",
+     "domain": "myclassboard.com",
+     "vertical": "School ERP / administration",
+     "region": "India",
+     "ownership": "Private",
+     "size_signal": "est. ~$34M ARR; 309 employees (third-party estimate, likely overstated)",
+     "banyan_fit_note": "Private, founder-run Indian school ERP that fits the ownership profile - treat the $34M ARR estimate skeptically and verify."
+    },
+    {
+     "name": "Skolaro",
+     "domain": "skolaro.com",
+     "vertical": "School ERP",
+     "region": "India",
+     "ownership": "Bootstrapped / private",
+     "size_signal": "est. ~$4M ARR; 36 employees",
+     "banyan_fit_note": "Bootstrapped, profitable small school-ERP - textbook Banyan micro-cap profile; verify recurring-revenue mix."
+    },
+    {
+     "name": "Classe365",
+     "domain": "classe365.com",
+     "vertical": "SIS + LMS + CRM for schools/colleges",
+     "region": "Australia",
+     "ownership": "Private",
+     "size_signal": "6,000+ institutions across 130 countries; revenue undisclosed",
+     "banyan_fit_note": "Private, broadly deployed unified school platform with recurring SaaS - fits; confirm ownership and that size is within band."
+    },
+    {
+     "name": "Populi",
+     "domain": "populi.co",
+     "vertical": "SIS/LMS/finance for small colleges",
+     "region": "US",
+     "ownership": "Private, bootstrapped/unfunded signal",
+     "size_signal": "est. ~$1M ARR; 11 employees (likely understated/stale)",
+     "banyan_fit_note": "Bootstrapped, profitable small-college SIS - ideal ownership profile; reported size is below Banyan's floor and probably understated, so verify actual revenue."
+    },
+    {
+     "name": "Orbund",
+     "domain": "orbund.com",
+     "vertical": "SIS for career schools & colleges",
+     "region": "US",
+     "ownership": "Private, founder-led",
+     "size_signal": "70+ employees",
+     "banyan_fit_note": "Founder-led niche higher-ed/career-school SIS with recurring revenue in the right band - strong fit."
+    },
+    {
+     "name": "Jenzabar",
+     "domain": "jenzabar.com",
+     "vertical": "Higher-ed SIS / ERP / LMS",
+     "region": "US",
+     "ownership": "Private, founder-led",
+     "size_signal": "1,400+ higher-ed customers; est. 500+ employees (revenue likely >$100M)",
+     "banyan_fit_note": "Founder-owned higher-ed ERP niche leader with deep recurring revenue; ownership fits but size likely exceeds Banyan's ~$100M ceiling - verify."
+    },
+    {
+     "name": "ClassLink",
+     "domain": "classlink.com",
+     "vertical": "K-12 identity, single sign-on, rostering & analytics",
+     "region": "US",
+     "ownership": "Private, founder-led",
+     "size_signal": "25M+ users; 3,000+ school systems",
+     "banyan_fit_note": "Founder-led niche leader in K-12 identity/rostering with sticky recurring contracts - strong fit; confirm revenue is within band."
+    },
+    {
+     "name": "Transfinder",
+     "domain": "transfinder.com",
+     "vertical": "School bus routing / pupil transportation logistics",
+     "region": "US",
+     "ownership": "Private, founder-led",
+     "size_signal": "$50.15M 2025 revenue; ~195 employees",
+     "banyan_fit_note": "Founder-led, profitable niche leader in school transportation software; ideal size and recurring revenue - excellent core fit."
+    },
+    {
+     "name": "Edlio",
+     "domain": "edlio.com",
+     "vertical": "K-12 school websites, communications & payments",
+     "region": "US",
+     "ownership": "Private; PE-backed history",
+     "size_signal": "16,000+ schools",
+     "banyan_fit_note": "Niche leader in school websites/comms with recurring revenue; verify current ownership - a prior PE stake may make it a platform rather than a founder deal."
+    },
+    {
+     "name": "Schoolbox",
+     "domain": "schoolbox.education",
+     "vertical": "K-12 LMS / community portal",
+     "region": "Australia",
+     "ownership": "Private",
+     "size_signal": "950+ campuses; 650,000+ users; revenue undisclosed",
+     "banyan_fit_note": "Private Australian LMS/portal niche player with recurring school subscriptions - fits; confirm ownership and revenue band."
+    },
+    {
+     "name": "Apptegy",
+     "domain": "apptegy.com",
+     "vertical": "K-12 district websites, communications & branding",
+     "region": "US",
+     "ownership": "Private, founder-owned; modest growth funding (~$20M raised)",
+     "size_signal": "est. ~$83M revenue on only ~$20M raised (capital-efficient)",
+     "banyan_fit_note": "Capital-efficient, founder-owned district-comms leader at the upper size edge; fits on efficiency and recurring revenue but on an aggressive growth trajectory - verify profitability and sale appetite."
+    }
+   ]
+  },
+  {
+   "angle": "manufacturing-industrial",
+   "companies": [
+    {
+     "name": "Global Shop Solutions",
+     "domain": "globalshopsolutions.com",
+     "vertical": "ERP for discrete manufacturers / job shops",
+     "region": "US (Texas)",
+     "ownership": "Family-owned / private, no outside capital",
+     "size_signal": "Family-run since 1976; targets manufacturers with 20-1,000 employees",
+     "banyan_fit_note": "Classic founder/family-owned vertical ERP niche leader \u2014 decades-old, profitable, no VC/PE; textbook Banyan profile."
+    },
+    {
+     "name": "Cetec ERP",
+     "domain": "cetecerp.com",
+     "vertical": "Cloud ERP for high-mix SMB manufacturers",
+     "region": "US (Texas)",
+     "ownership": "Founder/management-owned, no disclosed outside capital",
+     "size_signal": "~50-60 employees; founded 1996",
+     "banyan_fit_note": "Bootstrapped, no VC/PE, sticky SaaS ERP for SMB manufacturers \u2014 strong fit at target scale."
+    },
+    {
+     "name": "ProShop ERP",
+     "domain": "proshoperp.com",
+     "vertical": "ERP/MES/QMS for CNC, aerospace, defense, medical machine shops",
+     "region": "US / Canada",
+     "ownership": "PE-light / private",
+     "size_signal": "~100 employees (51-200 band)",
+     "banyan_fit_note": "Deep-vertical ERP+MES+QMS for regulated machine shops; PE-light and still SMB-scale."
+    },
+    {
+     "name": "MIE Solutions (MIE Trak Pro)",
+     "domain": "mie-solutions.com",
+     "vertical": "ERP/QMS for fabrication & job shops",
+     "region": "US (California)",
+     "ownership": "Mirador Software Group \u2014 family/employee-owned permanent holdco",
+     "size_signal": "Long family-owned history; now in Mirador portfolio",
+     "banyan_fit_note": "Niche fabrication/job-shop ERP; on-profile but already held by a permanent family/employee-owned group (lower actionability)."
+    },
+    {
+     "name": "Expandable ERP",
+     "domain": "expandable.com",
+     "vertical": "ERP for growing discrete manufacturers",
+     "region": "US (California)",
+     "ownership": "Mirador Software Group \u2014 family/employee-owned permanent holdco",
+     "size_signal": "Permanent-hold ownership; established SMB manufacturing base",
+     "banyan_fit_note": "Established SMB manufacturing ERP; fits the profile but already inside a Banyan-like permanent holdco."
+    },
+    {
+     "name": "PSL Datatrack",
+     "domain": "psldatatrack.com",
+     "vertical": "Production control / MRP for subcontract precision engineering",
+     "region": "UK (England)",
+     "ownership": "Family-owned / private",
+     "size_signal": "Founded 1988; LinkedIn lists 2-10 employees",
+     "banyan_fit_note": "Very niche family-owned production-control leader; likely at/near the low end of the revenue band \u2014 verify size."
+    },
+    {
+     "name": "E-Max Systems",
+     "domain": "emax-systems.co.uk",
+     "vertical": "ERP/MRP for UK manufacturing & engineering SMEs",
+     "region": "UK (Scotland)",
+     "ownership": "Private",
+     "size_signal": "25+ years in market; 3,000+ users cited",
+     "banyan_fit_note": "Established private UK manufacturing ERP with a broad installed base; SMB-niche fit."
+    },
+    {
+     "name": "WinMan ERP",
+     "domain": "winman.com",
+     "vertical": "ERP for manufacturing / distribution SMEs",
+     "region": "UK / North America",
+     "ownership": "Private",
+     "size_signal": "Operating since 1994",
+     "banyan_fit_note": "Long-running private ERP for SME manufacturers/distributors; no disclosed outside capital."
+    },
+    {
+     "name": "Statii",
+     "domain": "statii.co.uk",
+     "vertical": "Cloud MRP for bespoke SMB manufacturers",
+     "region": "UK",
+     "ownership": "Private (ownership not prominently disclosed)",
+     "size_signal": "Focused on SMB bespoke-manufacturing segment",
+     "banyan_fit_note": "Focused cloud MRP niche leader; profile fits but ownership/funding needs verification."
+    },
+    {
+     "name": "Total ETO",
+     "domain": "totaleto.com",
+     "vertical": "ERP/MRP for custom machine builders / engineer-to-order",
+     "region": "Canada (Ontario)",
+     "ownership": "Private",
+     "size_signal": "Hundreds of custom machine-builder customers",
+     "banyan_fit_note": "Narrow ETO/machine-builder ERP niche; private and SMB-scale \u2014 good boring-vertical fit."
+    },
+    {
+     "name": "Genius ERP",
+     "domain": "geniuserp.com",
+     "vertical": "ERP for custom / engineer-to-order manufacturers",
+     "region": "Canada (Quebec)",
+     "ownership": "Private (per sources)",
+     "size_signal": "51-200 employees; ~30-year history",
+     "banyan_fit_note": "Vertical ETO ERP at SMB-mid scale; confirm no growth-equity before advancing."
+    },
+    {
+     "name": "Invera",
+     "domain": "invera.com",
+     "vertical": "ERP for metal service centers, processors & mills",
+     "region": "Canada (Quebec), US/UK offices",
+     "ownership": "Private / unfunded",
+     "size_signal": "Founded 1977; 700+ companies cited",
+     "banyan_fit_note": "Dominant metals-industry ERP niche, unfunded and long-established \u2014 one of the strongest fits."
+    },
+    {
+     "name": "Jobscope",
+     "domain": "jobscope.com",
+     "vertical": "ERP for engineer-to-order / make-to-order / project manufacturers",
+     "region": "US (South Carolina)",
+     "ownership": "Private",
+     "size_signal": "45+ years in market",
+     "banyan_fit_note": "Long-tenured private ETO ERP; deep niche, likely profitable and in-band."
+    },
+    {
+     "name": "CIMx Software (Quantum)",
+     "domain": "cimx.com",
+     "vertical": "MES / paperless manufacturing execution",
+     "region": "US (Ohio)",
+     "ownership": "Private",
+     "size_signal": "30+ years of manufacturing expertise",
+     "banyan_fit_note": "Founder/private MES niche leader \u2014 boring, sticky, SMB-scale."
+    },
+    {
+     "name": "Sepasoft",
+     "domain": "sepasoft.com",
+     "vertical": "MES modules for Ignition (Inductive Automation ecosystem)",
+     "region": "US (California)",
+     "ownership": "Private",
+     "size_signal": "MES for OEE, traceability, documentation",
+     "banyan_fit_note": "Private MES niche anchored to the Ignition ecosystem; recurring, focused, SMB-scale."
+    },
+    {
+     "name": "AssurX",
+     "domain": "assurx.com",
+     "vertical": "eQMS for regulated manufacturing, med device, pharma, energy",
+     "region": "US (California)",
+     "ownership": "Private \u2014 explicitly no venture funding, debt-free",
+     "size_signal": "30+ years; states no VC funding",
+     "banyan_fit_note": "Explicitly debt-free, no-VC eQMS leader in regulated verticals \u2014 among the strongest fits on the list."
+    },
+    {
+     "name": "Harrington Group International (HQMS)",
+     "domain": "hgint.com",
+     "vertical": "Quality management software (QMS)",
+     "region": "US (Florida)",
+     "ownership": "Privately held",
+     "size_signal": "11-50 employees; 45,000+ users claimed",
+     "banyan_fit_note": "Small, privately held QMS niche vendor; high-recurring and SMB-scale."
+    },
+    {
+     "name": "QT9 Software",
+     "domain": "qt9software.com",
+     "vertical": "QMS / ERP / BI for regulated manufacturers",
+     "region": "US (Illinois)",
+     "ownership": "Privately held",
+     "size_signal": "Founded 2005; combined QMS+ERP suite",
+     "banyan_fit_note": "Privately held compliance-QMS niche; sticky regulated-industry SaaS."
+    },
+    {
+     "name": "1factory",
+     "domain": "1factory.com",
+     "vertical": "Manufacturing quality control / supplier quality / QMS",
+     "region": "US (California)",
+     "ownership": "Private / unfunded",
+     "size_signal": "Founded 2011; 11-50 employees",
+     "banyan_fit_note": "Bootstrapped/unfunded quality-control software; small but on-profile \u2014 verify no VC before advancing."
+    },
+    {
+     "name": "MAPCON Technologies",
+     "domain": "mapcon.com",
+     "vertical": "CMMS / maintenance management",
+     "region": "US (Iowa)",
+     "ownership": "Private",
+     "size_signal": "Founded 1982",
+     "banyan_fit_note": "Long-established private CMMS niche vendor \u2014 classic boring-profitable target."
+    },
+    {
+     "name": "MPulse Software",
+     "domain": "mpulsesoftware.com",
+     "vertical": "CMMS / maintenance management for manufacturing & facilities",
+     "region": "US (Oregon)",
+     "ownership": "JDM Technology Group \u2014 private, family-owned software group",
+     "size_signal": "3,500+ customers",
+     "banyan_fit_note": "Niche CMMS on-profile, but already held by a private family-owned software group (already consolidated)."
+    },
+    {
+     "name": "MicroMain",
+     "domain": "micromain.com",
+     "vertical": "CMMS / EAM for maintenance teams",
+     "region": "US (Texas)",
+     "ownership": "JDM Technology Group \u2014 private, family-owned software group",
+     "size_signal": "~31 employees",
+     "banyan_fit_note": "Small CMMS/EAM niche; fits the profile but already inside a family-owned permanent-hold group."
+    }
+   ]
+  },
+  {
+   "angle": "construction-fieldservice",
+   "companies": [
+    {
+     "name": "Commusoft",
+     "domain": "commusoft.co.uk",
+     "vertical": "Field service management for trades (heating, plumbing, gas engineers)",
+     "region": "UK",
+     "ownership": "Founder-owned / bootstrapped",
+     "size_signal": "~100-150 employees; SaaS recurring revenue",
+     "banyan_fit_note": "Profitable UK trades-FSM niche leader, founder-run, high recurring SaaS - strong Banyan profile [UNVERIFIED - codex research returned empty; confirm ownership/size]"
+    },
+    {
+     "name": "Joblogic",
+     "domain": "joblogic.com",
+     "vertical": "Field service & maintenance management (commercial contractors, facilities)",
+     "region": "UK",
+     "ownership": "Founder-owned (Timeserve)",
+     "size_signal": "~120-180 employees; SaaS",
+     "banyan_fit_note": "Established UK FSM niche leader with recurring subscriptions; founder-owned, under-the-radar [UNVERIFIED - research returned empty; confirm]"
+    },
+    {
+     "name": "Powered Now",
+     "domain": "powerednow.com",
+     "vertical": "Quoting/invoicing/job-admin app for small trades",
+     "region": "UK",
+     "ownership": "Founder-owned / bootstrapped",
+     "size_signal": "Small (~20-40 employees); SaaS",
+     "banyan_fit_note": "Niche SMB trades admin tool, recurring revenue, likely sub-$10M - fits smaller end of Banyan range [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Eworks Manager",
+     "domain": "eworksmanager.co.uk",
+     "vertical": "Field service & job management for trades/contractors",
+     "region": "UK / South Africa",
+     "ownership": "Founder-owned (likely)",
+     "size_signal": "SMB; SaaS",
+     "banyan_fit_note": "Bootstrapped-style FSM niche player, recurring revenue [UNVERIFIED - research empty; confirm ownership]"
+    },
+    {
+     "name": "Smart Service",
+     "domain": "smartservice.com",
+     "vertical": "QuickBooks-integrated field service scheduling/dispatch",
+     "region": "US",
+     "ownership": "Founder-owned (My Service Depot), bootstrapped",
+     "size_signal": "~50-100 employees",
+     "banyan_fit_note": "Long-standing profitable QuickBooks add-on for service contractors; sticky, recurring - classic Banyan target [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Kickserv",
+     "domain": "kickserv.com",
+     "vertical": "Field service management for small service businesses",
+     "region": "US",
+     "ownership": "Founder/independent (confirm)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "SMB FSM niche product with recurring revenue [UNVERIFIED - research empty; ownership uncertain, verify not already acquired]"
+    },
+    {
+     "name": "ServiceBox",
+     "domain": "servicebox.com",
+     "vertical": "Field service management for contractors",
+     "region": "Canada",
+     "ownership": "Founder-owned (Jobbox Software)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "Canadian founder-owned FSM niche leader, recurring revenue [UNVERIFIED - research empty; confirm]"
+    },
+    {
+     "name": "Vonigo",
+     "domain": "vonigo.com",
+     "vertical": "Field service management for franchised home-service brands",
+     "region": "Canada",
+     "ownership": "Founder-owned (likely)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "Niche FSM for franchise/home-services, recurring - fits founder-owned profile [UNVERIFIED - research empty; confirm ownership]"
+    },
+    {
+     "name": "GorillaDesk",
+     "domain": "gorilladesk.com",
+     "vertical": "Pest control & field service management software",
+     "region": "US",
+     "ownership": "Founder-owned / bootstrapped",
+     "size_signal": "SMB; profitable SaaS",
+     "banyan_fit_note": "Bootstrapped pest-control/FSM niche leader, high recurring revenue - textbook Banyan boring-profitable target [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "ServiceMonster",
+     "domain": "servicemonster.net",
+     "vertical": "Field service software for cleaning & restoration contractors",
+     "region": "US",
+     "ownership": "Founder-owned (Principal Focus), bootstrapped",
+     "size_signal": "Small SaaS",
+     "banyan_fit_note": "Vertical FSM for carpet cleaning/restoration; sticky recurring niche [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Skimmer",
+     "domain": "getskimmer.com",
+     "vertical": "Pool service management software",
+     "region": "US",
+     "ownership": "Founder-led (some growth investment - confirm)",
+     "size_signal": "SMB SaaS, fast-growing",
+     "banyan_fit_note": "Pool-service niche leader with recurring revenue; verify funding stage isn't venture-scale [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Arborgold",
+     "domain": "arborgold.com",
+     "vertical": "Tree, lawn & landscape service management",
+     "region": "US",
+     "ownership": "Founder-owned (Tree Management Systems)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "Green-industry FSM niche leader, founder-owned, recurring [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "LMN (Landscape Management Network)",
+     "domain": "golmn.com",
+     "vertical": "Landscape business management (estimating, CRM, time tracking)",
+     "region": "Canada",
+     "ownership": "Founder-led (confirm current ownership)",
+     "size_signal": "SMB SaaS, market leader in segment",
+     "banyan_fit_note": "Landscaping vertical software leader; verify not recently PE/strategic acquired [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Janitorial Manager",
+     "domain": "janitorialmanager.com",
+     "vertical": "Commercial cleaning / janitorial business management",
+     "region": "US",
+     "ownership": "Founder-owned (Double A Solutions)",
+     "size_signal": "Small SaaS",
+     "banyan_fit_note": "Niche cleaning-contractor software, recurring - small end of Banyan range [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Fergus",
+     "domain": "fergus.com",
+     "vertical": "Trades job management (plumbers, electricians)",
+     "region": "New Zealand",
+     "ownership": "Founder-led (minority NZ investors)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "NZ trades-FSM niche leader; confirm cap table is founder/PE-light not venture-scale [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Fieldmagic",
+     "domain": "fieldmagic.co",
+     "vertical": "Field service & asset management (fire protection, HVAC)",
+     "region": "Australia",
+     "ownership": "Founder-owned (likely)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "ANZ FSM/asset-maintenance niche (fire/HVAC compliance), recurring [UNVERIFIED - research empty; confirm ownership]"
+    },
+    {
+     "name": "Loc8",
+     "domain": "loc8.com",
+     "vertical": "Field service & asset maintenance management",
+     "region": "Australia",
+     "ownership": "Founder-owned (likely)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "Australian FSM/asset-management niche player, recurring [UNVERIFIED - research empty; confirm]"
+    },
+    {
+     "name": "Clear Estimates",
+     "domain": "clearestimates.com",
+     "vertical": "Remodeling/construction estimating software",
+     "region": "US",
+     "ownership": "Founder-owned / bootstrapped",
+     "size_signal": "Small SaaS",
+     "banyan_fit_note": "Bootstrapped estimating niche for remodelers; recurring, small - fits lower Banyan band [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Corecon Technologies",
+     "domain": "corecon.com",
+     "vertical": "Construction estimating & project management for SMB contractors",
+     "region": "US",
+     "ownership": "Founder-owned",
+     "size_signal": "Small SaaS",
+     "banyan_fit_note": "Founder-owned construction PM/estimating suite, recurring [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Contractor Foreman",
+     "domain": "contractorforeman.com",
+     "vertical": "All-in-one construction management (value/affordable segment)",
+     "region": "US",
+     "ownership": "Founder-owned / bootstrapped",
+     "size_signal": "SMB SaaS, fast-growing",
+     "banyan_fit_note": "Bootstrapped low-cost construction-management niche leader, high recurring - strong fit [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "Knowify",
+     "domain": "knowify.com",
+     "vertical": "Construction project & financial management for contractors",
+     "region": "US",
+     "ownership": "Founder-led (confirm)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "Contractor project/financial-mgmt niche; verify not venture-scale [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "McCormick Systems",
+     "domain": "mccormicksys.com",
+     "vertical": "Electrical estimating software",
+     "region": "US",
+     "ownership": "Founder-owned",
+     "size_signal": "Small; long-standing",
+     "banyan_fit_note": "Decades-old electrical-estimating niche leader, founder-owned - boring/profitable Banyan profile [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "FastEST",
+     "domain": "fastest-inc.com",
+     "vertical": "Mechanical & plumbing estimating software",
+     "region": "US",
+     "ownership": "Founder-owned",
+     "size_signal": "Small SaaS/license",
+     "banyan_fit_note": "Niche mechanical/plumbing estimating vendor, founder-owned, sticky [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "A-Systems",
+     "domain": "a-systems.net",
+     "vertical": "Construction accounting & job-cost software",
+     "region": "US",
+     "ownership": "Founder-owned",
+     "size_signal": "Small",
+     "banyan_fit_note": "Long-standing construction-accounting niche, founder-owned - fits Banyan boring-vertical thesis [UNVERIFIED - research empty]"
+    },
+    {
+     "name": "SiteMax",
+     "domain": "sitemaxsystems.com",
+     "vertical": "Construction site management / field operations",
+     "region": "Canada",
+     "ownership": "Founder-owned (likely)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "Canadian construction site-ops niche, recurring [UNVERIFIED - research empty; confirm ownership]"
+    },
+    {
+     "name": "Bizprac",
+     "domain": "bizprac.com",
+     "vertical": "Construction estimating & accounting for builders",
+     "region": "Australia",
+     "ownership": "Founder-owned (likely)",
+     "size_signal": "SMB",
+     "banyan_fit_note": "Australian builder estimating/accounting niche, founder-owned [UNVERIFIED - research empty; confirm]"
+    },
+    {
+     "name": "Groundplan",
+     "domain": "groundplan.com",
+     "vertical": "Digital takeoff & estimating for trades",
+     "region": "Australia",
+     "ownership": "Founder-owned (likely)",
+     "size_signal": "SMB SaaS",
+     "banyan_fit_note": "ANZ takeoff/estimating niche for trades, recurring [UNVERIFIED - research empty; confirm]"
+    },
+    {
+     "name": "Databuild",
+     "domain": "databuild.com.au",
+     "vertical": "Building estimating & accounting software",
+     "region": "Australia",
+     "ownership": "Founder-owned (likely)",
+     "size_signal": "Small",
+     "banyan_fit_note": "Long-standing Australian building estimating/accounting niche vendor [UNVERIFIED - research empty; confirm ownership]"
+    }
+   ]
+  },
+  {
+   "angle": "healthcare-practice-mgmt",
+   "companies": [
+    {
+     "name": "Cliniko",
+     "domain": "cliniko.com",
+     "vertical": "Allied-health practice management",
+     "region": "Australia",
+     "ownership": "Bootstrapped / founder-led (no outside funding)",
+     "size_signal": "65k+ practitioners cited; est. low-double-digit $M revenue",
+     "banyan_fit_note": "Textbook Banyan target: bootstrapped, profitable, high-recurring SaaS, clear allied-health niche leader."
+    },
+    {
+     "name": "Halaxy",
+     "domain": "halaxy.com",
+     "vertical": "Allied-health / GP & specialist practice platform",
+     "region": "Australia",
+     "ownership": "Private / founder-led, largely unfunded",
+     "size_signal": "40k+ practitioners; ~42-43 employees",
+     "banyan_fit_note": "Founder-led unfunded niche platform (freemium + payments model); verify revenue clears the $2M floor."
+    },
+    {
+     "name": "Zanda (formerly Power Diary)",
+     "domain": "zandahealth.com",
+     "vertical": "Allied-health & mental-health PMS",
+     "region": "Australia",
+     "ownership": "Founder / private (ownership unchanged post-rebrand)",
+     "size_signal": "Global user base; 1,200+ review signal",
+     "banyan_fit_note": "Founder-owned niche PMS with high recurring revenue; strong permanent-home fit."
+    },
+    {
+     "name": "Nookal",
+     "domain": "nookal.com",
+     "vertical": "Allied-health clinic PMS",
+     "region": "Australia",
+     "ownership": "Private / founder-operator",
+     "size_signal": "Founded 2010; allied-health focus",
+     "banyan_fit_note": "Founder-operated niche vendor; size modest, verify it clears $2M."
+    },
+    {
+     "name": "TherapyNotes",
+     "domain": "therapynotes.com",
+     "vertical": "Behavioral-health EHR/PMS",
+     "region": "United States",
+     "ownership": "Bootstrapped / independently owned (no outside funding)",
+     "size_signal": "Large independent; six-figure practitioner base industry-wide",
+     "banyan_fit_note": "Strong fit: bootstrapped, profitable, category leader in behavioral-health EHR."
+    },
+    {
+     "name": "Open Dental",
+     "domain": "opendental.com",
+     "vertical": "Dental practice management",
+     "region": "United States",
+     "ownership": "Founder/family private (Dr. Jordan Sparks)",
+     "size_signal": "300+ employees; likely ~$30-60M revenue",
+     "banyan_fit_note": "Excellent fit: founder-owned, profitable, high-share dental PMS with high recurring revenue."
+    },
+    {
+     "name": "Centaur Software / Dental4Windows",
+     "domain": "centaursoftware.com.au",
+     "vertical": "Dental PMS",
+     "region": "Australia / New Zealand",
+     "ownership": "Private (verify \u2014 possible strategic owner)",
+     "size_signal": "30+ years serving AU/NZ dental practices",
+     "banyan_fit_note": "Long-established AU/NZ dental niche leader; confirm independence (possible Henry Schein link) before pursuing."
+    },
+    {
+     "name": "Shepherd Veterinary Software",
+     "domain": "shepherd.vet",
+     "vertical": "Veterinary PMS",
+     "region": "United States",
+     "ownership": "Private / vet-founded (Cindy Barnes)",
+     "size_signal": "Newer entrant; size small",
+     "banyan_fit_note": "Founder-led vet PMS in an attractive niche; verify it clears the $2M revenue floor."
+    },
+    {
+     "name": "AestheticsPro",
+     "domain": "aestheticspro.com",
+     "vertical": "Medspa EMR/PMS",
+     "region": "United States",
+     "ownership": "Private",
+     "size_signal": "~$1.9M ARR; ~11 employees (Latka est.)",
+     "banyan_fit_note": "Private medspa niche vendor at ~$2M; right profile but at the low end of the revenue band."
+    },
+    {
+     "name": "Aesthetic Record",
+     "domain": "aestheticrecord.com",
+     "vertical": "Aesthetics EMR/PMS + embedded payments",
+     "region": "United States",
+     "ownership": "Private",
+     "size_signal": "$1B+ payments volume (GMV, not revenue) per Stripe case study",
+     "banyan_fit_note": "Private aesthetics niche leader with embedded payments; strong recurring + take-rate, though revenue (vs GMV) needs verification."
+    },
+    {
+     "name": "Pabau",
+     "domain": "pabau.com",
+     "vertical": "Aesthetic clinic / medspa PMS",
+     "region": "United Kingdom",
+     "ownership": "Bootstrapped per research \u2014 funding status CONTESTED, verify",
+     "size_signal": "UK medspa niche leader",
+     "banyan_fit_note": "Good fit if truly bootstrapped, but some reports indicate an Octopus Ventures round \u2014 verify cap table; drop if VC-backed."
+    },
+    {
+     "name": "Meevo / Millennium Systems International",
+     "domain": "meevo.com",
+     "vertical": "Salon / spa / medspa management",
+     "region": "United States / UK",
+     "ownership": "Privately held (founder-origin; verify current control)",
+     "size_signal": "Founded 1987; ~200 employees",
+     "banyan_fit_note": "Established private niche leader with a medspa module; confirm no large-PE control before pursuing."
+    },
+    {
+     "name": "ChiroSpring",
+     "domain": "chirospring.com",
+     "vertical": "Chiropractic EHR/PMS",
+     "region": "United States",
+     "ownership": "Private / unfunded (now ChiroSpring 360 with ClinicDr)",
+     "size_signal": "Founded 2011",
+     "banyan_fit_note": "Unfunded chiropractic niche vendor; verify post-partnership ownership and that revenue clears $2M."
+    },
+    {
+     "name": "zHealth EHR",
+     "domain": "zhealthehr.com",
+     "vertical": "Chiropractic / wellness PMS",
+     "region": "United States",
+     "ownership": "Private / founder-led",
+     "size_signal": "~46-49 employees; est. ~$5-10M",
+     "banyan_fit_note": "Founder-led chiropractic niche vendor at a clean Banyan scale."
+    },
+    {
+     "name": "Valant",
+     "domain": "valant.io",
+     "vertical": "Behavioral-health EHR & billing",
+     "region": "United States",
+     "ownership": "PE-light (Resurgens Technology Partners)",
+     "size_signal": "$11M PE investment disclosed; lower-mid-market",
+     "banyan_fit_note": "Niche behavioral-health leader; already PE-held, so a secondary / PE-to-PE deal rather than a founder purchase."
+    },
+    {
+     "name": "Noterro",
+     "domain": "noterro.com",
+     "vertical": "Massage / physio / chiro clinic management",
+     "region": "Canada",
+     "ownership": "Bootstrapped, profitable, no outside capital (per founder)",
+     "size_signal": "Thousands of clinics across CA/US/UK/ANZ",
+     "banyan_fit_note": "Textbook fit: bootstrapped, profitable, multi-country allied-health niche leader."
+    },
+    {
+     "name": "ClinicSense",
+     "domain": "clinicsense.com",
+     "vertical": "Massage-therapy & wellness clinic software",
+     "region": "Canada",
+     "ownership": "Founder-led / private (no disclosed VC)",
+     "size_signal": "Founded 2013; 7,000+ massage therapists",
+     "banyan_fit_note": "Bootstrapped niche leader in massage-therapy software; ~$4-6M recurring; strong permanent-hold fit."
+    },
+    {
+     "name": "PPS (Private Practice Software)",
+     "domain": "privatepracticesoftware.co.uk",
+     "vertical": "UK allied-health PMS (physio / podiatry / osteopathy)",
+     "region": "United Kingdom",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "20+ years in market",
+     "banyan_fit_note": "Established UK allied-health niche vendor; verify revenue band."
+    },
+    {
+     "name": "PracticePal",
+     "domain": "practicepal.co.uk",
+     "vertical": "UK allied / complementary-health PMS",
+     "region": "United Kingdom",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "Operating since 2006; small",
+     "banyan_fit_note": "Small private UK niche vendor; sourcing lead \u2014 verify it clears the $2M floor."
+    },
+    {
+     "name": "Kalix",
+     "domain": "kalixhealth.com",
+     "vertical": "Dietitian / nutrition EMR & telehealth",
+     "region": "Australia / United States",
+     "ownership": "Founder-led / private (dietitian Claire Nichols)",
+     "size_signal": "Niche dietitian focus; likely small",
+     "banyan_fit_note": "Founder-led nutrition-niche EMR; attractive profile but verify revenue reaches $2M."
+    },
+    {
+     "name": "TheraPlatform",
+     "domain": "theraplatform.com",
+     "vertical": "Speech / teletherapy & mental-health PMS",
+     "region": "United States",
+     "ownership": "Founder-led / private (no disclosed VC)",
+     "size_signal": "Therapist-built; recurring SaaS pricing",
+     "banyan_fit_note": "Founder-led teletherapy/SLP niche vendor; clean bootstrapped profile."
+    },
+    {
+     "name": "Theralytics",
+     "domain": "theralytics.net",
+     "vertical": "ABA (applied behavior analysis) practice management",
+     "region": "United States",
+     "ownership": "Founder-led / private (no disclosed VC)",
+     "size_signal": "100+ verified reviews; $200-300/mo base pricing",
+     "banyan_fit_note": "Founder-led ABA-niche vendor; verify revenue clears $2M."
+    },
+    {
+     "name": "PortiaPro",
+     "domain": "portiapro.com",
+     "vertical": "ABA clinic software (billing, data collection)",
+     "region": "Canada",
+     "ownership": "Private (Portia International Inc.; no disclosed VC)",
+     "size_signal": "Founded 2012",
+     "banyan_fit_note": "Private ABA-niche vendor with a solid permanent-hold profile."
+    },
+    {
+     "name": "BestNotes",
+     "domain": "bestnotes.com",
+     "vertical": "Behavioral-health & SUD EHR/CRM",
+     "region": "United States",
+     "ownership": "Unfunded / private (per Tracxn)",
+     "size_signal": "11-50 employees; founded 2003",
+     "banyan_fit_note": "Unfunded, long-established behavioral-health niche vendor (~$3-8M); strong fit."
+    },
+    {
+     "name": "CounSol.com",
+     "domain": "counsol.com",
+     "vertical": "Counseling / therapy PMS & telehealth",
+     "region": "United States",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "Founded 2011; $49.95-69.95/mo plans",
+     "banyan_fit_note": "Bootstrapped counseling-niche vendor; verify revenue band."
+    },
+    {
+     "name": "ClinicTracker",
+     "domain": "clinictracker.com",
+     "vertical": "Mental-health / SUD / human-services EHR",
+     "region": "United States",
+     "ownership": "Private (JAG Products; no disclosed VC)",
+     "size_signal": "Longstanding niche vendor",
+     "banyan_fit_note": "Private behavioral-health EHR with a clean independent profile."
+    },
+    {
+     "name": "Crystal Practice Management",
+     "domain": "crystalpm.com",
+     "vertical": "Optometry PM/EHR (independent eye-care)",
+     "region": "United States",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "8,000+ independent optometry providers",
+     "banyan_fit_note": "Strong fit: private, high-share optometry niche leader, likely comfortably above $2M."
+    },
+    {
+     "name": "Ocuco",
+     "domain": "ocuco.com",
+     "vertical": "Optometry / optical-retail PMS",
+     "region": "Ireland",
+     "ownership": "Private (institutional debt/refinancing; not VC per sources)",
+     "size_signal": "Medium-sized global eyecare software firm",
+     "banyan_fit_note": "Larger-end niche leader; verify capital structure and that revenue stays under $100M."
+    },
+    {
+     "name": "Compulink Advantage",
+     "domain": "compulinkadvantage.com",
+     "vertical": "Multi-specialty EHR/PMS (optometry / podiatry / chiro / derm)",
+     "region": "United States",
+     "ownership": "Private / founder-led (no disclosed VC)",
+     "size_signal": "Established multi-specialty vertical vendor",
+     "banyan_fit_note": "Founder-led multi-vertical niche leader with strong recurring revenue; good fit."
+    },
+    {
+     "name": "TIMS Audiology",
+     "domain": "timsaudiology.com",
+     "vertical": "Audiology office management",
+     "region": "United States",
+     "ownership": "Private / employee-owned parent (Computers Unlimited)",
+     "size_signal": "Longstanding specialty software line",
+     "banyan_fit_note": "Employee-owned niche audiology software; verify standalone scale within the product line."
+    },
+    {
+     "name": "ECLIPSE",
+     "domain": "eclipsepracticemanagementsoftware.com",
+     "vertical": "Chiropractic EHR/PMS",
+     "region": "United States",
+     "ownership": "Private (GalacTek; no disclosed VC)",
+     "size_signal": "Used by solo to 50+ employee practices",
+     "banyan_fit_note": "Private chiropractic niche vendor with a clean independent profile."
+    },
+    {
+     "name": "EZBIS",
+     "domain": "ezbis.com",
+     "vertical": "Chiropractic billing / scheduling / EHR",
+     "region": "United States",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "Longstanding chiropractic vendor",
+     "banyan_fit_note": "Private chiropractic niche vendor; verify revenue band."
+    },
+    {
+     "name": "DentiMax",
+     "domain": "dentimax.com",
+     "vertical": "Dental PMS + imaging (small practices)",
+     "region": "United States",
+     "ownership": "Founder-led / private (David Arnett)",
+     "size_signal": "Thousands of US dentists; $499-899/mo",
+     "banyan_fit_note": "Founder-led dental niche vendor with strong recurring revenue; good fit."
+    },
+    {
+     "name": "Systems for Dentists",
+     "domain": "sfd.co",
+     "vertical": "Dental PMS (UK / Ireland)",
+     "region": "United Kingdom",
+     "ownership": "Private / founder-led",
+     "size_signal": "Founded 1987; longest-trading UK dental PMS claim",
+     "banyan_fit_note": "Established founder-led UK dental niche leader; strong permanent-hold fit."
+    },
+    {
+     "name": "ClienTrax",
+     "domain": "clientrax.com",
+     "vertical": "Independent veterinary PIMS",
+     "region": "United States",
+     "ownership": "Independently owned (financially sound per company)",
+     "size_signal": "In market since 1987",
+     "banyan_fit_note": "Long-established independent veterinary niche vendor; classic Banyan profile."
+    },
+    {
+     "name": "HVMS / Business Infusions",
+     "domain": "hvmssoftware.com",
+     "vertical": "Equine veterinary practice management",
+     "region": "Canada",
+     "ownership": "Bootstrapped (founder story)",
+     "size_signal": "~20 employees",
+     "banyan_fit_note": "Bootstrapped equine-vet niche leader (~$3-5M); clean fit."
+    },
+    {
+     "name": "SpecVet",
+     "domain": "specvet.com",
+     "vertical": "ER / specialty veterinary workflow software",
+     "region": "United States",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "25+ years; built from ER-vet operations",
+     "banyan_fit_note": "Private specialty-veterinary niche vendor; verify revenue clears $2M."
+    },
+    {
+     "name": "Alora Health",
+     "domain": "alorahealth.com",
+     "vertical": "Home-health / hospice / home-care software",
+     "region": "United States",
+     "ownership": "Founder-led / private",
+     "size_signal": "Founded 2005; ~63 employees",
+     "banyan_fit_note": "Founder-led home-health niche vendor (~$8-15M); strong fit."
+    },
+    {
+     "name": "Ankota",
+     "domain": "ankota.com",
+     "vertical": "Home care / EVV / LTSS / adult-day-services",
+     "region": "United States",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "Founded 2008",
+     "banyan_fit_note": "Private home-care niche vendor with a solid permanent-hold profile."
+    },
+    {
+     "name": "Rosemark",
+     "domain": "rosemarksystem.com",
+     "vertical": "Home-care agency management",
+     "region": "United States",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "35+ years serving US/Canada agencies",
+     "banyan_fit_note": "Long-established private home-care niche vendor; strong fit."
+    },
+    {
+     "name": "Hospice Tools",
+     "domain": "hospicetools.com",
+     "vertical": "Hospice EMR & eBilling",
+     "region": "United States",
+     "ownership": "Private",
+     "size_signal": "Founded 2017; ~20 employees",
+     "banyan_fit_note": "Private hospice-niche EMR; younger/smaller \u2014 verify revenue band."
+    },
+    {
+     "name": "KanTime",
+     "domain": "kantime.com",
+     "vertical": "Home-health / hospice / pediatric / private-duty agency management",
+     "region": "United States",
+     "ownership": "Founder-led / private (no disclosed VC per research)",
+     "size_signal": "$25-50M revenue est.; ~112 employees",
+     "banyan_fit_note": "Strong fit at scale: founder-led home-based-care niche leader; verify no large-PE control."
+    },
+    {
+     "name": "eRSP",
+     "domain": "erspsolutions.com",
+     "vertical": "Home-care scheduling / billing / EVV / payroll",
+     "region": "United States",
+     "ownership": "Private (no disclosed VC)",
+     "size_signal": "2,000+ home-care agencies",
+     "banyan_fit_note": "Private home-care niche leader with a broad install base and strong recurring revenue."
+    }
+   ]
+  },
+  {
+   "angle": "realestate-hospitality",
+   "companies": [
+    {
+     "name": "Rent Manager (London Computer Systems)",
+     "domain": "rentmanager.com",
+     "vertical": "Residential/commercial property management software",
+     "region": "US (Ohio)",
+     "ownership": "Founder/family-owned (private, no outside investors)",
+     "size_signal": "Mid-market niche leader used across portfolios of every size; decades-long LCS product",
+     "banyan_fit_note": "Founder/family-owned, high-recurring PM niche leader; on the larger end but privately held and never venture-funded."
+    },
+    {
+     "name": "Rentec Direct",
+     "domain": "rentecdirect.com",
+     "vertical": "SMB landlord / property management software",
+     "region": "US (Oregon)",
+     "ownership": "Founder-led, private, profitable (no outside investors)",
+     "size_signal": "16,000+ landlords/PMs, 700,000+ units, $200B+ assets managed",
+     "banyan_fit_note": "Textbook permanent-home target: founder-owned, profitable, sticky recurring SMB PMS."
+    },
+    {
+     "name": "SimplifyEm",
+     "domain": "simplifyem.com",
+     "vertical": "Small-landlord property management software",
+     "region": "US (California)",
+     "ownership": "Founder-led; no funding reported (Tracxn)",
+     "size_signal": "~$1M-$10M revenue est.; 10-50 employees; 200,000+ customers claimed",
+     "banyan_fit_note": "Founder-owned, no VC, high-recurring niche; small end of the size band."
+    },
+    {
+     "name": "ManageCasa",
+     "domain": "managecasa.com",
+     "vertical": "Rental + HOA/community management software",
+     "region": "US (California)",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "~25-28 employees",
+     "banyan_fit_note": "Private niche PM/HOA SaaS; right size and recurring model, but ownership/funding history needs diligence."
+    },
+    {
+     "name": "OwnerRez",
+     "domain": "ownerrez.com",
+     "vertical": "Short-term-rental PMS / channel management",
+     "region": "US",
+     "ownership": "Bootstrapped, founder-led, profitable",
+     "size_signal": "Founded 2009; ~40 employees",
+     "banyan_fit_note": "Bootstrapped, profitable, founder-run STR PMS; classic Banyan fit."
+    },
+    {
+     "name": "Lodgix",
+     "domain": "lodgix.com",
+     "vertical": "Vacation-rental PMS",
+     "region": "US (North Carolina)",
+     "ownership": "Bootstrapped, no VC, profitable",
+     "size_signal": "Founded 2008",
+     "banyan_fit_note": "Explicitly bootstrapped and profitable vacation-rental PMS; boring under-the-radar niche."
+    },
+    {
+     "name": "WebRezPro (World Web Technologies)",
+     "domain": "webrezpro.com",
+     "vertical": "Independent hotel / lodging PMS",
+     "region": "Canada",
+     "ownership": "Privately held, founder-origin",
+     "size_signal": "Released 2003; 1,200+ properties in 40+ countries",
+     "banyan_fit_note": "Private, no-VC independent-hotel PMS with global footprint and recurring base."
+    },
+    {
+     "name": "Clock Software",
+     "domain": "clock-software.com",
+     "vertical": "Hotel PMS",
+     "region": "UK / Bulgaria",
+     "ownership": "Private, founder-origin",
+     "size_signal": "50+ employees; customers in 65+ countries",
+     "banyan_fit_note": "Founder-origin hotel PMS; profitable niche with wide country footprint."
+    },
+    {
+     "name": "Schedulefly",
+     "domain": "schedulefly.com",
+     "vertical": "Independent-restaurant scheduling / team communications",
+     "region": "US (North Carolina)",
+     "ownership": "Independent, no outside investors",
+     "size_signal": "5,200+ restaurants",
+     "banyan_fit_note": "Independently owned, no outside capital; sticky SMB restaurant SaaS \u2014 ideal permanent home."
+    },
+    {
+     "name": "Jolt",
+     "domain": "jolt.com",
+     "vertical": "Restaurant operations / checklists / food-safety software",
+     "region": "US (Utah)",
+     "ownership": "Private, founder-led (verify funding history)",
+     "size_signal": "Thousands of brands (Smoothie King, Jimmy John's, Buffalo Wild Wings)",
+     "banyan_fit_note": "Founder-led restaurant-ops SaaS with broad brand base; recurring model, but confirm no venture rounds."
+    },
+    {
+     "name": "Avero",
+     "domain": "averoinc.com",
+     "vertical": "Restaurant sales analytics / back-office software",
+     "region": "US (New York)",
+     "ownership": "Private, founder-origin",
+     "size_signal": "$13B annual sales data across 2,700 restaurants",
+     "banyan_fit_note": "Entrenched restaurant analytics niche with large recurring base; private/founder-origin."
+    },
+    {
+     "name": "Total Party Planner",
+     "domain": "totalpartyplanner.com",
+     "vertical": "Catering / event management software",
+     "region": "US (Alabama/Virginia)",
+     "ownership": "Founder-led (John Cohen)",
+     "size_signal": "Founded 1997",
+     "banyan_fit_note": "Owner-operated catering SaaS in a boring, sticky niche since the 1990s."
+    },
+    {
+     "name": "Planning Pod",
+     "domain": "planningpod.com",
+     "vertical": "Venue / event management software",
+     "region": "US",
+     "ownership": "Private (bootstrapped-style)",
+     "size_signal": "70,000+ venue/event organizations since 2007",
+     "banyan_fit_note": "Long-running venue/event management with large recurring base and no VC signal."
+    },
+    {
+     "name": "EventMobi",
+     "domain": "eventmobi.com",
+     "vertical": "Event management platform",
+     "region": "Canada",
+     "ownership": "Private, largely bootstrapped (no VC per company history)",
+     "size_signal": "Founded 2010",
+     "banyan_fit_note": "Bootstrapped event-management software; broader niche but founder-owned and profitable-profile."
+    },
+    {
+     "name": "Rosy Salon Software / Aura",
+     "domain": "rosysalonsoftware.com",
+     "vertical": "Salon/spa scheduling, POS & client management",
+     "region": "US",
+     "ownership": "Private (combined with Aura)",
+     "size_signal": "Thousands of salons, millions of clients served",
+     "banyan_fit_note": "Private salon/spa niche vendor; recurring SMB model, ownership post-Aura combination needs diligence."
+    },
+    {
+     "name": "RMS Cloud",
+     "domain": "rmscloud.com",
+     "vertical": "Hotel / holiday-park / campground PMS",
+     "region": "Australia",
+     "ownership": "Founder-built; Advent Partners minority/growth stake (PE-light)",
+     "size_signal": "184,000+ users; ~208 employees",
+     "banyan_fit_note": "Founder-built hospitality PMS with a minority/growth PE partner; right size and PE-light, not venture-scale."
+    },
+    {
+     "name": "Building Stack",
+     "domain": "buildingstack.com",
+     "vertical": "Residential property management software",
+     "region": "Canada (Quebec)",
+     "ownership": "Bootstrapped, no funding reported",
+     "size_signal": "~$2.3M ARR est.; 21 employees",
+     "banyan_fit_note": "Bootstrapped Canadian residential-PM SaaS just above the ~$2M floor; recurring niche."
+    },
+    {
+     "name": "Syrasoft",
+     "domain": "syrasoft.com",
+     "vertical": "Self-storage management software",
+     "region": "US",
+     "ownership": "Private; no funding reported (Tracxn)",
+     "size_signal": "~13 employees; 25+ years in market",
+     "banyan_fit_note": "No-VC self-storage software vendor; small, profitable, decades-long niche."
+    },
+    {
+     "name": "Storeganise",
+     "domain": "storeganise.com",
+     "vertical": "Self-storage management software",
+     "region": "Asia / global",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "1,200+ facilities across 50+ countries",
+     "banyan_fit_note": "Private self-storage SaaS with global facility footprint and recurring revenue."
+    },
+    {
+     "name": "Space Manager",
+     "domain": "space-manager.com",
+     "vertical": "Self-storage management software",
+     "region": "UK",
+     "ownership": "Privately held",
+     "size_signal": "11-50 employees; founded 1992",
+     "banyan_fit_note": "Long-established UK self-storage software; private, boring, recurring niche."
+    },
+    {
+     "name": "Storage Commander",
+     "domain": "storagecommander.com",
+     "vertical": "Self-storage management software",
+     "region": "US",
+     "ownership": "Private",
+     "size_signal": "25+ years operating history",
+     "banyan_fit_note": "Private self-storage software with a long-running recurring SMB base."
+    },
+    {
+     "name": "Self Storage Manager",
+     "domain": "selfstoragemanager.com",
+     "vertical": "Self-storage management software",
+     "region": "US",
+     "ownership": "Private",
+     "size_signal": "~17 employees; founded 2000",
+     "banyan_fit_note": "Small, stable, privately-owned self-storage niche vendor."
+    },
+    {
+     "name": "Storman",
+     "domain": "storman.com",
+     "vertical": "Self-storage management software",
+     "region": "Australia / NZ / UK",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "Regional supplier; industry-association member",
+     "banyan_fit_note": "Private ANZ/UK self-storage niche leader; no venture funding, recurring model."
+    },
+    {
+     "name": "ResNexus",
+     "domain": "resnexus.com",
+     "vertical": "Campground / inn / lodging PMS",
+     "region": "US",
+     "ownership": "Private, founder-led signal",
+     "size_signal": "'Thousands' of hospitality businesses",
+     "banyan_fit_note": "Founder-led lodging/campground PMS across many small properties; sticky recurring niche."
+    },
+    {
+     "name": "Senior Insight",
+     "domain": "seniorinsight.com",
+     "vertical": "Senior-living EHR / eMAR / operations software",
+     "region": "US",
+     "ownership": "Founder-led signal",
+     "size_signal": "20+ years of experience",
+     "banyan_fit_note": "Founder-led, regulated senior-living software niche; sticky, high-retention profile."
+    },
+    {
+     "name": "Medtelligent (ALIS)",
+     "domain": "medtelligent.com",
+     "vertical": "Assisted-living operating system",
+     "region": "US",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "~$6.7M ARR est.; 61 employees",
+     "banyan_fit_note": "Private assisted-living software in the sweet-spot size band; regulated, recurring niche."
+    },
+    {
+     "name": "Paperless Pipeline",
+     "domain": "paperlesspipeline.com",
+     "vertical": "Real-estate transaction management software",
+     "region": "US",
+     "ownership": "Bootstrapped (since 2009)",
+     "size_signal": "$2M+ historic revenue signal; small team",
+     "banyan_fit_note": "Founder-described bootstrapped transaction-management SaaS; sticky, profitable, small team."
+    },
+    {
+     "name": "RealtyJuggler",
+     "domain": "realtyjuggler.com",
+     "vertical": "Real-estate agent CRM",
+     "region": "US",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "Long-running paid SaaS",
+     "banyan_fit_note": "Private, no-VC real-estate CRM with durable paid-subscription base."
+    },
+    {
+     "name": "RealtyBackOffice",
+     "domain": "realtybackoffice.com",
+     "vertical": "Brokerage back-office / transaction management",
+     "region": "Philippines / US market",
+     "ownership": "Private",
+     "size_signal": "~$1M-$10M revenue est.; 1-10 employees",
+     "banyan_fit_note": "Small private brokerage back-office SaaS; recurring niche, size at lower end \u2014 diligence needed."
+    },
+    {
+     "name": "TotalBrokerage",
+     "domain": "totalbrokerage.com",
+     "vertical": "Real-estate brokerage CRM / back-office",
+     "region": "US",
+     "ownership": "Founder-created platform (private)",
+     "size_signal": "Private broker software product",
+     "banyan_fit_note": "Founder-created brokerage CRM/back-office; recurring model, private ownership."
+    },
+    {
+     "name": "Quarem",
+     "domain": "quarem.com",
+     "vertical": "Commercial real estate lease / property administration",
+     "region": "US",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "Established lease-admin vendor",
+     "banyan_fit_note": "Private CRE lease-administration niche vendor; sticky enterprise recurring use."
+    },
+    {
+     "name": "ThinkReservations",
+     "domain": "thinkreservations.com",
+     "vertical": "Independent hotel / inn PMS",
+     "region": "US",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "Thousands of hospitality users",
+     "banyan_fit_note": "Private independent-lodging PMS with a large recurring SMB base."
+    },
+    {
+     "name": "Sirvoy",
+     "domain": "sirvoy.com",
+     "vertical": "Small hotel / B&B PMS",
+     "region": "Sweden",
+     "ownership": "Founder/family-owned (three brothers); no VC found",
+     "size_signal": "SMB-focused across small hotels/B&Bs/hostels",
+     "banyan_fit_note": "Founder/family-owned SMB hotel PMS; no venture funding, high-recurring niche."
+    },
+    {
+     "name": "Tablein",
+     "domain": "tablein.com",
+     "vertical": "Restaurant reservations software",
+     "region": "Lithuania / EU",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "SMB restaurant SaaS (subscription pricing)",
+     "banyan_fit_note": "Private EU restaurant-reservations SaaS; small, focused, recurring niche."
+    },
+    {
+     "name": "CaterZen",
+     "domain": "caterzen.com",
+     "vertical": "Restaurant catering software",
+     "region": "US",
+     "ownership": "Founder-led (Michael Attias)",
+     "size_signal": "Niche SaaS; owner-operated",
+     "banyan_fit_note": "Owner-operated catering software in a narrow, sticky niche; boring under-the-radar profile."
+    },
+    {
+     "name": "GymMaster",
+     "domain": "gymmaster.com",
+     "vertical": "Gym / fitness-club management software",
+     "region": "New Zealand",
+     "ownership": "Privately held",
+     "size_signal": "11-50 employees; customers in 75+ countries",
+     "banyan_fit_note": "Privately held fitness-club management SaaS with global recurring base and no VC signal."
+    },
+    {
+     "name": "Clubworx",
+     "domain": "clubworx.com",
+     "vertical": "Fitness / martial-arts club management software",
+     "region": "Australia",
+     "ownership": "Private (no VC signal found)",
+     "size_signal": "~$3.7M revenue est.; ~14 employees",
+     "banyan_fit_note": "Small private club-management SaaS in the target size band; recurring, no venture funding."
+    },
+    {
+     "name": "Craftable",
+     "domain": "craftable.com",
+     "vertical": "Restaurant / hotel back-office inventory & AP software",
+     "region": "US (Texas)",
+     "ownership": "PE growth investment (Gauge Capital), not VC",
+     "size_signal": "50,000+ monthly active users",
+     "banyan_fit_note": "Hospitality back-office niche leader; PE growth-backed (not VC/oversized) \u2014 already institutionally owned, so more of a watch than a clean founder-succession target."
+    }
+   ]
+  },
+  {
+   "angle": "fintech-backoffice",
+   "companies": [
+    {
+     "name": "Corelation",
+     "domain": "corelationinc.com",
+     "vertical": "Credit-union core banking (KeyStone platform)",
+     "region": "US (San Diego, CA)",
+     "ownership": "Private / unfunded (founder-led)",
+     "size_signal": "~237-443 employees; 200+ credit-union clients",
+     "banyan_fit_note": "Private, no outside funding, entrenched CU core-banking niche leader with high switching costs; verify revenue is not already >$100M at upper size range."
+    },
+    {
+     "name": "FLEX Credit Union Technology",
+     "domain": "flexcutech.com",
+     "vertical": "Credit-union core processing (cards/lending support)",
+     "region": "US (Utah)",
+     "ownership": "Private",
+     "size_signal": "Established CU core system serving multiple credit unions",
+     "banyan_fit_note": "Boring, private, mission-critical CU core vendor with recurring processing revenue and sticky FI customers - classic buy-and-hold profile."
+    },
+    {
+     "name": "FedComp",
+     "domain": "fedcomp.com",
+     "vertical": "Credit-union core banking (Platinum) for small/minority CUs",
+     "region": "US (Virginia)",
+     "ownership": "Private",
+     "size_signal": "468 credit unions / ~9.4% share by count (2022 report)",
+     "banyan_fit_note": "Long-tail niche leader serving small credit unions; likely modest (~$5-15M) recurring revenue, private, low competition - strong fit."
+    },
+    {
+     "name": "Nortridge",
+     "domain": "nortridge.com",
+     "vertical": "Loan servicing + origination software",
+     "region": "US (California)",
+     "ownership": "Private / founder-era (bootstrapped)",
+     "size_signal": "Founded 1981; ~70 employees; ~$10-15M est. revenue",
+     "banyan_fit_note": "Decades-old bootstrapped specialty-lender servicing vendor with recurring revenue; squarely in the $2-100M band and founder-owned."
+    },
+    {
+     "name": "Shaw Systems",
+     "domain": "shawsystems.com",
+     "vertical": "Loan servicing + collections software",
+     "region": "US (Texas)",
+     "ownership": "Private / employee-owned",
+     "size_signal": "5+ decades in lending software; ~100 employees; ~$15-25M est.",
+     "banyan_fit_note": "Legacy niche leader in loan servicing/collections; sticky enterprise lending clients, private ownership, recurring maintenance/SaaS revenue."
+    },
+    {
+     "name": "The Mortgage Office (Applied Business Software)",
+     "domain": "themortgageoffice.com",
+     "vertical": "Private-lender loan management / servicing",
+     "region": "US (California)",
+     "ownership": "Private",
+     "size_signal": "40+ years serving private mortgage lenders",
+     "banyan_fit_note": "Dominant, under-the-radar platform for private/hard-money lenders; long-tenured private vendor with recurring licenses - textbook Banyan target."
+    },
+    {
+     "name": "FICS (Financial Industry Computer Systems)",
+     "domain": "fics.com",
+     "vertical": "Mortgage LOS + servicing software",
+     "region": "US (Texas)",
+     "ownership": "Private",
+     "size_signal": "40+ years; mortgage origination and servicing",
+     "banyan_fit_note": "Established private mortgage-tech vendor with recurring revenue and deep bank/lender relationships; likely within the target revenue band."
+    },
+    {
+     "name": "GOLDPoint Systems",
+     "domain": "goldpointsystems.com",
+     "vertical": "End-to-end loan management (origination + servicing)",
+     "region": "US (Utah)",
+     "ownership": "Self-owned / private (family-affiliated)",
+     "size_signal": "201-500 employees; 34.6M loans serviced signal",
+     "banyan_fit_note": "Private family-affiliated loan-platform niche leader; verify revenue does not exceed $100M given the larger headcount before pursuing."
+    },
+    {
+     "name": "Bryt Software",
+     "domain": "brytsoftware.com",
+     "vertical": "Cloud loan servicing (private-lender / CDFI focus)",
+     "region": "US (California)",
+     "ownership": "Private / unfunded",
+     "size_signal": "Founded 2016; niche private-lender and CDFI base",
+     "banyan_fit_note": "Small bootstrapped cloud loan-servicing niche player; confirm revenue clears the ~$2M floor - may be on the small side for Banyan."
+    },
+    {
+     "name": "Margill",
+     "domain": "margill.com",
+     "vertical": "Loan servicing / interest calculation software",
+     "region": "Canada",
+     "ownership": "Private",
+     "size_signal": "11-50 employees; used in 50+ countries",
+     "banyan_fit_note": "Small profitable private vendor in a defensible calculation/servicing niche with global install base; fits lower-mid revenue band."
+    },
+    {
+     "name": "Vergent LMS",
+     "domain": "vergentlms.com",
+     "vertical": "Consumer-finance loan management system",
+     "region": "US (Mississippi)",
+     "ownership": "Private",
+     "size_signal": "20,000+ daily lending users reported",
+     "banyan_fit_note": "Private consumer-finance LMS with recurring SaaS revenue and sizable active user base; plausibly in the target band."
+    },
+    {
+     "name": "Megasys",
+     "domain": "megasys.net",
+     "vertical": "Consumer-finance LOS / servicing / collections",
+     "region": "US (California)",
+     "ownership": "Privately held",
+     "size_signal": "Founded 1981; 11-50 employees",
+     "banyan_fit_note": "Long-standing small private consumer-lending software vendor; recurring revenue, niche focus, founder/private ownership - clean fit."
+    },
+    {
+     "name": "Teslar Software",
+     "domain": "teslarsoftware.com",
+     "vertical": "Community-FI lending process automation",
+     "region": "US (Arkansas)",
+     "ownership": "Private / founder-led",
+     "size_signal": "Founded 2008; ~25-100 employees",
+     "banyan_fit_note": "Founder-led niche vendor automating lending workflows for community banks/CUs; recurring revenue, under-the-radar - strong fit (confirm no large recent raise)."
+    },
+    {
+     "name": "BankPoint",
+     "domain": "getbankpoint.com",
+     "vertical": "Bank loan/deposit workflow & portfolio operations",
+     "region": "US (Texas)",
+     "ownership": "Privately funded",
+     "size_signal": "Bank operations platform; smaller private vendor",
+     "banyan_fit_note": "Small privately funded community-bank ops software; niche workflow layer with recurring revenue - likely lower end of the band."
+    },
+    {
+     "name": "Advyzon",
+     "domain": "advyzon.com",
+     "vertical": "RIA all-in-one advisor platform (CRM + portfolio + reporting)",
+     "region": "US (Illinois)",
+     "ownership": "Private / founder-led (Hailin Li)",
+     "size_signal": "Strong T3 advisor-survey position; growing RIA base",
+     "banyan_fit_note": "Founder-owned, self-funded RIA platform winning share against PE-backed incumbents; high-recurring, private - excellent fit if valuation is reasonable."
+    },
+    {
+     "name": "HawkSoft",
+     "domain": "hawksoft.com",
+     "vertical": "Insurance agency management system (P&C)",
+     "region": "US (Oregon)",
+     "ownership": "Founder-family / bootstrapped (no outside investors)",
+     "size_signal": "Owned by founding group since 1995; thousands of agencies",
+     "banyan_fit_note": "Archetypal Banyan target: bootstrapped, no VC/PE, decades-old niche leader in independent-agency AMS with very sticky recurring revenue."
+    },
+    {
+     "name": "AgencyBloc",
+     "domain": "agencybloc.com",
+     "vertical": "Life & health insurance agency management + CRM",
+     "region": "US (Iowa)",
+     "ownership": "PE-backed (Resurgens Technology Partners - lower-mid-market)",
+     "size_signal": "Positioned as #1 recommended life/health AMS",
+     "banyan_fit_note": "Niche leader in the life/health AMS segment backed by a small bootstrapped-software PE; PE-light, likely <$100M, recurring - fits, would be a secondary buyout."
+    },
+    {
+     "name": "Baker Hill",
+     "domain": "bakerhill.com",
+     "vertical": "Community-bank commercial lending, risk & analytics",
+     "region": "US (Indiana)",
+     "ownership": "PE-backed (Flexpoint Ford - mid-market)",
+     "size_signal": "40+ year lending vendor to banks & credit unions",
+     "banyan_fit_note": "Established vertical lending-software niche leader; PE-owned so any deal is a secondary buyout - verify revenue is under the $100M ceiling before pursuing."
+    }
+   ]
+  },
+  {
+   "angle": "legal-compliance-gov",
+   "companies": [
+    {
+     "name": "CobbleStone Software",
+     "domain": "cobblestonesoftware.com",
+     "vertical": "Contract lifecycle management (CLM) & e-procurement",
+     "region": "US",
+     "ownership": "Founder-owned / bootstrapped",
+     "size_signal": "Founded 1995; ~178 employees; est. ~$26M revenue",
+     "banyan_fit_note": "Textbook fit: founder-run, bootstrapped, profitable CLM niche leader with 30-yr history and sticky recurring contracts, comfortably sub-$100M."
+    },
+    {
+     "name": "Smokeball",
+     "domain": "smokeball.com",
+     "vertical": "Legal practice management, billing & document automation (small firms)",
+     "region": "US / Australia",
+     "ownership": "Founder-controlled (Christian Beck / ATI group; minority growth capital)",
+     "size_signal": "51-200 employees (LinkedIn); est. ~$20-40M",
+     "banyan_fit_note": "Founder-controlled small-firm legal-PM leader with high recurring SaaS; verify ATI-group standalone size and founder willingness to sell a permanent home."
+    },
+    {
+     "name": "Actionstep",
+     "domain": "actionstep.com",
+     "vertical": "Mid-market legal practice management",
+     "region": "New Zealand / US",
+     "ownership": "Growth-PE-backed (Serent Capital)",
+     "size_signal": "Mid-market platform; est. ~$38M",
+     "banyan_fit_note": "Strong mid-market legal-PM niche leader with recurring revenue; currently Serent-backed so likely to be re-sold - a future permanent-home target more than an immediate one."
+    },
+    {
+     "name": "Pramata",
+     "domain": "pramata.com",
+     "vertical": "Contract intelligence / CLM data",
+     "region": "US",
+     "ownership": "Private (growth-backed)",
+     "size_signal": "est. ~$50M; ~150-300 employees",
+     "banyan_fit_note": "Mid-market contract-intelligence niche with recurring revenue; not a unicorn but growth-backed - verify cap table and profitability before pursuing."
+    },
+    {
+     "name": "LogicManager",
+     "domain": "logicmanager.com",
+     "vertical": "Enterprise risk management (ERM) / GRC",
+     "region": "US",
+     "ownership": "Founder-led, private",
+     "size_signal": "Founded 2005 by Steven Minsky; mid-size, no big-PE owner",
+     "banyan_fit_note": "Founder-led independent ERM/GRC player - boring, recurring, clean cap table; strong permanent-home candidate; confirm revenue >$2M and profitability."
+    },
+    {
+     "name": "StandardFusion",
+     "domain": "standardfusion.com",
+     "vertical": "GRC / ISMS compliance management",
+     "region": "Canada",
+     "ownership": "Bootstrapped (no outside funding)",
+     "size_signal": "~36 employees; est. ~$10M ARR",
+     "banyan_fit_note": "Bootstrapped GRC niche leader with no investors - clean fit; small but recurring; verify growth and retention."
+    },
+    {
+     "name": "SmartRIA",
+     "domain": "smartria.com",
+     "vertical": "Compliance software for RIAs (investment advisers)",
+     "region": "US",
+     "ownership": "Private / independent",
+     "size_signal": "est. ~$4M revenue",
+     "banyan_fit_note": "Small, boring RIA-compliance niche; independent ownership fits Banyan's under-$10M recurring-niche sweet spot; verify ownership and profitability."
+    },
+    {
+     "name": "QT9 Software",
+     "domain": "qt9software.com",
+     "vertical": "EQMS + ERP for regulated (FDA/ISO) manufacturers",
+     "region": "US",
+     "ownership": "Bootstrapped / founder",
+     "size_signal": "Founded 2005; ~69 employees; est. ~$22M",
+     "banyan_fit_note": "Bootstrapped, profitable EQMS niche leader for regulated manufacturers with sticky compliance workflows - strong fit."
+    },
+    {
+     "name": "AssurX",
+     "domain": "assurx.com",
+     "vertical": "EQMS / regulatory compliance workflow (regulated industries)",
+     "region": "US",
+     "ownership": "Private / unfunded",
+     "size_signal": "est. ~$17M; ~80-150 employees",
+     "banyan_fit_note": "Independent, unfunded quality/compliance software for regulated industries with recurring revenue - classic under-the-radar target."
+    },
+    {
+     "name": "Intellect",
+     "domain": "intellect.com",
+     "vertical": "EQMS / EHSQ no-code quality apps",
+     "region": "US",
+     "ownership": "Private / founder",
+     "size_signal": "est. ~$17M",
+     "banyan_fit_note": "Founder/private EQMS + EHS niche vendor with a configurable quality/compliance platform; verify recurring mix and ownership permanence."
+    },
+    {
+     "name": "SafetyChain",
+     "domain": "safetychain.com",
+     "vertical": "Food & beverage plant quality/safety compliance",
+     "region": "US",
+     "ownership": "Growth/PE-backed",
+     "size_signal": "est. ~$17M",
+     "banyan_fit_note": "Food-safety/quality compliance niche leader for F&B plants with recurring revenue; growth-backed so PE-light Banyan-adjacent - verify profitability."
+    },
+    {
+     "name": "Cetec ERP",
+     "domain": "cetecerp.com",
+     "vertical": "Manufacturing ERP with integrated QMS (regulated manufacturers)",
+     "region": "US",
+     "ownership": "Founder / bootstrapped",
+     "size_signal": "est. ~$17M",
+     "banyan_fit_note": "Founder/bootstrapped, capital-efficient mfg-ERP+QMS for regulated manufacturers; recurring - fits, though ERP-first (the quality/compliance module is the legal-compliance overlap)."
+    },
+    {
+     "name": "ProShop ERP",
+     "domain": "proshoperp.com",
+     "vertical": "ERP/MES/QMS for precision manufacturing",
+     "region": "Canada",
+     "ownership": "Founder + growth-equity",
+     "size_signal": "est. ~$22M",
+     "banyan_fit_note": "Founder-led Canadian ERP+QMS for regulated/precision manufacturers with recurring revenue; QMS/compliance overlap; verify growth-equity investor's exit intent."
+    },
+    {
+     "name": "Nextpoint",
+     "domain": "nextpoint.com",
+     "vertical": "E-discovery / litigation support (SaaS)",
+     "region": "US",
+     "ownership": "Private / lightly funded (~$350K raised)",
+     "size_signal": "est. ~$25M; ~100-250 employees",
+     "banyan_fit_note": "Effectively bootstrapped e-discovery niche leader with recurring litigation-support SaaS - good fit; verify profitability."
+    },
+    {
+     "name": "GovPilot",
+     "domain": "govpilot.com",
+     "vertical": "Local-government permitting & administration (govtech)",
+     "region": "US",
+     "ownership": "Founder-owned, private",
+     "size_signal": "est. ~$4M revenue",
+     "banyan_fit_note": "Founder-run local-gov permitting SaaS with sticky public-sector recurring contracts; early-stage size - verify revenue >$2M and growth."
+    },
+    {
+     "name": "iWorQ Systems",
+     "domain": "iworq.com",
+     "vertical": "Local-gov permitting, code enforcement & CMMS",
+     "region": "US",
+     "ownership": "Private / independent",
+     "size_signal": "est. ~$14M revenue",
+     "banyan_fit_note": "Independent, self-funded-style govtech niche leader (permitting/code enforcement) with recurring municipal contracts - strong fit."
+    },
+    {
+     "name": "GOGov",
+     "domain": "gogovapps.com",
+     "vertical": "Local-gov citizen engagement / 311 / permitting",
+     "region": "US",
+     "ownership": "Bootstrapped, private",
+     "size_signal": "est. ~$3M revenue",
+     "banyan_fit_note": "Bootstrapped small-gov engagement/311 SaaS with a sticky municipal base; small - verify revenue floor and retention."
+    },
+    {
+     "name": "Envisio",
+     "domain": "envisio.com",
+     "vertical": "Public-sector strategic & performance planning",
+     "region": "Canada",
+     "ownership": "Founder-led, private",
+     "size_signal": "est. ~$10M ARR",
+     "banyan_fit_note": "Founder-led public-sector planning niche leader with recurring gov contracts and clean ownership - good fit."
+    },
+    {
+     "name": "Pagefreezer",
+     "domain": "pagefreezer.com",
+     "vertical": "Web/social-media & records archiving for compliance (gov & regulated)",
+     "region": "Canada",
+     "ownership": "Founder-owned, private",
+     "size_signal": "est. ~$10M",
+     "banyan_fit_note": "Founder-owned compliance/records-archiving niche used by governments and regulated firms; recurring revenue and clean cap table - strong fit."
+    },
+    {
+     "name": "Kaizen Reporting",
+     "domain": "kaizenreporting.com",
+     "vertical": "Regulatory reporting quality assurance (financial services)",
+     "region": "UK",
+     "ownership": "Private / growth-backed",
+     "size_signal": "est. ~$30M",
+     "banyan_fit_note": "Boring, high-value regulatory-reporting-assurance niche leader with recurring revenue and UK/EU footprint - fits if the investor seeks a permanence-friendly exit (verify)."
+    },
+    {
+     "name": "FundApps",
+     "domain": "fundapps.co",
+     "vertical": "Investment/shareholding-disclosure compliance & regulatory monitoring",
+     "region": "UK",
+     "ownership": "Growth-equity / PE-light",
+     "size_signal": "est. ~$30M",
+     "banyan_fit_note": "Regtech niche leader (shareholding disclosure / position-limit compliance) with recurring revenue; PE-light - plausible target if the investor wants an exit."
+    },
+    {
+     "name": "PerformLine",
+     "domain": "performline.com",
+     "vertical": "Marketing/partner compliance monitoring (regulated lending/finance)",
+     "region": "US",
+     "ownership": "Growth-equity-backed",
+     "size_signal": "est. ~$25M",
+     "banyan_fit_note": "Compliance-monitoring niche for regulated marketing/lending with recurring revenue; growth-equity-backed so PE-light Banyan-adjacent - verify profitability."
+    },
+    {
+     "name": "Ennov",
+     "domain": "ennov.com",
+     "vertical": "Life-sciences regulatory, quality & clinical software",
+     "region": "France / EU",
+     "ownership": "PE-backed (Bregal Sagemount + Ardian)",
+     "size_signal": "~650 customers; 500k+ users; est. ~$50-80M",
+     "banyan_fit_note": "EU life-sciences regulatory/quality niche leader with recurring revenue; backed by two large PE funds and near the size ceiling - Banyan-adjacent, verify revenue and ownership."
+    },
+    {
+     "name": "BS&A Software",
+     "domain": "bsasoftware.com",
+     "vertical": "Municipal ERP / financials / utility billing",
+     "region": "US",
+     "ownership": "PE-light (Serent Capital)",
+     "size_signal": "2,900+ municipalities / 3,500+ customers; est. ~$55M",
+     "banyan_fit_note": "Deeply entrenched municipal-ERP niche leader with very sticky gov recurring revenue; Serent-owned - Banyan-adjacent if/when it exits PE."
+    },
+    {
+     "name": "Edmunds GovTech",
+     "domain": "edmundsgovtech.com",
+     "vertical": "Local-government ERP / utility billing",
+     "region": "US",
+     "ownership": "PE-backed (TA Associates / LLR)",
+     "size_signal": "est. ~$30M",
+     "banyan_fit_note": "Regional local-gov ERP niche leader with recurring municipal contracts; PE-owned - verify it stays sub-ceiling and the investor's exit path."
+    },
+    {
+     "name": "gWorks",
+     "domain": "gworks.com",
+     "vertical": "Small-town government ERP / utility billing / GIS",
+     "region": "US",
+     "ownership": "PE-backed rollup (BV Investment Partners)",
+     "size_signal": "est. ~$17M",
+     "banyan_fit_note": "Small-local-gov ERP/utility-billing niche with recurring revenue; itself a small rollup under lower-mid-market PE - Banyan-adjacent, verify permanence fit."
+    }
+   ]
+  },
+  {
+   "angle": "regional-bootstrapped",
+   "companies": [
+    {
+     "name": "Halo Service Solutions",
+     "domain": "haloservicesolutions.com",
+     "vertical": "ITSM / service desk / enterprise service management software",
+     "region": "United Kingdom",
+     "ownership": "Founder-owned; no outside investment",
+     "size_signal": "~\u00a374.3M sales (~$90M), ~250 staff",
+     "banyan_fit_note": "Clean founder-owned, profitable ITSM niche leader sitting just under the $100M ceiling \u2014 top-tier fit."
+    },
+    {
+     "name": "BrightLocal",
+     "domain": "brightlocal.com",
+     "vertical": "Local SEO / reputation tooling for agencies & multi-location SMBs",
+     "region": "United Kingdom",
+     "ownership": "Bootstrapped (funding $0)",
+     "size_signal": "~$32.9M ARR, 168 employees, 6.8k customers",
+     "banyan_fit_note": "Bootstrapped high-recurring niche SaaS leader in the ideal revenue band."
+    },
+    {
+     "name": "ServiceM8",
+     "domain": "servicem8.com",
+     "vertical": "Field-service job management for trades",
+     "region": "Australia",
+     "ownership": "Bootstrapped / privately held",
+     "size_signal": "~$2.6M ARR, 24 employees",
+     "banyan_fit_note": "Bootstrapped trades FSM; small but founder-owned niche with high recurring revenue."
+    },
+    {
+     "name": "Commusoft",
+     "domain": "commusoft.com",
+     "vertical": "Field-service management for commercial service businesses",
+     "region": "United Kingdom",
+     "ownership": "Bootstrapped",
+     "size_signal": "15k+ customers; ~$10M-$25M revenue est.",
+     "banyan_fit_note": "Bootstrapped FSM niche leader with a deep installed base \u2014 squarely in-thesis."
+    },
+    {
+     "name": "Cliniko",
+     "domain": "cliniko.com",
+     "vertical": "Practice management for allied-health clinics",
+     "region": "Australia",
+     "ownership": "Founder-led / bootstrapped",
+     "size_signal": "30,000+ users worldwide",
+     "banyan_fit_note": "Famously bootstrapped, profitable healthcare-vertical SaaS; sticky recurring base."
+    },
+    {
+     "name": "Hoowla",
+     "domain": "hoowla.com",
+     "vertical": "Legal case management / conveyancing software",
+     "region": "United Kingdom",
+     "ownership": "Private / founder-led",
+     "size_signal": "Trusted by 350+ UK firms",
+     "banyan_fit_note": "Founder-led legal-vertical SaaS at an ideal early size for a permanent acquirer."
+    },
+    {
+     "name": "RotaCloud",
+     "domain": "rotacloud.com",
+     "vertical": "Workforce scheduling / time & attendance (care, hospitality, retail)",
+     "region": "United Kingdom",
+     "ownership": "Private; no VC signal",
+     "size_signal": "5,000+ businesses",
+     "banyan_fit_note": "Bootstrapped-style workforce SaaS niche leader with recurring per-seat revenue."
+    },
+    {
+     "name": "Rotamap",
+     "domain": "rotamap.net",
+     "vertical": "Healthcare workforce rostering (anaesthesia / medical)",
+     "region": "United Kingdom",
+     "ownership": "Bootstrapped",
+     "size_signal": "~$3.1M ARR est.",
+     "banyan_fit_note": "Bootstrapped hyper-niche NHS rostering tool; sticky and mission-critical."
+    },
+    {
+     "name": "ServiceBox",
+     "domain": "getservicebox.com",
+     "vertical": "Field-service management for HVAC / plumbing / electrical contractors",
+     "region": "Canada",
+     "ownership": "Private; no VC signal",
+     "size_signal": "11-50 employees",
+     "banyan_fit_note": "Niche trades FSM with no institutional capital \u2014 clean founder-transition candidate."
+    },
+    {
+     "name": "ClubRunner",
+     "domain": "clubrunner.ca",
+     "vertical": "Membership management for Rotary clubs, chambers & associations",
+     "region": "Canada",
+     "ownership": "Private / founder-market",
+     "size_signal": "5,000+ clubs worldwide",
+     "banyan_fit_note": "Boring, sticky association-management niche leader \u2014 archetypal buy-and-hold asset."
+    },
+    {
+     "name": "MealSuite",
+     "domain": "mealsuite.com",
+     "vertical": "Foodservice software for senior living & healthcare",
+     "region": "Canada",
+     "ownership": "Private; minimal funding (~$150k)",
+     "size_signal": "Senior-living / healthcare niche",
+     "banyan_fit_note": "Deep vertical (senior-living foodservice) with regulatory stickiness and little outside capital."
+    },
+    {
+     "name": "ProShop ERP",
+     "domain": "proshoperp.com",
+     "vertical": "ERP for precision manufacturing / machine shops",
+     "region": "Canada / US",
+     "ownership": "Growth equity (Mainsail); formerly founder-led bootstrapped",
+     "size_signal": "$32M growth investment taken",
+     "banyan_fit_note": "Strong manufacturing-ERP vertical but now growth-equity backed \u2014 a secondary, lower-priority for a founder-transition thesis."
+    },
+    {
+     "name": "InPlace Software",
+     "domain": "inplacesoftware.com",
+     "vertical": "Work-integrated learning / student placement management",
+     "region": "Australia",
+     "ownership": "Bootstrapped (funding $0)",
+     "size_signal": "~$3M ARR est., 27 employees",
+     "banyan_fit_note": "Bootstrapped education-vertical niche leader; embedded in university workflows."
+    },
+    {
+     "name": "Pulse Software",
+     "domain": "pulsesoftware.com",
+     "vertical": "Governance, risk & compliance / reporting software",
+     "region": "Australia",
+     "ownership": "Bootstrapped (funding $0)",
+     "size_signal": "~$6.6M ARR est., 60 employees",
+     "banyan_fit_note": "Bootstrapped GRC vertical with recurring gov/enterprise contracts."
+    },
+    {
+     "name": "Preno",
+     "domain": "prenohq.com",
+     "vertical": "Property management system for independent hotels",
+     "region": "New Zealand",
+     "ownership": "Founder-led; funding not obvious",
+     "size_signal": "~$1M ARR / 14 FTE in 2021, likely larger now",
+     "banyan_fit_note": "Founder-led hotel-PMS in exactly Banyan's kind of niche; verify current revenue clears the ~$2M floor."
+    },
+    {
+     "name": "hotelkit",
+     "domain": "hotelkit.net",
+     "vertical": "Hotel operations / team-collaboration platform",
+     "region": "Austria",
+     "ownership": "Private / founder-led (confirm cap table)",
+     "size_signal": "Global SaaS; Hotel Tech Awards 2026 winner",
+     "banyan_fit_note": "Hospitality-ops niche leader; confirm ownership before outreach."
+    },
+    {
+     "name": "Cargoclix",
+     "domain": "cargoclix.com",
+     "vertical": "Logistics tendering, yard & time-slot/ramp management",
+     "region": "Germany",
+     "ownership": "Unfunded / private",
+     "size_signal": "11-50 employees; 190,000+ users",
+     "banyan_fit_note": "Unfunded logistics-vertical niche leader with an outsized user network \u2014 very clean."
+    },
+    {
+     "name": "Cargoo",
+     "domain": "cargoo.com",
+     "vertical": "Ocean-freight / logistics collaboration platform",
+     "region": "Switzerland",
+     "ownership": "Bootstrapped; no outside funding",
+     "size_signal": "~$7.4M ARR est., 67 employees",
+     "banyan_fit_note": "Bootstrapped freight-tech niche in the ideal size band."
+    },
+    {
+     "name": "Degura",
+     "domain": "degura.de",
+     "vertical": "Digital company-pension / benefits administration",
+     "region": "Germany",
+     "ownership": "Bootstrapped (funding $0)",
+     "size_signal": "~$4.4M ARR est., 40 employees",
+     "banyan_fit_note": "Bootstrapped benefits-admin vertical; insurtech-adjacent, verify recurring-revenue mix."
+    },
+    {
+     "name": "Orgavision",
+     "domain": "orgavision.com",
+     "vertical": "Quality management system (QMS) / compliance management",
+     "region": "Germany",
+     "ownership": "Founder-led / private (confirm)",
+     "size_signal": "German QMS/compliance SaaS niche",
+     "banyan_fit_note": "Compliance-vertical niche with sticky recurring contracts; confirm ownership."
+    },
+    {
+     "name": "FlexyBox",
+     "domain": "flexybox.com",
+     "vertical": "POS & operations software for restaurants / leisure",
+     "region": "Denmark",
+     "ownership": "Private (confirm ownership)",
+     "size_signal": "38 employees",
+     "banyan_fit_note": "Niche hospitality/leisure POS at ideal micro-cap size; confirm cap table."
+    },
+    {
+     "name": "ProPet Software",
+     "domain": "propetware.com",
+     "vertical": "Kennel, daycare, grooming & pet-services operations software",
+     "region": "Canada",
+     "ownership": "100% founder-owned; no outside investors",
+     "size_signal": "~$5M revenue, 11 employees",
+     "banyan_fit_note": "Explicitly founder-owned, no outside capital \u2014 a textbook clean micro-cap target."
+    },
+    {
+     "name": "BIS Safety Software",
+     "domain": "bissafety.ca",
+     "vertical": "EHS, training & compliance software",
+     "region": "Canada",
+     "ownership": "Founder-led (Dan MacDonald)",
+     "size_signal": "~$25M CAD revenue",
+     "banyan_fit_note": "Founder-led safety/compliance vertical at solid scale with recurring subscriptions."
+    },
+    {
+     "name": "Plexxis",
+     "domain": "plexxis.com",
+     "vertical": "ERP for specialty (drywall / wall & ceiling) construction contractors",
+     "region": "Canada",
+     "ownership": "Unfunded / private",
+     "size_signal": "51-200 employees",
+     "banyan_fit_note": "Deep construction-vertical ERP with no institutional capital \u2014 high switching costs."
+    },
+    {
+     "name": "Juvonno",
+     "domain": "juvonno.com",
+     "vertical": "Allied-health clinic management / EMR",
+     "region": "Canada",
+     "ownership": "Unfunded / private",
+     "size_signal": "Founded 2002; Winnipeg",
+     "banyan_fit_note": "Long-running bootstrapped clinic-management vertical; durable recurring base."
+    },
+    {
+     "name": "Noterro",
+     "domain": "noterro.com",
+     "vertical": "Clinic management for massage / physio / chiro",
+     "region": "Canada",
+     "ownership": "Private; no VC signal",
+     "size_signal": "Founded 2010",
+     "banyan_fit_note": "Bootstrapped allied-health practice SaaS in a fragmented sticky niche."
+    },
+    {
+     "name": "ClinicSense",
+     "domain": "clinicsense.com",
+     "vertical": "Massage / wellness practice management",
+     "region": "Canada",
+     "ownership": "Private; bootstrapped-style, no VC",
+     "size_signal": "7,000+ massage therapists supported",
+     "banyan_fit_note": "Bootstrapped wellness-vertical niche with strong single-practitioner recurring revenue."
+    },
+    {
+     "name": "Membee",
+     "domain": "membee.com",
+     "vertical": "Membership management for associations & chambers",
+     "region": "Canada",
+     "ownership": "Private; long-running niche vendor",
+     "size_signal": "Founded 1989; Calgary",
+     "banyan_fit_note": "Decades-old, boring, extremely sticky association-management niche \u2014 ideal permanent hold."
+    },
+    {
+     "name": "FIELDBOSS",
+     "domain": "fieldboss.com",
+     "vertical": "Field-service management for elevator & HVAC contractors (Dynamics ISV)",
+     "region": "Canada",
+     "ownership": "Private; no VC signal",
+     "size_signal": "Microsoft Dynamics vertical ISV",
+     "banyan_fit_note": "Hyper-niche (elevator/HVAC contractors) FSM with high switching costs."
+    },
+    {
+     "name": "Workhub",
+     "domain": "workhub.com",
+     "vertical": "EHS compliance, training & workforce safety software",
+     "region": "Canada",
+     "ownership": "Founder-origin (bootstrapped-style)",
+     "size_signal": "Compliance SaaS for regulated SMBs",
+     "banyan_fit_note": "Founder-led safety-compliance vertical serving regulated SMBs; recurring by nature."
+    },
+    {
+     "name": "work4all",
+     "domain": "work4all.de",
+     "vertical": "ERP / CRM / project software for SMEs",
+     "region": "Germany",
+     "ownership": "Family business, second generation",
+     "size_signal": "~40 employees, 1,000+ customers",
+     "banyan_fit_note": "Second-generation family-owned software \u2014 classic succession/founder-transition candidate."
+    },
+    {
+     "name": "ConSense",
+     "domain": "consense-gmbh.com",
+     "vertical": "Quality management / integrated management systems (QMS)",
+     "region": "Germany",
+     "ownership": "Owner-managed private company",
+     "size_signal": "Lower-middle-market QMS vendor",
+     "banyan_fit_note": "Owner-managed QMS vertical with regulatory stickiness \u2014 clean acquisition profile."
+    },
+    {
+     "name": "Babtec",
+     "domain": "babtec.com",
+     "vertical": "CAQ / QMS software for manufacturing quality",
+     "region": "Germany",
+     "ownership": "Founder-led / private",
+     "size_signal": "200+ employees, 8 locations",
+     "banyan_fit_note": "Founder-led manufacturing-quality niche leader; deeply embedded in factory workflows."
+    },
+    {
+     "name": "STREIT Software",
+     "domain": "streit-software.de",
+     "vertical": "ERP / apps for construction-adjacent trades",
+     "region": "Germany",
+     "ownership": "Private GmbH; no VC/public signal",
+     "size_signal": "120+ employees",
+     "banyan_fit_note": "Private trades-ERP vertical of ideal size with no institutional owner."
+    },
+    {
+     "name": "Soloplan",
+     "domain": "soloplan.com",
+     "vertical": "Transport management system / logistics software (CarLo suite)",
+     "region": "Germany",
+     "ownership": "Family business",
+     "size_signal": "~210-260 employees",
+     "banyan_fit_note": "Family-owned TMS/logistics niche leader; confirm revenue sits under the $100M ceiling."
+    },
+    {
+     "name": "mesonic",
+     "domain": "mesonic.com",
+     "vertical": "ERP / CRM / PPS / DMS for SMEs",
+     "region": "Austria",
+     "ownership": "Founder-led private GmbH",
+     "size_signal": "100+ employees, 10,000 customers",
+     "banyan_fit_note": "Founder-led SME ERP with a large sticky installed base across DACH."
+    },
+    {
+     "name": "Dalux",
+     "domain": "dalux.com",
+     "vertical": "BIM, construction-field & facility management software",
+     "region": "Denmark",
+     "ownership": "Family business (founding brothers)",
+     "size_signal": "Reported near/at $100M revenue",
+     "banyan_fit_note": "Family-owned construction-software leader; strong fit but at the very top of the size range."
+    },
+    {
+     "name": "Rivil\u0117",
+     "domain": "rivile.lt",
+     "vertical": "Accounting & ERP for Lithuanian SMEs",
+     "region": "Lithuania",
+     "ownership": "Private company",
+     "size_signal": "29 employees; founded 1992",
+     "banyan_fit_note": "Decades-old private Baltic accounting/ERP niche leader \u2014 entrenched local standard."
+    },
+    {
+     "name": "DocLogix",
+     "domain": "doclogix.com",
+     "vertical": "Document & process management (DMS / QMS)",
+     "region": "Lithuania",
+     "ownership": "Private company",
+     "size_signal": "31 employees; founded 2003",
+     "banyan_fit_note": "Private Baltic DMS/workflow vertical with recurring enterprise/gov contracts."
+    },
+    {
+     "name": "Directo",
+     "domain": "directo.ee",
+     "vertical": "Cloud ERP / business software for SMEs",
+     "region": "Estonia",
+     "ownership": "Private O\u00dc; no VC/public signal",
+     "size_signal": "Operating since 2000",
+     "banyan_fit_note": "Long-running private Estonian ERP niche leader; durable recurring SME base."
+    }
+   ]
+  }
+ ],
+ "total": 285
+}

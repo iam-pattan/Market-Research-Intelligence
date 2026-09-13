@@ -1,0 +1,46 @@
+## Answer
+
+**Phorest snapshot for M&A assessment, as of September 13, 2026:** Phorest is a Dublin-founded, founder-led vertical SaaS platform for premium salons, spas, barbers, beauty businesses, and aesthetic/med-spa clinics. The product is an all-in-one operating system: booking, POS/payments, CRM/client records, staff/rota management, inventory, marketing automation, loyalty/Treatcard, branded apps, memberships/recurring billing, reporting, digital forms, and newer AI workflow tools.
+
+**Business model & scale:** Phorest appears to monetize through subscription SaaS plus transaction/payment and messaging-related revenue. In a Latka CEO transcript, Ronan Perceval described revenue mix as roughly 65% SaaS and 35% transactional, with typical base software pricing then around $100-$200/month for SMB salons. Public positioning now is more upmarket: "premium," "growth-focused," and 3+ staff/multi-location salons. Phorest says over 12,000 salons, spas, and aesthetic clinics use the product, representing 155,000+ professionals across Ireland, UK, US, Canada, Australia, and Europe; CIBC's 2022 release cited 8,500+ businesses, implying meaningful account growth since then.
+
+**Market position:** Phorest sits in the salon/beauty/wellness vertical SaaS category. Its wedge is not the cheapest solo-stylist tool; it is the richer operating platform for independent premium salons and smaller multi-location groups. A competitor comparison from Zenoti, biased but useful, places Phorest above entry/midmarket tools like Vagaro in capability and below enterprise Zenoti in multi-location depth. This matches Phorest's own messaging around premium salons, human support, loyalty, marketing ROI, and client retention.
+
+**Revenue / ARR estimate:** The best public ARR/revenue estimate I found is Latka: $50M revenue/ARR in 2024, up from $23M in 2021, with a reported $175M valuation in 2021. Treat this as third-party/private-company intelligence, not audited financials. A rough sanity check: $50M across 12,000 businesses is about $4.2k per business/year before considering multi-location accounts, payments, SMS, apps, and add-ons, which is plausible for a subscription-plus-transaction model.
+
+**Profitability signals:** Phorest was reportedly profitable as early as 2016 at around €9M revenue. Current profitability is not publicly disclosed. Positive indicators include mature 20+ year operating history, vertical focus, payments/transaction revenue, low reported annual logo churn of ~6% in the 2018 Latka transcript, and a scaled SMB base. Negative/uncertain indicators: recent AI/product investment and international expansion may suppress EBITDA, and public filings/aggregated databases may not reflect consolidated global ARR.
+
+**Employee count & growth:** Public sources conflict. Latka shows 170 employees in 2018, 188 in 2020, 249 in 2021, ~300 in 2022, and ~321 in 2023-2024. LinkedIn/search snippets and Tracxn currently indicate roughly 523-525 employees in 2026, while PitchBook snippets show 400. Practical diligence range: likely **400-525 employees today**, with clear long-term headcount growth from ~170 in 2018.
+
+**Ownership & funding history:** Phorest is privately held and founder-led by Ronan Perceval. It was largely bootstrapped until 2011, then took outside capital. Publicly visible funding history is somewhat inconsistent across sources:
+
+| Year | Round / financing | Amount | Investors / notes |
+|---|---:|---:|---|
+| 2011 | Seed / Series A | ~€1.3M / ~$1.5M | Enterprise Ireland + private investors, per historical reports and Latka/Wikipedia summaries |
+| 2013 | Seed | ~$800k | Reported by Latka; investor detail not visible publicly |
+| 2018 | Growth equity / Series B | ~€20M / $23.2M | Susquehanna Growth Equity; included secondary/liquidity elements, with Enterprise Equity noting an exit/return |
+| 2021 | Series C | ~$17M at ~$175M valuation | Reported by Latka; not independently confirmed in the open press I found |
+| 2022 | Growth financing / venture debt | $12M | CIBC Innovation Banking; BusinessWire says proceeds for market expansion, strategic products, next-gen platform, and machine learning |
+
+**Key competitors:** Fresha, Vagaro, Booksy, GlossGenius, Boulevard, Mangomint, Mindbody/Booker, Zenoti, Meevo/Millennium, Square Appointments, Timely, and newer AI receptionist/booking products. Segmentally, Fresha/Vagaro/Booksy pressure the lower-priced SMB/marketplace end; Boulevard/Mangomint pressure premium UX; Zenoti pressures enterprise/multi-location; Mindbody is strong in hybrid wellness/fitness.
+
+**Moat / defensibility:** The strongest moat is workflow depth plus switching friction: salons centralize bookings, client histories, formulas/notes, payments, campaigns, staff schedules, memberships, forms, and reporting. Embedded payments and SMS/marketing automation increase ARPU and stickiness. Phorest also has a community/content moat: podcasts, events, benchmark tools, education, and Salon Owners Summit create trust in a relationship-driven vertical. The brand appears especially strong in Ireland/UK and expanding in North America.
+
+**Risks:** The category is crowded and price-sensitive. Fresha/Vagaro can undercut; Zenoti can win larger chains; AI-native front-desk tools may commoditize parts of Phorest's new AI story. SMB exposure creates macro risk because salons can fail in downturns. Some public competitor reviews call out gaps in enterprise-grade multi-location reporting and deeper backbar inventory. Payments revenue also brings margin, compliance, and platform dependency risk. Finally, because Phorest has growth-equity backing and venture debt, an acquirer should diligence liquidation preferences, debt covenants, and secondary shareholder expectations.
+
+**Recent news, last 12-18 months:** In 2026, Phorest leaned heavily into AI: Front Desk AI, Cheat Sheet AI, Reporting AI/insights, WhatsApp/SMS automation, and AI-supported decisioning. Salon Magazine covered the January 25-26, 2026 Salon Owners Summit in Dublin, with 600+ attendees, product previews, and Ronan Perceval emphasizing AI that supports rather than replaces human salon relationships. Phorest also announced continued Canadian investment, citing nearly 1,000 Canadian customers, and said the 2027 Summit will move to Killarney.
+
+**Founder / leadership:** Ronan Perceval is founder and CEO. Sylvie McDermott is cited as COO in historical/public profiles. Jonathan Miller appears in the CIBC release as VP Finance and is shown on Phorest careers material as CFO. Patrick Monaghan is cited by Salon Magazine as Chief Product Officer. Other product/engineering leaders named publicly at the 2026 Summit include Conor Cunningham, Rich Cullen, and Aoife Hannigan.
+
+**Founder outreach personalization hooks:** Strong hooks include Ronan's unusual origin story: he worked the front desk in a Dublin salon and built Phorest from that firsthand pain. He also co-founded Demonware, which was acquired by Activision, before building Phorest on what he has described as "evergreen" company principles. Another angle: Phorest is a certified B Corp and runs a large salon-owner community, so outreach should avoid generic financial-engineering language and instead speak to long-term stewardship, community, employee ownership, and strengthening the beauty industry. A timely 2026 hook is Phorest's AI theme: "human experience, powered by technology," plus its Canada growth and the Summit move to Killarney.
+
+## Sources
+
+- [Phorest official site](https://www.phorest.com/) — Product positioning, vertical focus, 12,000+ businesses, 155,000+ professionals, supported geographies, B Corp signal, AI/payments/membership feature claims.
+- [CIBC / BusinessWire: $12M financing to Phorest](https://www.businesswire.com/news/home/20220307005074/en/CIBC-Innovation-Banking-Provides-%2412-Million-Financing-to-Phorest-Salon-Software-to-Accelerate-Growth) — 2022 growth financing, use of proceeds, 8,500+ businesses, SGE backing, Jonathan Miller quote.
+- [Latka: Phorest revenue, valuation & funding](https://getlatka.com/companies/phorest) — Third-party estimates for revenue/ARR, valuation, funding rounds, employee trend, founder/CEO, and transcript details.
+- [Susquehanna Growth Equity](https://www.sgep.com/) — Confirms SGE relationship with Phorest and Ronan Perceval's founder/CEO role; describes SGE's patient-growth-equity model.
+- [Salon Magazine: 2026 Phorest Salon Owners Summit](https://www.salonmagazine.ca/highlights-from-phorests-2026-salon-owners-summit/) — Recent news on 2026 Summit, AI product direction, Canada growth, leadership names, and 2027 Killarney move.
+- [Zenoti salon software comparison](https://www.zenoti.com/thecheckin/best-salon-software-comparison) — Competitive positioning versus Zenoti, Vagaro, Boulevard, Fresha, GlossGenius, Square, and others; useful but competitor-authored.
+- [Phorest AI features](https://www.phorest.com/features/ai-features/) — Product detail on Front Desk AI, Cheat Sheet AI, SMS/WhatsApp automation, and AI positioning.
+- [Phorest FM: Ronan Perceval on the story of Phorest](https://www.phorest.com/blog/phorest-fm-episode-234-ronan-perceval-on-the-story-of-phorest/) — Founder story and public narrative useful for outreach personalization.

@@ -1,0 +1,1137 @@
+{
+ "synthesis": {
+  "executive_summary": "The 14 briefs sort cleanly into three bands by fit to Banyan's specific thesis (profitable, founder/family-owned, high-recurring niche leaders, ~$2M-$100M, held forever). BAND 1 \u2014 genuine hunting grounds: Education, Manufacturing & Industrial, and Construction & Field Service, followed closely by Healthcare (practice-management layer), Legal/Risk/Compliance (the boring EQMS/CLM/loan-servicing tail, not the AI cohort), Real Estate & Property, and the insurance/long-tail \"Other Vertical SaaS.\" These are regulated, deeply fragmented markets with a consolidated platform tier on top and a large founder-owned sub-$100M (often sub-$20M) tail underneath that the big platforms under-hunt \u2014 Banyan's structural lane. BAND 2 \u2014 structurally attractive but narrow, thin, or crowded: Fintech (a small genuine cluster of loan-servicing/CU-core/RIA back-office buried under VC noise), Government (good fragmentation but the single most contested corner), Hospitality/Personal Services (density 0.07, payments-strategics disintermediating), Logistics (only ~5-6 genuine of 23). BAND 3 \u2014 off-thesis as screened: Security (screened as horizontal cyber = all VC), Dev Tools/Data/AI Infra (density 0, VC-saturated), and Horizontal AI (six VC unicorns). In Band 3, density=0 is a TRUE signal, not a confidence-discount artifact \u2014 and the real Banyan lanes (physical-security VMS; boring Postgres/test-data/API-contract infra) sit OUTSIDE the screened cohorts and require re-scoped discovery. Opportunity concentrates where three conditions coincide: a mandated/regulated workflow with a proprietary content/audit-trail moat; a fragmented long tail below a consolidated platform; and VC money looking elsewhere (usually the AI-native adjacency). Education SIS/administration, sub-vertical manufacturing ERP/QMS, specialty-trades FSM, and EQMS satisfy all three best. The dominant competitive fact across every Band 1/2 segment: Banyan is not primarily bidding against Thoma Bravo or the strategics \u2014 it is bidding against Constellation Software's operating groups (Volaris/Harris/Vela/Jonas/Topicus) and Valsoft, plus Main Capital/Everfield in Europe, whose permanent-hold thesis is identical. Banyan's edge is entry-multiple discipline (~2-4x revenue / 8-15x EBITDA on proprietary, sub-radar deals), and that edge is being compressed as those rivals reach down-market.",
+  "cross_segment_themes": [
+   "Barbell/two-speed structure is universal: every segment has a consolidated platform tier (bid up by strategics and mega-PE) sitting on a fragmented founder-owned long tail below ~$100M. Banyan's lane is consistently that under-hunted sub-$100M (often sub-$20M) tier \u2014 never the category leaders.",
+   "The confidence-discount artifact vs. the VC tell \u2014 the two signals that must never be conflated: genuine private founder-owned targets systematically land at tier C because public web can't verify their financials (low/zero verified density in Education, Manufacturing, Healthcare, LRC, Gov is a VERIFICATION artifact, not absence of fit). But a high growth score paired with a mediocre Banyan score = VC-backed non-target \u2014 and in the AI-native cohorts (Horizontal AI, Dev Tools/Data/AI Infra, cyber-Security) density=0 is the literal truth, not a discount to be argued away.",
+   "Regulation + proprietary content is the durable moat that recurs everywhere: the most defensible niches own forms, jurisdictional rule mappings, audit trails, state-reporting logic, compliance checklists \u2014 not a thin AI feature. This is what makes boring niche leaders sticky and buy-and-hold-FOREVER-underwritable.",
+   "Constellation Software (Volaris/Harris/Vela/Jonas/Topicus) and Valsoft appear as competing acquirers in essentially every segment \u2014 they, not the PE megafunds or strategics, are Banyan's true competitive set for founder-owned sub-$100M vertical software.",
+   "'Looks founder-owned' is not 'is founder-owned' \u2014 cap-table verification is mandatory. Cautionary tales recur across briefs: Agiloft (KKR-majority since 2024), ClassLink (JMI), Tripleseat (Vista-majority), PayHOA (2024 Series A conversion), Cogitate (probable growth equity). Every name must clear a funding/ownership check before it counts.",
+   "Screen contamination is pervasive: names bleed across segments (WorkOS and education/gov-ERP into Manufacturing; Semgrep into Education; Material Security into Hospitality; construction/field-service names into LRC). Every shortlist requires manual de-contamination before use.",
+   "AI disruption is a double-edged buy-and-hold risk: VC AI-native names (Harvey, Abridge, Sierra, etc.) attack exactly the sticky workflows \u2014 CLM, legal research, clinical notes, document review \u2014 that make Banyan's boring incumbents durable. Held-forever underwriting must stress-test moat erosion, favoring slow-changing regulated niches over fast-churning ones.",
+   "Multiple inflation from rising permanent-hold and PE competition is compressing Banyan's entry-discount edge across LRC, Manufacturing, Gov, Real Estate, Construction \u2014 the proprietary-deal advantage is the defense, and it is eroding as roll-ups reach down.",
+   "Genuine targets cluster geographically outside the US VC ecosystem \u2014 ANZ/UK (trades FSM, allied-health PM), Canada (property PMS, lending LOS, GRC), Estonia/Greece (manufacturing MRP). Bootstrapped founder-owned leaders concentrate where venture capital is thin, but so do European permanent-hold rivals (Everfield, Main Capital, Topicus).",
+   "Revenue-quality dilution is a recurring diligence trap: hardware/telematics mix (fleet-GPS), services/implementation-heavy delivery (WMS, e-discovery, public-sector), and license/support-vs-subscription models (some EQMS/ERP) can depress true recurring-SaaS purity \u2014 screen for recurring-software share, not blended revenue."
+  ],
+  "segments_ranked": [
+   {
+    "segment": "Education (SIS, school administration, rostering, higher-ed ops)",
+    "attractiveness": "High \u2014 top pick",
+    "rationale": "Highest VERIFIED banyan-fit density of any segment. Dense with bootstrapped/family-owned systems-of-record (Rediker, Aeries, Edupoint, Populi, Gradelink) whose moat is state-reporting depth and mandated workflows with painful switching costs. Fragmented bottom layer below the PowerSchool/Instructure/Tyler tier. Caveats: budget/ESSER-cliff cyclicality, US-only cohort concentration, size-ceiling on the top name (Infinite Campus likely >$100M), and tuck-in competition from well-capitalized strategics reaching down."
+   },
+   {
+    "segment": "Manufacturing & Industrial B2B Software (ERP/MES/QMS/CMMS)",
+    "attractiveness": "High",
+    "rationale": "Deep, structural fragmentation at the operating-workflow layer (MOM has no double-digit-share vendor) reliably produces bootstrapped niche leaders \u2014 QT9, Cetec, Global Shop Solutions, MRPeasy, JOBSCOPE are near-textbook fits. Bimodal cohort: ~half genuine buy-and-hold, half VC burn (Katana, Limble, UpKeep, Guidewheel) that must be struck. Contested hard by Constellation, Valsoft, Aptean, Forterro; several strongest fits are sub-$5M."
+   },
+   {
+    "segment": "Construction & Field Service",
+    "attractiveness": "High",
+    "rationale": "Fragmentation reliably yields profitable founder-owned systems-of-record; the ANZ/UK trades-FSM cluster (ServiceM8, AroFlo, Tradify, Commusoft, Buildxact, Fergus) is a clean bootstrapped seam. But it is heavily contested (Constellation/Jonas, Valsoft, EverCommerce, JDM), several genuine fits sit at the ~$2-5M scale floor, and geographic concentration adds FX/cross-border and small-per-country-TAM risk. PE has already captured several cohort names, thinning the independent pool."
+   },
+   {
+    "segment": "Healthcare & Life Sciences (practice-management layer)",
+    "attractiveness": "Medium-High",
+    "rationale": "Real supply of bootstrapped, profitable, founder-owned practice-management leaders (Cliniko, Jane App, TherapyNotes, Zanda, Curve Dental, Pabau). Strong regulatory/workflow moats. But best assets carry founder-non-seller risk (Cliniko, TherapyNotes), the AI-scribe cluster must be excluded wholesale, scale ceilings threaten the top names, and the entire Life-Sciences half of the segment is essentially unscreened (coverage gap)."
+   },
+   {
+    "segment": "Legal, Risk & Compliance (the EQMS/CLM/regtech tail \u2014 NOT the AI cohort)",
+    "attractiveness": "Medium-High",
+    "rationale": "The SEGMENT is an excellent Banyan hunting ground (regulation-driven, sticky systems-of-record with content/audit-trail moats), but the SCREENED cohort is weak and ~a third is VC/PE hype (Harvey, Vanta, Everlaw) that must be struck outright. Genuine set is a minority of ~8-10 boring founder-owned names (CobbleStone, AssurX, Pagefreezer, Casepoint, FundApps). AI disruption cuts directly at these workflows, and PE/strategic bidding is inflating multiples. Agiloft (KKR) is the cap-table cautionary tale."
+   },
+   {
+    "segment": "Real Estate & Property (PMS, HOA, STR/hotel PMS, mortgage LOS)",
+    "attractiveness": "Medium",
+    "rationale": "Genuine supply of self-funded profitable operators (Rentec Direct, OwnerRez, Rent Manager, Wise Agent, HOA Express) in the SMB-facing niches below the RealPage/Yardi/MRI core. But the market is mid-cycle and actively consolidating (163 PropTech deals in 11 months of 2025), several top names are already sponsor-owned or VC-converted (Vantaca, CINC, PayHOA), and size ceilings/ownership-drift risk are live."
+   },
+   {
+    "segment": "Other Vertical SaaS (insurance AMS/core + the broad long tail)",
+    "attractiveness": "Medium",
+    "rationale": "The meta-segment (industry-specific long tail) is the canonical Banyan compounder market, and HawkSoft is a rare tier-B verified family-owned fit. But the screened cohort is n=2 and entirely insurance \u2014 a mature, heavily-consolidated corner (Vertafore/Roper, Applied) where independents are scarce and contested \u2014 while the genuinely thick long tail (trades, inspection, compliance, field-service microverticals) is underrepresented in the screen. Cogitate needs a funding-history check."
+   },
+   {
+    "segment": "Fintech & Financial Infrastructure (application/workflow layer)",
+    "attractiveness": "Medium-Low",
+    "rationale": "A narrow but real genuine cluster exists in loan-servicing (Nortridge, Shaw), credit-union core (Corelation, near the size ceiling), and RIA back-office (Advyzon, AssetBook) \u2014 but it is buried under VC-backed infrastructure noise, so deal density and hit-rate are low. Adverse selection is acute: the good private names rarely sell, and when they do, Vencora/strategics with payments-data synergies and lower cost of capital outbid a disciplined holder."
+   },
+   {
+    "segment": "Government & Public Sector",
+    "attractiveness": "Medium-Low",
+    "rationale": "Structurally excellent (90k+ local governments, mandated non-discretionary workflows, high logo retention) but the single most CONTESTED corner of vertical software \u2014 Valsoft, Constellation/Harris, and multiple PE platforms (Tyler, Granicus, OpenGov, NEOGOV) all hunt the same sub-$30M founder-owned assets, compressing the proprietary-deal edge. Genuine cohort fits are few (Envisio, GovPilot, GOGov); the visible names skew VC (Zencity, Clariti, Cloudpermit). Services drag and budget-cycle lumpiness add friction."
+   },
+   {
+    "segment": "Hospitality, Restaurant & Personal Services",
+    "attractiveness": "Medium-Low",
+    "rationale": "A legitimate but selective hunting ground, not a rich seam \u2014 cohort density 0.07, with only Schedulefly tier-B verified. Genuine micro-leaders exist (Total Party Planner, Meevo, Celerant, Planning Pod) but many top-visibility names are VC/PE-backed (7shifts, MarginEdge, Tripleseat) or mis-tagged (Material Security is email security). Payments-led strategics (Shift4/Toast/DoorDash) pay up on payment-volume and disintermediate standalone software; Constellation/Valsoft hunt the same bootstrapped names."
+   },
+   {
+    "segment": "Logistics & Supply Chain",
+    "attractiveness": "Medium-Low",
+    "rationale": "Thinner for Banyan than the 23-name cohort suggests \u2014 only ~5-6 are true buy-and-hold-shaped (One Step GPS, OptimoRoute, AscendTMS, Datex, Rastrac), the rest VC/growth-equity (Fleetio, DispatchTrack, Rose Rocket, Bringg) or already consolidated (C3/K\u00f6rber). Crowded by Descartes/WiseTech/Aptean reaching down into ~$100M tuck-ins, with revenue-quality dilution from hardware/telematics and services-heavy WMS, plus sub-scale and geography-mismatch risk."
+   },
+   {
+    "segment": "Security (as screened = horizontal cybersecurity)",
+    "attractiveness": "Low \u2014 re-scope required",
+    "rationale": "Poor as screened: all 8 cohort names are VC-backed horizontal-cyber growth companies (Tailscale, Chainguard, Panther, Tines) \u2014 density=0 is a TRUE signal of unfitness, not a discount. The genuine Banyan lane in 'Security' is physical-security vertical software (guard scheduling/billing, alarm/central-station software, fire/life-safety inspection compliance, integrator ERP, remote-video-monitoring ops) \u2014 fragmented, founder-owned, and entirely ABSENT from the cohort. Recommendation: re-run discovery scoped to physical-security VMS."
+   },
+   {
+    "segment": "Dev Tools, Data & AI Infrastructure",
+    "attractiveness": "Low \u2014 re-scope required",
+    "rationale": "Weak as screened (verified fit count=0): the cohort is a roster of venture-funded, growth-priced infra companies (ClickHouse, Grafana, Retool, Docker) \u2014 the exact species the thesis excludes; even the top banyan_adj name (Linear) is a famous VC rocket. The real Banyan opportunity is outside the cohort \u2014 mature, boring, founder-owned tools that Perforce/Idera/SmartBear roll up (test/synthetic data, Postgres operational tooling, API contract testing, legacy/ETL regression). Treat the cohort as an adjacency map, not a target list."
+   },
+   {
+    "segment": "Horizontal AI Applications",
+    "attractiveness": "Low \u2014 deprioritize",
+    "rationale": "Poorest fit and the density=0 is genuine, not an artifact. All six names (AlphaSense, Sierra, Clay, Decagon, 11x, Trunk Tools) are VC-funded, pre-profit, growth-priced AI-native companies at $1B-$10B valuations \u2014 the antithesis of Banyan's model, and Banyan does not meaningfully compete for any of them. AI exposure, if wanted, belongs in profitable bootstrapped VERTICAL software that added AI inside a system-of-record workflow \u2014 a different screen entirely."
+   }
+  ],
+  "whitespace_ranked": [
+   "Special education / IEP / autism / Medicaid-billing and chronic-absenteeism/attendance compliance (Education) \u2014 legally mandated, high-cost, painful workflows with measurable district ROI that venture capital is NOT chasing; thickest and least-contested niche identified across all briefs.",
+   "Sub-vertical SMB ERP/MES/QMS for spreadsheet-bound manufacturers (metal fabrication, plastics/injection molding, contract manufacturing/EMS, food processors, packaging, job shops) \u2014 the fragmentation IoT Analytics flags, still un-rolled-up at the plant-workflow level.",
+   "Physical-security vertical software (guard workforce management/billing/proof-of-service, alarm/central-station software, false-alarm reduction, fire/life-safety inspection compliance, integrator ERP) \u2014 the re-scoped 'Security' lane: fragmented, founder-owned, channel-embedded, and the roll-ups (Constellation/Volaris/ASG) have not fully arrived.",
+   "Specialty-trades field-service under-served by ServiceTitan/Procore (roofing, restoration, fire/life-safety, elevators, pools, landscaping, pest, oilfield, industrial maintenance) \u2014 deep single-niche systems-of-record with high switching costs.",
+   "EQMS / regulated-industry quality-and-compliance for smaller manufacturers (pharma, med-device, food) \u2014 moat is proprietary forms, regulatory mappings, and regulator-ready audit history, not UI; venture money is elsewhere.",
+   "Special-district and grant-compliance govtech (water/sewer/fire/transit/housing authorities; IIJA grant reporting, subrecipient monitoring, FOIA/records/retention) \u2014 too small for the enterprise suites, mandated, and under-picked below the roll-up radar.",
+   "Loan-servicing and lending back-office for non-bank/specialty lenders, plus community-bank and credit-union modernization adjacencies (onboarding, exception handling, compliance automation) \u2014 legacy, sticky, high switching cost.",
+   "Regulatory change management for NON-banks and mid-market third-party/supply-chain risk (TPRM) driven by DORA/NIS2/CSRD and cyber-insurance \u2014 regulation-driven demand with weak SMB-tier incumbents.",
+   "Trade compliance / customs / UFLPA-forced-labor traceability / digital product passports and unglamorous logistics execution utilities (freight audit/payment, dock scheduling, yard management, carrier onboarding) \u2014 regulation-driven and specialized.",
+   "HOA/condo, trust/escrow accounting, independent-hotel/STR PMS, and mortgage/private-lending LOS below the platform tiers (CINC/Vantaca, Hostaway/Guesty) \u2014 boring, regulated, high-frequency SMB workflows.",
+   "Allied-health/wellness practice-management in under-penetrated geographies (continental Europe, LATAM, APAC) and specialty-specific clinical operating systems without a bootstrapped default (ABA/autism, fertility, hospice/home-health, oncology).",
+   "Boring dev/data infrastructure the Perforce/Idera/SmartBear roll-ups target (Postgres operational tooling \u2014 migrations/tuning/pooling/backup; test/synthetic-data and environment management; API contract testing) \u2014 profitable founder-owned incumbents that never raised VC, absent from the screened AI-infra cohort.",
+   "Medspa-specific workflows (consent, before/after photos, memberships, provider utilization, financing) and SMB restaurant/salon back-office automation (inventory, AP, recipe/menu costing, franchise reporting) \u2014 overlooked by the payments/PMS platforms."
+  ],
+  "prioritized_shortlist": [
+   {
+    "company": "HawkSoft",
+    "segment": "Other Vertical SaaS (insurance)",
+    "why": "Privately held, founder/family-run Oregon insurance agency-management system; the rare tier-B PUBLICLY-confirmed profitable, high-recurring, founder-owned profile \u2014 moderate growth is exactly the hold-forever shape."
+   },
+   {
+    "company": "Schedulefly",
+    "segment": "Hospitality & Personal Services",
+    "why": "Bootstrapped, profitable, no outside capital; sticky restaurant staff-scheduling/comms niche leader \u2014 the one tier-B confirmed name in its segment and a textbook Banyan asset."
+   },
+   {
+    "company": "QT9 Software",
+    "segment": "Manufacturing & Industrial",
+    "why": "Bootstrapped, ~$0 external funding, ~$22M revenue, profitable QMS+ERP for regulated manufacturers \u2014 near-textbook fit and top of its cohort."
+   },
+   {
+    "company": "Cetec ERP",
+    "segment": "Manufacturing & Industrial",
+    "why": "Founder/bootstrapped US manufacturing ERP/MRP/QMS (~$17M), transparent SaaS pricing, high recurring revenue \u2014 clean ownership fit."
+   },
+   {
+    "company": "Global Shop Solutions",
+    "segment": "Manufacturing & Industrial",
+    "why": "Family-owned US manufacturing ERP (~$62M), no outside capital \u2014 the largest clean-ownership durable niche leader in the cohort."
+   },
+   {
+    "company": "ServiceM8",
+    "segment": "Construction & Field Service",
+    "why": "Bootstrapped, no outside funding; category-defining AU/NZ trades FSM system-of-record \u2014 the cleanest founder buy-and-hold profile in the segment."
+   },
+   {
+    "company": "AroFlo",
+    "segment": "Construction & Field Service",
+    "why": "Private, founder-led AU trades job-management veteran with no disclosed funding; sticky niche with high recurring revenue."
+   },
+   {
+    "company": "Commusoft",
+    "segment": "Construction & Field Service",
+    "why": "Founder/private UK plumbing/HVAC/electrical FSM; deep vertical specialization and switching costs, bootstrapped scale."
+   },
+   {
+    "company": "Rentec Direct",
+    "segment": "Real Estate & Property",
+    "why": "Self-funded/no outside VC, profitable, ~$17M recurring-revenue small-landlord PMS; top banyan_adj in its cohort \u2014 textbook fit."
+   },
+   {
+    "company": "OwnerRez",
+    "segment": "Real Estate & Property",
+    "why": "Bootstrapped ($0 reported funding), profitable STR PMS niche leader (~$5M); a clean permanent-hold candidate."
+   },
+   {
+    "company": "Rediker Software",
+    "segment": "Education",
+    "why": "Family-owned school-administration/SIS operating since the 1980s \u2014 the most durable, budget-proof profile in the Education cohort, squarely in Banyan's size band."
+   },
+   {
+    "company": "Aeries Software",
+    "segment": "Education",
+    "why": "Founder/family-owned California-focused K-12 SIS, bootstrapped and sticky via state-reporting depth; high Banyan score with moderate (not venture-fueled) growth."
+   },
+   {
+    "company": "Edupoint (Synergy)",
+    "segment": "Education",
+    "why": "Founder-owned K-12 SIS/LMS/administration suite, private and profitable-looking, with district-level switching-cost moat."
+   },
+   {
+    "company": "Populi",
+    "segment": "Education",
+    "why": "Founder-owned, bootstrapped higher-ed SIS/LMS for small colleges \u2014 an underserved niche the big platforms ignore, at Banyan-friendly scale."
+   },
+   {
+    "company": "CobbleStone Software",
+    "segment": "Legal, Risk & Compliance",
+    "why": "CLM/contract-management, founder-led since ~1995, bootstrapped and profitable \u2014 the cleanest buy-and-hold profile in the LRC cohort with no institutional VC/PE overhang."
+   },
+   {
+    "company": "AssurX",
+    "segment": "Legal, Risk & Compliance / Manufacturing (EQMS)",
+    "why": "Founder-owned EQMS/quality-and-compliance for regulated manufacturing (pharma, med-device, energy); deeply embedded regulator-ready audit-trail moat (verify recurring-vs-license mix)."
+   },
+   {
+    "company": "Advyzon",
+    "segment": "Fintech & Financial Infrastructure",
+    "why": "Self-funded, founder-led wealth/advisor all-in-one platform (~$25M, high recurring, sticky RIA workflows) \u2014 the cleanest genuine fit in fintech."
+   },
+   {
+    "company": "Nortridge Software",
+    "segment": "Fintech & Financial Infrastructure",
+    "why": "Bootstrapped, no outside capital, loan-servicing core (~$12.5M) \u2014 classic founder-owned, profitable-by-necessity niche leader; tier C is a private-data discount, not a fit weakness."
+   },
+   {
+    "company": "TherapyNotes",
+    "segment": "Healthcare & Life Sciences",
+    "why": "Bootstrapped US behavioral-health EHR, deep sticky niche, profitable, founder-owned \u2014 clean buy-and-hold profile (assess founder willingness to sell)."
+   },
+   {
+    "company": "Envisio",
+    "segment": "Government & Public Sector",
+    "why": "Highest Banyan-adj in its cohort with restrained growth \u2014 the profitable, capital-efficient, founder-owned shape; narrow mandated public-sector planning/reporting workflow with best odds of an uncontested proprietary deal."
+   }
+  ],
+  "competing_consolidators": [
+   "Constellation Software operating groups (Volaris, Harris, Vela, Jonas, Perseus, Topicus/TSS) \u2014 the most direct permanent-hold competitor across EVERY segment for founder-owned sub-$100M vertical software; Banyan's true rival, not the megafunds",
+   "Valsoft / Aspire Software \u2014 serial permanent-hold acquirer of small vertical B2B software in exactly Banyan's size band, prolific across manufacturing, construction/FSM, hospitality, government",
+   "European permanent-hold acquirers: Main Capital, Everfield, Visma, Vitec \u2014 competing for UK/Nordic/EU founder-owned targets (allied-health PM, GRC, manufacturing ERP, trades FSM)",
+   "Roper Technologies \u2014 permanent-capital vertical-software strategic reaching down for high-quality niche assets (healthcare, education/campus, insurance)",
+   "EverCommerce \u2014 SMB service-vertical roll-up overlapping the trades-FSM and personal-services cohorts",
+   "Vertical ERP roll-ups: Aptean, Epicor, IFS, Forterro \u2014 manufacturing/distribution/logistics consolidators buying adjacencies",
+   "Insurance-software strategics: Vertafore/Roper, Applied Systems, Ivans, Zywave, Insurity \u2014 most relevant to the Other-Vertical-SaaS insurance cohort",
+   "Category strategics that outbid on strategic assets one tier up: Thomson Reuters, LexisNexis/RELX, Wolters Kluwer, Diligent, NAVEX, Mitratech (LRC); PowerSchool/Bain, Instructure/KKR, Tyler (education); Descartes, WiseTech (logistics); RealPage/Yardi/MRI/AppFolio (real estate); Shift4/Toast/DoorDash (hospitality); Granicus/OpenGov/NEOGOV (government); Waystar/R1/ModMed/PointClickCare (healthcare); Perforce/Idera/SmartBear (dev/data tools)",
+   "PE / sponsor platforms that bolt small assets onto portfolio companies and bid up any clean-financials target: Thoma Bravo, Vista Equity, Hg, KKR, TA Associates, Insight Partners, Francisco Partners, Genstar, GI Partners, Aquiline, JMI Equity, Mainsail, Clearlake"
+  ],
+  "caveats": [
+   "Private-company financials are unverifiable from the public web: nearly all genuine targets sit at tier C by construction, so every shortlisted name requires primary diligence on profitability, gross retention, and recurring-revenue mix before any valuation \u2014 the screen cannot confirm these.",
+   "All revenue and profitability figures are Codex/Growjo-style web-research estimates at ~0.25-0.55 confidence \u2014 directional, not fact; do not underwrite off them.",
+   "Ownership/funding calls are training-knowledge-based and time-sensitive: cap tables must be confirmed at diligence. Cautionary tales recur (Agiloft/KKR, ClassLink/JMI, Tripleseat/Vista, PayHOA Series A, Cogitate probable growth equity) \u2014 'looks founder-owned' is repeatedly wrong.",
+   "density=0 / low-density means opposite things in different bands: in Education/Manufacturing/Healthcare/LRC/Gov it is a verification artifact hiding genuine tier-C fits; in Horizontal AI, Dev Tools/Data/AI Infra, and cyber-Security it is a TRUE signal of unfitness. The confidence-discount narrative must never be used to rescue VC names.",
+   "Coverage gaps mean the shortlist is not exhaustive: Other Vertical SaaS was screened at n=2 (insurance only), the Life-Sciences half of Healthcare is essentially unscreened, and Security was mis-scoped to horizontal cyber \u2014 the physical-security VMS lane and the boring dev-infra lane sit entirely outside the screened cohorts and need re-run discovery.",
+   "Scale-floor risk: several genuine fits are at or below the ~$2M revenue floor (Total ETO, Megaventory, MRPeasy, Tradify, BuildBook, Buildern, RealtyJuggler), where deal size may be below Banyan's efficient minimum and key-person/customer-concentration risk is high.",
+   "Founder-non-seller risk on the best assets (Cliniko, TherapyNotes, and the strongest bootstrapped names generally): availability is not the same as fit, and the cleanest profiles are often the least likely to sell.",
+   "Precedent-M&A multiples cited throughout are scale-leader/strategic comps (AuditBoard, SafeSend, Aareon, PowerSchool, etc.) that set unrealistic seller expectations; Banyan's actual entry band (~2-4x revenue / 8-15x EBITDA on proprietary sub-radar deals) is lower and mostly undisclosed.",
+   "Competitive intensity is rising: Constellation/Valsoft and PE add-on acquirers are actively bidding for the same founder-owned assets, compressing Banyan's entry-discount edge and potentially inflating multiples on the better targets.",
+   "Revenue-quality dilution must be screened, not assumed: hardware/telematics mix, services/implementation-heavy delivery, and license/support (vs. subscription) models can materially overstate true recurring-SaaS purity in several shortlisted names.",
+   "AI moat-erosion risk is real for buy-and-hold-FOREVER underwriting: VC AI-native entrants attack the exact sticky workflows that make these incumbents durable \u2014 favor slow-changing, regulation-anchored niches and stress-test defensibility over a multi-decade hold."
+  ]
+ },
+ "briefs": [
+  {
+   "segment": "Legal, Risk & Compliance (LRC) B2B software \u2014 spanning legal tech (research, CLM, e-discovery, practice/matter management), GRC (governance, risk, audit, policy), and regtech (financial-crime, regulatory reporting, TPRM, EQMS/quality-compliance).",
+   "market_overview": "Large, regulation-driven vertical-software market. Practical 2026 TAM ~$60B-$90B depending on how much tax/accounting, cyber-GRC, ESG and financial-crime regtech is included; the three overlapping sub-categories should not be summed. Component estimates (Mordor): legal tech ~$38.7B in 2026 at ~13.2% CAGR to 2031; GRC software ~$23.3B in 2026 at ~10.8% CAGR; regtech ~$20.7B in 2025 at ~16.4% CAGR. Net: a combined opportunity growing low-to-mid teens, structurally tailwinded by rising regulatory load (DORA, NIS2, CSRD, AI governance). Fragmentation: moderately concentrated at the platform layer (Thomson Reuters/Westlaw, RELX/LexisNexis, Wolters Kluwer, Diligent, OneTrust, NAVEX, AuditBoard, Relativity, Clio) but deeply fragmented below it \u2014 hundreds of narrow vendors split by jurisdiction, practice area, regulator, firm size and compliance domain. That long tail of sticky, mission-critical, sub-scale niche products is precisely the Banyan hunting layer.",
+   "consolidation_state": "Active, well-capitalized roll-up territory \u2014 but the M&A is concentrated ABOVE Banyan's price point. Strategics (Thomson Reuters, LexisNexis/RELX, Wolters Kluwer, Diligent, NAVEX, Mitratech, Onit, Litera, Ideagen, Dye & Durham, Clio) and PE sponsors (Hg, Thoma Bravo, Vista, K1, KKR, FTV, JMI, TA, Francisco Partners) are consolidating aggressively, with category leaders clearing at premium multiples (AuditBoard/Hg ~15x ARR; SafeSend/TR ~10x forward revenue). That activity sits mostly at $100M+ revenue / $500M+ EV, leaving the sub-$100M \u2014 often sub-$20M \u2014 founder-owned tier comparatively under-hunted by the big platforms. That tier is Banyan's lane, but it is increasingly contested by other permanent-hold and PE add-on acquirers.",
+   "banyan_fit_read": "The SEGMENT is a good Banyan hunting ground \u2014 regulation-driven, high-recurring-revenue, sticky systems-of-record with proprietary content/audit-trail moats, and a deep fragmented long tail of founder-owned niche leaders. THIS COHORT as screened, however, is a weak list that needs heavy filtering: verified banyan-fit B/A count=0 and density=0 is not telling us there are no fits \u2014 per our confidence-discount methodology, genuine private targets land at tier C because their financials can't be verified from the public web. The bigger problem is composition: roughly a third of the 34 are VC/PE-backed hype names that are NOT buy-and-hold targets and should be struck outright. The tell is a high growth score with only a mediocre B score. Explicit NON-TARGETS (VC/PE-backed, unprofitable, and/or >$100M): Harvey (G=0.743, multi-billion legal-AI unicorn), Hebbia (a16z/Index/Thiel), Vanta (>$100M ARR, ~$4B), Everlaw (a16z/CapitalG/TPG, ~$2B), EvenUp (Bessemer/Bain unicorn), ComplyAdvantage, Legora, Eudia, Norm Ai, Patlytics, Sardine, Sprinto, Spellbook, LinkSquares (all VC growth), DebtBook (WestCap-led, high G=0.547), Document Crunch, and \u2014 the important trap \u2014 Agiloft, which sits at tier C but is actually KKR-majority-owned since May 2024 (FTV + JMI also on the cap table), so it is definitively PE-controlled, not founder-owned. Also strike the field-service/construction names that are mis-segmented AND mostly growth-backed: BuildOps (a16z unicorn), CompanyCam (Insight), JobNimbus (Mainsail), ServiceTrade (JMI). The GENUINE buy-and-hold set is the minority of ~8-10 boring, bootstrapped/founder-owned niche leaders below \u2014 that is where Banyan should concentrate, and each still needs private-financial verification (Agiloft is the cautionary tale that 'looks founder-owned' is not the same as 'is').",
+   "top_targets": [
+    {
+     "name": "CobbleStone Software",
+     "why": "CLM/contract management, founder-led since ~1995, bootstrapped and profitable niche leader \u2014 the cleanest buy-and-hold profile in the cohort (B=0.544); verify financials but no institutional VC/PE overhang."
+    },
+    {
+     "name": "AssurX",
+     "why": "EQMS/quality-and-compliance for regulated manufacturing (pharma, med-device, energy), long-established (~1990s), privately held and founder-owned; deeply embedded, regulator-ready audit-trail moat."
+    },
+    {
+     "name": "Casepoint",
+     "why": "E-discovery/legal hold, founder-owned, strong government + AmLaw base (B=0.516); genuine target but diligence the services mix and gov-contract customer concentration for revenue quality."
+    },
+    {
+     "name": "Pagefreezer",
+     "why": "Records / web & social-media archiving for compliance, Vancouver, founder-owned and lightly funded (B=0.547, 2nd-highest in cohort); sticky compliance-evidence use case."
+    },
+    {
+     "name": "StandardFusion",
+     "why": "GRC platform, Canadian, small founder-owned SaaS (B=0.517); right profile though sub-scale \u2014 confirm it clears the ~$2M revenue floor."
+    },
+    {
+     "name": "FundApps",
+     "why": "Investment/shareholding-disclosure compliance monitoring, UK founder-led (B=0.546); high-recurring regulatory workflow \u2014 verify whether prior minority growth capital dilutes the founder-owned thesis."
+    },
+    {
+     "name": "Kaizen Reporting",
+     "why": "Regulatory-reporting quality-assurance for financial services, London, founder-owned niche specialist; narrow, sticky, content/rules-driven moat."
+    },
+    {
+     "name": "Nextpoint",
+     "why": "Litigation/e-discovery SaaS, Chicago, founder-owned; solid profile but small \u2014 same services/scale diligence as Casepoint."
+    },
+    {
+     "name": "Kuali",
+     "why": "Higher-ed research administration & compliance SaaS; potentially profitable and founder-run post-2014 for-profit conversion, but ownership is ambiguous \u2014 verify no VC control before pursuing."
+    },
+    {
+     "name": "SafetyChain",
+     "why": "Food-safety / quality compliance for F&B manufacturers \u2014 segment-adjacent and genuinely sticky; flagged because it has reportedly taken growth funding, so confirm ownership/profitability."
+    }
+   ],
+   "whitespace": "Underserved niches that fit the Banyan profile (founder-owned, sticky, below the platform roll- ups): (1) SMB compliance automation for firms too small for OneTrust/Diligent/NAVEX but too regulated for spreadsheets; (2) jurisdiction- and practice-specific legal workflow \u2014 immigration, probate, conveyancing, municipal/administrative law, insolvency, workers' comp, court filing; (3) regulatory change management for NON-banks (healthcare, insurance brokers, logistics, energy, construction, education); (4) mid-market third-party/supply-chain risk (TPRM) driven by DORA/NIS2/CSRD and cyber-insurance; (5) AI governance and model-risk compliance \u2014 evidence capture, approval workflows, policy attestation, audit trails; (6) legal-spend analytics and outside-counsel/billing-guideline enforcement for mid-market in-house teams; (7) EQMS / regulated-industry quality-and-compliance (pharma, med-device, food) where the moat is proprietary forms, regulatory mappings, and regulator-ready audit history rather than UI. The durable common denominator: content + workflow ownership (proprietary checklists, jurisdictional rule mappings, benchmark data), not a thin AI feature.",
+   "precedent_ma": "Recent deals: Hg/AuditBoard 2024 (>$3B, ~15x ARR after crossing $200M ARR); Thomson Reuters/Casetext 2023 ($650M); Thomson Reuters/SafeSend 2025 ($600M cash, ~$60M expected 2025 revenue \u2248 ~10x forward revenue); Clio/vLex 2025 (~$1B); LexisNexis/Henchman 2024; Workday/Evisort 2024; Mitratech/Prevalent + Preparis 2024 and Mineral + Syntrio 2024; Onit/Legal Files 2025; KKR majority stake in Agiloft May 2024 (FTV + JMI co-investors). Multiple bands for LMM/SMB vertical software here: ~2-5x revenue for slower-growth, services-heavy, customer-concentrated or founder-dependent assets; ~5-8x for clean SaaS (90%+ GRR, 20%+ growth, strong margins); ~8-12x+ for scarce AI/legal-data/workflow-of-record categories; ~10-18x EBITDA for mature profitable niche leaders. Banyan transacts at the LOW end of these bands \u2014 small founder-owned deals below the PE/strategic radar typically clear well under the headline category-leader multiples; the premium comps (AuditBoard, SafeSend, vLex) are scale-leader outcomes, not the SMB reality Banyan underwrites.",
+   "competing_acquirers": [
+    "Constellation Software operating groups (Vela, Harris, Perseus, Jonas) \u2014 the most direct competitor for founder-owned sub-$100M vertical LRC SaaS on a permanent-hold basis",
+    "Valsoft / Aspire Software \u2014 serial acquirer of small vertical B2B software, overlapping size band",
+    "Everfield (EU) and other European permanent-hold acquirers for UK/Nordic founder-owned targets (relevant: FundApps, StandardFusion, Kaizen, Legora geography)",
+    "Mainsail Partners, JMI Equity, FTV Capital \u2014 growth-equity buyers active one tier up (they took JobNimbus, ServiceTrade, Agiloft), competing when a founder wants partial liquidity",
+    "Hg \u2014 dominant in compliance/risk/accounting software (AuditBoard, Ideagen); sets the premium end",
+    "Thoma Bravo, Vista, K1, KKR, Francisco Partners, TA, Insight \u2014 PE platforms that bolt small compliance/legal assets onto existing portfolio companies",
+    "Strategic consolidators: Thomson Reuters, LexisNexis/RELX, Wolters Kluwer, Diligent, NAVEX, Mitratech, Onit, Litera, Ideagen, Dye & Durham, Clio \u2014 acquire for product/content gaps, usually outbidding on strategic assets"
+   ],
+   "risks": "1) AI disruption risk cuts directly at this thesis: the VC-backed legal/compliance-AI names (Harvey, Hebbia, Legora, Spellbook, Norm Ai) are attacking exactly the sticky workflows (CLM, legal research, document review, compliance authoring) that make Banyan's boring niche leaders durable \u2014 buy-and-hold-FOREVER underwriting must stress-test moat erosion. 2) Multiple inflation: PE and strategic roll-ups are bidding up compliance/legal assets, compressing Banyan's entry-discount edge. 3) Revenue-quality traps in e-discovery/gov names (Casepoint, Nextpoint): services-heavy delivery and gov-contract concentration. 4) Cohort mislabeling: several names are construction/field-service, not LRC (Contractor Foreman, JobNimbus, CompanyCam, BuildOps, ServiceTrade), inflating apparent segment supply. 5) Verification gap / 'founder-owned' illusion: nearly all genuine targets are tier C because private, and 'looks founder-owned' can be wrong \u2014 Agiloft sits at tier C yet is KKR-majority-owned; every target needs cap-table confirmation before it counts. 6) Regulatory dependence is double-edged \u2014 a tailwind for demand but a source of product churn and re-platforming cost when rules change.",
+   "sources": [
+    "https://www.mordorintelligence.com/industry-reports/global-legal-tech-market",
+    "https://www.mordorintelligence.com/industry-reports/governance-risk-and-compliance-software-market",
+    "https://www.mordorintelligence.com/industry-reports/global-regtech-industry",
+    "https://www.paulweiss.com/insights/client-news/hg-capital-acquires-auditboard-in-3-billion-deal",
+    "https://optro.ai/blog/auditboard-agrees-to-be-acquired-by-hg-for-over-3-billion",
+    "https://www.thomsonreuters.com/en/press-releases/2023/june/thomson-reuters-corporation-signs-definitive-agreement-to-acquire-casetext.html",
+    "https://www.prnewswire.com/news-releases/thomson-reuters-acquires-safesend-expanding-tax-automation-capabilities-302340941.html",
+    "https://newsroom.workday.com/workday-signs-definitive-agreement-to-acquire-evisort",
+    "https://www.freshfields.com/en-gb/our-thinking/campaigns/transactions/2024/06/freshfields-advises-relx-on-the-acquisition-by-lexisnexis-of-henchman/",
+    "https://www.onit.com/news/onit-announces-acquisition-of-legal-files-software-inc/",
+    "https://mitratech.com/resource-hub/blog/prevalent-acquired-by-mitratech-a-new-era-for-third-party-risk-management-starts-today/",
+    "https://softwareequity.com/",
+    "https://en.wikipedia.org/wiki/Agiloft",
+    "https://en.wikipedia.org/wiki/Kuali"
+   ]
+  },
+  {
+   "segment": "Manufacturing & Industrial B2B Software",
+   "market_overview": "Large, structurally fragmented, and growing above GDP. TAM depends heavily on scope: a narrow industrial-software cut is ~$20-60B, while the broad industrial software ecosystem is $100B+ (IoT Analytics: $146B in 2023 -> $355B by 2030, ~13.5% CAGR). The Banyan-relevant operating-workflow layer -- Manufacturing Operations Management (MES/MOM) -- was ~$21B in 2025 and is forecast to ~$110B by 2034 (~20.3% CAGR). Growth drivers: cloud migration of legacy on-prem ERP/MES, reshoring, labor scarcity, IT/OT convergence, regulatory traceability, and AI-in-workflow. Fragmentation is the defining feature at the workflow level: ERP, MES/MOM, QMS, CMMS/EAM, CPQ, PLM/BOM, SCADA and industrial IoT are bought by different personas, and discrete-vs-process manufacturing, sub-vertical specialization (metal fab, plastics, EMS, food, ETO/MTO job shops), and country-specific tax/compliance localization keep a very long tail of niche leaders alive. IoT Analytics notes MOM specifically has no vendor at double-digit share. This is exactly the \"boring, embedded, mission-critical, recurring-revenue niche leader\" profile Banyan hunts.",
+   "consolidation_state": "Fragmented at the operating-workflow level, consolidating hard at the platform/capital level -- a two-speed market. Strategics (Siemens, Emerson/AspenTech, Schneider/AVEVA, Rockwell/Plex, PTC, Autodesk, Dassault, Hexagon, Synopsys/Ansys, Trimble, Honeywell) are assembling connected digital-thread platforms via multi-billion-dollar deals. Simultaneously PE-backed vertical-ERP roll-ups (Aptean, Epicor, IFS, Forterro) and permanent-hold VMS acquirers (Constellation groups, Valsoft, Main Capital) sweep up sticky niche recurring-revenue assets in the lower-middle market. The long tail of founder/family-owned sub-vertical ERP/MES/QMS/CMMS vendors -- Banyan's target zone -- remains largely un-rolled-up, but competition for those assets is intensifying, most directly from Constellation-style permanent holders whose thesis overlaps Banyan's.\"",
+   "banyan_fit_read": "Yes -- this is a strong hunting ground, but it demands discipline on the ownership-fit axis, because the segment is bimodal. Roughly half the cohort is genuine buy-and-hold material (bootstrapped/family-owned, profitable or profitability-plausible, $2-100M, high recurring revenue in an entrenched sub-vertical), and roughly half is VC/growth-funded burn that is explicitly NOT a Banyan target despite attractive-looking growth scores. Read banyan_adj + the qualitative ownership profile, not the tier letter: the cohort density here (0.13) understates fit because most genuine targets are private and confidence-discounted to tier C -- inFlow, MRPeasy, Total ETO, Megaventory, JOBSCOPE all land at C purely because financials can't be publicly verified, not because they are weak. GENUINE strongest candidates: QT9 Software (bootstrapped, $0 external funding, ~$22M, profitable, regulated-manufacturer QMS+ERP -- near-textbook fit), Cetec ERP (founder/bootstrapped, transparent SaaS pricing, ~$17M), Global Shop Solutions (family-owned, ~$62M, no outside capital), inFlow Inventory (bootstrapped/unfunded Toronto, ~$7M), MRPeasy (founder/private, ~$5M SaaS MRP), and the entrenched ETO/MTO founder-owned niche leaders JOBSCOPE and Total ETO. EXPLICITLY NOT targets -- VC/growth-backed, unprofitable, or sponsor-owned, where a high G score is the tell: Katana (>EUR60M raised), Fulcrum Pro (Series A/A2 burn), MachineMetrics (~$38M), Guidewheel (~$48M, G=0.589), Limble CMMS (~$94-113M), UpKeep (VC-backed), Fracttal (~$35M 2026 round), Propel Software (venture-funded), SafetyChain ($50M growth), and Parsec/TrakSYS + ProShop ERP (already sponsor/growth-equity owned -- a PE holder is already in the cap table). One cohort artifact to discard outright: WorkOS is developer-tools/enterprise-auth infrastructure, VC-backed, highest G in the list (0.589) -- it bled into this screen and is neither manufacturing nor a buy-and-hold target. Skyward, BS&A, Veracross, iWorQ, Edmunds GovTech are education/local-government ERP that likewise crossed over from adjacent segments -- fine companies, but they belong to other briefs.",
+   "competing_acquirers": [
+    "Constellation Software operating groups (Volaris, Vela, Jonas, Harris, Topicus) -- the most direct permanent-hold competitor to Banyan for niche industrial VMS",
+    "Valsoft -- acquisitive VMS holder targeting the same lower-middle-market vertical niches",
+    "Main Capital -- European B2B software buy-and-build",
+    "Aptean (backed by TA Associates, Insight, Charlesbank, Clearlake) -- vertical ERP roll-up for manufacturers/distributors",
+    "Forterro (Partners Group) -- European manufacturing ERP consolidator (e.g. Orgadata)",
+    "Epicor (CD&R) and IFS (Hg/TA/EQT) -- scaled industrial ERP platforms buying adjacencies",
+    "PE sponsors circling the space: TPG, Partners Group, TA Associates, Insight Partners, Charlesbank, Clearlake, CD&R, Hg, EQT, Thoma Bravo, Vista, KKR, Battery, Mainsail (already in ProShop), BVP Forge (already in Parsec/TrakSYS)",
+    "Strategics for the larger/tech-forward assets: Siemens, Emerson/AspenTech, Schneider/AVEVA, Rockwell/Plex, PTC, Autodesk, Dassault, Hexagon, Synopsys/Ansys, Trimble, Honeywell"
+   ],
+   "top_targets": [
+    {
+     "name": "QT9 Software",
+     "why": "Bootstrapped, ~$0 external funding, ~$22M rev, profitable QMS+ERP for regulated manufacturers -- near-textbook Banyan fit (B=0.581, top of cohort)."
+    },
+    {
+     "name": "Cetec ERP",
+     "why": "Founder/bootstrapped US manufacturing ERP/MRP/QMS, ~$17M, transparent per-user SaaS pricing and high recurring revenue; strong ownership fit (B=0.566)."
+    },
+    {
+     "name": "Global Shop Solutions",
+     "why": "Family-owned US manufacturing ERP, ~$62M, no outside capital, ~300+ staff -- durable niche leader, largest clean-ownership asset in the cohort (B=0.558)."
+    },
+    {
+     "name": "inFlow Inventory",
+     "why": "Bootstrapped/unfunded Toronto inventory & order management for SMB distributors/manufacturers, ~$7M, 90%+ recurring; C-tier only for confidence, not fit (B=0.537)."
+    },
+    {
+     "name": "MRPeasy",
+     "why": "Founder/private Estonian SMB manufacturing MRP, ~$5M, ~90% recurring SaaS with little outside funding -- clean fit, size at the small end (B=0.534)."
+    },
+    {
+     "name": "JOBSCOPE",
+     "why": "US ETO/MTO manufacturing ERP with long-standing stable private ownership (~$20M) in a defensible engineer-to-order niche; ownership fit 0.85."
+    },
+    {
+     "name": "Total ETO",
+     "why": "Founder/private Canadian engineer-to-order ERP, ~$3M, one of the most niche verticals in the cohort (is_vertical_niche 0.95) -- small but indispensable."
+    },
+    {
+     "name": "Megaventory",
+     "why": "Bootstrapped/private Greek inventory/production/order management, ~$3M, high recurring revenue -- classic small profitable niche holder (ownership fit 0.9)."
+    },
+    {
+     "name": "AssurX",
+     "why": "Private US enterprise QMS/regulatory-compliance (~$17M), no sponsor found, sticky compliance workflows; needs recurring-mix diligence (enterprise license vs SaaS)."
+    },
+    {
+     "name": "Intellect",
+     "why": "Private/founder US QMS/EHSQ no-code quality platform (~$17M), high recurring; slightly broader ICP so verify niche defensibility."
+    }
+   ],
+   "whitespace": "Underserved niches where a founder-owned system-of-record can still be built or bought cheaply: (1) sub-vertical ERP for segments still on generic ERP + spreadsheets -- metal fabrication, plastics/injection molding, contract manufacturing/EMS, food processors, packaging, specialty chemicals, industrial distributors, and job shops; (2) lightweight MES/MOM for SMB plants that cannot absorb Siemens/Rockwell/Dassault-scale deployments (the MOM fragmentation IoT Analytics flags); (3) quality/traceability/genealogy/compliance for smaller regulated manufacturers (QT9, AssurX, Intellect live here -- room for more sub-vertical depth); (4) quoting/costing/CPQ and engineering-to-order workflows for complex industrial products (Total ETO, JOBSCOPE); (5) maintenance/spare-parts/warranty/aftermarket and installed-base monetization; (6) supplier and customer portals for mid-market manufacturers; (7) industrial data plumbing -- OT connectors, historians, edge analytics, plant-to-ERP integration; (8) AI copilots embedded in real workflows (quote generation, work instructions, maintenance triage, root-cause, scheduling, compliance docs). The durable profile in all of these is a narrow ICP, irreplaceable domain workflows, 90%+ gross retention, pricing power, and a system of record/execution rather than a dashboard.",
+   "precedent_ma": "Valuation benchmarks for founder-owned lower-middle-market vertical SaaS: ~3.0x-6.5x revenue/ARR for ordinary quality, 8x+ revenue top-quartile; private SaaS deal medians ~4x-5x EV/revenue in 2025-2026 (SEG/Aventis-linked data). Slower-growth-but-profitable industrial software (ERP/MES/QMS/CMMS with services or on-prem mix) is typically underwritten on EBITDA at ~8x-15x for high-quality mid-market, higher for scaled high-retention assets. Premiums accrue to high gross retention, low services dependency, clean SaaS metrics, mission-critical workflows, proprietary data, and credible AI. Recent notable deals (2023-2026): Siemens/Altair ~$10B EV (2025); Emerson buying remaining AspenTech at ~$16.8B EV (2025); Synopsys/Ansys completed (2025); IFS/Copperleaf ~C$1B (2024); Aptean/Logility ~$490M EV (2025); TPG carve-out of GE Vernova Proficy $600M, combined with PTC Kepware+ThingWorx into Velotic (2026); PTC/ServiceMax $1.46B; Autodesk/FlexSim (2023); Rockwell/Clearpath-OTTO Motors (2023); Forterro/Orgadata. Read-through for Banyan: the mega-deals set the strategic ceiling, but Banyan competes in the sub-$100M founder-owned tier where entry multiples are 4-6x revenue or ~8-15x EBITDA and the real contest is against Constellation groups, Valsoft, Aptean and Main Capital, not the strategics.",
+   "risks": "Data/confidence: every cohort revenue and profitability figure is a Codex web-research estimate at 0.3-0.55 confidence -- private financials are unverifiable, so tier-C targets need direct diligence before valuation; do not treat the estimates as facts. Ownership-fit misread: the biggest scoring trap is a high growth score masking VC burn (Guidewheel, Limble, UpKeep, Katana, MachineMetrics, Fracttal, Propel) -- these fail the buy-and-hold test regardless of banyan_adj. Segment contamination: WorkOS (dev-tools/auth) and the education/local-gov ERP names (Skyward, BS&A, Veracross, iWorQ, Edmunds) crossed into this screen and must be excluded from manufacturing shortlisting. Business-model quality: some \"manufacturing software\" is license/support rather than subscription (Sepasoft recurring score 0.3; AssurX enterprise licensing) -- recurring-revenue quality must be verified, not assumed. Competitive tension: Constellation/Valsoft/Aptean actively court the exact founder-owned assets Banyan wants, compressing availability and potentially bidding up multiples. Legacy/technical: on-prem-to-cloud migration risk and services-heavy delivery can depress margins and complicate the perpetual-hold model. Concentration/small-scale: several strongest-fit targets (Total ETO, Megaventory, MRPeasy, Statii, E-Max) are sub-$5M -- below or at the low edge of the $2M floor, with key-person and customer-concentration risk.",
+   "sources": [
+    "https://iot-analytics.com/industrial-software-market-landscape/",
+    "https://www.fortunebusinessinsights.com/manufacturing-operations-management-software-market-102713",
+    "https://softwareequity.com/research/annual-saas-report",
+    "https://windsordrake.com/saas-valuation-multiples/",
+    "https://www.csisoftware.com/operating-groups/",
+    "https://www.ta.com/portfolio/investments/aptean-inc/",
+    "https://news.siemens.com/en-us/",
+    "https://www.emerson.com/en/corporate/news/2025/emerson-to-acquire-remaining-outstanding-shares-of-aspentech",
+    "https://www.ifs.com/en/insights/news/ifs-completes-copperleaf-acquisition",
+    "https://www.gevernova.com/news/press-releases/tpg-to-acquire-ge-vernovas-proficy-manufacturing-software-business",
+    "https://www.jonesday.com/en/practices/experience/2025/01/logility-enters-into-acquisition-agreement-with-aptean",
+    "https://adsknews.autodesk.com/en/news/autodesk-acquires-factory-simulation-flexsim/"
+   ]
+  },
+  {
+   "banyan_fit_read": "This is a viable but competitive hunting ground for Banyan, not a greenfield one. The segment has a real supply of profitable, founder/family-owned, high-recurring-revenue niche leaders in the $2M-$100M band \u2014 which matters more than the cohort's headline density (0.15, 4 verified B/A), since per the scoring caveat genuine private targets are confidence-discounted into tier C rather than being weak. The STRONGEST GENUINE buy-and-hold candidates are the self-funded, profitable operators: Rentec Direct (self-funded, no outside VC, profitability 0.8, ~$17M, top banyan_adj 0.613/B) and OwnerRez (bootstrapped, $0 funding reported, profitability 0.8, ~$5M, 0.586/B) are textbook Banyan fits; Rent Manager/LCS (independent family/bootstrapped, ~$87M, 0.581/B) fits the profile but sits near the $100M ceiling. Behind them, several tier-C names are strong fits whose C is a verification artifact, not a quality signal: HOA Express, Wise Agent, RealtyJuggler (all bootstrapped, profitable, no outside funding), plus the independent hotel/mortgage PMS operators RMS Cloud (AU, founder/family), WebRezPro (CA, bootstrapped), LendingPad and Mortgage Automator (privately held lending LOS) \u2014 lower-confidence on financials but the right ownership shape. EXPLICITLY NOT BANYAN TARGETS (VC/PE-backed, buy-and-hold-incompatible; note the high growth-score-with-mediocre-B pattern the caveat flags): DoorLoop (Series B, $130M raised, prof 0.4), Dealpath (~$67M raised, Series C, prof 0.4), Lodgify (Series B VC, prof 0.4), FinQuery/ex-LeaseQuery (~$65.5M raised), Hostaway (~$543M raised, General Atlantic \u2014 also above the size band), Ylopo (venture-backed, G=0.531), Amenitiz and RoomRaccoon (heavily VC-backed EU PMS). Also exclude the already-sponsor-owned assets effectively spoken for: Vantaca (Cove Hill/JMI, $300M+), CINC Systems (Hg/Spectrum, G=0.531), Buildout (Riverside/Susquehanna) and Breezeway (Resurgens). PayHOA is a borderline drop \u2014 bootstrapped historically but took a $27.5M Series A in 2024 with a high growth score (G=0.53), the exact VC-conversion signature the caveat warns against.",
+   "competing_acquirers": [
+    "RealPage (Thoma Bravo)",
+    "Yardi",
+    "MRI Software (TA Associates / GI Partners / Harvest Partners)",
+    "CoStar Group",
+    "Zillow",
+    "AppFolio",
+    "Entrata (Blackstone growth)",
+    "Lone Wolf Technologies (Stone Point)",
+    "Aareon (TPG / CDPQ)",
+    "Constellation Software (Emphasys / Constellation1) \u2014 closest to Banyan's permanent-hold model",
+    "Cove Hill Partners & JMI Equity (Vantaca, HOA)",
+    "Hg & Spectrum Equity (CINC Systems, HOA)",
+    "The Riverside Company & Susquehanna Growth Equity (Buildout, CRE)",
+    "Resurgens Technology Partners (Breezeway, STR ops)",
+    "General Atlantic (Hostaway, STR PMS)",
+    "STR/PMS and lending-LOS growth investors down-market"
+   ],
+   "consolidation_state": "Actively consolidating and mid-cycle. PropTech M&A re-accelerated: Corum counted 163 PropTech M&A deals in the first 11 months of 2025 vs 134 in all of 2024, with PE involved in ~one-third of transactions; Houlihan Lokey tallied 55 U.S. PropTech M&A deals in 1H 2025. The multifamily/commercial/marketplace cores are already rolled up by RealPage, Yardi, MRI, CoStar, Aareon and their PE sponsors, and mega-deals (Aareon ~\u20ac3.9B, idealista ~\u20ac2.9B) show sponsors paying up at the top. But the SMB-facing niches Banyan targets (HOA, STR/independent-hotel PMS, brokerage CRM, small-landlord PMS, mortgage LOS) remain fragmented with many bootstrapped operators and only partial PE penetration \u2014 meaning competition for assets is rising but a genuine supply of un-rolled founder-owned leaders still exists.",
+   "market_overview": "TAM is large and layered. Narrowly defined \"real estate applications\" software was ~$9.5B globally in 2024, growing ~11.9% YoY toward ~$12.6B by 2029 (~5.8% CAGR, Apps Run The World). Broader property-management-platform definitions run much bigger: MarketsandMarkets sizes property management software at $26.49B (2024) rising to $42.78B by 2030 (~8.3% CAGR). Working TAM for B2B real-estate/property vertical software: ~$10B-$30B today depending on inclusion of lease admin, IWMS/facilities, embedded payments, portals, analytics, and tenant/resident engagement. Structure is \"consolidated core, fragmented edges\": the top 10 vendors held 51.2% of the 2024 real-estate software market (RealPage 13.4%, then Yardi, CoStar, AppFolio, Aareon, MRI, Constellation, Entrata), leaving nearly half in long-tail niche vendors. Consolidated cores = multifamily PMS, commercial/lease systems, and property data/marketplaces; fragmented edges = specialty asset classes, HOA/condo, short-term-rental & independent-hotel PMS, trust/escrow accounting, inspections, maintenance/vendor orchestration, affordable/public housing compliance, small-commercial landlords, brokerage-team ops, and mortgage/lending workflow. That long tail is exactly where founder/family-owned niche leaders in Banyan's $2M-$100M band live.",
+   "precedent_ma": "Property-software deal multiples are largely undisclosed, so benchmark to broader vertical/SaaS M&A: SEG reported ~4.0x median EV/TTM revenue for SaaS M&A in Q2 2026 (vertical public SaaS ~3.7x); Windsor Drake pegs founder-led lower-middle-market SaaS at ~3x-6.5x ARR with top-quartile disclosed deals above 8x; SaasRise's 2024 private dataset shows 4.1x median revenue / 19.2x median EBITDA (vs 2.6x / 10.2x for all private software). Underwrite ordinary profitable SMB real-estate software at ~2x-5x revenue or 8x-15x EBITDA, moving to 5x-8x+ revenue / 15x-25x+ EBITDA for low-churn, payments/data-expanding, Rule-of-40 assets. Recent notable transactions: Zillow/Follow Up Boss up to $500M (Dec 2023, agent CRM); TPG-CDPQ/Aareon ~\u20ac3.9B EV (Jun 2024, EU property-mgmt SaaS); Cinven/idealista ~\u20ac2.9B EV (Jun 2024, marketplace platform); Entrata/Colleen AI (Jun 2024, multifamily AI); CoStar/Matterport completed (Feb 2025, 3D digital twins); RealPage/Livble (Jul 2025, embedded rent payments); MRI Software/Proptech Labs (Oct 2025, regional PMS roll-up). Most of these are strategic/PE platform deals at scale \u2014 Banyan competes further down-market where headline multiples are lower and undisclosed.",
+   "risks": "1) Competition/valuation risk: rising PE and strategic roll-up activity (163 deals in 11 months of 2025) is bidding up assets and pre-empting the better founder-owned targets. 2) Financial-verification risk: the strongest fits are private and confidence-discounted (tier C) \u2014 revenue estimates carry 0.25-0.4 confidence, so profitability and ARR must be diligenced directly before conviction. 3) Size-ceiling risk: Rent Manager/LCS (~$87M) sits near the band's top; Hostaway (~$87M) is already too large and sponsor-owned. 4) Ownership-drift risk: bootstrapped names can convert to VC (PayHOA's 2024 Series A) \u2014 recheck funding status at diligence. 5) Platform-disintermediation risk: giants (RealPage, Yardi, AppFolio) and embedded-payments/AI entrants can compress niche vendors lacking a defensible system-of-record and switching costs. 6) Regulatory risk: rent-control, algorithmic-pricing scrutiny (RealPage litigation), commission-rule changes, and PMS/trust-accounting compliance can shift the value of specific workflows. 7) Growth-trap risk: high growth-score names (DoorLoop, Ylopo, Dealpath, CINC G=0.53) are the VC/PE-signature profiles that are NOT buy-and-hold targets despite screening near the cohort top.",
+   "segment": "Real Estate & Property (B2B vertical software: property/PMS, HOA/community, short-term-rental & hotel PMS, CRE/brokerage, mortgage/lending workflow)",
+   "sources": [
+    "https://www.appsruntheworld.com/top-10-real-estate-software-vendors-market-size-and-market-forecast/",
+    "https://www.marketsandmarkets.com/Market-Reports/property-management-market-36579732.html",
+    "https://www2.hl.com/pdf/2025/1h-2025-proptech-market-update-september-2025.pdf",
+    "https://www.corumgroup.com/insights/ma-property-technology-sector",
+    "https://softwareequity.com/research/quarterly-saas-report",
+    "https://windsordrake.com/saas-valuation-multiples/",
+    "https://www.saasrise.com/blog/the-saas-m-a-report-2025",
+    "https://investors.costargroup.com/news-releases/news-release-details/costar-group-completes-acquisition-matterport-ushering-new-era",
+    "https://www.geekwire.com/2023/zillow-acquiring-follow-up-boss-for-up-to-500m-in-quest-for-housing-super-app/",
+    "https://www.lacaisse.com/en/news/pressreleases/aareal-bank-advent-international-sell-aareon-tpg-approximately-eu-39-billion",
+    "https://eqtgroup.com/news/eqt-to-sell-majority-stake-in-real-estate-platform-idealista-in-eur-29-billion-transaction-2024-06-28",
+    "https://www.csisoftware.com/acquisition-criteria/"
+   ],
+   "top_targets": [
+    {
+     "name": "Rentec Direct",
+     "why": "Textbook Banyan fit: self-funded/no outside VC, profitable (0.8), ~$17M recurring-revenue small-landlord PMS; top cohort banyan_adj 0.613/B."
+    },
+    {
+     "name": "OwnerRez",
+     "why": "Bootstrapped ($0 funding reported), profitable (0.8), ~$5M STR PMS niche leader; 0.586/B \u2014 a clean permanent-hold candidate."
+    },
+    {
+     "name": "Rent Manager / LCS",
+     "why": "Independent family/bootstrapped property-mgmt leader, high recurring revenue, 0.581/B; strong fit but ~$87M sits near the $100M ceiling."
+    },
+    {
+     "name": "RMS Cloud",
+     "why": "Founder/family-owned Australian hotel/property PMS, 0.547/C \u2014 C reflects private-financial discount, not weakness; verify profitability."
+    },
+    {
+     "name": "WebRezPro",
+     "why": "Bootstrapped Canadian independent-hotel PMS, 0.537/C; niche system-of-record with switching costs, right ownership shape."
+    },
+    {
+     "name": "LendingPad",
+     "why": "Privately held mortgage LOS workflow leader, 0.511/C; regulated high-frequency niche the giants underserve."
+    },
+    {
+     "name": "Wise Agent",
+     "why": "Bootstrapped, profitable (0.7) real-estate brokerage CRM, ~$8M, 0.51/C; durable founder-owned niche fit."
+    },
+    {
+     "name": "HOA Express",
+     "why": "Bootstrapped, no outside funding, profitable (0.7) HOA/community software, ~$3M, 0.51/C; small but pure buy-and-hold profile."
+    },
+    {
+     "name": "Mortgage Automator",
+     "why": "Founder/bootstrapped Canadian private-lending LOS; regulated workflow niche, right ownership shape (lower financial confidence \u2014 diligence required)."
+    },
+    {
+     "name": "RealtyJuggler",
+     "why": "Bootstrapped, profitable real-estate CRM at ~$2M \u2014 near the size floor but a genuine permanent-hold micro-leader."
+    }
+   ],
+   "whitespace": "Best whitespace is in boring, regulated, high-frequency workflows underserved by the platform giants: HOA/condo and manufactured-housing operations (below the CINC/Vantaca enterprise tier); trust/escrow and rent-deposit accounting and compliance; independent & boutique-hotel and short-term-rental PMS (below the Hostaway/Guesty scale tier); mortgage & private-lending loan-origination workflow (LendingPad, Mortgage Automator); inspections and maintenance/vendor orchestration; affordable/public-housing and rent-control/licensing/reporting compliance; small-commercial and mixed-use landlord PMS; brokerage-team transaction management after the U.S. commission-rule changes; and insurance/claims and ESG/energy-compliance workflows for property. The durable pattern: a mission-critical system of record/action for a narrow persona that encodes local compliance and workflow nuance the giants won't maintain, with expansion via units/payments/modules. AI is attractive where it automates workflow inside governance, not where it creates pricing/tenant-decision regulatory risk."
+  },
+  {
+   "segment": "Healthcare & Life Sciences (vertical B2B software)",
+   "market_overview": "Narrowly defined (healthcare SaaS + life-sciences software), the global current-software TAM is roughly $55B-$60B, growing low-teens to high-teens CAGR. Mordor puts healthcare SaaS at $37.7B in 2026 growing 16.9% CAGR to $82.4B by 2031; Fortune puts life-sciences software at $19.5B in 2026 growing 10.5% CAGR to $43.2B by 2034. (Broader \"healthcare IT\" figures are far larger because they include services, infrastructure, hardware and outsourcing.) Structure is barbell-shaped: consolidated at the enterprise-suite layer (hospital EHR concentrated around Epic ~42.3% footprint, Oracle Health/Cerner, MEDITECH) but highly fragmented in the workflow-niche layer where Banyan actually hunts \u2014 hundreds of specialty apps across RCM, specialty EHR/PM, prior auth, behavioral/allied health, post-acute, lab/R&D and payer analytics. KLAS tracks 1,100+ HCIT products as a proxy for that fragmentation. Our cohort sits almost entirely in the fragmented practice-management sub-layer (allied health, behavioral health, dental, medspa, wellness, veterinary), which is the right place to be for a niche-leader roll-up.",
+   "consolidation_state": "Actively consolidating via buy-and-build, not winner-take-all: 265 HCIT deals in 2024, B2B 71.7%, PE 49.8% and mostly add-ons. Many sub-scale founder assets remain independent in the practice-management niche (AU/UK/CA bootstrapped leaders), but permanent-capital and PE consolidators compete directly for the same profitable niche software.",
+   "banyan_fit_read": "Good hunting ground, but only in the practice-management / niche-vertical-SaaS layer \u2014 not the AI or enterprise layers. Screen density is 0.17 (4 verified B/A of 24), which understates fit: per the confidence-discount, genuine private founder-owned targets correctly land at tier C because financials can't be publicly verified, so weigh banyan_adj and profile over the tier letter. Strongest GENUINE buy-and-hold candidates are the bootstrapped, profitable, founder-owned practice-management leaders: Cliniko (AU allied-health, bootstrapped/profitable, founder not a known seller), Jane App (highest B=0.6, founder-owned CA health/wellness PM \u2014 watch scale vs the $100M ceiling), TherapyNotes (bootstrapped US behavioral-health EHR), plus the smaller capital-efficient tier (Zanda/Power Diary, Noterro, Curve Dental, Pabau, splose, Practice Better, Nutrium). These fit the Banyan pattern: mission-critical workflow ownership, recurring revenue, high retention, narrow ICP, disciplined capital. EXPLICITLY NOT TARGETS (VC-backed, growth-over-profit, high-G/modest-B signature): Abridge (G=0.729), Nabla (0.596), Freed (0.595), Rad AI, Ambience Healthcare, Tennr, Hippocratic AI \u2014 the ambient/clinical-documentation AI cluster, venture-funded and unprofitable. Also non-Banyan on ownership/profitability: Boulevard (VC salon/spa), Archy and Digitail (VC dental/vet), Greenspace Health. Vagaro (B=0.56) is borderline on scale/ownership \u2014 needs a control-and-profitability check before counting as a true buy-and-hold candidate.",
+   "top_targets": [
+    {
+     "name": "Cliniko",
+     "why": "Archetypal Banyan fit: bootstrapped, profitable, founder-owned AU allied-health PM niche leader with high recurring revenue \u2014 but founder is a known non-seller (C tier = private, not weak)."
+    },
+    {
+     "name": "Jane App",
+     "why": "Highest B (0.6), founder-owned CA health/wellness practice-management leader, strong recurring revenue and retention; verify scale sits inside the ~$100M ceiling."
+    },
+    {
+     "name": "TherapyNotes",
+     "why": "Bootstrapped US behavioral-health EHR, deep sticky niche, profitable, founder-owned \u2014 clean buy-and-hold profile."
+    },
+    {
+     "name": "Curve Dental",
+     "why": "Cloud dental PMS niche leader (B=0.512/C); solid vertical, but confirm ownership/prior growth capital before pursuit."
+    },
+    {
+     "name": "Zanda (Power Diary)",
+     "why": "Bootstrapped AU allied-health PM; small, sticky, founder-run \u2014 right size band for Banyan."
+    },
+    {
+     "name": "Noterro",
+     "why": "Capital-efficient CA massage/allied-health PM; founder-run, low churn, comfortably inside Banyan's size band."
+    },
+    {
+     "name": "Pabau",
+     "why": "UK medspa/aesthetic-clinic PM niche leader; recurring revenue and workflow ownership (check any minority growth round)."
+    },
+    {
+     "name": "splose",
+     "why": "Bootstrapped AU allied-health PM; early/small but capital-efficient \u2014 a watch-and-grow candidate."
+    },
+    {
+     "name": "Practice Better",
+     "why": "CA health/wellness & nutrition PM; recurring, founder-led niche fit (confirm control post any growth investment)."
+    },
+    {
+     "name": "Nutrium",
+     "why": "PT dietitian/nutrition software; narrow niche, capital-efficient \u2014 small but on-thesis buy-and-hold."
+    }
+   ],
+   "whitespace": "Best whitespace is a regulatory/workflow wedge + measurable ROI where venture money is NOT chasing: (1) specialty-specific operating systems without a bootstrapped default (ABA/autism, fertility, ophthalmology, oral surgery, oncology clinics, hospice/home health/LTC); (2) allied-health/wellness PM in under-penetrated geographies (continental Europe, LATAM, APAC) where a local Cliniko/Jane-style leader is the system of record; (3) veterinary/animal-health practice software (seek profitable independents, not the VC startups); (4) compliance/evidence automation (HIPAA, SOC 2, HITRUST, FDA/GxP audit evidence, consent/privacy ops); (5) SMB life-sciences data-fabric tooling (ELN/LIMS/QMS, GxP validation, lab-instrument integration) below the Veeva/Dotmatics strategics; (6) community/rural provider modernization (billing automation, staffing/workforce, cybersecurity add-ons). Banyan's edge is the sub-$100M, boring, sticky niche leader that the AI wave and mega-PE platforms both overlook.",
+   "competing_acquirers": [
+    "Roper Technologies (permanent-capital vertical software; Syntellis $1.25B at ~15x EBITDA)",
+    "Constellation Software / Harris and its Vela and Volaris groups (closest philosophical competitor for bootstrapped founder assets)",
+    "HCIT strategics doing tuck-ins: Waystar, R1 RCM, ModMed, PointClickCare, symplr, RLDatix, HealthEdge, Veeva",
+    "PE/sponsor consolidators: Thoma Bravo, Vista, Francisco Partners, Clearlake, Bain, Insight, TA, Hg, New Mountain",
+    "Life-sciences/industrial strategics (above Banyan size, lab/R&D whitespace): Siemens, Dassault, Thermo Fisher, Danaher/IDBS"
+   ],
+   "precedent_ma": "Valuations are wide and mostly ABOVE Banyan's zone, which validates exit demand rather than entry comps. SMB/founder-owned vertical software typically underwrites at ~2x-5x revenue or ~8x-14x EBITDA depending on growth, retention, gross margin and services intensity \u2014 that is Banyan's actual buy band. Broader benchmarks: Berkery Noyes healthcare/pharma info-&-tech median 2.47x revenue / 11.25x EBITDA over 2022-2024 (2024: 2.5x rev / 12.2x EBITDA); Capstone HCIT averaged 6.1x EV/revenue 2021-2024 (6.3x for disclosed middle-market). Strategic premiums: Roper/Syntellis ~15x EBITDA. Recent large deals (all well above Banyan scale, useful only as demand signal): Thoma Bravo/NextGen $1.8B (Nov 2023); Roper/Syntellis $1.25B (Aug 2023); TowerBrook+CD&R/R1 RCM $8.9B (Aug 2024); Francisco Partners/AdvancedMD $1.1B (Oct 2024); Vista/Model N $1.25B (2024); Clearlake/ModMed ~$5.3B (2025); Bain/HealthEdge ~$2.6B (2025); Siemens/Dotmatics $5.1B (Jul 2025); Waystar/Iodine $1.25B (Jul 2025).",
+   "risks": "1) AI displacement of legacy note/PM workflows \u2014 underwrite defensibility, not just current stickiness. 2) Competition from Constellation/Harris (Vela/Volaris) and Roper bids up the same bootstrapped niche leaders, compressing entry multiples. 3) Private financials unverifiable \u2014 strongest candidates are confidence-discounted (C tier); diligence must confirm profitability and recurring-revenue mix. 4) Scale ceiling \u2014 Jane App, Vagaro, LEAP may exceed ~$100M revenue; verify before pursuit. 5) VC contamination \u2014 exclude the AI cluster, Boulevard, Archy, Digitail regardless of banyan_adj rank. 6) Founder non-seller risk on the best fits (Cliniko, TherapyNotes). 7) Regulatory/PHI/GxP diligence cost. 8) Cohort is practice-management heavy \u2014 the Life Sciences half of the segment is essentially unscreened, a coverage gap.",
+   "sources": [
+    "https://www.mordorintelligence.com/industry-reports/healthcare-software-as-a-service-market",
+    "https://www.fortunebusinessinsights.com/life-science-software-market-107725",
+    "https://www.capstonepartners.com/insights/article-healthcare-it-ma-update/",
+    "https://berkerynoyes.com/full-year-2024-healthcare-industry-trends/",
+    "https://www.ropertech.com/news-releases/news-release-details/roper-technologies-has-acquired-syntellis-performance-solutions/",
+    "https://www.thomabravo.com/press-releases/thoma-bravo-completes-acquisition-of-nextgen-healthcare",
+    "https://news.siemens.com/en-us/dotmatics-closing/",
+    "https://www.towerbrook.com/news/r1-rcm-to-be-acquired-by-towerbrook-and-cdr-for-8-9-billion/",
+    "https://www.baincapital.com/news/healthedge-secures-strategic-investment-bain-capital",
+    "https://www.waystar.com/news/waystar-to-acquire-iodine-software-accelerating-the-ai-powered-transformation-of-healthcare-payments/"
+   ]
+  },
+  {
+   "segment": "Dev Tools, Data & AI Infrastructure",
+   "market_overview": "This is a stack, not a single market: DevOps/CI-CD/testing, observability, infra automation, data integration/quality/catalog/governance, MLOps/model ops, vector/RAG infra, and enterprise-ready open-source databases. TAM triangulation (with heavy double-counting risk): DevOps ~$18.8B (2026) to ~$47.1B (2030) at 25.8% CAGR (Research and Markets); data & analytics software ~$205.6B (2026) to ~$345.3B (2030) at 13.6% CAGR (Grand View); AI infrastructure ~$62.1B (2025) to ~$510B (2034) at 26.35% CAGR (Insight Partners, but includes hardware/cloud so the pure-software slice is far smaller). A cleaner \"developer/data/AI-infra tooling\" serviceable pool is roughly $75B-$125B today, growing mid-teens to high-20s by subsegment. Structurally fragmented at the tool level (open source, cloud APIs, model churn and new developer workflows keep spawning wedges) but consolidating at the enterprise-platform level as buyers demand fewer vendors and unified telemetry/security/governance/AI-ready data context.",
+   "consolidation_state": "Two-speed. Fragmented and still proliferating at the individual-tool layer; rapidly consolidating at the platform layer, where mega-strategics buy category leaders to assemble end-to-end stacks (Cisco/Splunk ~$28B, IBM/HashiCorp $6.4B, Databricks/Tabular + Neon, Snowflake/Crunchy Data, Datadog/Metaplane + Adaptive ML, Atlassian/DX ~$1B, ServiceNow/Moveworks $2.85B, JFrog/Qwak). Public/strategic deals price the venture-scale winners; a separate, quieter consolidation of mature founder-owned niche tools runs underneath it via operating roll-ups (Perforce, Idera, SmartBear, Progress, OpenText, Rocket) \u2014 that lower tier, not the unicorn tier, is where a buy-and-hold acquirer actually competes.",
+   "banyan_fit_read": "Weak hunting ground as screened, and the screen is telling the truth: verified banyan-fit B/A count = 0, density = 0. This cohort is not confidence-discounted founder-owned niche leaders hiding at tier C \u2014 it is a roster of well-known, venture-funded, growth-priced infrastructure companies, exactly the species the thesis excludes. Every top name pairs a mediocre B score (0.44-0.52, none reaching tier B) with a high growth score (G 0.56-0.69), which the scoring guidance flags as the VC-backed / not-buy-and-hold signature; here it is not a proxy but ground truth. Explicit NON-TARGETS (VC-backed, unprofitable-by-design, and/or already >$100M revenue and priced for a strategic/growth-equity exit, not a hold-forever sale): ClickHouse (G=0.694, ~$6B-class valuation), Grafana Labs (~$6B), Docker, Aiven (~$3B), Retool (~$3B unicorn), Temporal (~$1.5B), Linear, Pinecone (rejected), Render (rejected), LangChain (rejected), MotherDuck (rejected), Railway (rejected), Astronomer, PlanetScale, Hasura, Weaviate, Clerk, Modal, Airbyte, Dagster Labs. Do NOT read Linear's top banyan_adj as fit \u2014 it is a famous venture rocket; banyan_adj here is ranking the least-hyped among disqualified names, not surfacing genuine targets. The real Banyan opportunity in THIS segment sits outside the cohort: mature, boring, mission-critical founder/bootstrapper-owned niche tools \u2014 test/synthetic data and environment management, database/Postgres operational tooling (migrations, tuning, pooling, backup), API contract testing, legacy/ETL modernization and regression testing \u2014 the assets Perforce/Idera/SmartBear roll up. Recommendation: treat this cohort as a source-of-adjacencies map, not a target list, and re-run discovery filtered for profitable, low-growth, non-institutionally-funded incumbents in these boring subsegments.",
+   "consolidation_state_note": "",
+   "competing_acquirers": [
+    "Perforce (DevOps/testing/data & test-data management roll-up) \u2014 the most direct Banyan competitor for mature founder-owned dev/data tools",
+    "Idera (developer/database/testing tools roll-up)",
+    "SmartBear (API and software-quality roll-up)",
+    "Progress Software (mature infrastructure / legacy modernization)",
+    "OpenText (legacy-modernization and data assets)",
+    "Rocket Software (mainframe/legacy infrastructure)",
+    "PE sponsors driving these platforms: Thoma Bravo, Vista Equity, Francisco Partners, TPG, Insight Partners, Clearlake, TA Associates, Accel-KKR, Genstar, Hg, Partners Group, HGGC",
+    "Strategic consolidators (compete mainly for the venture-scale names, less for Banyan-size assets): Cisco, IBM/Red Hat, Databricks, Snowflake, Datadog, Atlassian, ServiceNow, JFrog, GitLab, Elastic, MongoDB, Cloudflare, Microsoft/GitHub, Google Cloud, AWS, Broadcom/VMware"
+   ],
+   "top_targets": [
+    {
+     "name": "Svix",
+     "why": "Webhooks-as-a-service \u2014 a narrow, mission-critical infra primitive with deep workflow embedment and low support burden (the 'boring and mission-critical' profile); smallest/most-niche in the cohort, but confirm funding/ownership (YC/seed-backed) and profitability before pursuing."
+    },
+    {
+     "name": "Inngest",
+     "why": "Durable/event-driven function orchestration \u2014 small, sticky, developer-trusted workflow primitive; plausible on the niche-leader dimension but verify it is not on a VC growth track that disqualifies a hold-forever sale."
+    },
+    {
+     "name": "Trigger.dev",
+     "why": "Open-source background-jobs/workflow orchestration \u2014 small, embedded, high switching cost once in production; VC-backed, so only viable if a later, capital-efficient or founder-controlled situation confirms profitability and sub-$100M scale."
+    },
+    {
+     "name": "Turbopuffer",
+     "why": "Lean vector+search database, reportedly capital-efficient with a small team, and the No.2 banyan_adj (0.504) with a relatively low G (0.573) \u2014 least VC-rocket-shaped of the data names, but still institutionally funded; verify ownership and unit economics."
+    },
+    {
+     "name": "MotherDuck",
+     "why": "Cloud analytics on DuckDB \u2014 narrow, differentiated wedge; listed only as a distant option and currently REJECTED in-screen (VC-backed), so include only if a distressed/carve-out path emerges."
+    },
+    {
+     "name": "Astronomer",
+     "why": "Managed Airflow with real recurring revenue and high switching cost \u2014 strong on stickiness, but ~$200M+ raised implies VC ownership and likely >$100M revenue trajectory; treat as disqualified pending contrary private financials."
+    }
+   ],
+   "whitespace": "Best whitespace is not another dashboard but tooling that makes AI-era systems reliable, governable and cheaper to run: (1) AI-agent governance for engineering teams (permissions, sandboxing, approval trails, secrets, repo access, auditability); (2) AI-generated-code risk management (provenance, dependency drift, review triage, vuln prioritization, compliance evidence); (3) data observability for AI pipelines (source-to-prompt/RAG/action lineage with eval and rollback); (4) inference FinOps (cost/perf governance by model, agent, user, token, GPU, workload); (5) private/hybrid/on-prem AI infrastructure for regulated enterprises; (6) vertical data/dev platforms (fintech, healthcare, defense, industrial, insurance, pharma, public sector); (7) Postgres ecosystem tools (migrations, compliance, tuning, pooling, backup, edge sync); (8) test/synthetic data and environment management for regulated and legacy teams; (9) API contract testing and runtime security for agentic systems; (10) legacy modernization with AI-safe controls (COBOL/mainframe, ETL, regression testing). For Banyan specifically, the durable, profitable, founder-owned niche leaders concentrate in 7-10 (boring, mission-critical, high switching cost) \u2014 and those are under-represented in the current cohort, which skews toward hyped AI-native infra.",
+   "precedent_ma": "Underwrite founder-owned SMB software well below strategic/public headlines. Mature niche tool, low growth, small ARR, customer concentration: ~1.5x-3.5x revenue or 5x-8x EBITDA (Banyan's zone). Profitable vertical/dev/data SaaS, 10-25% growth, sticky workflow: ~3x-6x revenue or 8x-15x EBITDA. Best-in-class infra, >25-30% growth, NRR >115-120%: 6x-10x+ ARR / 15x-25x+ EBITDA (the cohort's zone \u2014 outside Banyan's range). Public/strategic benchmarks: SEG 2Q26 SaaS M&A median ~4.0x EV/TTM revenue; DevOps & IT Management public comps ~5.3x; vertical SaaS ~3.7x; Rule-of-40 names command a premium (Investec). Recent deals: New Relic take-private by Francisco Partners/TPG ~$6.5B (2023); Cisco/Splunk ~$28B (2024); IBM/HashiCorp $6.4B EV (2024, closed 2025); Databricks/Tabular (2024) and /Neon (2025); Snowflake/Crunchy Data (2025); Perforce/Delphix (2024, DevOps + test-data); JFrog/Qwak (2024, MLOps); Atlassian/DX ~$1B (2025); ServiceNow/Moveworks $2.85B (2025); Datadog/Metaplane and /Adaptive ML (2025-26). Note: the strategic comps set unrealistic seller expectations for the SMB assets Banyan targets \u2014 anchor to the 1.5x-3.5x revenue / 5x-8x EBITDA band, not these.",
+   "risks": "(1) Selection/thesis mismatch: the cohort is dominated by VC-backed, growth-priced companies; forcing a shortlist here risks buying the wrong species at the wrong price \u2014 the density=0 result should be respected, not overridden. (2) Ownership/profitability opacity: private financials are unverifiable from the public web, so any pursuit requires primary diligence before conviction (tier C is not evidence of fit). (3) Valuation expectations: sellers anchored to strategic/unicorn comps (4-5x+ revenue) versus Banyan's 1.5x-3.5x band. (4) Technology/durability risk: AI model churn and open-source substitution can erode wedges fast in the hyped subsegments; buy-and-hold-forever favors boring, slow-changing niches, which these largely are not. (5) Competition: for genuinely-attractive mature assets Banyan competes with better-capitalized operating roll-ups (Perforce, Idera, SmartBear) that can pay up. (6) Concentration/open-source monetization risk in infra tools (usage-based revenue, customer concentration, community forks). (7) Process risk: several names are 'rejected' in-screen \u2014 re-litigating them wastes cycles better spent re-running discovery on profitable, founder-owned incumbents in the whitespace subsegments.",
+   "sources": [
+    "https://www.researchandmarkets.com/reports/5767407/devops-market-report",
+    "https://www.theinsightpartners.com/reports/ai-infrastructure-market",
+    "https://softwareequity.com/research/quarterly-saas-report",
+    "https://softwareequity.com/research/annual-saas-report",
+    "https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report",
+    "https://newsroom.ibm.com/2024-04-24-IBM-to-Acquire-HashiCorp-Inc-Creating-a-Comprehensive-End-to-End-Hybrid-Cloud-Platform",
+    "https://newsroom.cisco.com/",
+    "https://www.databricks.com/company/newsroom/press-releases/databricks-agrees-acquire-tabular-company-founded-original-creators",
+    "https://www.sec.gov/Archives/edgar/data/1650372/000165037225000050/ex991pressreleasedatedsept.htm",
+    "https://www.businesswire.com/news/home/20250602455530/en/Snowflake-Acquires-Crunchy-Data-to-Bring-Enterprise-Ready-Postgres-Offering-to-the-AI-Data-Cloud"
+   ]
+  },
+  {
+   "segment": "Logistics & Supply Chain (vertical B2B software)",
+   "market_overview": "Large, growing, uneven. A reasonable 2026 TAM frame is ~$30-40B+ globally for broad SCM software, with submarkets growing at different speeds: Mordor puts SCM software at $36.4B in 2026 growing 9.0% CAGR to $56.0B by 2031; Fortune Business Insights puts logistics software at $17.5B in 2026 growing 7.75% CAGR to $31.7B by 2034; WMS is smaller but faster at $4.8B in 2026 growing 18.0% CAGR to $10.9B by 2031 (Mordor). Fragmentation is the key structural fact: the market is only moderately fragmented at the SUITE level (SAP, Oracle, Blue Yonder, Manhattan, Kinaxis, Descartes, WiseTech, E2open, Coupa, K\u00f6rber, Infor, Epicor) but HIGHLY fragmented in vertical/SMB day-to-day workflows split across TMS, WMS, freight audit, customs, supplier risk, routing, broker tools, yard/dock scheduling, cold chain, returns/reverse, visibility, EDI, and procurement. That long tail of subscale, dated, regulation-specialized vendors is classic vertical-software roll-up terrain and is where the Banyan-sized (~$2M-$100M rev) niche leaders sit.",
+   "consolidation_state": "Active and consolidating the mid-tier fast. Lincoln International counted 167 SCM software M&A deals in 2024 (up from 159 in 2023, 144 in 2022), momentum continuing into Q1 2025; Hampleton reports SCMS M&A rebounded in 1H 2025 after a 2024 dip. Dominant logic is platform convergence (planning + execution + visibility + compliance + AI in one stack). For Banyan the implication is a barbell: the suite tier and scaled mid-market assets are being rolled up quickly and expensively by PE-backed platforms (not Banyan's game), while the quieter founder/family-owned niche layer below the roll-up radar stays genuinely fragmented \u2014 but that same layer is increasingly the buy-and-build feedstock for those platforms, so competition for the better small assets is intensifying.",
+   "competing_acquirers": [
+    "Descartes Systems Group (serial acquirer of TMS/customs/broker software \u2014 3GTMS, Tai Software)",
+    "WiseTech Global (E2open; global trade/customs)",
+    "Aptean (PE-style vertical SaaS roll-up; Logility)",
+    "Blue Yonder / Panasonic (One Network)",
+    "Manhattan Associates",
+    "K\u00f6rber Supply Chain (already acquired cohort name C3 Solutions in 2020)",
+    "Trimble (transportation/telematics)",
+    "Samsara and Fleetio (fleet/telematics consolidators \u2014 Fleetio is itself in the cohort but is a buyer, not a Banyan target)",
+    "Oracle / SAP / Infor / Epicor (suite strategics)",
+    "Vista Equity Partners (JAGGAER)",
+    "Thoma Bravo",
+    "Francisco Partners (Command Alkon)",
+    "EQT (Avetta)",
+    "TA Associates",
+    "Hg",
+    "Battery Ventures",
+    "Rubicon Technology Partners",
+    "Banneker Partners",
+    "Sumeru / LLR (lower-mid-market vertical SaaS PE)"
+   ],
+   "banyan_fit_read": "Moderate hunting ground, but thinner for Banyan than the 23-name cohort size suggests, and crowded. Two caveats up front: (1) the cohort shows verified banyan-fit B/A count=0 / density=0, which per our scoring context is EXPECTED \u2014 genuine private founder-owned targets confidence-discount to tier C because their financials can't be publicly verified, not because they are weak; (2) the specific funding-status calls below come from training knowledge and MUST be verified before outreach. The reliable in-cohort signal separating the two populations is the B-vs-G gap: genuine bootstrapped/profitable founder-owned firms show B clearly above G, while VC/PE growth companies show G approaching or exceeding B (exactly the pattern our scoring context warns about). GENUINE buy-and-hold candidates (B>G, founder-owned/bootstrapped, profitable-looking niche leaders): One Step GPS (B=0.534>G=0.434), Datex (0.491>0.361), AscendTMS/InMotion Global (0.484>0.385), Rastrac (0.478>0.358), OptimoRoute (0.469>0.427), ERPLY (0.473>0.423, though retail-POS-adjacent). EXPLICITLY NOT targets \u2014 VC/PE-backed growth companies to exclude (high or B~G growth profile, external institutional capital, several already scaled past the founder-owned buy-and-hold profile): Fleetio (VC-backed and itself a consolidator), DispatchTrack (Spectrum Equity), Deposco (Sageview), IntelliShift (Volition), PCS Software (Harvest Partners PE), ShipHero (Riverwood), Logiwa (Sageview), Rose Rocket (Insight/Emergence), Alvys (Bessemer), PortPro, Whip Around, MyCarrier (all VC-backed), and the India/Israel scale-ups FarEye (TCV/Dragoneer), Shipsy (Sequoia/A91), and Bringg (Insight/Salesforce, raised ~$250M+) \u2014 the last three are firmly out of profile on both funding and geography. Separately, C3 Solutions appears already acquired by K\u00f6rber (2020) and is likely unavailable \u2014 treat as consolidated, not a live target. Net: ~5-6 of 23 are true Banyan-shaped; the rest are growth-equity or already-consolidated names.",
+   "top_targets": [
+    {
+     "name": "One Step GPS",
+     "why": "Highest banyan_adj in cohort (B=0.534) with B well above G \u2014 the bootstrapped/profitable signal; founder-owned fleet-GPS niche leader with recurring subscription + hardware base (verify SaaS-recurring purity vs. hardware mix)."
+    },
+    {
+     "name": "OptimoRoute",
+     "why": "Bootstrapped, reputationly profitable route-optimization/dispatch with a sticky operational workflow and clear ROI; founder-owned, no known institutional capital \u2014 textbook buy-and-hold profile."
+    },
+    {
+     "name": "AscendTMS (InMotion Global)",
+     "why": "Founder-owned, bootstrapped TMS with a very large installed base and freemium-to-paid recurring revenue; low-growth/profitable (B=0.484>G=0.385) \u2014 'boring but mission-critical' broker/carrier workflow."
+    },
+    {
+     "name": "Datex",
+     "why": "Long-established founder-owned 3PL WMS in a deeply vertical, high-switching-cost niche (3PL warehousing); low-growth profitable profile (B=0.491>G=0.361) fits buy-and-hold, though on-prem/services mix needs checking."
+    },
+    {
+     "name": "Rastrac",
+     "why": "Small founder-owned fleet/asset-tracking niche vendor with recurring telematics revenue (B=0.478>G=0.358); attractive profile but flag sub-scale risk \u2014 confirm revenue clears Banyan's ~$2M floor."
+    },
+    {
+     "name": "ERPLY",
+     "why": "Founder-owned Estonian retail POS/inventory with recurring SaaS; adjacent rather than core logistics \u2014 include only if inventory/supply-chain workflow (not retail POS) is the value and size/profitability check out."
+    }
+   ],
+   "whitespace": "Underserved niches with the best odds of hiding profitable founder-owned leaders: (1) SMB and mid-market cloud WMS/TMS for 3PLs, regional distributors, and freight brokers still on spreadsheets or aging on-prem systems; (2) trade compliance, customs, tariff-impact, denied-party screening, UFLPA/forced-labor traceability, digital product passports, and supplier ESG evidence \u2014 regulation-driven, sticky, and specialized; (3) verticalized logistics workflows in healthcare/pharma cold chain, hazmat, food/ag, building materials, heavy equipment, returns/reverse logistics, project logistics, and cross-border US-Mexico-Canada trade; (4) unglamorous execution utilities \u2014 freight audit/payment, dock scheduling, yard management, claims, carrier onboarding, spot/RFP optimization; (5) AI execution/exception-resolution layers that sit across ERP/WMS/TMS/telematics/EDI (vs. dashboards); (6) supply-chain-network cybersecurity and vendor-risk tooling. The durable-target profile: solves an expensive operational problem with clear ROI, owns one narrow workflow deeply, has embedded integrations (ERP/WMS/TMS/EDI/telematics/carriers/regulators) and proprietary transaction/network data, low churn, and domain complexity that repels generic SaaS/AI competitors.",
+   "precedent_ma": "Multiples (private SaaS, Aventis 2015-2026 sample): median 4.5x EV/revenue and 23.0x EV/EBITDA long-run, but compressed recently \u2014 2.9x rev (2024), 3.8x (2025), 3.1x (Q1 2026). Practical underwriting band for SMB vertical logistics software: 2x-4x revenue for slower-growth/services-heavy/mixed license-SaaS; 4x-7x+ revenue for clean high-retention SaaS with scarce workflow/data assets; 8x-15x EBITDA for profitable slower-growth founder-owned assets; 15x-25x+ EBITDA for scarce scaled mission-critical platforms. Marquee outliers (Lincoln): Avetta 12.0x rev / 30.0x EBITDA, JAGGAER 7.4x rev / 20.0x EBITDA, Logility 3.9x rev / 39.0x EBITDA. Recent deals: WiseTech/E2open ~$2.1B (2025); EQT/Avetta ~$3B (2024); Vista/JAGGAER (2024); Blue Yonder/One Network ~$839M (2024); Aptean/Logility ~$490M EV (2025); Descartes/3GTMS ~$115M (2025); Descartes/Tai Software ~$100M (2026); Francisco Partners/Command Alkon (2026, sponsor-to-sponsor). IMPORTANT for Banyan: nearly all named deals sit ABOVE Banyan's typical bite size \u2014 they characterize the exit/strategic environment and set the 8-15x EBITDA anchor for the founder-owned tier, not Banyan's own (usually sub-$50M, often single-digit-million) deals. The closest-scale comps to watch are Descartes' ~$100-115M TMS/broker tuck-ins, which show strategics reaching down into exactly the niches our cohort occupies.",
+   "risks": "(1) PE-backed roll-ups (Aptean, Descartes, WiseTech) and lower-mid-market sponsors are actively bidding down into Banyan's niche layer, raising prices and shrinking the quiet-asset pool. (2) The cohort is VC/growth-heavy \u2014 at least ~14 of 23 look institutionally funded and off-profile; the true buy-and-hold set is ~5-6. (3) Funding statuses above are training-knowledge-based and time-sensitive \u2014 several 'genuine' candidates may have taken capital since; verify cap table before ranking. (4) Private financials are unverifiable from the public web (the reason all sit at tier C) \u2014 profitability, recurring-revenue %, and churn must be confirmed in diligence, not assumed from the score. (5) Already-consolidated names (C3 Solutions/K\u00f6rber) waste pipeline if not screened out. (6) Geography/profile mismatch: FarEye/Shipsy (India) and Bringg (Israel) are outside Banyan's typical hunting geography and growth profile. (7) Sub-scale risk: small trackers (Rastrac) may fall below the ~$2M revenue floor. (8) Revenue-quality dilution: hardware/telematics (One Step GPS, IntelliShift-type) and services/implementation-heavy WMS (Datex) can depress recurring-SaaS purity; ERPLY is retail-POS-adjacent and may be out of segment. (9) AI disruption risk to thin-workflow tools \u2014 favor niches where domain/regulatory complexity protects the moat.",
+   "sources": [
+    "https://www.mordorintelligence.com/industry-reports/supply-chain-management-software-market",
+    "https://www.fortunebusinessinsights.com/logistics-software-market-110261",
+    "https://www.mordorintelligence.com/industry-reports/warehouse-management-system-market",
+    "https://www.lincolninternational.com/wp-content/uploads/Spring_2025-Industrial-Software-Market-Report_Blinded-Market-Map.pdf",
+    "https://www.drakestar.com/news/supply-chain-report-march-2025",
+    "https://aventis-advisors.com/saas-valuation-multiples/",
+    "https://www.descartes.com/",
+    "https://www.aptean.com/en-US/resources/pressroom/press-release/aptean-completes-acquisition-of-logility",
+    "https://www.wisetechglobal.com/",
+    "https://www.pwc.com/us/en/industries/consumer-markets/transportation-logistics/transportation-logistics-deals-outlook.html"
+   ]
+  },
+  {
+   "segment": "Fintech & Financial Infrastructure (B2B vertical software into banks, credit unions, lenders, wealth/RIA, insurers, and fintechs)",
+   "market_overview": "Large, GDP-plus growth, barbell fragmentation. Broad financial-services software is ~$160-180B globally in 2025-26 growing ~8-12% CAGR (The Business Research Company: $162.6B in 2025 to $276.3B by 2030). Narrower infrastructure pockets are smaller but faster: core banking software ~$13-20B in 2025 at 10%+ CAGR. For a founder-owned asset, the honest sizing is bottom-up by workflow (customer count x ARPA x attach x payments/revenue-share), not the \"fintech\" headline. Fragmentation is a barbell: the infrastructure layers with scale/network effects (merchant acquiring, issuer processing, fraud networks, wealth platforms, capital-markets/regulatory data) are consolidating hard, while the application layer stays highly fragmented because regulation, integrations, and vertical workflows differ by geography and end market. SEG 2Q26: vertically focused SaaS was 54% of SaaS M&A activity and financial services the #2 vertical at 12.8% of vertical-SaaS deals. Banyan hunts the application/workflow layer, where niche leaders persist precisely because the work is regulated, integration-heavy, and unglamorous.",
+   "consolidation_state": "Actively consolidating at the top, still fragmented at the bottom.",
+   "banyan_fit_read": "See detailed read; summary: narrow genuine cluster (private loan-servicing + CU core + RIA back-office) buried under VC-backed infrastructure noise.",
+   "competing_acquirers": [
+    "Constellation Software (Volaris / Vencora specifically for financial-services software; Vencora bought CREALOGIX)",
+    "Other permanent-capital vertical roll-ups: Visma, Topicus/TSS, Everfield, Jonas, Harris, Perseus",
+    "Strategic consolidators moving down-market: SS&C, Jack Henry, nCino, Q2, Alkami, Envestnet, Broadridge, Fiserv/FIS",
+    "PE / sponsor platforms rolling up finserv software: Thoma Bravo, Vista, Hg, GTCR, Francisco Partners, Genstar, TA Associates, Warburg Pincus, Permira",
+    "Category strategics for the wealth/RIA and lending niches (e.g. acquirers of advisor-tech and loan-servicing tuck-ins)"
+   ],
+   "top_targets": [
+    {
+     "name": "Advyzon",
+     "why": "Self-funded, founder-led wealth/advisor all-in-one platform (~$25M rev, high recurring, sticky RIA workflows) -- the cleanest genuine buy-and-hold fit in the cohort; tier B on public confirmation."
+    },
+    {
+     "name": "Nortridge Software",
+     "why": "Bootstrapped, no outside capital, loan servicing core (~$12.5M) -- classic founder-owned, profitable-by-necessity niche leader; tier C is a private-data discount, not a fit weakness."
+    },
+    {
+     "name": "Shaw Systems",
+     "why": "Established private loan-servicing vendor (~$20M) with a decades-old sticky install base and high switching costs; unloved-but-durable legacy software Banyan holds forever."
+    },
+    {
+     "name": "Corelation",
+     "why": "Founder/family-owned credit-union core banking, fast-growing, high retention (~$80M) -- top qualitative fit, but flag the near-$100M-ceiling size and price stretch against Banyan's SMB mandate."
+    },
+    {
+     "name": "AssetBook",
+     "why": "Bootstrapped RIA portfolio reporting/billing (~$3M, ~17 heads) -- small but a textbook profitable, founder-owned niche tuck-in in the wealth back-office pocket."
+    },
+    {
+     "name": "Teslar Software",
+     "why": "Community-bank lending-workflow niche leader with real stickiness -- watch-list only: strategic-bank/VC investors imply an institutional exit expectation, so diligence ownership intent before pursuing."
+    }
+   ],
+   "whitespace": "Underserved, founder-ownable niches: (1) Loan servicing / lending back-office for non-bank and specialty lenders where incumbents are legacy and sticky -- niche loan servicing, mortgage/consumer/commercial servicing exception handling. (2) Community-bank and credit-union modernization adjacencies: digital onboarding, LOS/servicing workflow, exception handling, compliance automation, statement/data migration, vendor-risk. (3) Wealth/RIA back office: billing, advisor-transition tooling, alternatives/private-credit workflows, model governance, client reporting, compliance archiving. (4) Vertical B2B payments in complex workflows (legal trust accounting, insurance premium finance, property management, dealerships, healthcare, construction) -- system-of-record-plus-transaction-layer economics. (5) Sponsor-bank/BaaS governance and reg-evidence tooling (program monitoring, ledger controls, KYB, transaction monitoring, reconciliation) -- but pursue the profitable workflow tools, not the venture-funded rails. (6) Legacy-to-cloud replacements in fund admin, tax forms, investment accounting, municipal/utility billing-payments where incumbents are sticky but unloved.",
+   "precedent_ma": "Multiples (proxy via private SaaS/software M&A, since SMB deal data is sparse): services-heavy/on-prem/low-growth 1-3x EV/rev, 6-10x EBITDA; solid founder-owned vertical SaaS $3-10M ARR 2.5-5x rev, 8-14x EBITDA; high-quality $10-30M ARR regulated-workflow 15%+ growth 4-8x rev, 12-20x+ EBITDA; scarce scaled infra 8x+ rev, 20x+ EBITDA. Aventis long-run medians ~4.5x rev / 23x EBITDA, but 2024-26 disclosed SaaS is lower (~2.9-3.8x rev). SEG 2Q26: SaaS M&A median ~4.0x EV/TTM rev, public 'financial applications' 3.4x, vertical SaaS 3.7x. Recent deals: Nasdaq/Adenza ~$10.5B (2023, capital-markets risk/reg); Visa/Pismo $1.0B (2024, cloud issuer/core); Vencora(Volaris)/CREALOGIX ~CHF84M (2024, digital banking -- the closest permanent-capital comp); Bain consortium/Envestnet ~$4.5B (2024, wealthtech); Visa/Featurespace (2024, fraud/AML); Clearwater/Enfusion ~$1.5B (2025, investment-mgmt SaaS); TPG+Corpay/AvidXchange ~$2.2B (2025, AP automation); Global Payments/Worldpay ~$24.3B and FIS/TSYS ~$13.5B (H1 2026, payments infra); Permira+Warburg/Clearwater ~$8.4B (2026). Note: these are scaled-asset comps; Banyan's SMB tuck-ins transact well below these multiples and mostly undisclosed.",
+   "risks": "(1) Adverse selection on the good private names: Advyzon/Corelation/Nortridge/Shaw rarely sell, and when they do, strategics and Vencora-type roll-ups with lower cost of capital and payments/data synergies can outbid a disciplined buy-and-hold acquirer. (2) Cohort composition risk: most of these 20 names are VC-backed infrastructure companies that will never be buy-and-hold targets, so genuine deal density is low -- effort/hit-rate is poor without hard pre-filtering on ownership and profitability. (3) Financials unverifiable: tier-C private targets require primary diligence to confirm the profitability/retention thesis; public-web screening can't. (4) Regulatory/technology obsolescence: legacy loan-servicing and core assets (Shaw, Nortridge) carry on-prem/services-heavy tails and core-migration risk; verify recurring-revenue quality and cloud roadmap. (5) Customer concentration and channel dependence (bank-partner-dependent tools like Teslar). (6) AI disruption risk to thin-workflow tools -- discount anything that is a wrapper around generic automation; reward embedded proprietary workflow/data loops. (7) Size ceiling: Corelation (~$80M) risks breaching the $100M buy-and-hold cap before close.",
+   "sources": [
+    "https://www.thebusinessresearchcompany.com/report/financial-services-software-global-market-report",
+    "https://softwareequity.com/research/quarterly-saas-report",
+    "https://aventis-advisors.com/saas-valuation-multiples/",
+    "https://kpmg.com/xx/en/what-we-do/industries/financial-services/pulse-of-fintech.html",
+    "https://www.bcg.com/publications/2025/fintechs-scaled-winners-emerging-disruptors",
+    "https://www.precedenceresearch.com/core-banking-software-market",
+    "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-accelerates-its-transformation-leading-financial",
+    "https://www.pismo.io/blog/visa-to-acquire-pismo-for-us-1-billion",
+    "https://investor.visa.com/news/news-details/2024/Visa-to-Acquire-Featurespace/default.aspx",
+    "https://cwan.com/press-releases/clearwater-analytics-to-acquire-enfusion/",
+    "https://www.baincapital.com/news/envestnet-leading-wealth-technology-platform-announces-45-billion-take-private-transaction-bain",
+    "https://crealogix.com/en/media-centre/vencora-acquires-crealogix"
+   ]
+  },
+  {
+   "segment": "Construction & Field Service",
+   "market_overview": "Large and still-fragmented vertical software market. Combined \"construction + field service\" software TAM is roughly $20B-$25B today, growing toward $30B-$40B+ by the early 2030s (before embedded payments/financing/payroll upside). Component evidence: construction applications ~$14.7B (2024) \u2192 $19.8B (2029) at 6.1% CAGR (Apps Run The World); construction software $10.76B (2025) \u2192 $24.72B (2034) at 9.7% (Fortune); construction management software $11.72B (2025) \u2192 $28.05B at ~10.2%; FSM software $4.9B-$5.1B (2024/25) \u2192 $8.6B-$9.2B (2029/30) at ~11.7% (Vista Point / MarketsandMarkets). FSM is smaller but more monetizable (scheduling, dispatch, invoicing, payments sit close to revenue). Highly fragmented: top-10 construction vendors held only 46.5% of the global market in 2024 and category leader Procore has just ~7.4% share \u2014 a long tail of trade-, region-, and workflow-specific vendors persists because a roofer, commercial HVAC service firm, homebuilder, electrical sub and civil contractor each need different job-costing, dispatch, estimating, compliance and billing. That structural fragmentation is exactly what produces subscale founder-owned niche leaders.",
+   "consolidation_state": "Fragmented but actively consolidating. Three forces pull consolidation: (1) platform appetite \u2014 Procore, Autodesk, Nemetschek, ServiceTitan, IFS/WorkWave, EverCommerce want fuller suites; (2) PE roll-up logic \u2014 high recurring revenue, low churn, mission-critical workflows and many subscale founder-owned vendors; (3) AI/data strategy \u2014 buyers want field data, asset history, estimates, invoices and jobsite telemetry. Deal cadence is heavy in 2024-2026 (Autodesk-MaintainX ~$3.575B, Autodesk-Payapps, Nemetschek-GoCanvas ~11.5x ARR, Procore-Intelliwave, several ServiceTitan tuck-ins, Vista-Joblogic, Sumeru-JobNimbus, Valsoft-Progression, JDM-Buildlogic). Notably, several of our own cohort names have already been captured by PE/growth equity (Foundation=Thoma Bravo, STACK=Level Equity, BigChange=Great Hill, JobNimbus=Mainsail, ServiceTrade=JMI), which both proves the thesis and shrinks the pool of still-independent founder-owned targets.",
+   "banyan_fit_read": "Good hunting ground, with a sharp filter. The segment's fragmentation reliably produces profitable, sticky, founder-owned niche systems-of-record \u2014 Banyan's ideal profile. The catch is separating genuine buy-and-hold targets from the VC/PE-backed growth stories that dominate the same keyword space. Per our scoring context, the entire cohort lands at tier C (verified B/A count=0, density=0) because private financials aren't publicly verifiable \u2014 that is EXPECTED for real Banyan targets, not evidence of weak fit. The strongest GENUINE candidates are the founder-led / bootstrapped ANZ + UK trades-FSM cluster: ServiceM8 (bootstrapped, no outside funding, category-defining AU/NZ trades FSM), AroFlo, Tradify, Commusoft, Buildxact and Fergus \u2014 all private, founder-owned, high-recurring, well inside the $2M-$100M band, each a deep single-niche workflow tool with high switching costs (accounting/payments/telematics integrations). Tenna, BuildBook and Buildern are smaller founder/bootstrapped names in the same spirit (BuildBook/Buildern likely at the low end of scale). Explicitly NOT Banyan targets despite ranking near the top of the list: Foundation Software (Thoma Bravo-owned already \u2014 its higher B=0.533 reflects verifiable profitability, not availability as a founder buy-and-hold), STACK (Level Equity PE), BigChange (Great Hill PE). And the high-growth / VC-backed names that a naive read of the growth score would flag \u2014 OpenSpace (VC unicorn, loss-making, already rejected), FieldPulse ($50M Series C 2025), Workiz, Assignar (~$47M VC), Raken (VC), PermitFlow and Buildots (VC-backed AI/permitting growth stories) \u2014 are out of thesis: VC-backed, growth-optimized, several unprofitable. Rule of thumb confirmed by the data: a high G score with a mediocre B score = VC-backed = pass.",
+   "top_targets": [
+    {
+     "name": "ServiceM8",
+     "why": "Bootstrapped, no outside funding; category-defining AU/NZ trades FSM system-of-record \u2014 the cleanest founder buy-and-hold profile in the cohort (B=0.547)."
+    },
+    {
+     "name": "AroFlo",
+     "why": "Private, founder-led AU trades job-management veteran with no disclosed funding/acquisition; sticky niche, high recurring revenue (B=0.524)."
+    },
+    {
+     "name": "Tradify",
+     "why": "Founder-led NZ trades job-management leader, no outside capital; small ($5M) but durable single-niche fit (B=0.518)."
+    },
+    {
+     "name": "Commusoft",
+     "why": "Founder/private UK plumbing/HVAC/electrical FSM; deep vertical specialization and switching costs, bootstrapped scale (B=0.518)."
+    },
+    {
+     "name": "Buildxact",
+     "why": "Founder-led AU residential estimating/job management (~$12M); mid-band size, no disclosed acquisition, strong niche fit (B=0.516)."
+    },
+    {
+     "name": "Fergus",
+     "why": "Founder-led NZ trades job management, no disclosed funding; same durable ANZ trades-FSM archetype (B=0.492)."
+    },
+    {
+     "name": "Tenna",
+     "why": "Founder/private construction equipment & fleet tracking; niche asset-visibility system-of-record, no outside capital (~$8M)."
+    },
+    {
+     "name": "BuildBook",
+     "why": "Founder/bootstrapped residential construction management; genuine profile but low-end scale (~$3M) \u2014 a watch/earlier-stage fit."
+    },
+    {
+     "name": "Buildern",
+     "why": "Founder/bootstrapped construction-management SaaS (Armenia/USA); genuine thesis fit but small (~$2M) and less-proven niche leadership."
+    }
+   ],
+   "whitespace": "Best whitespace sits where generic platforms are too broad and horizontal SaaS too shallow: (1) specialty trades under-served by ServiceTitan/Procore \u2014 roofing, restoration, fire/life-safety, elevators, garage doors, pools, landscaping, pest/lawn, security, oilfield services, industrial maintenance, and mechanical/electrical/plumbing subs; (2) preconstruction & estimating by trade \u2014 takeoff, supplier pricing, bid leveling, scope-gap/spec-submittal automation; (3) financial workflows \u2014 progress claims, lien waivers, retainage, certified payroll / prevailing wage, job-cost forecasting, working-capital financing (a natural embedded-payments ARPU lever on top of a sticky base); (4) field compliance \u2014 safety, inspections, permits, COIs, subcontractor qualification, OSHA/EHS, warranty, commissioning, punch lists; (5) materials & asset visibility \u2014 tool/consumables/rental tracking, prefab logistics, equipment utilization; (6) owner/operator handoff \u2014 closeout, O&M manuals, as-built data, CMMS/EAM integration; (7) regional/regulatory niches \u2014 local permitting, licensing, union rules, public-sector procurement, multilingual crews. For Banyan specifically, the sweet spot is a profitable founder-owned tool that already owns ONE of these niches in a defensible geography, where embedded payments/payroll can lift ARPU without bloating the product.",
+   "precedent_ma": "Undisclosed private terms dominate, so use ranges. Small profitable founder-owned vertical SaaS with modest growth: ~2x-4x ARR (or 8x-12x EBITDA) \u2014 Banyan's typical entry zone. Good lower-middle-market SaaS with strong retention and 15%+ growth: ~4x-7x ARR (12x-18x EBITDA). Category leaders / strategic assets with data moat, payments or platform value: 7x-12x+ ARR. Scarcity assets clear higher (GoCanvas ~11.5x ARR; MaintainX reportedly ~mid-20s forward ARR). Recent comparable deals: Autodesk-MaintainX ~$3.575B (May 2026); Autodesk-Payapps (2024); Nemetschek-GoCanvas at ~11.5x 2023 ARR of $67M (2024); Procore-Intelliwave (2024); ServiceTitan-Convex (2024) and -Conduit Tech (~$19.8M, 2025); Sumeru $330M into JobNimbus (2024/25); Vista \u00a3100M+ into Joblogic (2025); Valsoft-Progression (Aug 2025); JDM-Buildlogic (Dec 2024). Read-through for Banyan: the small founder-owned trades tools in our cohort would transact at the low end (2x-4x ARR / 8x-12x EBITDA), well below the strategic MaintainX/GoCanvas multiples, and durable recurring cash flow lets profitable niche leaders trade well even at slower growth.",
+   "risks": "(1) Competition for the best founder-owned assets is intense and specialized \u2014 VMS consolidators (Constellation/Jonas, Valsoft, JDM) and EverCommerce hunt exactly these small FSM/construction vendors, and PE growth funds have already captured several cohort names, thinning the independent pool and pushing multiples up. (2) Verification risk \u2014 all targets sit at tier C; revenue figures are Growjo estimates and profitability is inferred, so financial diligence will do heavy lifting and some may prove less profitable/sticky than assumed. (3) Services-burden / implementation intensity \u2014 construction/FSM often carries onboarding and customization that can depress gross margin and scalability if not disciplined. (4) Platform disintermediation \u2014 ServiceTitan, Procore and Autodesk expanding into trades and field workflows could squeeze narrow point tools over time. (5) SMB/cyclical exposure \u2014 contractor customers are sensitive to construction cycles, rates and labor scarcity, pressuring churn in downturns. (6) Geographic/regulatory concentration \u2014 the strongest candidates cluster in ANZ/UK, adding FX, cross-border ownership-transfer and small-TAM-per-country considerations. (7) Scale-floor risk \u2014 several genuine fits (ServiceM8 ~$2M, Tradify ~$5M, BuildBook ~$3M, Buildern ~$2M) sit at the bottom of the $2M-$100M band, where deal size may be below Banyan's efficient minimum.",
+   "competing_acquirers": [
+    "Constellation Software / Jonas / Volaris / Vela (VMS holdco buying niche construction & FSM vendors; Jonas cites 20+ construction niches) \u2014 Banyan's most direct permanent-capital competitor",
+    "EverCommerce (SMB service verticals incl. field/home services \u2014 closest strategic overlap with the trades-FSM cohort)",
+    "Valsoft / TAG Software Group (broad VMS consolidator; acquired Progression in FSM, 2025)",
+    "JDM Technology Group (construction software buy-and-build holdco; acquired Buildlogic)",
+    "Everfield / Topicus / Harris (European-leaning VMS acquirers overlapping the UK/ANZ founder-owned niches)",
+    "ServiceTitan (strategic platform rolling up trades/home/commercial-services workflows)",
+    "IFS / WorkWave (enterprise FSM/EAM/ERP for asset-intensive service industries)",
+    "Autodesk / Procore / Nemetschek (construction platforms acquiring payments, field-data, compliance and materials workflows)",
+    "Growth-equity / PE sponsors active in-segment: Thoma Bravo, Vista, Mainsail, JMI, Level Equity, Great Hill, Sumeru, Accel-KKR, PSG, Main Capital (several already own cohort names)"
+   ],
+   "sources": [
+    "https://www.appsruntheworld.com/top-10-construction-software-vendors-market-size-and-market-forecast/",
+    "https://www.fortunebusinessinsights.com/construction-software-market-108480",
+    "https://www.fortunebusinessinsights.com/construction-management-software-market-102852",
+    "https://www.marketsandmarkets.com/Market-Reports/field-service-management-market-209977425.html",
+    "https://vistapointadvisors.com/field-service-management-construction-tech-market-update-q4-2024/",
+    "https://jonassoftware.com/construction-vertical-market-overview",
+    "https://jdmtechnologygroup.com/",
+    "https://www.valsoftcorp.com/news/valsoft-acquires-progression-a-leading-field-service-management-software-company-based-in-quebec",
+    "https://adsknews.autodesk.com/en/news/autodesk-to-acquire-payapps/",
+    "https://investors.autodesk.com/static-files/5fae23ef-49ce-4567-9e7c-184289440aa9",
+    "https://www.gocanvas.com/content/blog/post/gocanvas-joins-forces-with-nemetschek-group",
+    "https://www.intelliwavetechnologies.com/"
+   ]
+  },
+  {
+   "segment": "Hospitality, Restaurant & Personal Services (vertical B2B software: restaurant, hotel/hospitality, salon/spa/medspa, catering/events, specialty-retail POS)",
+   "market_overview": "Core software TAM is roughly $12B-$15B today across the three main sub-verticals, before large adjacent pools (embedded payments, payroll, lending, delivery/marketplace, events, channel management). Anchors: restaurant management software ~$6.5B in 2025 \u2192 $14.7B by 2031 (14.5% CAGR, Mordor); hotel/hospitality management software ~$4.2B in 2025 \u2192 $8.4B by 2033 (9.8% CAGR, Grand View); spa/salon software ~$1.0B in 2025 \u2192 $1.9B by 2031 (10.7% CAGR, Mordor). End markets are highly fragmented at the customer level (independent restaurants, boutique hotels, salons, spas, medspas, franchise groups, local service SMBs on mixed POS/booking/CRM/payroll/spreadsheet stacks) and only moderately concentrated at the vendor level in most categories \u2014 but capital ownership is consolidating fast as platforms race to own the operating system, guest/customer record, payments flow, and marketing loop.",
+   "consolidation_state": "Actively consolidating, and getting more crowded. Three overlapping buyer classes are compressing the space: (1) payments-led platforms bundling software to capture payment volume (Shift4, Toast, Block/Square, DoorDash); (2) hospitality/PMS and STR cloud roll-ups (Mews, Guesty, Agilysys, Cloudbeds, Oracle Hospitality, Amadeus, Lightspeed); and (3) buy-and-hold vertical-software groups directly overlapping Banyan's mandate (Constellation units Volaris and Jonas/Vertus, plus Valsoft/Aspire). PE and growth capital (Blackstone, Vista, KKR, EQT, PSG, JMI, L Catterton) is active on the larger/adjacent assets. Net effect: the marquee, high-growth, payments-attached assets are being bid up by strategics; the boring, sub-$20M, founder-owned back-office and niche-workflow tools remain under-hunted \u2014 which is exactly where Banyan should fish.",
+   "consolidation_state_note": "",
+   "competing_acquirers": [
+    "Constellation Software / Volaris Group (bought Squirrel Systems 2024, Bit Soft 2025) \u2014 most direct buy-and-hold competitor for profitable niche leaders",
+    "Constellation Software / Jonas (Vertus) \u2014 foodservice/hospitality vertical roll-up",
+    "Valsoft / Aspire Software (bought MonkeyMedia 2025, entering restaurant tech) \u2014 direct bootstrapped-leader competitor",
+    "Shift4 \u2014 payments-led POS consolidator (Revel + majority of Vectron, 2024); pays up for payment volume",
+    "Toast, Block/Square, Lightspeed \u2014 payments/POS platforms that bundle software and can outbid on payments attach",
+    "DoorDash \u2014 strategic guest-experience roll-up (SevenRooms, $1.2B, 2025)",
+    "Agilysys, Mews, Guesty, Cloudbeds, Oracle Hospitality, Amadeus \u2014 hospitality/PMS/STR platform buyers",
+    "PE/growth funds: Blackstone (Cvent), Vista (already owns Tripleseat), KKR, EQT, PSG, JMI, L Catterton"
+   ],
+   "banyan_fit_read": "A legitimate hunting ground, but a selective one, not a rich seam. Cohort density is low (0.07; only 1 of 15 reached verified B/A), and \u2014 critically \u2014 several of the highest-visibility names are disqualified by the thesis, not by score. The genuine buy-and-hold profiles here are the boring, bootstrapped, founder/family-owned micro-niche tools whose low growth scores are a feature, not a weakness. Strongest GENUINE candidates: (1) Schedulefly (B=0.595, tier B) \u2014 bootstrapped, profitable, sticky restaurant staff-scheduling/comms leader, no outside capital; the textbook Banyan asset and the one name with public confirmation. (2) Total Party Planner (B=0.496) \u2014 long-tenured family-owned catering/event software, low churn, low growth, too vertical for the platforms to bother with. (3) Meevo/Millennium Systems (B=0.511) \u2014 founder-heritage salon/spa SaaS with recurring revenue and a payments wedge (verify current ownership \u2014 confirm no PE control). (4) Celerant Technology (B=0.53) \u2014 decades-old founder-owned specialty-retail POS/omnichannel with recurring maintenance/SaaS (segment-adjacent). (5) Planning Pod (B=0.51) and (6) Rezku (B=0.488) \u2014 small bootstrapped venue/event and restaurant-POS niche tools. Phorest (B=0.55, Ireland) is a strong founder-led salon/spa leader but sits at the edge of scope: verify it is still <$100M and that prior growth funding does not make it a growth-priced/PE-controlled asset. EXPLICITLY NOT targets (VC/PE-backed and/or growth-priced \u2014 high G with mediocre B is the tell): 7shifts (G=0.562; VC-backed, SoftBank/Enlightened Hospitality \u2014 restaurant workforce management), MarginEdge (G=0.548; VC-backed restaurant AP/back-office), Mangomint (VC-backed salon/spa, Altos/OMERS), Craftable (VC-backed restaurant back-office), and Tripleseat (G=0.531; Vista Equity holds a majority \u2014 already PE-owned, not buy-and-hold-able). Material Security is a data-quality flag: it is an enterprise email/cloud-security company (Founders Fund/a16z), not hospitality software \u2014 a screen false-positive that should be removed from this segment.",
+   "top_targets": [
+    {
+     "name": "Schedulefly",
+     "why": "Bootstrapped, profitable, no outside capital; sticky restaurant staff-scheduling/comms niche leader \u2014 the textbook Banyan asset and the only name with tier-B public confirmation."
+    },
+    {
+     "name": "Total Party Planner",
+     "why": "Long-tenured family-owned catering/event-management software; low growth, low churn, too vertical for platforms to chase \u2014 classic Banyan micro-leader."
+    },
+    {
+     "name": "Meevo / Millennium Systems",
+     "why": "Founder-heritage salon/spa SaaS with recurring revenue and a payments wedge; verify no PE control before proceeding."
+    },
+    {
+     "name": "Celerant Technology",
+     "why": "Decades-old founder-owned specialty-retail POS/omnichannel with recurring maintenance/SaaS revenue; segment-adjacent but durable and boring in the good way."
+    },
+    {
+     "name": "Planning Pod",
+     "why": "Small, bootstrapped venue/event-management tool; profitable-profile niche with limited platform competition."
+    },
+    {
+     "name": "Rezku",
+     "why": "Bootstrapped restaurant POS (Guest Innovations); small founder-owned system-of-record with recurring revenue \u2014 verify scale is above the $2M floor."
+    },
+    {
+     "name": "Phorest",
+     "why": "Founder-led salon/spa leader (Dublin) with strong retention and payments attach; borderline on scope \u2014 confirm still <$100M and not growth-priced/PE-controlled from prior funding."
+    }
+   ],
+   "whitespace": "Underserved niches the payments/PMS platforms overlook and Banyan could own: (1) medspa-specific workflows \u2014 consent, before/after photos, memberships, provider utilization, inventory, compliance, financing; (2) AI receptionist / missed-call capture for restaurants, salons, spas, and boutique hotels; (3) back-office automation \u2014 inventory, vendor ordering, AP, recipe/menu costing, procurement, franchise reporting; (4) labor tooling for hourly teams \u2014 scheduling, tip pooling, payroll, training, retention; (5) integration middleware stitching messy SMB stacks (POS/PMS/accounting/delivery/CRM/payroll/payments/Google-Meta-TikTok); (6) revenue optimization outside core booking \u2014 spa, golf, events, memberships, packages, upgrades, dynamic pricing; (7) multi-location \"emerging chain\" tools between single-store SMB software and enterprise systems. The durable-asset profile is a system of record for a painful vertical workflow with 90%+ gross retention, 70%+ gross margin, module/payments/location expansion, and enough profit to avoid forced fundraising.",
+   "precedent_ma": "Recent deals: DoorDash/SevenRooms $1.2B (2025); Shift4/Revel + majority of Vectron (~18,000 + ~65,000 POS locations, 2024); Agilysys/Book4Time ~$150M (2024, spa); Mews/Frontdesk Anywhere (2024) and Clarity (2025); Guesty/Rentals United (2024, after Kigo/HiRUM/YieldPlanet/StaySense); Volaris/Squirrel Systems (2024) and Bit Soft (2025); Valsoft/MonkeyMedia (2025); Blackstone/Cvent $4.6B (2023, adjacent events); Mindbody+ClassPass/EGYM merger valuing the combined wellness OS at $7.5B (2026). Multiple bands for lower-middle-market SMB vertical software: subscale/legacy/on-prem ~1x-3x revenue or 6x-10x EBITDA; healthy profitable niche SaaS ($2M-$20M ARR, 10-25% growth) ~3x-6.5x revenue or 12x-20x EBITDA; premium strategic/payments-attached assets 6x-10x+ revenue. Market context is disciplined: SEG median SaaS M&A ~4.0x EV/TTM revenue in 2Q26, public SaaS ~3.2x. Banyan's small-private, cash-flow entries realistically clear at the low end (~1x-4x revenue / ~4x-8x EBITDA), below where payments-led strategics will stretch.",
+   "risks": "(1) Competition/valuation: payments-led strategics (Shift4, Toast, DoorDash) and PE roll-ups pay up on payment-volume monetization, so Banyan can be outbid on anything with a strong payments attach. (2) Direct buy-and-hold rivals: Constellation/Volaris/Jonas and Valsoft/Aspire hunt the exact same bootstrapped niche leaders, are prolific and fast, and may pre-empt deals. (3) Disintermediation: standalone software risks commoditization as POS/payment platforms bundle cheap/free software. (4) Thin genuine-target pool: density 0.07, and several top-B cohort names are actually VC/PE-backed (7shifts, MarginEdge, Mangomint, Craftable, Tripleseat) or mis-segmented (Material Security is email security) \u2014 the true addressable list is short. (5) Diligence burden: tier-C dominance means private financials are unverifiable from the public web; some names may fall below the $2M floor, already be sold, or lack the recurring-revenue mix assumed. (6) SMB cyclicality: restaurants/salons run thin margins and churn, pressuring NRR. (7) AI disruption to booking/receptionist workflows could erode moats of older desktop-era tools (Rezku, MicroBiz, Rain Retail).",
+   "sources": [
+    "https://www.mordorintelligence.com/industry-reports/restaurant-management-software-market",
+    "https://www.grandviewresearch.com/industry-analysis/hotel-hospitality-management-software-market-report",
+    "https://www.mordorintelligence.com/industry-reports/spa-and-salon-software-market",
+    "https://softwareequity.com/research/annual-saas-report",
+    "https://softwareequity.com/research/quarterly-saas-report",
+    "https://about.doordash.com/en-us/news/doordash-completes-acquisition-of-sevenrooms",
+    "https://www.restaurantdive.com/news/DoorDash-acquires-sevenrooms-1-billion/747226/",
+    "https://investors.shift4.com/news-events/press-releases/detail/221/shift4-acquires-majority-stake-of-german-point-of-sale-company-vectron-systems-ag-and-completes-previously-announced-acquisition-of-revel-systems",
+    "https://www.phocuswire.com/agilysys-acquires-spa-management-software-solution-book4time",
+    "https://www.phocuswire.com/mews-acquires-hospitality-cloud-software-provider-frontdesk-anywhere",
+    "https://hoteltechnologynews.com/2024/05/guesty-acquires-rentals-united-to-expand-its-property-management-platform-capabilities-in-the-short-term-rental-market/",
+    "https://www.squirrelsystems.com/posts/news/volaris-group-acquires-squirrel-systems/",
+    "https://hsgsoftware.com/news/valsoft-corporation-expands-into-restaurant-technology-with-the-acquisition-of-monkeysoft",
+    "https://www.blackstone.com/news/press/blackstone-completes-acquisition-of-cvent/"
+   ]
+  },
+  {
+   "segment": "Education (vertical B2B software for schools, districts, and colleges \u2014 SIS, LMS, school administration, identity/rostering, IT operations, and family/school communications)",
+   "market_overview": "Global education technology SaaS-tools market is sized at ~$37.7B (2023) \u2192 ~$57.2B (2026) \u2192 ~$94.8B (2030), a ~14.1% CAGR (Grand View Research); Market.us gives a directionally similar 14.1% CAGR read ($38B 2023 \u2192 $141B 2033). The realistic B2B vertical-software TAM is roughly a $40B-$60B current global software market growing low-to-mid teens, with the US the largest and most monetizable region \u2014 which matches our all-US cohort (regions {US:13}). The market is fragmented overall but consolidated inside a few core workflows: K-12 SIS, LMS, assessment, credentialing, and school ERP have recognizable leaders, while long-tail niches (special education/IEP/Medicaid billing, CTE/work-based learning, private-school and microschool ops, early childhood, continuing ed, higher-ed housing/advising) remain fractured. Our cohort sits squarely in the fragmented-but-mission-critical pocket Banyan wants: systems-of-record (SIS, administration, rostering) that survive budget scrutiny because state reporting, procurement rules, and compliance are locally specific and switching costs are high.",
+   "consolidation_state": "Two-speed. The top of the K-12 stack is already consolidating fast \u2014 PowerSchool taken private by Bain (~$5.6B), Instructure by KKR/Dragoneer (~$4.8B) then bolting on Parchment/Scribbles, Tyler and Roper expanding into K-12/campus, and Tyton Partners counting 514 global education transactions in H1 2026 (up 77% YoY). But the small/mid founder-owned SIS and school-administration layer that Banyan targets is still highly fragmented: multiple sub-scale, regionally-focused, bootstrapped systems-of-record (Aeries in CA, Rediker, Gradelink, Populi and Campus Cafe in small higher-ed) coexist because the incumbents chase larger districts. That fragmentation at the bottom is exactly where a buy-and-hold acquirer can operate below the radar of mega-PE, though the same well-capitalized strategics/PE increasingly reach down for tuck-ins.",
+   "banyan_fit_read": "This is a GOOD hunting ground for Banyan \u2014 dense with profitable-looking, founder/family-owned, high-retention systems-of-record in fragmented niches \u2014 but the cohort must be read against ownership and size, not the score alone. The strongest GENUINE buy-and-hold candidates are the bootstrapped, founder/family-owned SIS and school-administration players whose tier-B/C letters reflect private-financial opacity, not weakness: Aeries Software (family-owned CA K-12 SIS), Rediker Software (family-owned school admin since the 1980s \u2014 the most 'boring, durable, unavoidable' profile in the set), Edupoint/Synergy (founder-owned K-12 SIS/LMS), Populi and Campus Cafe (founder-owned higher-ed SIS for small colleges), and Gradelink (small bootstrapped K-12 SIS). These have the classic pattern: sticky multi-year contracts, high switching costs, state/segment-specific domain depth, and slow-but-durable growth (moderate G scores 0.35-0.45) \u2014 the opposite of a growth-at-all-costs profile. TWO high-B names carry caveats that the screen may not have caught and need diligence: Infinite Campus (highest banyan_adj, clean founder-owned/bootstrapped profile) is likely at or ABOVE Banyan's $100M revenue ceiling and reads more as a PE take-private platform than a buy-and-hold tuck-in; and ClassLink (B=0.597) reportedly took a JMI Equity growth investment, so it may already be PE-backed and not founder-owned/available on Banyan terms \u2014 verify ownership before pursuing. The names to explicitly EXCLUDE as NOT buy-and-hold targets are the high-growth/mediocre-B tier-C cluster that fits the VC-backed signature the scoring context warns about: Incident IQ (G=0.557), ParentSquare (G=0.543), and Apptegy (G=0.532) \u2014 each pairs an elevated growth score with a middling B score, the tell-tale of venture/growth-equity-funded, not-yet-profitable, exit-seeking companies. Finally, Semgrep is a mis-classified contaminant: it is a developer/code-security scanning vendor (not education) and is heavily VC-backed (Sequoia/Redpoint/Lightspeed-class rounds) \u2014 remove it from the segment entirely; it is neither education nor a buy-and-hold target.",
+   "top_targets": [
+    {
+     "name": "Rediker Software",
+     "why": "Family-owned school-administration/SIS operating since the 1980s \u2014 the most durable, boring, budget-proof profile in the cohort and right in Banyan's size band; classic buy-and-hold."
+    },
+    {
+     "name": "Aeries Software",
+     "why": "Founder/family-owned California-focused K-12 SIS, bootstrapped and sticky via state-reporting depth; high B (0.572), moderate growth \u2014 textbook Banyan niche leader."
+    },
+    {
+     "name": "Edupoint (Synergy)",
+     "why": "Founder-owned K-12 SIS/LMS/administration suite, private and profitable-looking (B=0.593); systems-of-record moat with district-level switching costs."
+    },
+    {
+     "name": "Populi",
+     "why": "Founder-owned, bootstrapped higher-ed SIS/LMS for small colleges \u2014 underserved niche the big platforms ignore; durable recurring revenue at Banyan-friendly scale."
+    },
+    {
+     "name": "Gradelink",
+     "why": "Small bootstrapped K-12 SIS/administration for private and smaller schools; low-drama recurring revenue, likely at the smaller end of Banyan's range."
+    },
+    {
+     "name": "Campus Cafe",
+     "why": "Higher-ed SIS for small institutions \u2014 a fragmented, sticky niche; C-tier reflects private opacity, not weakness (G=0.351 signals steady, not venture-fueled)."
+    },
+    {
+     "name": "Alma SIS",
+     "why": "K-12 SIS with a moderate growth score (0.40); a possible fit but requires funding-history diligence \u2014 verify it is not venture-backed before advancing."
+    },
+    {
+     "name": "Infinite Campus",
+     "why": "Highest banyan_adj and a clean founder-owned/bootstrapped profile, BUT likely at/above the $100M ceiling \u2014 pursue only if revenue confirms it fits; otherwise a PE take-private, not a Banyan tuck-in."
+    }
+   ],
+   "whitespace": "Underserved niches adjacent to the cohort where a founder-owned, compliance-driven system-of-record could be acquired below mega-PE radar: (1) special education / IEP / autism / accessibility / Medicaid billing \u2014 legally mandated, high-cost, painful workflows; (2) chronic-absenteeism and attendance/family-engagement tooling with measurable district ROI; (3) CTE, work-based learning, apprenticeships and career pathways riding durable workforce-policy funding; (4) student records, transcripts, credentialing and learner wallets (network effects across institutions); (5) private-school, microschool and ESA operations plus early childhood \u2014 less exposed to district budget cycles and the ESSER cliff; (6) higher-ed housing, campus commerce, retention/advising \u2014 operationally critical and budget-linked; (7) regulated continuing-education and credential-maintenance compliance. The cohort is heavily K-12 SIS-concentrated (8 of 12 real names), so the higher-ed operational layer (beyond Populi/Campus Cafe) and the special-ed/attendance/CTE compliance niches are the clearest whitespace for additional sourcing.",
+   "consolidation_state_note": "",
+   "competing_acquirers": [
+    "PowerSchool (Bain-owned; K-12 systems-of-record consolidator bolting on adjacent workflows)",
+    "Instructure (KKR/Dragoneer-owned; LMS platform adding SIS-adjacent records via Parchment/Scribbles)",
+    "Tyler Technologies (public-sector strategic expanding into K-12 HR/compliance, e.g. Edulink)",
+    "Roper Technologies (permanent-capital strategic; Transact Campus + CBORD in campus commerce)",
+    "Renaissance (assessment/student-insight roll-up; GL Education)",
+    "Constellation Software / Vela / Jonas and similar buy-and-hold vertical roll-ups (Banyan's closest philosophical competitors for small niche SIS)",
+    "Community Brands, Frontline Education, Vector Solutions (PE-backed education-software platforms doing tuck-ins)",
+    "PE platform buyers: Vista Equity, Thoma Bravo, Francisco Partners, JMI Equity (reportedly in ClassLink), Five Arrows, Accel-KKR, Bain Capital",
+    "Newsela (analytics/intervention roll-up; Schoolytics, EveryDay Labs) and ETS/Coursera-Udemy in adjacent workforce/skills"
+   ],
+   "precedent_ma": "Large platform benchmarks are richer than SMB comps: PowerSchool \u2192 Bain ~$5.6B (~8x 2023 revenue, ~24x adjusted EBITDA); Instructure \u2192 KKR/Dragoneer ~$4.8B (high-single-digit revenue multiple); Roper \u2192 Transact Campus $1.5B, explicitly ~14x expected 2025 EBITDA and ~4.6x expected 2025 revenue. Bolt-ons/strategic: Instructure\u2013Parchment (Feb 2024, credentialing) and Instructure\u2013Scribbles (Jul 2024, K-12 records); Renaissance\u2013GL Education (2023, assessment); Tyler\u2013Edulink (2025); Five Arrows + Vista into StarRez (2026, higher-ed housing); Coursera\u2013Udemy combination (2026); Newsela\u2013Schoolytics/EveryDay Labs (2026). Most relevant to Banyan: Banyan itself acquired Educational Vistas / Questi (2026), confirming permanent-capital appetite for niche education software. Multiple guidance for the SMB/lower-middle-market band our cohort occupies: small, slower-growth, services-heavy assets ~1.5x-3.5x revenue (7x-12x EBITDA); profitable vertical SaaS with retention/compliance depth ~3x-6x revenue (12x-20x EBITDA); category leaders with high retention and strategic scarcity 6x-9x+ revenue (20x+ EBITDA). Expect the founder-owned SIS names to transact in the 3x-6x revenue / 12x-20x EBITDA zone if profitable.",
+   "risks": "(1) Size ceiling \u2014 the top-scored name (Infinite Campus) is likely at/above Banyan's $100M revenue limit, making it a PE take-private rather than a buy-and-hold target; verify revenue before pursuing. (2) Ownership already institutional \u2014 ClassLink reportedly took JMI Equity growth capital, so despite a high B score it may not be founder-owned/available on Banyan terms; confirm cap tables for every name (Alma also needs funding-history diligence). (3) VC-backed false positives \u2014 Incident IQ, ParentSquare, and Apptegy show the high-growth/mediocre-B signature of venture-funded, likely-unprofitable companies; they are not buy-and-hold targets. (4) Data contamination \u2014 Semgrep is not an education company and is VC-backed; the segment tag is wrong and it should be dropped. (5) Private-financial opacity \u2014 most genuine targets are tier C precisely because profitability/margins can't be verified from the public web; the whole shortlist requires primary diligence on EBITDA, gross retention, and recurring-revenue mix. (6) Budget cyclicality \u2014 district spend is exposed to the ESSER funding cliff and procurement/appropriation cycles; concentration risk since the cohort is 100% US. (7) Competitive bidding \u2014 well-capitalized strategics (PowerSchool, Instructure, Tyler, Roper) and mega-PE increasingly reach down for tuck-ins, pressuring entry multiples. (8) AI disruption \u2014 point tools (communications, helpdesk, websites) are more exposed than entrenched systems-of-record; favor the SIS/administration core.",
+   "sources": [
+    "https://www.grandviewresearch.com/industry-analysis/education-technology-saas-tools-market-report",
+    "https://tytonpartners.com/h1-2026-education-sector-deal-recap-the-rebound-realized-unevenly/",
+    "https://tytonpartners.com/2025-key-deal-highlights-and-predictions-for-2026/",
+    "https://aventis-advisors.com/saas-valuation-multiples/",
+    "https://www.baincapital.com/news/powerschool-be-acquired-bain-capital-56-billion-transaction",
+    "https://www.instructure.com/press-release/kkr-and-dragoneer-complete-acquisition-instructure",
+    "https://www.instructure.com/press-release/instructure-completes-acquisition-parchment-worlds-largest-academic-credential",
+    "https://www.ropertech.com/news-releases/news-release-details/roper-technologies-acquire-transact-campus/",
+    "https://www.cosn.org/tools-and-resources/resource/u-s-state-of-edtech-2026/",
+    "https://investor.coursera.com/news/news-details/2026/Coursera-Completes-Combination-with-Udemy-to-Build-the-Worlds-Most-Comprehensive-Skills-Platform/default.aspx"
+   ]
+  },
+  {
+   "banyan_fit_read": "Poor hunting ground AS SCREENED \u2014 but the mismatch is the real finding, not a weak market. The cohort is populated entirely with horizontal cybersecurity VC darlings, none of which fit the buy-and-hold-forever thesis. The confidence-discount caveat does NOT rescue these names: their profile is high growth score + mediocre B score, which the scoring guidance itself flags as the signature of VC-backed companies that are NOT buy-and-hold targets. Verified banyan-fit count = 0 is correct here, and it reflects genuine unfitness, not just unverifiable private financials.\n\nVC-backed names that are explicitly NOT targets (all eight): Tailscale (nine-figure raises, unicorn-tier WireGuard mesh \u2014 likely at/above the $100M revenue ceiling and not founder-controllable), Chainguard (~$356M Series D, ~$3.5B valuation \u2014 grossly outside thesis), Panther Labs (VC-backed SIEM, ~$1B+ valuation), Tines (VC-backed SOAR, large Series C), Aikido Security (VC-backed AppSec \u2014 already rejected in screen), Socket (VC-backed supply-chain \u2014 rejected), Endor Labs (VC-backed SCA \u2014 rejected), DataBahn (VC-backed telemetry pipeline \u2014 rejected). Every one is venture-financed and growth-optimized; buy-and-hold acquisition is not their exit path and their owners are not sellers to a permanent holder at fit-consistent multiples.\n\nWhere Banyan SHOULD hunt in \"Security\": the research's physical-security vertical software \u2014 guard scheduling/billing/proof-of-service, alarm/central-station software, fire/life-safety inspection compliance, SMB integrator ERP, false-alarm-reduction and remote-video-monitoring ops software. Those are founder-owned, profitable, high-retention, channel-embedded niche leaders in the $2M-$100M band. None are in the current cohort. Recommendation: re-scope this segment away from horizontal cybersecurity toward physical-security VMS and re-run discovery; treat the present cohort as a screen that correctly returned zero fits.",
+   "competing_acquirers": [
+    "Constellation Software / Harris (direct buy-and-hold competitor for founder-owned VMS)",
+    "Volaris Group (direct buy-and-hold competitor)",
+    "ASG / Alpine Software Group",
+    "Riverside (Omnigo)",
+    "K1 (Trackforce / TrackTik)",
+    "Pye-Barker Fire & Safety (PE-backed roll-up)",
+    "Everon / GTCR",
+    "RapidFire Safety & Security",
+    "Gemspring",
+    "Allied Universal",
+    "GardaWorld",
+    "Convergint",
+    "Thoma Bravo (large-cap PE, e.g. Everbridge)",
+    "Motorola Solutions (strategic)",
+    "Alarm.com (strategic)",
+    "Honeywell / LenelS2 (strategic)",
+    "Johnson Controls (strategic)",
+    "ASSA ABLOY / HID (strategic)",
+    "Genetec / Brivo / Eagle Eye (strategic)"
+   ],
+   "consolidation_state": "Physical-security software/services: actively consolidating and accelerating. Capstone reported 242 Security Solutions M&A deals in 2025, up 24.1% YoY, with PE add-ons the largest buyer cohort. Consolidation is most advanced in fire/life-safety, commercial integration, guard services, and platform hardware/software ecosystems; it is far LESS advanced in SMB vertical workflow software, where fragmentation persists \u2014 that gap is exactly where a patient buy-and-hold acquirer has room to operate before the roll-ups arrive.\n\nHorizontal cybersecurity (the cohort's market): consolidation happens through strategic acquisition of scaled leaders (Palo Alto, CrowdStrike, Cisco, Microsoft) and large-cap PE take-privates (Thoma Bravo), plus VC-funded organic scaling. Small profitable niche leaders are rare because the capital model pushes companies to raise and grow rather than stay founder-owned and cash-generative. This is not a Banyan consolidation lane.",
+   "market_overview": "Two very different markets share the \"Security\" label, and this brief has to hold both in view because the research and the cohort point at different ones.\n\n(A) PHYSICAL-SECURITY VERTICAL SOFTWARE \u2014 the market the research covers, and the one that actually fits Banyan. Broad physical-security ecosystem TAM ~$120B+ globally at mid-single-digit CAGR; video intelligence alone ~$60B+ at ~10% CAGR. The pure-software slice is much smaller but faster: guard-management software ~$1.6B (2024) growing to ~$4.5B by 2033 (~12% CAGR). Aggregate vertical-software opportunity across guard workforce mgmt, alarm/central-station software, cloud VMS, access-control SaaS, visitor management, incident reporting, and fire/life-safety compliance is low-to-mid single-digit billions today, growing high-single to low-teens. Highly fragmented at the operator/channel layer \u2014 thousands of local alarm dealers, monitoring firms, guard companies, and integrators running on a patchwork of vertical apps, QuickBooks, spreadsheets, and legacy central-station systems. This is a textbook Banyan environment: sticky, mission-critical, recurring, founder-owned niche tools embedded in labor-constrained service operations.\n\n(B) HORIZONTAL CYBERSECURITY INFRASTRUCTURE \u2014 what our 8-name cohort actually is (WireGuard networking, cloud SIEM, SOAR, AppSec, software-supply-chain/SCA, telemetry pipelines). This is a large, fast-growing, but VC/PE-saturated market where category leaders raise nine-figure rounds and carry unicorn valuations. It is structurally the OPPOSITE of a buy-and-hold hunting ground. The cohort's own signal confirms this: verified banyan-fit B/A count = 0, density = 0.",
+   "precedent_ma": "Multiples (physical-security vertical software/services): Capstone five-year Security Solutions average 2.2x EV/revenue and 11.8x EV/EBITDA. Services-heavy integrator/monitoring/fire-security ~1-2.5x revenue / 8-12x EBITDA; niche profitable SMB vertical software ~2-4x ARR / 10-16x EBITDA (Banyan's fairway); scaled retentive SaaS ~4-7x ARR; AI/video-data category leaders 7-10x+ ARR selectively. Broader private-software medians (Aventis) ~3.7x EV/revenue and ~19x EV/EBITDA, with smaller deals lower.\n\nRecent deals (strategic read): ADT sold ADT Commercial to GTCR for $1.6B (2023) forming Everon (PE platform creation); Honeywell bought Carrier Global Access Solutions for $4.95B (2023-24, access-control consolidation around LenelS2/Onity/Supra); Motorola acquired IPVideo/HALO (2023), Silent Sentinel (2024), RapidDeploy and InVisit (2025, public-safety cloud + visitor mgmt); Thoma Bravo took Everbridge private (2024, critical-event mgmt); GardaWorld acquired Stealth Monitoring (2024, AI remote video); Alarm.com took a majority stake in CHeKT (2025, dealer-channel remote video/false-alarm reduction). Note these are mostly strategic/PE platform deals above Banyan's band \u2014 Banyan's comps are the smaller founder-owned VMS transactions done by Constellation/Volaris/ASG, which are largely undisclosed and cluster in the 2-4x revenue / low-teens EBITDA range.\n\nFor the cohort's horizontal-cyber market: relevant precedents are large strategic/PE deals (e.g., Thoma Bravo take-privates, Palo Alto/CrowdStrike tuck-ins) at growth multiples that are irrelevant to a buy-and-hold budget \u2014 another reason the cohort is off-thesis.",
+   "risks": "(1) Segment-definition risk is the dominant one: the cohort screened 'Security' as horizontal cybersecurity, which structurally cannot yield buy-and-hold targets (density=0 is a correct signal, not a data gap). Acting on this cohort as-is means chasing companies that are not for sale to a permanent holder. (2) Do not let the confidence-discount narrative override the growth/B-score signal \u2014 for these eight, high G + mediocre B genuinely indicates VC-backed non-targets, not undervalued private niche leaders. (3) In the correct (physical-security VMS) market, Banyan faces direct competition from Constellation/Volaris/Riverside/K1 and a rising PE roll-up bid (242 deals in 2025, +24% YoY) that can inflate multiples on the best founder-owned assets. (4) Services-heavy security businesses often mix low-margin field labor with software \u2014 screen for the recurring-software share, not blended revenue, to avoid overpaying at software multiples. (5) Physical-security software tied to specific panel/camera/access hardware ecosystems carries platform-dependency and displacement risk if the underlying hardware vendor consolidates. (6) All financials on genuine founder-owned targets will be private and unverifiable from the public web \u2014 expect them to sit at tier C by construction, so weight qualitative moat/retention/channel evidence over the tier letter.",
+   "segment": "Security",
+   "sources": [
+    "https://www.capstonepartners.com/insights/article-security-ma-update/",
+    "https://www.insightpartners.com/ideas/video-intelligence-investor-pov/",
+    "https://aventis-advisors.com/software-valuation-multiples/",
+    "https://aventis-advisors.com/saas-valuation-multiples/",
+    "https://investors.alarm.com/news-releases/press-release-details/2026/Alarm-com-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx",
+    "https://newsroom.adt.com/corporate-news/news-details/2023/ADT-Announces-Sale-of-Commercial-Business-for-1.6-Billion/default.aspx",
+    "https://www.motorolasolutions.com/newsroom/press-releases/invisit-cloud-based-visitor-mgt-solution-provider-acquisition.html",
+    "https://alarm.com/press/alarm-com-acquires-chekt-a-leader-in-proactive-video-monitoring-solutions/",
+    "https://www.gardaworld.com/news/gardaworld-completes-acquisition-of-stealth-monitoring",
+    "https://www.thomabravo.com/press-releases/everbridge-enters-into-definitive-agreement-to-be-acquired-by-thoma-bravo-for-1-5-billion"
+   ],
+   "top_targets": [
+    {
+     "name": "None of the 8 cohort names is a genuine buy-and-hold target",
+     "why": "All eight are VC-backed, growth-optimized horizontal cybersecurity companies (verified banyan-fit count=0); the real Banyan targets in 'Security' are physical-security vertical-software niche leaders absent from this cohort \u2014 re-scope discovery."
+    },
+    {
+     "name": "Tailscale (rank 1 by banyan_adj, NOT a recommendation)",
+     "why": "Highest banyan_adj (B=0.53/C, G=0.606) but nine-figure VC raises and unicorn scale breach the founder-owned/<=$100M/buy-and-hold profile; ranks first only as a confidence-discount artifact."
+    },
+    {
+     "name": "Chainguard (rank 2, NOT a recommendation)",
+     "why": "B=0.519/C, G=0.669; ~$356M Series D at ~$3.5B valuation is the clearest thesis violation \u2014 high G / mediocre B is the textbook VC-backed non-target signature."
+    },
+    {
+     "name": "Panther Labs (rank 3, NOT a recommendation)",
+     "why": "B=0.487/C cloud SIEM, VC-backed at ~$1B+ valuation; growth-financed rather than cash-generative and founder-controllable, so not a permanent-hold asset."
+    },
+    {
+     "name": "Tines (rank 4, NOT a recommendation)",
+     "why": "B=0.486/C no-code SOAR, VC-backed with a large Series C and a horizontal (not vertical) product \u2014 fails both the vertical-niche-leader and the ownership tests."
+    }
+   ],
+   "whitespace": "The best Banyan niches are where 'security' is going software-defined while operators remain in local-service workflows: (1) SMB security-integrator ERP (quoting, scheduling, service, RMR/billing); (2) guard workforce management (scheduling/payroll/billing/client proof-of-service) in a labor-constrained industry; (3) alarm/central-station monitoring software and false-alarm reduction; (4) remote-video-monitoring operations software (fastest-pulling area per CHeKT/Stealth); (5) fire/life-safety inspection and compliance workflow with regulatory content; (6) vertical security workflows for schools, multifamily, healthcare, data centers; (7) access-control identity governance and cyber-physical compliance as physical security shifts to CISO/IT ownership. Moat pattern to screen for: high gross retention, sticky integrations into panels/cameras/access/payroll/CAD/monitoring centers, compliance content, and an existing dealer/integrator/monitoring-center channel wedge that lowers CAC. None appear in the current cohort."
+  },
+  {
+   "banyan_fit_read": "Poor hunting ground \u2014 and the screen's density=0 / B-A count=0 here is a true signal, not a confidence-discount artifact. The confidence-discount caveat explains why a genuine bootstrapped niche leader lands at tier C; it does NOT rescue this cohort, because all six exhibit the tell the scoring context warns about: high growth score with only a mediocre B score = VC-backed, not buy-and-hold. Concretely, every name is a VC-funded, pre-profit, AI-native growth company \u2014 the antithesis of Banyan's profile (profitable, founder/family-owned, high-recurring-revenue, $2M-$100M revenue, held forever). VC-BACKED / NOT TARGETS (all six): AlphaSense \u2014 late-stage unicorn, ~$4B+ valuation, raised $650M+, revenue well above the $100M ceiling; disqualified on size and ownership. Sierra \u2014 Bret Taylor's customer-service AI, ~$10B valuation, massively VC-funded; the single least-Banyan asset in the set. Clay \u2014 Sequoia-backed GTM-data unicorn (~$1.25B+); off-thesis. Decagon \u2014 a16z/Accel/Bain-backed support-agent unicorn (~$1.5B); off-thesis. 11x \u2014 a16z/Benchmark AI-SDR company with publicly reported ARR/churn-misrepresentation issues; off-thesis and a diligence red flag. Trunk Tools \u2014 Redpoint/Innovation-Endeavors-backed construction AI; earlier and more vertical than the rest, but still VC-funded and unprofitable. GENUINE buy-and-hold candidates in this cohort: effectively none. If Banyan wants AI exposure, it should hunt profitable, bootstrapped, founder-owned vertical software that has added AI as a feature inside a mission-critical workflow \u2014 not AI-native horizontal rockets. Recommend deprioritizing this segment for direct sourcing.",
+   "competing_acquirers": [
+    "Strategics: ServiceNow, Salesforce, Workday, Microsoft, Thomson Reuters, Atlassian, Dropbox, Intuit, Adobe, SAP, Oracle, Zoom",
+    "PE/growth sponsors: Thoma Bravo, Vista, Hg, TA, Insight, Accel-KKR, Francisco Partners, K1, PSG, Warburg Pincus, Silver Lake",
+    "Late-stage VCs that already own these assets: a16z, Sequoia, Benchmark, Accel",
+    "Vertical software roll-ups: Constellation/Volaris/Jonas/Topicus, Valsoft, Visma, Roper, EverCommerce, Banyan",
+    "NOTE: Banyan does not meaningfully compete for any of the six cohort names \u2014 those are priced by growth-equity/strategic buyers at valuations ($1B-$10B) far outside its cash-flow, sub-$100M-revenue, permanent-hold model. Banyan's real competitive set is only relevant one layer over, for profitable bootstrapped AI-enabled vertical tools, where it competes with Constellation-style acquirers rather than a16z."
+   ],
+   "consolidation_state": "Early and top-heavy. Fragmented, churning app layer with consolidation concentrated at the platform/system-of-record level: strategics (ServiceNow, Workday, Salesforce, Thomson Reuters, Atlassian) buy AI-native capability at growth-equity prices set by VC rounds. There is no durable cash-flow roll-up market in horizontal AI yet \u2014 targets are pre-profit and priced on ARR growth, not EBITDA \u2014 so vertical-software permanent-capital acquirers (Constellation, Valsoft, Visma, Roper, Banyan) are largely spectators. A shakeout is more likely than a lower-middle-market consolidation window in the near term.",
+   "market_overview": "Horizontal AI applications = B2B AI apps that cut across industries/functions (copilots, AI search/knowledge, workflow/sales/support agents, meeting and document intelligence). SIZE/GROWTH: Menlo puts 2025 enterprise generative-AI spend at ~$37B (up 3.2x YoY); the application layer was ~$19B, of which horizontal AI was ~$8.4B and growing ~5.3x YoY \u2014 that is current spend, not ultimate TAM. McKinsey's long-run value pool is far larger (~$2.6T-$4.4T annual economic potential), but it will be captured unevenly by incumbents, AI-natives, and services automation, so near-term software revenue remains low tens of billions. FRAGMENTATION: fragmented at the app layer (AI-native startups captured ~63% of 2025 app-layer revenue per Menlo) but concentrating at distribution/control points \u2014 horizontal copilots already cluster around Microsoft, OpenAI, Anthropic, Google and enterprise knowledge platforms. The long tail of agents/tools is highly fragmented. Structurally, this is a fast-growing, capital-intensive, VC-funded arena \u2014 the opposite of the slow-compounding, cash-generative niche software Banyan buys.",
+   "precedent_ma": "RECENT DEALS (all strategic, all off-thesis for Banyan on price/size): ServiceNow/Moveworks (2025, $2.85B, employee-support agents); Workday/Sana (2025, ~$1.1B, enterprise knowledge/learning); Workday/Evisort (2024, contract/document intelligence); Thomson Reuters/Casetext (2023, $650M, legal AI/CoCounsel); Salesforce/Tenyx (2024, conversational voice AI); Atlassian/Loom (2023, ~$975M); Atlassian/The Browser Company (2025, reported $610M); Dropbox/Reclaim.ai (2024, AI scheduling). MULTIPLES: SEG 2Q26 median disclosed SaaS M&A ~4.0x EV/TTM revenue; public SaaS reset to ~3.2x (vertical SaaS ~3.7x); ~29.7x EBITDA for B2B SaaS at YE2025 (sparse EBITDA data). Lower-middle-market founder-owned vertical software realistically trades ~3-6x ARR (5-8x+ for exceptional retention/data), or ~8-15x EBITDA for profit-led platform deals \u2014 Banyan's zone. Note the horizontal AI deals above cleared at revenue multiples and check sizes 10x-100x Banyan's model; AI alone commands no premium unless it demonstrably improves retention/expansion/margin/defensibility (Houlihan Lokey).",
+   "risks": "1) Thesis mismatch (primary): the entire cohort is VC-backed and pre-profit; pursuing any of them violates the buy-and-hold-forever, profitable, sub-$100M-revenue mandate. 2) Valuation: prices set by growth-equity/strategics are far above cash-flow-based multiples Banyan can underwrite. 3) Gross-margin fragility: inference costs can erode SaaS-like margins, undermining the durable-FCF requirement. 4) Low app-layer defensibility: horizontal apps are exposed to platform disintermediation by Microsoft/OpenAI/Google copilots. 5) Winner-take-most / flame-out dynamics: high failure and churn rates (11x's reported ARR/churn issues are a concrete example) make permanent-hold underwriting unreliable. 6) Founder/culture: VC cap tables and growth incentives conflict with Banyan's operator-continuity, no-exit model. 7) Diligence data quality: private AI-native ARR figures are frequently overstated; verify net revenue retention and true recurring vs. usage/pilot revenue before any engagement.",
+   "segment": "Horizontal AI Applications",
+   "sources": [
+    "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+    "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+    "https://softwareequity.com/research/quarterly-saas-report",
+    "https://softwareequity.com/research/annual-saas-report",
+    "https://www2.hl.com/ai-in-vertical-software-q1-2026.pdf",
+    "https://softwareequity.com/blog/top-strategic-buyers",
+    "https://newsroom.servicenow.com/",
+    "https://www.thomsonreuters.com/",
+    "https://banyansoftware.com/"
+   ],
+   "top_targets": [
+    {
+     "name": "Trunk Tools (least-implausible, still off-thesis)",
+     "why": "Most defensible VERTICAL wedge in the set (construction documentation) and smaller/earlier, but VC-backed and pre-profit \u2014 revisit only if it becomes a profitable, founder-controlled niche leader; not a target today."
+    },
+    {
+     "name": "AlphaSense (rule-out: size)",
+     "why": "Highest banyan_adj (B=0.468) with a genuine proprietary-data moat, but a ~$4B unicorn with revenue far above the $100M ceiling \u2014 structurally impossible as buy-and-hold."
+    },
+    {
+     "name": "Clay (rule-out: VC/pre-profit)",
+     "why": "Strong retention in GTM data but a Sequoia-backed ~$1.25B unicorn; VC-priced and unprofitable."
+    },
+    {
+     "name": "Decagon (rule-out: VC/pre-profit)",
+     "why": "a16z/Accel/Bain-backed ~$1.5B support-agent platform; high-G/mediocre-B = the VC profile the scoring context flags as not a target."
+    },
+    {
+     "name": "Sierra (rule-out: VC/scale)",
+     "why": "Highest growth score (G=0.695) at a ~$10B valuation \u2014 clearest high-G-mediocre-B VC rocket; explicitly excluded."
+    },
+    {
+     "name": "11x (rule-out: VC + red flag)",
+     "why": "Lowest banyan_adj (B=0.398) plus public ARR/churn-misrepresentation reporting; VC-backed and a diligence red flag."
+    }
+   ],
+   "whitespace": "The Banyan-relevant whitespace is NOT in the horizontal AI-native cohort; it is one layer over. Per Menlo/McKinsey and Houlihan Lokey, the durable value sits in AI embedded into painful, regulated, document-heavy or labor-heavy workflows with measurable ROI \u2014 SMB back-office automation, compliance/audit, field-service dispatch, construction documentation, government permitting, insurance claims, healthcare revenue-cycle/admin, specialty legal/tax/accounting, procurement/vendor risk, and industry-specific knowledge management. For Banyan specifically, the actionable whitespace is profitable, bootstrapped, founder/family-owned vertical software niche leaders that have added AI as a feature inside a system-of-record workflow (AI in the core, human-in-the-loop, ROI-proven, inference cost that does not wreck gross margin) \u2014 assets that compound quietly rather than raise VC. That profile appears in VERTICAL AI screens, not in this horizontal set."
+  },
+  {
+   "segment": "Government & Public Sector",
+   "market_overview": "Definition-sensitive but attractive. A narrow \"government software\" view is a ~$25-35B global market today: SEG cites $28.2B in license/maintenance/subscription revenue; DataIntelo puts it at $26.4B (2025) growing to $55.8B by 2034, an 8.7% CAGR. Broader \"GovTech\"/smart-government definitions (services, cloud, platforms) are larger and faster: Mordor estimates $58.3B (2026) to $139.2B (2031), ~19% CAGR. Demand is unusually durable because the software runs legally mandated workflows (budgeting, procurement, permitting, public records, courts, public safety, tax, benefits, licensing, inspections, citizen comms); budget cycles slow purchasing but switching is painful once implemented. The market is deeply FRAGMENTED on both sides: the U.S. alone has ~90,837 local governments (2022 Census) before state/federal/court/school/special districts, each with distinct statutes, forms, and procurement rules, and the vendor landscape is a long tail of workflow-specific point solutions. This fragmentation-plus-stickiness combination is structurally favorable for a buy-and-hold acquirer \u2014 but it is well-known and heavily contested by capitalized consolidators.",
+   "consolidation_state": "Fragmented at the workflow/customer level, actively consolidating at the platform level. Large suites are buying niche products to cross-sell into installed agency bases and modernize legacy on-prem systems. Tyler positions as the broadest public-sector portfolio; Granicus has reportedly made 14+ acquisitions since 2016; PE-backed platforms (NEOGOV, CivicPlus, Euna, CentralSquare, OpenGov) continue to aggregate category-specific products. Deal cadence is steady and rising (Tyler MyGov, For The Record, CODY Systems; CivicPlus Streamline; NEOGOV PowerDetails; Granicus Simpleview all within the last ~24 months). Net: the mid/upper market is consolidating fast, while the sub-$30M founder-owned long tail remains fragmented and under-picked \u2014 that long tail is the genuine Banyan lane, but it is where Valsoft/Constellation-style acquirers hunt too.",
+   "consolidation_state_note": "",
+   "competing_acquirers": [
+    "Valsoft \u2014 most direct small-cap competitor; buy-and-hold vertical software including public-sector niche products, comparable check size to Banyan",
+    "Harris / Constellation Software (CSI) \u2014 the archetypal buy-and-hold-forever public-sector consolidator; runs cash-flowing niche govtech products for decades, Banyan's closest philosophical rival",
+    "Tyler Technologies \u2014 public pure-play leader; upmarket but competes for the better scaled assets (ResourceX, ARInspect, MyGov, For The Record, CODY Systems)",
+    "Granicus (Vista/Harvest-backed) \u2014 citizen engagement, digital services, meetings/records/permitting; 14+ acquisitions (Simpleview 2024)",
+    "CivicPlus \u2014 local-gov web/comms/records/engagement roll-up (Municode, SeeClickFix, Optimere, Streamline)",
+    "NEOGOV (EQT + CPP Investments, ~$3B+) \u2014 public-sector HR/workforce/compliance; tuck-ins like PowerDetails",
+    "Euna Solutions (GI Partners) \u2014 public finance, budgeting, procurement, grants, payments",
+    "OpenGov (Cox Enterprises, ~$1.8B) \u2014 ERP/budgeting/procurement/permitting suite",
+    "Motorola Solutions, Axon, Hexagon, CentralSquare \u2014 active specifically in public safety/dispatch/evidence/records",
+    "Civica \u2014 non-U.S. long-tail public-sector software consolidator"
+   ],
+   "banyan_fit_read": "A structurally good hunting ground with a crowding caveat. The fragmentation (90k+ local governments), mandated non-discretionary workflows, high logo retention, and a deep long tail of founder-owned niche leaders match the Banyan thesis well. The caveat is that this is one of the most contested corners of vertical software: Valsoft, Constellation/Harris, and multiple PE platforms actively bid the sticky sub-$30M assets, which compresses Banyan's proprietary-deal advantage and can push multiples up. The genuine Banyan targets here are the boring, bootstrapped, sub-$30M, founder-owned workflow leaders that do NOT appear in venture headlines. Within our cohort, apply the scoring guidance: all six sit at tier C purely from the private-company confidence discount, so rank on banyan_adj plus profile shape, not the letter. The strongest GENUINE buy-and-hold candidates are the high-B / moderate-G names: Envisio (B=0.523, G=0.427), GovPilot (B=0.509, G=0.412), and GOGov (B=0.505, G=0.385) \u2014 this high-B-with-restrained-growth shape is the fingerprint of a profitable, capital-efficient, founder-owned niche leader rather than a venture rocket. Explicitly NOT targets under the buy-and-hold thesis are the high-G / mediocre-B trio: Zencity (G=0.497, B=0.475) is a heavily VC-backed civic-analytics company (multiple venture rounds) and off-thesis; Clariti (G=0.491) and Cloudpermit (G=0.47) both show the growth-skewed profile consistent with growth-equity/VC backing in permitting \u2014 their elevated growth scores against weaker Banyan scores are the exact signal the framework flags as likely-VC, not likely-founder-held. Funding status on Clariti and Cloudpermit should be verified in diligence, but on the profile signal alone they belong in the \"monitor, not pursue\" bucket. Cohort density of verified B/A fits is 0 \u2014 expected given the private-company discount, not evidence of a weak segment.",
+   "top_targets": [
+    {
+     "name": "Envisio",
+     "why": "Highest Banyan-adj (0.523) with restrained growth \u2014 the profitable, founder-owned niche-leader shape; narrow mandated workflow (public-sector strategic/performance planning) with sticky annual reporting cadence and low venture-rocket risk."
+    },
+    {
+     "name": "GovPilot",
+     "why": "Strong B (0.509), moderate G (0.412); US local-government permitting/administration is a deep long-tail workflow with statutory forms and high logo retention \u2014 classic bootstrapped founder-led profile Banyan can hold forever."
+    },
+    {
+     "name": "GOGov",
+     "why": "B=0.505 with the LOWEST growth (0.385) in the cohort \u2014 the steady, capital-efficient citizen-engagement/311 niche leader; smallest and most likely truly founder-owned, best odds of a proprietary (uncontested) deal."
+    },
+    {
+     "name": "Cloudpermit",
+     "why": "Watchlist only \u2014 solid e-permitting niche but G=0.47 vs B=0.486 skews growth-backed; verify funding (likely growth-equity) before any pursuit."
+    },
+    {
+     "name": "Clariti",
+     "why": "Watchlist only \u2014 attractive permitting/licensing platform but G=0.491 against B=0.483 signals growth/VC backing; probably above-thesis on capital structure, confirm before engaging."
+    }
+   ],
+   "whitespace": "The best whitespace is boring, regulated workflow automation still run on email/PDF/spreadsheets/legacy DBs, not \"generic government AI.\" Underserved niches: (1) Special districts \u2014 water, sewer, fire, transit, housing authorities, parks, libraries, vector control, cemetery districts \u2014 too small for enterprise suites; (2) Grant compliance & reporting \u2014 IIJA/federal grants, subrecipient monitoring, audit readiness, outcome measurement; (3) Long-tail permitting/inspections for small municipalities needing cheaper/faster alternatives to enterprise platforms (note our cohort is already permitting-heavy \u2014 Cloudpermit, Clariti, GovPilot \u2014 so incremental permitting bets face internal overlap and external roll-up competition); (4) Public records / FOIA / redaction / retention / ADA-Section 508 accessibility; (5) Public safety administration \u2014 off-duty scheduling, accreditation, warrants, evidence chain-of-custody, training, overtime, wellness; (6) Procurement & vendor compliance \u2014 cooperative purchasing, bid evaluation, contract lifecycle, spend analytics; (7) Cybersecurity/compliance for small agencies \u2014 CJIS, NIST, identity, backups, incident readiness; (8) Interoperability layers connecting Tyler/Accela/CivicPlus/Granicus/Esri/state portals/payments. The durable niche leader owns deep domain content (forms, rules, reporting logic, integrations) and becomes part of how a department stays compliant every week, at 20-35% EBITDA potential once implementation is disciplined.",
+   "precedent_ma": "Multiples (SEG 2Q26): public SaaS index median 3.2x EV/TTM revenue; vertical SaaS 3.7x; disclosed private SaaS M&A ~4.0x median. Vertical software was 54% of SaaS M&A in 2Q26, with government ~7% of vertical-SaaS activity. Practical SMB public-sector ranges: 2-4x revenue / 7-12x EBITDA for slower-growth, services-heavy, smaller or on-prem-heavy businesses (Banyan's typical entry zone); 4-7x revenue / 12-18x EBITDA for profitable SaaS with strong retention and clean financials; 8x+ revenue / 20x+ EBITDA only for scarce scaled category leaders. Recent notable deals: Cox/OpenGov majority at ~$1.8B (Feb 2024); EQT + CPP Investments/NEOGOV reportedly >$3B (Jul 2025); Tyler/For The Record $258M EV (Feb 2026); Granicus/Simpleview (Sep 2024); Tyler/MyGov (Jan 2025); CivicPlus/Streamline (Dec 2025, 2,500+ agencies); NEOGOV/PowerDetails (Apr 2026); Tyler/CODY Systems (Jul 2026). Implication for Banyan: the headline deals are upper-market and PE/strategic; Banyan's discipline (2-4x rev / 7-12x EBITDA on founder-owned assets) keeps it below the contested scaled-asset premium tier.",
+   "risks": "(1) Acquisition competition \u2014 Valsoft and Constellation/Harris hunt the same sub-$30M founder-owned assets and pay disciplined-but-real prices; scaled PE platforms bid up any asset with clean financials, eroding proprietary-deal advantage and multiple discipline. (2) Off-thesis capital structures \u2014 several visible cohort names (Zencity clearly, Clariti/Cloudpermit likely) are VC/growth-backed and thus not buy-and-hold targets; the segment's most-covered companies are disproportionately venture-funded, so name recognition is a poor filter. (3) Confidence-discount blind spot \u2014 genuine targets sit at tier C with unverifiable financials; diligence must confirm profitability, recurring-revenue mix, and ownership before pursuit, since the screen cannot. (4) Services drag \u2014 public-sector software often carries heavy implementation/services; margins and multiples suffer unless the implementation motion is productized. (5) Budget-cycle and procurement-cycle sensitivity \u2014 long sales cycles, election/administration turnover, and appropriations timing create lumpy bookings. (6) Platform disintermediation \u2014 Tyler/Granicus/OpenGov/CivicPlus suite expansion can commoditize single-workflow point solutions over time; niche must be defensible via deep domain content and integrations. (7) Cohort concentration risk \u2014 three of six are permitting/licensing and three of six are Canadian; limited diversification within the current screened set. (8) Accessibility/security compliance burden (ADA/Section 508, CJIS, NIST) is rising and can be a cost sink for underinvested small vendors.",
+   "sources": [
+    "https://softwareequity.com/sectors/government-software",
+    "https://softwareequity.com/research/quarterly-saas-report",
+    "https://dataintelo.com/report/government-software-market",
+    "https://www.mordorintelligence.com/industry-reports/smart-government-market",
+    "https://www.stlouisfed.org/on-the-economy/2024/mar/number-types-local-governments-us",
+    "https://investors.tylertech.com/investor-overview/default.aspx",
+    "https://granicus.com/press-release/granicus-acquires-leading-destination-marketing-software-company-simpleview/",
+    "https://www.prnewswire.com/news-releases/opengov-accelerates-cloud-and-ai-transformation-of-government-with-majority-investment-from-cox-enterprises-302073686.html",
+    "https://www.axios.com/newsletters/axios-pro-rata-ffa8aa3a-f3a5-4df5-bf08-c63890bd671a",
+    "https://www.cppinvestments.com/newsroom/eqt-and-cpp-investments-to-acquire-neogov/",
+    "https://investors.tylertech.com/news/news-details/2026/Tyler-Technologies-to-Acquire-For-The-Record/default.aspx",
+    "https://www.powerdetails.com/"
+   ]
+  },
+  {
+   "segment": "Other Vertical SaaS",
+   "market_overview": "\"Other Vertical SaaS\" is the long tail of industry-specific B2B software outside the mega-verticals (healthcare, fintech, real estate, gov, education, hospitality, retail). It is large, growing, and structurally fragmented. Global vertical software is ~$147B (2025) / ~$164B (2026), growing to ~$283B by 2031 (~11.5% CAGR); the residual \"other\" long tail is a reasonable ~$70B-$90B+ of 2026 spend, growing low-to-mid teens. Growth drivers: cloud/SaaS penetration replacing on-prem systems of record, embedded payments/payroll/compliance attach, and AI workflow automation. Fragmentation is inherent \u2014 every niche has its own workflow, vocabulary, compliance regime, and buyer network \u2014 so no single dominant TAM story exists; value accrues to \"small monopolies\" in narrow, mission-critical workflows with high retention and cash conversion. NOTE: our n=2 cohort here is entirely insurance software (agency management + P&C core), so this brief weights the insurance-vertical software sub-market, which is one of the most mature and actively consolidated corners of the long tail.",
+   "consolidation_state": "Buyer-side consolidation is very active while the target universe stays fragmented. SEG reported 2,784 SaaS M&A transactions TTM through Q2 2026, with vertical software at 54% of all SaaS M&A and PE/VC-backed buyers involved in 59% of deals. Insurance software specifically is further along the consolidation curve than most of the long tail: the agency-management and P&C-core layer has already seen Roper/Vertafore, Applied Systems, and Aquiline-backed insurtech roll-ups sweep up mid-market assets. This is a mature hunting ground \u2014 meaning genuine founder-owned independents (like HawkSoft) are increasingly scarce and therefore valuable, but also increasingly contested.",
+   "banyan_fit_read": "Yes, but with discipline. The long tail of vertical SaaS is the canonical Banyan compounder market \u2014 profitable, sticky, founder-owned niche leaders with recurring revenue. The insurance-software slice our cohort actually covers is a proven vertical-software category (high retention, mission-critical system-of-record use, compliance depth), which is a plus, but it is also heavily picked-over by larger, deep-pocketed insurance-specific consolidators, which is a competitive minus for Banyan. On the cohort: HawkSoft is the strongest GENUINE buy-and-hold candidate \u2014 it is a privately held, founder/family-run Oregon insurance agency management system with the highest banyan_adj (0.631) AND a tier-B letter, meaning we found real public confirmation of the founder-owned, profitable, high-recurring profile rather than just inferring it. Its moderate growth score (G=0.44) is a FEATURE for a buy-and-hold acquirer, not a defect. Cogitate is a plausible but caveated candidate: banyan_adj 0.501, tier C \u2014 and per the scoring context, tier C for a private company usually reflects unverifiable financials rather than a weak fit, so it should not be dismissed on the letter alone. HOWEVER, the explicit red-flag check applies: Cogitate Technologies has taken institutional/growth-equity funding (P&C insurance core/back-office platforms in this class typically raise venture rounds), which \u2014 if confirmed \u2014 would disqualify it as a buy-and-hold target under the thesis (VC/PE-backed is NOT a hold-forever fit) regardless of its C tier. This must be verified before pursuit. Neither cohort name shows the classic \"high G + mediocre B = VC-backed\" pattern (both G scores are modest ~0.40), so the growth-signal filter does not flag them; the Cogitate concern is a funding-history concern, not a growth-signal one.",
+   "competing_acquirers": [
+    "Permanent holdcos (direct Banyan competitors): Constellation Software / Volaris / Harris / Vela / Jonas / Topicus, Valsoft, Vitec, Visma",
+    "Insurance-software strategics/roll-ups (most relevant to THIS cohort): Roper/Vertafore, Applied Systems, Ivans, Zywave, EverCommerce, Insurity",
+    "Insurtech-focused PE: Aquiline Capital Partners, Vista Equity, Thoma Bravo, Genstar, TA Associates, PSG, Accel-KKR",
+    "Broad vertical-SaaS strategics: Roper Technologies, Tyler Technologies, IFS/WorkWave, Trimble, EverCommerce"
+   ],
+   "banyan_fit_read_note": "",
+   "top_targets": [
+    {
+     "name": "HawkSoft",
+     "why": "Strongest genuine buy-and-hold fit: privately held, founder/family-run insurance agency management system; highest banyan_adj (0.631) with a tier-B letter confirming the profitable, high-recurring, founder-owned profile from public sources \u2014 moderate growth (G=0.44) is exactly the hold-forever shape."
+    },
+    {
+     "name": "Cogitate",
+     "why": "Plausible P&C insurance core/back-office target (banyan_adj 0.501; tier C reflects unverifiable private financials, not weak fit) \u2014 BUT verify funding history first: any VC/growth-equity backing disqualifies it as a buy-and-hold target under the thesis."
+    }
+   ],
+   "whitespace": "The best whitespace is systems-of-record for messy, regulated, paper-heavy workflows \u2014 not \"another CRM for X.\" Within insurance-adjacent long tail: specialty/MGA underwriting workflow, claims-adjuster and inspection tooling, compliance/filing automation, and agency back-office modules underserved by the Vertafore/Applied duopoly (smaller independent/regional agencies). Beyond insurance, high-attractiveness niches from the research: specialty trade contractors, inspection/permitting/compliance, fire & life safety, environmental services, ag/food traceability, franchise ops, lab/testing workflows, funeral/cemetery, childcare/elder-care admin, industrial maintenance, field-service microverticals, specialty distributors, and local-government back-office. Highest-value wedges pair core workflow with embedded payments, payroll, compliance filing, scheduling/quoting, or benchmarking data; AI is defensible only where proprietary workflow/data context makes it an embedded accelerator, not a thin wrapper.",
+   "precedent_ma": "Multiples for small founder-owned vertical SaaS show wide dispersion: small/slow-growth-but-profitable ~2x-4x revenue (8x-14x EBITDA); solid SMB vertical SaaS with 10-25% growth ~3x-6x revenue (12x-20x EBITDA); category leaders with payments/data attach 6x-10x+ revenue (20x+ EBITDA). Aventis long-run private-SaaS medians ~4.5x EV/revenue and ~23x EV/EBITDA, but recent reset: 2.9x revenue (2024), 3.8x (2025), 3.1x (Q1 2026); SEG Q2 2026 median ~4.0x EV/TTM revenue. Recent notable deals: Bain/PowerSchool ~$5.6B EV (2024, K-12); Roper/Transact Campus $1.5B, ~14x 2025E EBITDA (2024, higher-ed payments); Hg/AuditBoard >$3B (2024, audit/risk/compliance); EQT+CPP/NEOGOV from Warburg+Carlyle (2025, public-sector HR/compliance); Silver Lake merging Cegid+Silae into a >\u20ac10B European software group (2026); Vista/Amtech Software from Peak Rock (2025, packaging ERP). Banyan should anchor to the low end (~2x-4x revenue / high-single-to-low-teens EBITDA) for sub-$100M founder-owned niche leaders \u2014 the mid/high ranges are contested-auction, sponsor-scale outcomes.",
+   "risks": "1) Funding-history disqualifier: Cogitate (and P&C-core platforms generally) may be VC/growth-equity-backed, which voids the buy-and-hold thesis \u2014 verify cap table before spending diligence. 2) Contested category: insurance software is already heavily consolidated (Vertafore/Roper, Applied, Aquiline), so Banyan competes for scarce independents against deeper-pocketed strategics that can outbid and pay for synergies. 3) Cohort thinness: n=2, density 0.5, both US and both insurance \u2014 this is not a diversified read of \"Other Vertical SaaS,\" it's a narrow insurance sample; the true long tail (trades, inspection, compliance, field service) is underrepresented in our screen. 4) Private-company verifiability: tier C dominance means financials (margin, churn, recurring mix) are unconfirmed from public web \u2014 the confidence discount is structural, so any go-decision requires management-provided financials. 5) Multiple reset risk: 2024-26 medians came down; overpaying at prior-peak revenue multiples erodes hold-forever cash returns. 6) AI-substitution risk in thin niches \u2014 screen for proprietary workflow/data defensibility, not \"AI wrapper\" exposure.",
+   "sources": [
+    "https://www.mordorintelligence.com/industry-reports/vertical-software-market",
+    "https://softwareequity.com/research/quarterly-saas-report",
+    "https://aventis-advisors.com/saas-valuation-multiples/",
+    "https://www.csisoftware.com/",
+    "https://banyansoftware.com/",
+    "https://www.valsoftcorp.com/",
+    "https://www.ropertech.com/news-releases/news-release-details/roper-technologies-acquire-transact-campus/",
+    "https://www.powerschool.com/bain-capital/",
+    "https://www.cppinvestments.com/newsroom/eqt-and-cpp-investments-to-acquire-neogov-a-provider-of-hr-software-for-us-public-sector-agencies-from-warburg-pincus-and-carlyle/",
+    "https://www.cooley.com/news/coverage/2024/2024-05-23-auditboard-to-be-acquired-by-hg-for-more-than-3-billion"
+   ]
+  }
+ ]
+}

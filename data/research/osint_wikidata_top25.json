@@ -1,0 +1,199 @@
+[
+ {
+  "status": "no-wikidata-entity",
+  "name": "HawkSoft",
+  "domain": "hawksoft.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "Rentec Direct",
+  "domain": "rentecdirect.com"
+ },
+ {
+  "status": "found",
+  "qid": "Q63676934",
+  "match": "website-match",
+  "description": "K-12 education data management software for U.S. schools",
+  "founded": "",
+  "country": "",
+  "employees": "",
+  "owned_by": "Infinite Campus, Inc.",
+  "industry": "",
+  "official_site": "infinitecampus.com",
+  "name": "Infinite Campus",
+  "domain": "infinitecampus.com"
+ },
+ {
+  "status": "found",
+  "qid": "Q100669743",
+  "match": "first-hit",
+  "description": "15 Sep 1719 New London, Connecticut - 30 Jun 1751 New London, Connecticut",
+  "founded": "",
+  "country": "",
+  "employees": "",
+  "owned_by": "",
+  "industry": "",
+  "official_site": "",
+  "name": "Jane App",
+  "domain": "jane.app"
+ },
+ {
+  "status": "found",
+  "qid": "Q7538102",
+  "match": "website-match",
+  "description": "software company",
+  "founded": "1980",
+  "country": "",
+  "employees": "",
+  "owned_by": "",
+  "industry": "",
+  "official_site": "skyward.com",
+  "name": "Skyward",
+  "domain": "skyward.com"
+ },
+ {
+  "status": "found",
+  "qid": "Q134969739",
+  "match": "website-match",
+  "description": "",
+  "founded": "",
+  "country": "",
+  "employees": "",
+  "owned_by": "",
+  "industry": "",
+  "official_site": "classlink.com",
+  "name": "ClassLink",
+  "domain": "classlink.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "Schedulefly",
+  "domain": "schedulefly.com"
+ },
+ {
+  "status": "found",
+  "qid": "Q63676952",
+  "match": "website-match",
+  "description": "US-based student information system",
+  "founded": "1998",
+  "country": "United States",
+  "employees": "",
+  "owned_by": "",
+  "industry": "",
+  "official_site": "edupoint.com",
+  "name": "Edupoint",
+  "domain": "edupoint.com"
+ },
+ {
+  "status": "entity-error: IncompleteRead(0 bytes read)",
+  "name": "Corelation",
+  "domain": "corelationinc.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "OwnerRez",
+  "domain": "ownerrez.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "QT9 Software",
+  "domain": "qt9software.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "Rent Manager / LCS",
+  "domain": "rentmanager.com"
+ },
+ {
+  "status": "search-error: HTTP Error 429: Too Many Requests",
+  "name": "Aeries Software",
+  "domain": "aeries.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "Advyzon",
+  "domain": "advyzon.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "Rediker Software",
+  "domain": "rediker.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "Cetec ERP",
+  "domain": "cetecerp.com"
+ },
+ {
+  "status": "found",
+  "qid": "Q110612747",
+  "match": "website-match",
+  "description": "business management platform and online marketplace for the wellness industry",
+  "founded": "",
+  "country": "",
+  "employees": "",
+  "owned_by": "",
+  "industry": "software industry",
+  "official_site": "vagaro.com",
+  "name": "Vagaro",
+  "domain": "vagaro.com"
+ },
+ {
+  "status": "entity-error: IncompleteRead(0 bytes read)",
+  "name": "Cliniko",
+  "domain": "cliniko.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "Global Shop Solutions",
+  "domain": "globalshopsolutions.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "PayHOA",
+  "domain": "payhoa.com"
+ },
+ {
+  "status": "search-error: HTTP Error 429: Too Many Requests",
+  "name": "Populi",
+  "domain": "populi.co"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "TherapyNotes",
+  "domain": "therapynotes.com"
+ },
+ {
+  "status": "no-wikidata-entity",
+  "name": "Gradelink",
+  "domain": "gradelink.com"
+ },
+ {
+  "status": "found",
+  "qid": "Q7187385",
+  "match": "website-match",
+  "description": "Irish software company",
+  "founded": "2002",
+  "country": "Ireland",
+  "employees": "",
+  "owned_by": "",
+  "industry": "business software",
+  "official_site": "phorest.com",
+  "name": "Phorest",
+  "domain": "phorest.com"
+ },
+ {
+  "status": "found",
+  "qid": "Q135708791",
+  "match": "desc-match",
+  "description": "American technology company",
+  "founded": "",
+  "country": "",
+  "employees": "",
+  "owned_by": "",
+  "industry": "",
+  "official_site": "",
+  "name": "Hebbia",
+  "domain": "hebbia.com"
+ }
+]

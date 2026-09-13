@@ -1,0 +1,40 @@
+The Codex deep web research completed. Returning its findings verbatim.
+
+## Answer
+
+**TherapyNotes snapshot:** TherapyNotes is a Horsham, PA-based vertical SaaS company providing an all-in-one EHR/practice-management system for behavioral health providers. It was launched in 2010 by husband-and-wife founders Brad Pliner, a web/software technologist, and Dr. Debra Pliner, a clinical psychologist. The founding hook is unusually strong for founder outreach: the product was reportedly shaped from Debra's own group practice needs, not from a generic healthcare IT template.
+
+**Product & business model:** TherapyNotes sells subscription SaaS to solo clinicians, group practices, agencies, clinics, and training programs. Core modules include structured clinical notes, scheduling, billing/claims, client portal, secure messaging, telehealth, payments, ePrescribe, outcome measures, AI documentation tools under TherapyFuel, TherapySearch directory profiles, and a mobile app. Published pricing is transparent: solo is **$69/month**, group is **$79/month for the first clinician plus $50/month per additional clinician**, with enterprise starting around 30 users. Add-ons include electronic claims/eligibility/remittance fees, appointment reminders, payment processing, premium telehealth, ePrescribe, and TherapyFuel AI.
+
+**Market position:** The niche is behavioral-health EHR/practice-management software, especially outpatient mental health private practices and small-to-mid-sized groups. TherapyNotes positions itself as a specialist alternative to generic EHRs and a support-heavy alternative to other therapist tools. Public review signal is strong: Trustpilot shows roughly **4.9/5 from 3k+ reviews**, with customer comments heavily emphasizing support. LinkedIn describes it as the "industry-preferred online EHR for behavioral health," and shows **201-500 employees** and **366 LinkedIn-associated employees**. It has also been listed in Newsweek/Statista's "America's Best Online Platforms" for 2025 and 2026.
+
+**Revenue / ARR estimate:** TherapyNotes is private, so no audited revenue is public. Third-party estimates cluster in the **$10M-$25M+ annual revenue** range: LeadIQ estimates **$10M-$25M** as of July 2026, while Startup Intros cites about **$21M**. Given the published pricing, a back-of-envelope ARR model implies that 20k-30k paid clinician seats at roughly $50-$70/month before add-ons would produce about **$12M-$25M ARR**, with claims, reminders, ePrescribe, payments, telehealth, and AI potentially lifting revenue. Treat this as a diligence hypothesis, not a fact.
+
+**Profitability signals:** No EBITDA or profitability figures are public. However, the company appears to have operated for years without disclosed VC/PE capital, has survived multiple product cycles since 2010, and raised prices effective December 2025 while emphasizing continued support and product expansion. That combination suggests at least a credible path to profitability. The offset: 24/7 live support, HIPAA/security compliance, and healthcare integrations can be expensive, so margins should be verified carefully.
+
+**Employee count & trend:** Public sources are inconsistent but point to a few hundred employees: LinkedIn and Indeed both show **201-500**, LinkedIn displays **366 associated employees**, and LeadIQ estimates **351 employees**. Built In shows a lower figure, likely stale or incomplete. Hiring volume visible on Indeed was modest, suggesting steady growth rather than VC-style hypergrowth.
+
+**Ownership & funding history:** Publicly, TherapyNotes is **privately held**. I found no disclosed institutional funding rounds, VC investors, or PE sponsor. Tracxn search snippets indicate no funding rounds, and industry commentary describes TherapyNotes as independently owned/bootstrapped. Best diligence phrasing: **founder/family-origin, apparently bootstrapped or at least not institutionally financed in public records; verify cap table directly.**
+
+**Leadership:** Brad Pliner is co-founder and CEO. Dr. Debra Pliner is co-founder and clinical-product originator. Craft lists Christopher Weniger as COO, though that should be verified in management calls.
+
+**Key competitors:** SimplePractice, TheraNest / Ensora Health, Valant, Tebra/Kareo, Luminello/SimplePractice, TherapyAppointment, CarePaths, TheraPlatform, Jane App, BestNotes, AdvancedMD, DrChrono, Athenahealth, and emerging AI documentation layers like Mentalyc, Upheal, Freed, and other ambient-note tools.
+
+**Moat / defensibility:** The moat is classic vertical SaaS: purpose-built behavioral-health workflows, structured documentation templates, billing/claims integration, embedded payments, compliance/security posture, longitudinal clinical records, switching friction, high-touch support reputation, and expanding adjacencies like TherapySearch and TherapyFuel. The company's independence may itself be a differentiator versus PE-backed competitors if clinicians distrust consolidation.
+
+**Notable risks:** Key risks include AI note-taker commoditization, low-ASP SMB churn, heavy support burden, cybersecurity/HIPAA exposure, dependence on clearinghouses/payment partners, founder/key-person risk, product pressure from PE-backed consolidators, and possible feature gaps for larger practices. One Trustpilot reviewer specifically said TherapyNotes can feel "gold standard" for small/mid-size practices but may need add-ons above roughly 30 clinicians, which is worth testing in enterprise diligence.
+
+**Recent news, last 12-18 months:** TherapyNotes announced a December 2025 price increase; introduced Practice Profiles in TherapySearch in December 2025; launched TherapyNotes Mobile in January 2026; achieved HITRUST AI Security Certification for TherapyFuel in April 2026; and announced another Newsweek "America's Best Online Platforms" recognition in August 2026.
+
+**Founder outreach hooks:** Strong personalization angles include: "built by a psychologist + technologist spouse team," "started from Debra's real practice workflow," "still appears independent while the category has consolidated around PE-backed platforms," "24/7 live support as a cultural differentiator," and "HITRUST AI certification as a trust-first approach to AI in behavioral health."
+
+## Sources
+
+- [TherapyNotes Pricing and Subscription Options](https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options) — Official pricing, plan structure, included features, and add-on monetization.
+- [TherapyNotes LinkedIn Company Profile](https://www.linkedin.com/company/therapynotes-llc) — Company description, headcount range, headquarters, founding year, product positioning, founders, and visible employees.
+- [Indeed: About TherapyNotes](https://www.indeed.com/cmp/Therapynotes/about) — Company origin story, Brad/Debra Pliner background, launch in November 2010, and employee range.
+- [LeadIQ: TherapyNotes Company Overview](https://leadiq.com/c/therapynotes-llc/5a1d9d6a2300005c008d41ea) — Third-party estimates for employees and annual revenue range.
+- [TherapyNotes December 2025 Pricing Update](https://blog.therapynotes.com/therapynotes-2025-pricing-update) — Official pricing increase and 2025 product-enhancement commentary.
+- [TherapyNotes HITRUST AI Security Certification for TherapyFuel](https://blog.therapynotes.com/therapynotes-achieves-hitrust-ai-security-certification-for-therapyfuel) — April 2026 AI/security certification announcement.
+- [TherapyNotes Mobile Launch](https://blog.therapynotes.com/introducing-therapynotes-mobile-your-practice-on-the-go) — January 2026 mobile app announcement.
+- [Trustpilot: TherapyNotes Reviews](https://uk.trustpilot.com/review/therapynotes.com) — Public customer review volume, rating, and qualitative support/product feedback.

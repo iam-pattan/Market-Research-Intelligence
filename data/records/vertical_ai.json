@@ -1,0 +1,1710 @@
+[
+  {
+    "name": "Harvey",
+    "domain": "harvey.ai",
+    "hq_region": "US",
+    "vertical": "Legal AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.7,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 325000000,
+      "below_2M": false,
+      "above_100M": true,
+      "confidence": 0.65,
+      "source": "Codex web search: Sacra/press ~$300-350M ARR"
+    },
+    "niche_leadership": {
+      "score": 0.9,
+      "confidence": 0.7
+    },
+    "retention": {
+      "score": 0.6,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "2026 growth round (Sequoia/GIC); later reports $550M Lightspeed/Diffusion"
+    },
+    "team_stability": {
+      "score": 0.5,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.95,
+      "confidence": 0.65
+    },
+    "hiring_velocity": {
+      "score": 0.9,
+      "confidence": 0.6
+    },
+    "funding_momentum": {
+      "score": 0.95,
+      "confidence": 0.7
+    },
+    "market_size": {
+      "score": 0.9,
+      "confidence": 0.6
+    },
+    "notes": "Category leader in legal AI; ~1,100+ employees; very high funding momentum"
+  },
+  {
+    "name": "Legora",
+    "domain": "legora.com",
+    "hq_region": "Sweden",
+    "vertical": "Legal AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.7,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 125000000,
+      "below_2M": false,
+      "above_100M": true,
+      "confidence": 0.6,
+      "source": "Codex web search: newsroom ~$100-150M ARR"
+    },
+    "niche_leadership": {
+      "score": 0.75,
+      "confidence": 0.6
+    },
+    "retention": {
+      "score": 0.6,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "2026 Series D / growth (Bain, NVentures)"
+    },
+    "team_stability": {
+      "score": 0.5,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.9,
+      "confidence": 0.6
+    },
+    "hiring_velocity": {
+      "score": 0.85,
+      "confidence": 0.5
+    },
+    "funding_momentum": {
+      "score": 0.9,
+      "confidence": 0.65
+    },
+    "market_size": {
+      "score": 0.85,
+      "confidence": 0.55
+    },
+    "notes": "Passed $100M ARR per own newsroom; ~650 employees; European legal AI leader"
+  },
+  {
+    "name": "EvenUp",
+    "domain": "evenuplaw.com",
+    "hq_region": "US",
+    "vertical": "Legal / personal injury",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.65,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 105000000,
+      "below_2M": false,
+      "above_100M": true,
+      "confidence": 0.6,
+      "source": "Codex web search: GetLatka ~$100-110M ARR"
+    },
+    "niche_leadership": {
+      "score": 0.75,
+      "confidence": 0.6
+    },
+    "retention": {
+      "score": 0.6,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "$150M Series E (Bessemer)"
+    },
+    "team_stability": {
+      "score": 0.5,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.85,
+      "confidence": 0.55
+    },
+    "hiring_velocity": {
+      "score": 0.8,
+      "confidence": 0.5
+    },
+    "funding_momentum": {
+      "score": 0.9,
+      "confidence": 0.65
+    },
+    "market_size": {
+      "score": 0.75,
+      "confidence": 0.5
+    },
+    "notes": "Personal-injury legal AI; ~800+ employees"
+  },
+  {
+    "name": "Eudia",
+    "domain": "eudia.com",
+    "hq_region": "US",
+    "vertical": "Corporate legal AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.6,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 10000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: >$10M ARR (Business Insider)"
+    },
+    "niche_leadership": {
+      "score": 0.55,
+      "confidence": 0.5
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "up to $105M Series A (General Catalyst)"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.8,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.7,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.85,
+      "confidence": 0.6
+    },
+    "market_size": {
+      "score": 0.75,
+      "confidence": 0.5
+    },
+    "notes": "Corporate/in-house legal AI; made conditional acquisition of Johnson Hana"
+  },
+  {
+    "name": "Norm Ai",
+    "domain": "norm.ai",
+    "hq_region": "US",
+    "vertical": "Regulatory / compliance AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 17000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.35,
+      "source": "Codex web search: ~$10-25M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.5,
+      "confidence": 0.45
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.6,
+      "type": "vc_backed",
+      "last_funding": "$48M Series B; reports of $120M Series C (Khosla)"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.75,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.65,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.85,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.75,
+      "confidence": 0.5
+    },
+    "notes": "Regulatory compliance AI agents; revenue is estimate"
+  },
+  {
+    "name": "Patlytics",
+    "domain": "patlytics.ai",
+    "hq_region": "US",
+    "vertical": "Patent / IP AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 17000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.35,
+      "source": "Codex web search: ~$10-25M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.5,
+      "confidence": 0.45
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.6,
+      "type": "vc_backed",
+      "last_funding": "$40M Series B (SignalFire)"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.75,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.6,
+      "confidence": 0.35
+    },
+    "funding_momentum": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.65,
+      "confidence": 0.45
+    },
+    "notes": "Patent/IP workflow AI; ~50-100 employees; revenue estimate"
+  },
+  {
+    "name": "Spellbook",
+    "domain": "spellbook.com",
+    "hq_region": "Canada",
+    "vertical": "Contract legal AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.6,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 30000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$20-40M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.6,
+      "confidence": 0.5
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.6,
+      "type": "vc_backed",
+      "last_funding": "$50M Series B (Khosla)"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.8,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.7,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.75,
+      "confidence": 0.5
+    },
+    "notes": "Contract drafting/review AI for transactional lawyers; ~200+ employees"
+  },
+  {
+    "name": "Abridge",
+    "domain": "abridge.com",
+    "hq_region": "US",
+    "vertical": "Clinical documentation AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.7,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 117000000,
+      "below_2M": false,
+      "above_100M": true,
+      "confidence": 0.6,
+      "source": "Codex web search: ~$117M ARR reported"
+    },
+    "niche_leadership": {
+      "score": 0.85,
+      "confidence": 0.65
+    },
+    "retention": {
+      "score": 0.6,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "$300M Series E (a16z/Khosla); ~$5.3B valuation"
+    },
+    "team_stability": {
+      "score": 0.5,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.95,
+      "confidence": 0.6
+    },
+    "hiring_velocity": {
+      "score": 0.9,
+      "confidence": 0.55
+    },
+    "funding_momentum": {
+      "score": 0.95,
+      "confidence": 0.7
+    },
+    "market_size": {
+      "score": 0.9,
+      "confidence": 0.6
+    },
+    "notes": "Leading clinical documentation AI; ~700-900 employees"
+  },
+  {
+    "name": "Hippocratic AI",
+    "domain": "hippocraticai.com",
+    "hq_region": "US",
+    "vertical": "Healthcare agent AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 22000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.35,
+      "source": "Codex web search: ~$15-30M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.6,
+      "confidence": 0.5
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$126M Series C (a16z, General Catalyst, Kleiner Perkins)"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.8,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.75,
+      "confidence": 0.45
+    },
+    "funding_momentum": {
+      "score": 0.9,
+      "confidence": 0.6
+    },
+    "market_size": {
+      "score": 0.9,
+      "confidence": 0.6
+    },
+    "notes": "Patient-facing healthcare agent AI; ~250-400 employees; revenue estimate"
+  },
+  {
+    "name": "Ambience Healthcare",
+    "domain": "ambiencehealthcare.com",
+    "hq_region": "US",
+    "vertical": "Clinical AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 45000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$30-60M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.65,
+      "confidence": 0.5
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "$243M Series C (Oak HC/FT, a16z)"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.85,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.8,
+      "confidence": 0.45
+    },
+    "funding_momentum": {
+      "score": 0.9,
+      "confidence": 0.65
+    },
+    "market_size": {
+      "score": 0.9,
+      "confidence": 0.6
+    },
+    "notes": "Clinical AI platform; ~250-350 employees; revenue estimate"
+  },
+  {
+    "name": "Nabla",
+    "domain": "nabla.com",
+    "hq_region": "France / US",
+    "vertical": "Clinical assistant AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.6,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 27800000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.55,
+      "source": "Codex web search: GetLatka ~$27.8M revenue"
+    },
+    "niche_leadership": {
+      "score": 0.6,
+      "confidence": 0.55
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$70M Series C (HV Capital)"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.8,
+      "confidence": 0.5
+    },
+    "hiring_velocity": {
+      "score": 0.65,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.8,
+      "confidence": 0.6
+    },
+    "market_size": {
+      "score": 0.85,
+      "confidence": 0.55
+    },
+    "notes": "Ambient clinical assistant; <200 employees"
+  },
+  {
+    "name": "Rad AI",
+    "domain": "radai.com",
+    "hq_region": "US",
+    "vertical": "Radiology workflow AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 37000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$25-50M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.65,
+      "confidence": 0.55
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$60M Series C (Transformation Capital) + $8M extension"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.8,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.7,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.8,
+      "confidence": 0.6
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "Radiology reporting/workflow AI; ~200-300 employees; revenue estimate"
+  },
+  {
+    "name": "Tennr",
+    "domain": "tennr.com",
+    "hq_region": "US",
+    "vertical": "Healthcare referrals AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 35000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$20-50M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.6,
+      "confidence": 0.5
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "$101M Series C (IVP)"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.85,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.8,
+      "confidence": 0.45
+    },
+    "funding_momentum": {
+      "score": 0.9,
+      "confidence": 0.65
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "Automates healthcare referrals/faxes; ~150-250 employees; revenue estimate"
+  },
+  {
+    "name": "Freed",
+    "domain": "getfreed.ai",
+    "hq_region": "US",
+    "vertical": "Medical scribe AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.6,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 19000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.55,
+      "source": "Codex web search: Sacra ~$19M ARR"
+    },
+    "niche_leadership": {
+      "score": 0.6,
+      "confidence": 0.55
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$30M Series A (Sequoia)"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.85,
+      "confidence": 0.5
+    },
+    "hiring_velocity": {
+      "score": 0.7,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.75,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "AI medical scribe for clinicians; ~75-125 employees"
+  },
+  {
+    "name": "Rogo",
+    "domain": "rogo.com",
+    "hq_region": "US",
+    "vertical": "Finance / investment banking AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.6,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 75000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$50-100M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.7,
+      "confidence": 0.55
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "$160M Series D (Kleiner Perkins); strategic bank investors"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.9,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.85,
+      "confidence": 0.5
+    },
+    "funding_momentum": {
+      "score": 0.95,
+      "confidence": 0.65
+    },
+    "market_size": {
+      "score": 0.85,
+      "confidence": 0.55
+    },
+    "notes": "AI for investment banking/finance analysts; ~300-500 employees; revenue estimate"
+  },
+  {
+    "name": "Hebbia",
+    "domain": "hebbia.com",
+    "hq_region": "US",
+    "vertical": "Finance / legal document AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.6,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.6,
+      "confidence": 0.4,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 13000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.5,
+      "source": "Codex web search: TechCrunch ~$13M+ profitable revenue (2024, likely higher now)"
+    },
+    "niche_leadership": {
+      "score": 0.65,
+      "confidence": 0.55
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$130M Series B (a16z)"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.8,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.6,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.8,
+      "confidence": 0.6
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.5
+    },
+    "notes": "Reported profitable revenue in 2024 (loss_evidence false); document AI for finance/legal; ~100-200 employees"
+  },
+  {
+    "name": "AlphaSense",
+    "domain": "alpha-sense.com",
+    "hq_region": "US",
+    "vertical": "Market intelligence AI",
+    "is_vertical_niche": 0,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.7,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.4,
+      "confidence": 0.3,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 600000000,
+      "below_2M": false,
+      "above_100M": true,
+      "confidence": 0.6,
+      "source": "Codex web search: >$600M ARR reported"
+    },
+    "niche_leadership": {
+      "score": 0.8,
+      "confidence": 0.7
+    },
+    "retention": {
+      "score": 0.7,
+      "confidence": 0.35
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.75,
+      "type": "vc_backed",
+      "last_funding": "$350M round (Vitruvian) at $7.5B valuation"
+    },
+    "team_stability": {
+      "score": 0.6,
+      "confidence": 0.35
+    },
+    "revenue_growth": {
+      "score": 0.85,
+      "confidence": 0.6
+    },
+    "hiring_velocity": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "funding_momentum": {
+      "score": 0.9,
+      "confidence": 0.65
+    },
+    "market_size": {
+      "score": 0.85,
+      "confidence": 0.6
+    },
+    "notes": "Market intelligence platform; ~2,000+ employees; more horizontal/broad but finance-oriented"
+  },
+  {
+    "name": "Zest AI",
+    "domain": "zest.ai",
+    "hq_region": "US",
+    "vertical": "Credit underwriting AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.35,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 60000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$40-80M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.65,
+      "confidence": 0.55
+    },
+    "retention": {
+      "score": 0.6,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.55,
+      "type": "vc_backed",
+      "last_funding": "Strategic customer investment; prior Insight backing"
+    },
+    "team_stability": {
+      "score": 0.5,
+      "confidence": 0.35
+    },
+    "revenue_growth": {
+      "score": 0.6,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.4,
+      "confidence": 0.35
+    },
+    "funding_momentum": {
+      "score": 0.55,
+      "confidence": 0.45
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "Established credit underwriting AI; ~113 employees; slower hiring/funding momentum than newer entrants"
+  },
+  {
+    "name": "Gradient AI",
+    "domain": "gradientai.com",
+    "hq_region": "US",
+    "vertical": "Insurance underwriting AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.6,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.35,
+      "confidence": 0.3,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 12800000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.55,
+      "source": "Codex web search: GetLatka ~$12.8M ARR"
+    },
+    "niche_leadership": {
+      "score": 0.6,
+      "confidence": 0.55
+    },
+    "retention": {
+      "score": 0.6,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$56.1M Series C (Centana, MassMutual, Sandbox)"
+    },
+    "team_stability": {
+      "score": 0.5,
+      "confidence": 0.35
+    },
+    "revenue_growth": {
+      "score": 0.7,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.55,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.7,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "Insurance underwriting/claims AI; ~116 employees"
+  },
+  {
+    "name": "Sixfold",
+    "domain": "sixfold.ai",
+    "hq_region": "US",
+    "vertical": "Insurance underwriting AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 10000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.35,
+      "source": "Codex web search: ~$5-15M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.5,
+      "confidence": 0.45
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.6,
+      "type": "vc_backed",
+      "last_funding": "$30M Series B (Brewer Lane); Guidewire strategic"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.7,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.55,
+      "confidence": 0.35
+    },
+    "funding_momentum": {
+      "score": 0.75,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "Generative AI for insurance underwriting; ~75-125 employees; revenue estimate"
+  },
+  {
+    "name": "Buildots",
+    "domain": "buildots.com",
+    "hq_region": "Israel / UK",
+    "vertical": "Construction progress AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 30000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$20-40M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.65,
+      "confidence": 0.55
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$45M Series D (Qumra Capital)"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.75,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.65,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.75,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "Construction site progress tracking AI; ~230+ employees; revenue estimate"
+  },
+  {
+    "name": "Trunk Tools",
+    "domain": "trunktools.com",
+    "hq_region": "US",
+    "vertical": "Construction AI agents",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 17000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.35,
+      "source": "Codex web search: ~$10-25M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.55,
+      "confidence": 0.45
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$40M Series B (Insight Partners)"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.8,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.7,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "Construction AI agents; subscription/outcome-based pricing; ~60 employees; revenue estimate"
+  },
+  {
+    "name": "Document Crunch",
+    "domain": "documentcrunch.com",
+    "hq_region": "US",
+    "vertical": "Construction legal/risk AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 17000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.35,
+      "source": "Codex web search: ~$10-25M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.55,
+      "confidence": 0.45
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.6,
+      "type": "vc_backed",
+      "last_funding": "$21.5M Series B (Titanium Ventures)"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.75,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.6,
+      "confidence": 0.35
+    },
+    "funding_momentum": {
+      "score": 0.7,
+      "confidence": 0.5
+    },
+    "market_size": {
+      "score": 0.75,
+      "confidence": 0.5
+    },
+    "notes": "Construction contract risk/compliance AI; ~75-150 employees; revenue estimate"
+  },
+  {
+    "name": "PermitFlow",
+    "domain": "permitflow.com",
+    "hq_region": "US",
+    "vertical": "Construction permitting AI",
+    "is_vertical_niche": 1,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 22000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$15-30M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.6,
+      "confidence": 0.5
+    },
+    "retention": {
+      "score": 0.5,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.65,
+      "type": "vc_backed",
+      "last_funding": "$54M Series B (Accel)"
+    },
+    "team_stability": {
+      "score": 0.4,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.8,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.7,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.75,
+      "confidence": 0.5
+    },
+    "notes": "Construction permitting automation AI; ~100-200 employees; revenue estimate"
+  },
+  {
+    "name": "Clay",
+    "domain": "clay.com",
+    "hq_region": "US",
+    "vertical": "AI GTM / sales data",
+    "is_vertical_niche": 0,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.65,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.35,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 100000000,
+      "below_2M": false,
+      "above_100M": true,
+      "confidence": 0.5,
+      "source": "Codex web search: ~$100M ARR reported"
+    },
+    "niche_leadership": {
+      "score": 0.75,
+      "confidence": 0.6
+    },
+    "retention": {
+      "score": 0.65,
+      "confidence": 0.35
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "$100M Series C (CapitalG); later 2026 Series D reports"
+    },
+    "team_stability": {
+      "score": 0.5,
+      "confidence": 0.35
+    },
+    "revenue_growth": {
+      "score": 0.95,
+      "confidence": 0.55
+    },
+    "hiring_velocity": {
+      "score": 0.9,
+      "confidence": 0.55
+    },
+    "funding_momentum": {
+      "score": 0.9,
+      "confidence": 0.65
+    },
+    "market_size": {
+      "score": 0.85,
+      "confidence": 0.55
+    },
+    "notes": "GTM/sales data enrichment platform; more horizontal; ~500-700 employees"
+  },
+  {
+    "name": "Sierra",
+    "domain": "sierra.ai",
+    "hq_region": "US",
+    "vertical": "Customer service AI agents",
+    "is_vertical_niche": 0,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.65,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.35,
+      "confidence": 0.25,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 200000000,
+      "below_2M": false,
+      "above_100M": true,
+      "confidence": 0.5,
+      "source": "Codex web search: Sacra ~$200M ARR"
+    },
+    "niche_leadership": {
+      "score": 0.7,
+      "confidence": 0.6
+    },
+    "retention": {
+      "score": 0.6,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "$950M round (Tiger Global/GV); ~$15.8B valuation"
+    },
+    "team_stability": {
+      "score": 0.5,
+      "confidence": 0.35
+    },
+    "revenue_growth": {
+      "score": 0.95,
+      "confidence": 0.55
+    },
+    "hiring_velocity": {
+      "score": 0.9,
+      "confidence": 0.55
+    },
+    "funding_momentum": {
+      "score": 0.95,
+      "confidence": 0.7
+    },
+    "market_size": {
+      "score": 0.85,
+      "confidence": 0.55
+    },
+    "notes": "Customer service AI agents; usage/outcome-based pricing; horizontal; ~1,000+ employees"
+  },
+  {
+    "name": "Decagon",
+    "domain": "decagon.ai",
+    "hq_region": "US",
+    "vertical": "Customer support AI agents",
+    "is_vertical_niche": 0,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.6,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 75000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.4,
+      "source": "Codex web search: ~$50-100M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.6,
+      "confidence": 0.5
+    },
+    "retention": {
+      "score": 0.55,
+      "confidence": 0.3
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.7,
+      "type": "vc_backed",
+      "last_funding": "$131M Series C at $1.5B valuation; later Series D reports"
+    },
+    "team_stability": {
+      "score": 0.45,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.9,
+      "confidence": 0.45
+    },
+    "hiring_velocity": {
+      "score": 0.85,
+      "confidence": 0.5
+    },
+    "funding_momentum": {
+      "score": 0.9,
+      "confidence": 0.65
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "Customer support AI agents; horizontal; ~300-500 employees; revenue estimate"
+  },
+  {
+    "name": "11x",
+    "domain": "11x.ai",
+    "hq_region": "US / UK",
+    "vertical": "AI SDR / sales agents",
+    "is_vertical_niche": 0,
+    "already_acquired_or_public": false,
+    "recurring_revenue": {
+      "score": 0.9,
+      "confidence": 0.55,
+      "source": "Codex web search: pricing reported as subscription/recurring"
+    },
+    "profitability": {
+      "score": 0.3,
+      "confidence": 0.2,
+      "loss_evidence": false,
+      "source": "Codex web search"
+    },
+    "revenue_est_usd": {
+      "value": 17000000,
+      "below_2M": false,
+      "above_100M": false,
+      "confidence": 0.35,
+      "source": "Codex web search: ~$10-25M estimate"
+    },
+    "niche_leadership": {
+      "score": 0.5,
+      "confidence": 0.45
+    },
+    "retention": {
+      "score": 0.45,
+      "confidence": 0.25
+    },
+    "ownership_fit": {
+      "score": 0.8,
+      "confidence": 0.6,
+      "type": "vc_backed",
+      "last_funding": "$50M Series B (a16z)"
+    },
+    "team_stability": {
+      "score": 0.35,
+      "confidence": 0.3
+    },
+    "revenue_growth": {
+      "score": 0.75,
+      "confidence": 0.4
+    },
+    "hiring_velocity": {
+      "score": 0.7,
+      "confidence": 0.4
+    },
+    "funding_momentum": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "market_size": {
+      "score": 0.8,
+      "confidence": 0.55
+    },
+    "notes": "AI SDR/sales development agents; horizontal; ~100-200 employees; revenue estimate"
+  }
+]

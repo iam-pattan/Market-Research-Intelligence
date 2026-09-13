@@ -1,0 +1,252 @@
+[
+ {
+  "name": "HawkSoft",
+  "domain": "hawksoft.com",
+  "vertical": "Insurance agency management",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.631,
+  "growth_adj": 0.44,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Rentec Direct",
+  "domain": "rentecdirect.com",
+  "vertical": "Property management software",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.613,
+  "growth_adj": 0.406,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Infinite Campus",
+  "domain": "infinitecampus.com",
+  "vertical": "K-12 student information system / district administration",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.607,
+  "growth_adj": 0.457,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Jane App",
+  "domain": "jane.app",
+  "vertical": "Health/wellness practice management",
+  "region": "Canada",
+  "best": "banyan",
+  "banyan_adj": 0.6,
+  "growth_adj": 0.555,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Skyward",
+  "domain": "skyward.com",
+  "vertical": "K-12 SIS / school ERP",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.6,
+  "growth_adj": 0.441,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "ClassLink",
+  "domain": "classlink.com",
+  "vertical": "K-12 identity / single sign-on / rostering",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.597,
+  "growth_adj": 0.468,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Schedulefly",
+  "domain": "schedulefly.com",
+  "vertical": "Restaurant scheduling",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.595,
+  "growth_adj": 0.354,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Edupoint",
+  "domain": "edupoint.com",
+  "vertical": "K-12 SIS / LMS / administration (Synergy)",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.593,
+  "growth_adj": 0.449,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Corelation",
+  "domain": "corelationinc.com",
+  "vertical": "Credit-union core banking",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.589,
+  "growth_adj": 0.465,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "OwnerRez",
+  "domain": "ownerrez.com",
+  "vertical": "Short-term rental PMS",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.586,
+  "growth_adj": 0.386,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "QT9 Software",
+  "domain": "qt9software.com",
+  "vertical": "QMS + ERP for regulated manufacturers",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.581,
+  "growth_adj": 0.433,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Rent Manager / LCS",
+  "domain": "rentmanager.com",
+  "vertical": "Property management software",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.581,
+  "growth_adj": 0.431,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Aeries Software",
+  "domain": "aeries.com",
+  "vertical": "K-12 student information system",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.572,
+  "growth_adj": 0.423,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Advyzon",
+  "domain": "advyzon.com",
+  "vertical": "Wealth/advisor all-in-one platform",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.572,
+  "growth_adj": 0.438,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Rediker Software",
+  "domain": "rediker.com",
+  "vertical": "School administration / SIS",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.569,
+  "growth_adj": 0.397,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Cetec ERP",
+  "domain": "cetecerp.com",
+  "vertical": "Manufacturing ERP/MRP/QMS",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.566,
+  "growth_adj": 0.427,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Vagaro",
+  "domain": "vagaro.com",
+  "vertical": "Beauty/wellness SaaS",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.56,
+  "growth_adj": 0.531,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Cliniko",
+  "domain": "cliniko.com",
+  "vertical": "Allied-health practice management",
+  "region": "Australia",
+  "best": "banyan",
+  "banyan_adj": 0.558,
+  "growth_adj": 0.375,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Global Shop Solutions",
+  "domain": "globalshopsolutions.com",
+  "vertical": "Manufacturing ERP",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.558,
+  "growth_adj": 0.409,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "PayHOA",
+  "domain": "payhoa.com",
+  "vertical": "HOA/community management software",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.556,
+  "growth_adj": 0.53,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Populi",
+  "domain": "populi.co",
+  "vertical": "Higher-ed SIS / LMS (small colleges)",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.554,
+  "growth_adj": 0.394,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "TherapyNotes",
+  "domain": "therapynotes.com",
+  "vertical": "Behavioral-health EHR",
+  "region": "United States",
+  "best": "banyan",
+  "banyan_adj": 0.554,
+  "growth_adj": 0.505,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Gradelink",
+  "domain": "gradelink.com",
+  "vertical": "K-12 SIS / school administration",
+  "region": "US",
+  "best": "banyan",
+  "banyan_adj": 0.551,
+  "growth_adj": 0.4,
+  "banyan_tier": "B"
+ },
+ {
+  "name": "Phorest",
+  "domain": "phorest.com",
+  "vertical": "Salon/spa management",
+  "region": "Ireland",
+  "best": "banyan",
+  "banyan_adj": 0.55,
+  "growth_adj": 0.531,
+  "banyan_tier": "C"
+ },
+ {
+  "name": "Hebbia",
+  "domain": "hebbia.com",
+  "vertical": "Finance / legal document AI",
+  "region": "US",
+  "best": "growth",
+  "banyan_adj": 0.549,
+  "growth_adj": 0.582,
+  "banyan_tier": "C"
+ }
+]

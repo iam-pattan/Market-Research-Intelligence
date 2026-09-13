@@ -1,0 +1,227 @@
+[
+{
+"name": "Harvey",
+"domain": "harvey.ai",
+"vertical": "Legal AI",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.525,
+"growth_adj": 0.743
+},
+{
+"name": "Abridge",
+"domain": "abridge.com",
+"vertical": "Clinical documentation AI",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.513,
+"growth_adj": 0.729
+},
+{
+"name": "Sierra",
+"domain": "sierra.ai",
+"vertical": "Customer service AI agents",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.425,
+"growth_adj": 0.695
+},
+{
+"name": "ClickHouse",
+"domain": "clickhouse.com",
+"vertical": "Data infrastructure / OLAP database",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.448,
+"growth_adj": 0.694
+},
+{
+"name": "Clay",
+"domain": "clay.com",
+"vertical": "AI GTM / sales data",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.433,
+"growth_adj": 0.693
+},
+{
+"name": "AlphaSense",
+"domain": "alpha-sense.com",
+"vertical": "Market intelligence AI",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.468,
+"growth_adj": 0.689
+},
+{
+"name": "Legora",
+"domain": "legora.com",
+"vertical": "Legal AI",
+"region": "Sweden",
+"best": "growth",
+"banyan_adj": 0.492,
+"growth_adj": 0.684
+},
+{
+"name": "Chainguard",
+"domain": "chainguard.dev",
+"vertical": "Software supply-chain security",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.519,
+"growth_adj": 0.669
+},
+{
+"name": "Vanta",
+"domain": "vanta.com",
+"vertical": "Security & compliance automation",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.432,
+"growth_adj": 0.667
+},
+{
+"name": "Grafana Labs",
+"domain": "grafana.com",
+"vertical": "Observability / monitoring",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.462,
+"growth_adj": 0.665
+},
+{
+"name": "Linear",
+"domain": "linear.app",
+"vertical": "Developer workflow / issue tracking",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.518,
+"growth_adj": 0.656
+},
+{
+"name": "Rogo",
+"domain": "rogo.com",
+"vertical": "Finance / investment banking AI",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.495,
+"growth_adj": 0.656
+},
+{
+"name": "EvenUp",
+"domain": "evenuplaw.com",
+"vertical": "Legal / personal injury",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.49,
+"growth_adj": 0.646
+},
+{
+"name": "Modal",
+"domain": "modal.com",
+"vertical": "AI/ML infrastructure / serverless compute",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.429,
+"growth_adj": 0.645
+},
+{
+"name": "Decagon",
+"domain": "decagon.ai",
+"vertical": "Customer support AI agents",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.427,
+"growth_adj": 0.636
+},
+{
+"name": "Ambience Healthcare",
+"domain": "ambiencehealthcare.com",
+"vertical": "Clinical AI",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.48,
+"growth_adj": 0.634
+},
+{
+"name": "HawkSoft",
+"domain": "hawksoft.com",
+"vertical": "Insurance agency management",
+"region": "US",
+"best": "banyan",
+"banyan_adj": 0.631,
+"growth_adj": 0.44
+},
+{
+"name": "Tennr",
+"domain": "tennr.com",
+"vertical": "Healthcare referrals AI",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.468,
+"growth_adj": 0.613
+},
+{
+"name": "Rentec Direct",
+"domain": "rentecdirect.com",
+"vertical": "Property management software",
+"region": "US",
+"best": "banyan",
+"banyan_adj": 0.613,
+"growth_adj": 0.406
+},
+{
+"name": "Aikido Security",
+"domain": "aikido.dev",
+"vertical": "Security / unified AppSec platform (SMB-focused)",
+"region": "Belgium",
+"best": "growth",
+"banyan_adj": 0.469,
+"growth_adj": 0.611
+},
+{
+"name": "LangChain",
+"domain": "langchain.com",
+"vertical": "AI/ML infrastructure / LLM orchestration",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.46,
+"growth_adj": 0.609
+},
+{
+"name": "Infinite Campus",
+"domain": "infinitecampus.com",
+"vertical": "K-12 student information system / district administration",
+"region": "US",
+"best": "banyan",
+"banyan_adj": 0.607,
+"growth_adj": 0.457
+},
+{
+"name": "Hippocratic AI",
+"domain": "hippocraticai.com",
+"vertical": "Healthcare agent AI",
+"region": "US",
+"best": "growth",
+"banyan_adj": 0.464,
+"growth_adj": 0.606
+},
+{
+"name": "Tailscale",
+"domain": "tailscale.com",
+"vertical": "Networking / security infrastructure (WireGuard VPN)",
+"region": "Canada",
+"best": "growth",
+"banyan_adj": 0.53,
+"growth_adj": 0.606
+},
+{
+"name": "Aiven",
+"domain": "aiven.io",
+"vertical": "Managed open-source data infrastructure",
+"region": "Finland",
+"best": "growth",
+"banyan_adj": 0.41,
+"growth_adj": 0.605
+}
+]

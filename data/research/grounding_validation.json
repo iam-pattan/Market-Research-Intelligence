@@ -1,0 +1,219 @@
+{
+ "overall_rate": 0.986,
+ "total_facts": 415,
+ "grounded": 409,
+ "per_lead": [
+  {
+   "name": "Rent Manager / LCS",
+   "checks": 11,
+   "grounded": 10,
+   "rate": 0.91,
+   "has_research": true,
+   "missing": [
+    "names:Rent Manager Company"
+   ]
+  },
+  {
+   "name": "Corelation",
+   "checks": 12,
+   "grounded": 11,
+   "rate": 0.92,
+   "has_research": true,
+   "missing": [
+    "monies:$100M"
+   ]
+  },
+  {
+   "name": "Advyzon",
+   "checks": 13,
+   "grounded": 12,
+   "rate": 0.92,
+   "has_research": true,
+   "missing": [
+    "monies:$100M"
+   ]
+  },
+  {
+   "name": "Cliniko",
+   "checks": 15,
+   "grounded": 14,
+   "rate": 0.93,
+   "has_research": true,
+   "missing": [
+    "names:The September"
+   ]
+  },
+  {
+   "name": "Schedulefly",
+   "checks": 20,
+   "grounded": 19,
+   "rate": 0.95,
+   "has_research": true,
+   "missing": [
+    "names:Schedulefly Pricing"
+   ]
+  },
+  {
+   "name": "Edupoint",
+   "checks": 20,
+   "grounded": 19,
+   "rate": 0.95,
+   "has_research": true,
+   "missing": [
+    "names:Flagship Synergy Education"
+   ]
+  },
+  {
+   "name": "HawkSoft",
+   "checks": 14,
+   "grounded": 14,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Rentec Direct",
+   "checks": 9,
+   "grounded": 9,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Infinite Campus",
+   "checks": 13,
+   "grounded": 13,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Jane App",
+   "checks": 18,
+   "grounded": 18,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Skyward",
+   "checks": 27,
+   "grounded": 27,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "ClassLink",
+   "checks": 27,
+   "grounded": 27,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "OwnerRez",
+   "checks": 14,
+   "grounded": 14,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "QT9 Software",
+   "checks": 16,
+   "grounded": 16,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Aeries Software",
+   "checks": 22,
+   "grounded": 22,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Rediker Software",
+   "checks": 9,
+   "grounded": 9,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Cetec ERP",
+   "checks": 17,
+   "grounded": 17,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Vagaro",
+   "checks": 23,
+   "grounded": 23,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Global Shop Solutions",
+   "checks": 9,
+   "grounded": 9,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "PayHOA",
+   "checks": 17,
+   "grounded": 17,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Populi",
+   "checks": 13,
+   "grounded": 13,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "TherapyNotes",
+   "checks": 12,
+   "grounded": 12,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Gradelink",
+   "checks": 15,
+   "grounded": 15,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Phorest",
+   "checks": 28,
+   "grounded": 28,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  },
+  {
+   "name": "Hebbia",
+   "checks": 21,
+   "grounded": 21,
+   "rate": 1.0,
+   "has_research": true,
+   "missing": []
+  }
+ ]
+}
