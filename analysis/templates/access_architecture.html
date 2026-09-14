@@ -1,0 +1,399 @@
+<meta charset="utf-8">
+<title>Layered Data Access Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f4f5f8; --surface:#ffffff; --surface-2:#eceef5; --ink:#161a24; --ink-2:#565c6b; --muted:#8b91a0;
+  --line:#dfe2ea; --line-strong:#c6cad6; --accent:#3646a8; --accent-ink:#ffffff; --accent-soft:#e2e5f7;
+  --t0:#cde2fb; --t1:#9ec5f4; --t2:#5598e7; --t3:#2a78d6; --t4:#184f95; --t-ink-light:#0b2a4d; --t-ink-dark:#ffffff;
+  --good:#0ca30c; --good-text:#006300; --warn:#fab219; --warn-text:#7a5200; --crit:#d03b3b; --crit-text:#a32222;
+  --display:'Manrope',system-ui,sans-serif; --body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --bg:#0f1116; --surface:#171a22; --surface-2:#1f2330; --ink:#eceef4; --ink-2:#aab0be; --muted:#7c8393;
+  --line:#2a2f3c; --line-strong:#3b4150; --accent:#8f9cf0; --accent-ink:#0f1116; --accent-soft:#232848;
+  --t0:#1c3352; --t1:#1f4a7c; --t2:#2a6bb5; --t3:#3987e5; --t4:#86b6ef; --t-ink-light:#ffffff; --t-ink-dark:#0b2a4d;
+  --good:#0ca30c; --good-text:#5fd668; --warn:#fab219; --warn-text:#f2c35a; --crit:#e05a5a; --crit-text:#ff8a8a; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0f1116; --surface:#171a22; --surface-2:#1f2330; --ink:#eceef4; --ink-2:#aab0be; --muted:#7c8393;
+  --line:#2a2f3c; --line-strong:#3b4150; --accent:#8f9cf0; --accent-ink:#0f1116; --accent-soft:#232848;
+  --t0:#1c3352; --t1:#1f4a7c; --t2:#2a6bb5; --t3:#3987e5; --t4:#86b6ef; --t-ink-light:#ffffff; --t-ink-dark:#0b2a4d;
+  --good:#0ca30c; --good-text:#5fd668; --warn:#fab219; --warn-text:#f2c35a; --crit:#e05a5a; --crit-text:#ff8a8a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:14.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.2}
+h2{font-size:22px;font-weight:700;letter-spacing:-.01em}
+h3{font-size:15px;font-weight:700}
+p{margin:0}
+code,.mono{font-family:var(--mono);font-size:12.5px}
+code{background:var(--surface-2);padding:1px 5px;border-radius:4px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px 64px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px}
+aside.nav{position:sticky;top:0;align-self:start;padding-top:40px;height:100vh;overflow:auto}
+aside.nav .brand{font-family:var(--display);font-weight:800;font-size:15px;margin-bottom:18px;line-height:1.25}
+aside.nav a{display:block;padding:5px 0;font-size:13px;color:var(--ink-2);text-decoration:none;border-left:2px solid transparent;padding-left:10px;margin-left:-12px}
+aside.nav a.on,aside.nav a:hover{color:var(--ink);border-left-color:var(--accent)}
+main{padding-top:40px;min-width:0}
+section{margin-bottom:56px;scroll-margin-top:24px}
+section>h2{margin-bottom:6px}
+section>.lede{color:var(--ink-2);max-width:70ch;margin-bottom:20px}
+.prose{max-width:70ch}
+.prose p{margin-bottom:12px}
+.prose ul,.prose ol{margin:0 0 12px;padding-left:22px}
+.prose li{margin-bottom:6px}
+
+/* hero */
+.hero{margin-bottom:48px}
+.hero h1{font-size:36px;font-weight:800;letter-spacing:-.02em;margin:8px 0 14px;max-width:20ch}
+.hero .q{font-size:17px;color:var(--ink-2);max-width:62ch}
+.answer{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.answer .a{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.answer .a .k{font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.answer .a.yes .k{color:var(--good-text)}
+.answer .a.no .k{color:var(--crit-text)}
+.answer .a p{font-size:13.5px;color:var(--ink-2)}
+.answer .a p b{color:var(--ink)}
+
+/* layers diagram */
+.layers{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.layer{display:grid;grid-template-columns:64px minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr);gap:18px;padding:16px 18px;border-top:1px solid var(--line);align-items:start}
+.layer:first-child{border-top:0}
+.layer.pep{background:var(--accent-soft)}
+.layer .no{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px}
+.layer .no b{display:block;font-size:20px;color:var(--accent);font-weight:500;line-height:1}
+.layer h3{margin-bottom:4px}
+.layer .what{font-size:13.5px;color:var(--ink-2)}
+.layer .col h4{font-family:var(--body);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.layer .col p{font-size:13px}
+.layer .col p+p{margin-top:4px}
+.layer .col .miss{color:var(--warn-text)}
+.layer .col .have{color:var(--good-text)}
+.arrowline{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);padding:10px 18px;font-family:var(--mono)}
+.arrowline i{flex:1;height:1px;background:var(--line-strong)}
+
+/* tiers */
+.tiers{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-bottom:16px}
+.tier{border-radius:8px;padding:12px 12px 10px;min-height:120px;display:flex;flex-direction:column;gap:4px}
+.tier .lv{font-family:var(--mono);font-size:11px;opacity:.85}
+.tier .nm{font-family:var(--display);font-weight:800;font-size:13px;line-height:1.25}
+.tier .rg{font-size:11.5px;opacity:.9;margin-top:auto}
+.tier.l0{background:var(--t0);color:var(--t-ink-light)} .tier.l1{background:var(--t1);color:var(--t-ink-light)} .tier.l2{background:var(--t2);color:var(--t-ink-dark)} .tier.l3{background:var(--t3);color:var(--t-ink-dark)} .tier.l4{background:var(--t4);color:var(--t-ink-dark)}
+table.grid{width:100%;border-collapse:collapse;font-size:13px;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+table.grid th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);padding:10px 12px;border-bottom:1px solid var(--line);background:var(--surface);white-space:nowrap}
+table.grid td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+table.grid tr:last-child td{border-bottom:0}
+table.grid td.mono{font-size:12px}
+.tw{overflow-x:auto;border-radius:10px}
+.pat{display:flex;flex-wrap:wrap;gap:4px}
+.pat span{font-family:var(--mono);font-size:11px;background:var(--surface-2);padding:1px 6px;border-radius:4px}
+
+/* matrix */
+.cell{display:inline-block;width:22px;height:22px;border-radius:5px;text-align:center;line-height:22px;font-family:var(--mono);font-size:11px;font-weight:500}
+.cell.full{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good-text)}
+.cell.mask{background:color-mix(in srgb,var(--warn) 24%,transparent);color:var(--warn-text)}
+.cell.deny{background:color-mix(in srgb,var(--crit) 12%,transparent);color:var(--crit-text)}
+.cell.agg{background:var(--accent-soft);color:var(--accent)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);margin-top:10px;align-items:center}
+.legend .cell{margin-right:4px}
+.grp{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:14px!important}
+
+/* lens */
+.lens{display:grid;grid-template-columns:260px minmax(0,1fr);gap:22px;align-items:start}
+.lens .pick{display:grid;gap:6px;position:sticky;top:24px}
+.lens .pick h4{font-family:var(--body);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:10px 0 2px}
+.lens .pick button{text-align:left;border:1px solid var(--line-strong);background:var(--surface);border-radius:7px;padding:7px 10px;font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--ink)}
+.lens .pick button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.lens-out{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.lens-out .hd{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.lens-out .hd .role{font-family:var(--mono);font-size:15px}
+.lens-out .flags{display:flex;gap:8px;flex-wrap:wrap}
+.flag{display:inline-flex;gap:6px;align-items:center;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600}
+.flag.ok{background:color-mix(in srgb,var(--good) 14%,transparent);color:var(--good-text)}
+.flag.no{background:color-mix(in srgb,var(--crit) 12%,transparent);color:var(--crit-text)}
+.flag.wn{background:color-mix(in srgb,var(--warn) 22%,transparent);color:var(--warn-text)}
+.fields{display:grid;gap:4px}
+.frow{display:grid;grid-template-columns:170px 150px 96px minmax(0,1fr);gap:12px;align-items:center;padding:7px 10px;border-radius:6px;font-size:13px}
+.frow.h{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-bottom:2px}
+.frow.dropped{opacity:.55;text-decoration:line-through;text-decoration-color:var(--crit)}
+.frow.dropped .st{text-decoration:none}
+.frow .fn{font-family:var(--mono);font-size:12px}
+.frow .tb{font-family:var(--mono);font-size:10.5px;padding:2px 6px;border-radius:4px;display:inline-block}
+.frow .val{font-family:var(--mono);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.st{font-size:12px;font-weight:600;display:inline-flex;gap:5px;align-items:center}
+.st.shown{color:var(--good-text)} .st.masked{color:var(--warn-text)} .st.dropped,.st.withheld{color:var(--crit-text)}
+.st::before{font-family:var(--mono);font-weight:500}
+.st.shown::before{content:"✓"} .st.masked::before{content:"◐"} .st.dropped::before{content:"✕"} .st.withheld::before{content:"⊘"}
+.frow.withheld{opacity:.65}
+.lens-note{font-size:12.5px;color:var(--ink-2);margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+
+/* claude paths */
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.path{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:8px;align-content:start}
+.path h3{font-size:15px}
+.path .flow{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);background:var(--surface-2);border-radius:6px;padding:8px 10px;line-height:1.6}
+.path p{font-size:13.5px}
+.path .verdict{font-size:12.5px;font-weight:600}
+.twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.box h3{margin-bottom:8px}
+.box ul{margin:0;padding-left:20px;font-size:13.5px}
+.box li{margin-bottom:6px}
+.box.need{border-color:color-mix(in srgb,var(--good) 40%,var(--line))}
+.box.not{border-color:color-mix(in srgb,var(--crit) 40%,var(--line))}
+.box.need h3{color:var(--good-text)} .box.not h3{color:var(--crit-text)}
+
+/* threats */
+.threats{display:grid;gap:10px}
+.threat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:13.5px}
+.threat .t{font-weight:600}
+.threat .t small{display:block;font-weight:400;color:var(--ink-2);margin-top:3px}
+.threat .c{color:var(--ink-2)}
+.threat .c b{color:var(--ink)}
+
+/* governance */
+.gov{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.gov .box p{font-size:13.5px;color:var(--ink-2)}
+.rt{display:grid;gap:8px;margin-top:14px}
+.rt .f{display:grid;grid-template-columns:70px 1fr;gap:12px;font-size:13.5px;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.rt .f .sev{font-family:var(--mono);font-size:11px;color:var(--crit-text);font-weight:500;padding-top:2px}
+.rt .f .fix{color:var(--ink-2);margin-top:3px}
+.rt .f .fix b{color:var(--good-text)}
+
+/* roadmap */
+.steps{display:grid;gap:10px;counter-reset:s}
+.step{display:grid;grid-template-columns:36px 1fr;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:13.5px}
+.step .n{font-family:var(--mono);color:var(--accent);font-size:13px;padding-top:2px}
+.step .d{color:var(--ink-2);margin-top:3px}
+.foot{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+
+@media (max-width:980px){
+  .wrap{grid-template-columns:1fr;gap:0}
+  aside.nav{position:static;height:auto;padding-top:24px}
+  aside.nav .links{display:flex;flex-wrap:wrap;gap:4px 14px}
+  aside.nav a{border-left:0;padding-left:0;margin-left:0}
+  main{padding-top:24px}
+  .layer{grid-template-columns:48px 1fr}
+  .lens{grid-template-columns:1fr}
+  .lens .pick{position:static;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  .lens .pick h4{grid-column:1/-1}
+  .tiers{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .threat{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px 48px}
+  .hero h1{font-size:28px}
+  .frow{grid-template-columns:1fr 1fr;gap:4px 10px}
+  .frow .val{grid-column:1/-1}
+}
+</style>
+
+<div class="wrap">
+<aside class="nav">
+  <div class="brand">Layered Data Access<br>Architecture</div>
+  <div class="links">
+    <a href="#answer">The answer</a>
+    <a href="#layers">The six layers</a>
+    <a href="#tiers">Classification</a>
+    <a href="#matrix">Role matrix</a>
+    <a href="#lens">Role lens (live)</a>
+    <a href="#claude">Claude users</a>
+    <a href="#threats">What is not a control</a>
+    <a href="#prod">Production mapping</a>
+    <a href="#gov">Governance</a>
+    <a href="#roadmap">Roadmap</a>
+  </div>
+</aside>
+<main>
+  <div class="hero" id="answer">
+    <div class="eyebrow">Banyan M&amp;A intelligence · data access design</div>
+    <h1>Who sees what, and where the wall actually stands.</h1>
+    <p class="q">The question: <i>"We want a layered data architecture where each end user only consumes the data they are entitled to. How does that work for Claude users — does it require an extra layer for them?"</i></p>
+    <div class="answer">
+      <div class="a yes"><div class="k">Yes — two things, both outside Claude</div><p><b>Identity</b> (the user signs in through the company IdP, and their role and scope travel as claims) and <b>an enforcement point between the data and the model</b> — a service that authenticates the caller, resolves the role, and runs <code>policy.guard(role, payload)</code> before anything is returned. Claude is a <b>client</b> of that service, never the custodian of the raw dataset.</p></div>
+      <div class="a no"><div class="k">No — nothing inside Claude</div><p>No per-role Claude instances, no "system prompt says don't reveal financials", no output scrubbing after the fact. Once a field is in the model's context it has already been disclosed to that user. Prompt instructions are guidance, not access control; the filter must run <b>before</b> the data reaches the context window.</p></div>
+      <div class="a"><div class="k">Already built in this repo</div><p><code>banyan_screen/policy.py</code> is the policy decision point: 5 classification tiers, 14 roles, deny-by-default, 11 tests. <code>build_dossiers.py</code> fails closed on role. What is missing for production is the substrate around it — an identity source, the MCP/API enforcement point, storage-level tagging, and audit. Sections below are that map.</p></div>
+    </div>
+  </div>
+
+  <section id="layers">
+    <h2>The six layers</h2>
+    <p class="lede">Each layer has one job and one owner. A request travels top-to-bottom; data travels bottom-to-top and is narrowed at layer 4. The highlighted layer is the one that answers the "Claude users" question.</p>
+    <div class="layers">
+      <div class="layer"><div class="no"><b>1</b>identity</div><div><h3>Identity &amp; attributes</h3><p class="what">Who is asking. Corporate IdP (Okta / Entra ID / Google Workspace) authenticates; group membership maps to one <b>role family</b> per human; ABAC attributes (assigned verticals, regions, deal-team memberships, MNPI clearance, MFA strength) are pushed to the policy information point.</p></div><div class="col"><h4>In the repo today</h4><p class="miss">Not present — role is a string argument. The conceptual model (iam_hierarchy) defines the attribute set.</p></div><div class="col"><h4>Production</h4><p>OIDC/SAML SSO → JWT with <code>role</code>, <code>scope</code>, <code>mnpi_clearance</code> claims. Group-based provisioning; requester ≠ approver; same-day leaver.</p></div></div>
+      <div class="layer"><div class="no"><b>2</b>classify</div><div><h3>Data classification at rest</h3><p class="what">What each field is. Every column carries a sensitivity tier (Public → Internal → Confidential-Financial → Restricted-PII → Restricted-MNPI) and a regulatory category (SOX / GDPR / securities). Deal-intent signals are tagged MNPI at write-time. Unknown fields default to Confidential.</p></div><div class="col"><h4>In the repo today</h4><p class="have"><code>policy.classify(key)</code> — pattern-based, fail-closed default. Tested.</p></div><div class="col"><h4>Production</h4><p>BigQuery policy tags / Snowflake tag-based masking / column-level labels; lineage inherits MAX input tier; data steward proposes, second approver certifies.</p></div></div>
+      <div class="layer"><div class="no"><b>3</b>decide</div><div><h3>Policy decision point (PDP)</h3><p class="what">Given (subject, resource, environment) → allow / mask / deny per field, plus row predicates. RBAC sets the ceiling (which tiers a job function may ever see); ABAC narrows to permitted rows (own vertical, enumerated deals, residency).</p></div><div class="col"><h4>In the repo today</h4><p class="have"><code>policy.ROLES</code> + <code>enforce()</code> — the role → tier matrix, masking rules, aggregate-only flag for Data Science.</p><p class="miss">Row-level ABAC predicates: conceptual only.</p></div><div class="col"><h4>Production</h4><p>OPA (Rego) or Cedar policies evaluated on <i>effective</i> permissions; RLS predicates in the warehouse; a separate statistical-disclosure-control service for aggregates (k≥5).</p></div></div>
+      <div class="layer pep"><div class="no"><b>4</b>enforce</div><div><h3>Policy enforcement point — the "Claude layer"</h3><p class="what">The only door to the data. An <b>MCP server or API gateway</b> that (a) validates the user's token, (b) asks the PDP, (c) executes the query with the user's row scope, (d) runs <code>guard(role, result)</code> to drop or mask fields, and (e) writes an audit record. Claude — in claude.ai, Claude Code, or an agent — calls this door with the user's identity and receives only what that user may see.</p></div><div class="col"><h4>In the repo today</h4><p class="have"><code>policy.guard()</code> and the coarse <code>pitch_visible()</code> gate; <code>build_dossiers.py</code> refuses to build for non-Sales roles.</p><p class="miss">No network service yet — the guard is a library call.</p></div><div class="col"><h4>Production</h4><p>Remote MCP server (OAuth 2.1, per-user tokens), tools like <code>search_targets</code>, <code>get_dossier</code>, <code>segment_stats</code>; every tool result passes through guard before it is returned to the model.</p></div></div>
+      <div class="layer"><div class="no"><b>5</b>consume</div><div><h3>Consumers</h3><p class="what">Where people meet the data. claude.ai chat with the MCP connector; Claude Code with the same server; published Artifact pages and BI dashboards; direct warehouse access for Finance. Each consumer inherits the user's identity — none holds its own superuser credential.</p></div><div class="col"><h4>In the repo today</h4><p class="have">Static HTML reports (Leadership / tech-lead audience); per-role dossier builds.</p></div><div class="col"><h4>Production</h4><p>Claude Team/Enterprise with SSO; MCP connector registered org-wide; artifacts published per audience or backed by a viewer-aware data source.</p></div></div>
+      <div class="layer"><div class="no"><b>6</b>audit</div><div><h3>Audit &amp; governance</h3><p class="what">Proof it worked. Immutable, tamper-evident log of every decision (who, what field, which tier, purpose artifact), written to WORM storage the platform admin cannot alter. Quarterly recertification on effective permissions; break-glass that cannot reach MNPI.</p></div><div class="col"><h4>In the repo today</h4><p class="miss">Not present.</p></div><div class="col"><h4>Production</h4><p>Cloud audit logs → SIEM; one stream serving SOX ITGC, GDPR Art. 30 and insider-trading surveillance; alerts on downgrades, unmasks, exports, RLS bypass.</p></div></div>
+    </div>
+  </section>
+
+  <section id="tiers">
+    <h2>Classification tiers</h2>
+    <p class="lede">Five ascending tiers, as implemented in <code>policy.py</code>. A role is granted a <i>set</i> of tiers, and within that set some tiers are shown only masked. The classifier maps field names to tiers by pattern; anything it does not recognise lands at Confidential-Financial so a new column is never leaked by omission. Where the conceptual IAM model goes further than the code, the description says so.</p>
+    <div class="tiers" id="tier-cards"></div>
+    <div class="tw"><table class="grid" id="tier-table"></table></div>
+  </section>
+
+  <section id="matrix">
+    <h2>Role × tier matrix</h2>
+    <p class="lede">Read straight from <code>policy.ROLES</code>. Governance and platform roles are deliberately not business-data consumers: they administer the controls, they do not read the records. Data Science is aggregate-only — a per-record request from a DS role is refused outright, not filtered.</p>
+    <div class="tw"><table class="grid" id="matrix-table"></table></div>
+    <div class="legend"><span><span class="cell full">✓</span>shown</span><span><span class="cell mask">◐</span>masked</span><span><span class="cell deny">✕</span>dropped</span><span><span class="cell agg">Σ</span>aggregate-only (per-record refused)</span><span>Pitch = outreach narrative visible (coarse RBAC gate)</span></div>
+  </section>
+
+  <section id="lens">
+    <h2>Role lens — the policy, live</h2>
+    <p class="lede">Pick a role and see exactly what it receives for one enriched target record. These outcomes were computed by the real <code>policy.enforce()</code> at build time, not re-implemented in the page, The record is synthetic — no real company or person.</p>
+    <div class="box" style="margin-bottom:16px;border-color:color-mix(in srgb,var(--good) 40%,var(--line))"><h3 style="color:var(--good-text)">Gap found by this lens — and closed</h3><p style="font-size:13.5px;color:var(--ink-2)">The first build of this page showed <code>enforce()</code> filing a <code>pitch</code> field under the Confidential-Financial default — handing it to Finance and Leadership and dropping it for Sales, the opposite of <code>pitch_visible()</code>. <code>policy.py</code> now routes narrative keys (<code>pitch</code>, <code>outreach</code>, <code>email_body</code>, <code>cold_email</code>) through the Sales/BD gate inside <code>enforce()</code>, with a regression test, so the field-level engine and the artifact-level gate can no longer disagree. Select <code>sales_rep</code> vs <code>finance_analyst</code> to see it.</p></div>
+    <div class="lens">
+      <div class="pick" id="pick"></div>
+      <div class="lens-out" id="lens-out"></div>
+    </div>
+  </section>
+
+  <section id="claude">
+    <h2>How this works for Claude users</h2>
+    <p class="lede">Three ways a person in the company reaches this data through Claude, and what each one needs. In every case the enforcement point (layer 4) is the same service; what changes is how the user's identity gets to it.</p>
+    <div class="paths">
+      <div class="path"><h3>claude.ai chat (Team / Enterprise)</h3><div class="flow">user signs in via SSO → asks Claude → Claude calls MCP tool with the user's OAuth token → PEP resolves role → guard() → filtered result → Claude answers</div><p>The MCP connector is registered once by an admin; each user authorises it with their own login. A finance analyst asking "what's HawkSoft's revenue estimate?" gets the figure; a data scientist asking the same question gets a refusal from the tool, and Claude relays it. Claude never had the number.</p><p class="verdict">Needs: SSO + the MCP server. Nothing else.</p></div>
+      <div class="path"><h3>Claude Code (engineers, analysts)</h3><div class="flow">developer authorises the remote MCP server in the browser (OAuth) → Claude Code tools call PEP → guard() per call → local files never contain raw data</div><p>Same server, same rules. The one trap is the repository itself: if <code>data/</code> with raw records is checked out locally, the file system bypasses the wall. In production the raw JSON should not be in the repo — the pipeline writes to the governed store and Claude Code reads through the MCP server.</p><p class="verdict">Needs: MCP server + moving raw data out of the working tree.</p></div>
+      <div class="path"><h3>Published Artifacts &amp; dashboards</h3><div class="flow">static page: whoever has the link sees everything embedded in it → share per audience, or → page fetches data at view time from a viewer-aware source</div><p>The companion <i>Banyan Target Intelligence</i> page embeds the full dataset — it is a Leadership / tech-lead artifact and must be shared as one. For role-specific views, either build one page per role (what <code>build_dossiers.py</code> already does, failing closed) or have the page load data live through the same PEP using the viewer's identity.</p><p class="verdict">Needs: audience-scoped sharing, or per-role builds.</p></div>
+    </div>
+    <div class="twocol">
+      <div class="box need"><h3>What end users need</h3><ul><li>A company identity (SSO) — the same login they use for email.</li><li>To be placed in exactly one role family by provisioning; scope (verticals, regions, deals) as attributes.</li><li>The MCP connector authorised once in their Claude client.</li><li>Nothing to learn: they ask questions; refusals come back as plain "not available for your role" messages.</li></ul></div>
+      <div class="box not"><h3>What they do not need</h3><ul><li>A separate Claude account, model, or workspace per role.</li><li>Custom system prompts or "instructions" pretending to be access control.</li><li>A copy of the data. The dataset lives in one governed store; consumers get filtered views.</li><li>Trust in the model to self-censor — the model is treated as an untrusted client of the data service.</li></ul></div>
+    </div>
+  </section>
+
+  <section id="threats">
+    <h2>What is not a control</h2>
+    <p class="lede">Failure modes that look like security and are not. Each has a concrete answer in the design.</p>
+    <div class="threats">
+      <div class="threat"><div class="t">"Tell Claude not to reveal financials."<small>Prompt-level rule</small></div><div class="c">The field is already in context; a rephrased question, a summary, or a tool that echoes it will leak. <b>Answer:</b> filter at layer 4 before the context window. The model only ever sees what the role may see.</div></div>
+      <div class="threat"><div class="t">Post-filtering Claude's output<small>Output scrubbing / DLP on the response</small></div><div class="c">Catches strings, not meaning ("roughly eighteen and a half million"). Useful as defence-in-depth for exports, never as the primary gate. <b>Answer:</b> input-side enforcement; output DLP only on export step-ups.</div></div>
+      <div class="threat"><div class="t">A shared service account for the MCP server<small>One credential for all users</small></div><div class="c">Every caller becomes the same identity and the PDP has nothing to decide on. <b>Answer:</b> per-user OAuth tokens; the PEP never queries with more privilege than the caller holds.</div></div>
+      <div class="threat"><div class="t">Raw data in the git checkout<small>data/records, data/research in the working tree</small></div><div class="c">Any Claude Code session (or any grep) reads it, wall or no wall. <b>Answer:</b> pipeline outputs go to the governed store; the repo keeps code, tests, templates and synthetic fixtures.</div></div>
+      <div class="threat"><div class="t">Deal intent hidden in a score<small>The MNPI side-channel found in red-team</small></div><div class="c">A Banyan-fit score that moves when a deal starts <i>is</i> non-public deal information. <b>Answer:</b> tag deal-intent-bearing fields MNPI at write-time; exclude them from the Data Science mart entirely.</div></div>
+      <div class="threat"><div class="t">Aggregate differencing<small>A user who is both DS and Sales</small></div><div class="c">Subtract five own-territory raw scores from a k=6 aggregate to isolate the sixth company. <b>Answer:</b> mutually exclusive role families; SDC service enforces k≥5 with dominance and complementary suppression.</div></div>
+    </div>
+  </section>
+
+  <section id="prod">
+    <h2>Production mapping</h2>
+    <p class="lede">Each concept, its implementation in this repository, and the substrate it maps to. Two reference stacks are shown; pick one, do not mix.</p>
+    <div class="tw"><table class="grid">
+      <thead><tr><th>Concept</th><th>This repo</th><th>Google Cloud stack</th><th>AWS / Snowflake stack</th></tr></thead>
+      <tbody>
+        <tr><td>Identity &amp; claims</td><td class="mono">role: str argument</td><td>Cloud Identity / Okta → Workforce Identity Federation; groups → roles</td><td>IAM Identity Center / Entra ID → SAML/OIDC; groups → roles</td></tr>
+        <tr><td>Field classification</td><td class="mono">policy.classify()</td><td>BigQuery policy tags (Data Catalog taxonomy) + column-level security</td><td>Snowflake object tags + tag-based masking policies</td></tr>
+        <tr><td>Row scope (ABAC)</td><td>conceptual (iam_hierarchy)</td><td>BigQuery row-level security predicates on <code>SESSION_USER()</code> attributes</td><td>Snowflake row access policies keyed on <code>CURRENT_ROLE()</code> / mapping table</td></tr>
+        <tr><td>Policy decision</td><td class="mono">policy.ROLES, enforce()</td><td>OPA sidecar (Rego) or Cedar via Cloud Run; policies in git, tested</td><td>Amazon Verified Permissions (Cedar) or OPA on ECS</td></tr>
+        <tr><td>Enforcement point</td><td class="mono">guard(), pitch_visible(), build_dossiers gate</td><td>Remote MCP server on Cloud Run behind IAP; per-user OAuth 2.1</td><td>Remote MCP server on ECS/Lambda behind API Gateway + Cognito</td></tr>
+        <tr><td>Aggregate-only (DS)</td><td class="mono">RolePolicy.aggregate_only</td><td>Authorized views + BigQuery differential-privacy / k-threshold SQL in an SDC service</td><td>Secure views + aggregation policies (min group size)</td></tr>
+        <tr><td>PII masking &amp; erasure</td><td class="mono">_mask_value(): email → ***@domain</td><td>Sensitive Data Protection (DLP) de-identification templates; KMS crypto-shred per subject</td><td>Dynamic data masking; KMS key per subject for crypto-shred</td></tr>
+        <tr><td>Audit</td><td>—</td><td>Cloud Audit Logs + Data Access logs → BigQuery/SIEM; Bucket Lock (WORM)</td><td>CloudTrail + Lake Formation audit → S3 Object Lock (WORM) → SIEM</td></tr>
+        <tr><td>Secrets &amp; keys outside admin</td><td>—</td><td>Cloud KMS with separation-of-duties IAM; HSM for MNPI domains</td><td>KMS + CloudHSM; key policies exclude platform admins</td></tr>
+        <tr><td>Tests</td><td class="mono">10 policy tests / 46 suite</td><td colspan="2">Policy unit tests in CI (OPA <code>opa test</code> / Cedar test suites) + contract tests against the MCP server per role</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="gov">
+    <h2>Governance</h2>
+    <p class="lede">From the IAM model's red-teamed design. These are the operating rules that keep the layers honest over time.</p>
+    <div class="gov">
+      <div class="box"><h3>Provisioning</h3><p>Group-based via the IdP. One consumer family per human, enforced at grant. Every grant is request → approve → log, requester ≠ approver. Deal-team additions need Compliance co-approval — IT alone can never grant MNPI access. Unresolved attributes → alarmed pending state, deny.</p></div>
+      <div class="box"><h3>Access reviews</h3><p>Quarterly recertification on <i>effective</i> permissions across a person's full role + attribute set; MNPI, PII and financials first. Toxic role-pair detection on every identity. Exceptions are named, time-boxed, auto-expiring and visible in a "who can see company X" simulator.</p></div>
+      <div class="box"><h3>Audit</h3><p>Immutable, tamper-evident, on WORM storage the platform admin cannot alter. Every classification change, wall-crossing, bulk export, PII unmask, cross-territory read and RLS-bypass attempt is logged with its purpose artifact; sensitive events alert in real time.</p></div>
+      <div class="box"><h3>Break-glass</h3><p>Independently approved, alarmed, time-boxed, domain-bounded. Excludes Restricted-MNPI and cannot override a blackout window or an ethical wall. Frequency is tracked as a boundary-health signal.</p></div>
+    </div>
+    <h3 style="margin-top:22px">Red-team findings that shaped the model (3 Critical, all fixed)</h3>
+    <div class="rt">
+      <div class="f"><span class="sev">CRITICAL</span><div>Fit-scores were an unwalled MNPI side-channel — Finance and Sales could infer deal intent from score movement.<div class="fix"><b>Fixed:</b> write-time <code>mnpi_tag</code>; deal-intent signal excluded from the DS mart.</div></div></div>
+      <div class="f"><span class="sev">CRITICAL</span><div>The data steward was a single-party root of trust and could silently downgrade a tier.<div class="fix"><b>Fixed:</b> maker-checker on every downgrade / de-identification / retag; real-time downgrade alerts.</div></div></div>
+      <div class="f"><span class="sev">CRITICAL</span><div>No person-level role exclusion — stacking finance + leadership gave near-total reach.<div class="fix"><b>Fixed:</b> mutually exclusive role families; authorisation and recertification evaluate effective permissions.</div></div></div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <h2>Roadmap to production</h2>
+    <p class="lede">In dependency order. Steps 1–3 are enough to put Claude users behind the wall; 4–6 harden it.</p>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><div><b>Move raw data out of the repo</b> into a governed store with column tags mirroring <code>policy.classify()</code>.<div class="d">Keep code, tests, templates and a synthetic fixture in git. This alone closes the file-system bypass for Claude Code.</div></div></div>
+      <div class="step"><span class="n">2</span><div><b>Stand up the MCP server</b> (remote, OAuth 2.1, per-user tokens) exposing <code>search_targets</code>, <code>get_target</code>, <code>get_dossier</code>, <code>segment_stats</code>.<div class="d">Every tool result passes through <code>guard()</code>; <code>get_dossier</code> additionally checks <code>pitch_visible()</code>. Contract-test each tool per role.</div></div></div>
+      <div class="step"><span class="n">3</span><div><b>Connect the IdP</b> — SSO on the Claude workspace, groups → one role family per user, role and scope as token claims.<div class="d">Register the MCP connector org-wide; users authorise with their own login.</div></div></div>
+      <div class="step"><span class="n">4</span><div><b>Row-level ABAC</b> — territory / deal-team predicates in the warehouse, evaluated on the caller's claims.<div class="d">Wildcard scope forbidden for any role whose ceiling includes dossiers, contacts or pipeline.</div></div></div>
+      <div class="step"><span class="n">5</span><div><b>Audit stream to WORM + SIEM</b>, with alerts on downgrades, unmasks, exports and bypass attempts.<div class="d">One stream serves SOX ITGC, GDPR Art. 30 and insider-trading surveillance.</div></div></div>
+      <div class="step"><span class="n">6</span><div><b>SDC service for Data Science</b> — k≥5, dominance and complementary suppression; MNPI-bearing signals excluded from the mart.<div class="d">Replaces the blunt per-record refusal with governed aggregates that still answer real questions.</div></div></div>
+    </div>
+    <div class="foot" id="foot"></div>
+  </section>
+</main>
+</div>
+
+<script>
+const D = /*__DATA__*/null;
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const TIER_META = {
+  PUBLIC: ['Public', 'none', 'The floor every known role is granted. No field pattern maps here today, so it is empty in practice; the conceptual model reserves it for certified-scrubbed content.'],
+  INTERNAL: ['Internal', 'none', 'Identity and screening signals: name, domain, vertical, region, scores, confidence, tier, rank, notes, retention, market size.'],
+  CONFIDENTIAL_FINANCIAL: ['Confidential-Financial', 'SOX', 'Revenue, margins, EBITDA, valuation, TPV. Finance reads; Leadership sees masked summaries; everyone else dropped. Also the default for unknown fields.'],
+  RESTRICTED_PII: ['Restricted-PII', 'GDPR / CCPA', 'Contacts, decision-makers, emails, phones, LinkedIn. Sales and Leadership receive it masked (email → ***@domain); every other role drops it. Unmask-as-step-up is a conceptual-model control, not yet in code.'],
+  RESTRICTED_MNPI: ['Restricted-MNPI', 'securities', 'Deal stage, pipeline, acquisition intent. In code only c_suite_leadership may see it, unmasked. The conceptual model narrows this further to enumerated deal teams — a row-scope (ABAC) control that is not implemented yet.'],
+};
+const tierName = t => TIER_META[t][0];
+const tierIdx = t => D.tiers.find(x => x.name === t).level;
+const tierBadge = t => t === 'SALES_NARRATIVE' ? `<span class="tb" style="background:var(--accent-soft);color:var(--accent)">Sales narrative</span>` : `<span class="tb" style="background:var(--t${tierIdx(t)});color:var(--t-ink-${tierIdx(t) >= 2 ? 'dark' : 'light'})">${tierName(t)}</span>`;
+
+/* tiers */
+$('#tier-cards').innerHTML = D.tiers.map(t => `<div class="tier l${t.level}"><span class="lv">tier ${t.level}</span><span class="nm">${tierName(t.name)}</span><span class="rg">${TIER_META[t.name][1] === 'none' ? 'no regulatory category' : TIER_META[t.name][1]}</span></div>`).join('');
+const patFor = t => (D.patterns[t] || []).map(p => `<span>${esc(p)}</span>`).join('');
+$('#tier-table').innerHTML = `<thead><tr><th>Tier</th><th>Regulatory</th><th>What lives here</th><th>Field-name patterns (classify)</th></tr></thead><tbody>${D.tiers.map(t => `<tr><td>${tierBadge(t.name)}</td><td>${TIER_META[t.name][1]}</td><td style="max-width:40ch">${TIER_META[t.name][2]}</td><td><div class="pat">${t.name === 'PUBLIC' ? '<span style="background:none;color:var(--muted)">no pattern — only reached by explicit grant</span>' : patFor(t.name)}${t.name === D.patterns.default ? '<span style="border:1px dashed var(--line-strong);background:none">default for unmatched keys</span>' : ''}</div></td></tr>`).join('')}</tbody>`;
+
+/* matrix */
+const tiersOrder = D.tiers.map(t => t.name);
+let mrows = '', lastGroup = '';
+D.matrix.forEach(r => {
+  if (r.group !== lastGroup) { mrows += `<tr><td class="grp" colspan="${tiersOrder.length + 3}">${r.group}</td></tr>`; lastGroup = r.group; }
+  mrows += `<tr><td class="mono">${r.role}</td>${tiersOrder.map(t => { const a = r.allowed.includes(t), m = r.masked.includes(t); return `<td><span class="cell ${!a ? 'deny' : m ? 'mask' : 'full'}" title="${tierName(t)}: ${!a ? 'dropped' : m ? 'masked' : 'shown'}">${!a ? '✕' : m ? '◐' : '✓'}</span></td>`; }).join('')}<td>${r.aggregate_only ? '<span class="cell agg" title="aggregate-only">Σ</span>' : ''}</td><td>${r.pitch_visible ? '<span class="cell full">✓</span>' : '<span class="cell deny">✕</span>'}</td></tr>`;
+});
+$('#matrix-table').innerHTML = `<thead><tr><th>Role</th>${tiersOrder.map(t => `<th>${tierName(t).replace('Restricted-', 'R-').replace('Confidential-', 'C-')}</th>`).join('')}<th>Agg.</th><th>Pitch</th></tr></thead><tbody>${mrows}</tbody>`;
+
+/* lens */
+const L = D.lens;
+const roleOrder = [...D.groups.flatMap(g => g.roles.map(r => [g.group, r])), ['Unknown', 'unknown_role']];
+let pickHTML = '', lg = '';
+roleOrder.forEach(([g, r]) => { if (g !== lg) { pickHTML += `<h4>${g}</h4>`; lg = g; } pickHTML += `<button data-role="${r}" aria-pressed="false">${r}</button>`; });
+$('#pick').innerHTML = pickHTML;
+function showRole(role) {
+  $$('#pick button').forEach(b => b.setAttribute('aria-pressed', b.dataset.role === role));
+  const p = L.per_role[role];
+  const counts = p.fields.reduce((a, f) => (a[f.status]++, a), {shown: 0, masked: 0, dropped: 0, withheld: 0});
+  const flags = [
+    p.per_record_refused ? `<span class="flag no">per-record request refused${p.aggregate_only ? ' — aggregate-only' : ''}</span>` : `<span class="flag ok">per-record allowed</span>`,
+    p.pitch_visible ? `<span class="flag ok">pitch visible</span>` : `<span class="flag no">pitch withheld</span>`,
+  ].join('');
+  $('#lens-out').innerHTML = `<div class="hd"><span class="role">${role}</span><div class="flags">${flags}</div></div>
+    <div class="fields"><div class="frow h"><span>field</span><span>tier</span><span>outcome</span><span>value the role receives</span></div>
+    ${p.fields.map(f => `<div class="frow ${f.status}"><span class="fn">${esc(f.field)}</span><span>${tierBadge(f.tier)}</span><span class="st ${f.status}">${f.status}</span><span class="val" title="${esc(f.value ?? '')}">${f.status === 'dropped' ? '—' : esc(f.value)}</span></div>`).join('')}</div>
+    <div class="lens-note">${counts.shown} shown · ${counts.masked} masked · ${counts.dropped} dropped${counts.withheld ? ' · ' + counts.withheld + ' withheld' : ''} of ${p.fields.length} fields. ${p.note ? esc(p.note) : p.per_record_refused ? 'The field-level view above is what enforce() would yield, but guard() refuses the whole per-record payload for this role — Data Science receives aggregates only.' : 'Computed by banyan_screen.policy.enforce() at build time.'}</div>`;
+}
+$('#pick').addEventListener('click', e => { const b = e.target.closest('button'); if (b) showRole(b.dataset.role); });
+showRole('sales_rep');
+
+/* nav highlight */
+const links = $$('aside.nav a');
+const obs = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id)); }), {rootMargin: '-20% 0px -70% 0px'});
+$$('main section, main .hero').forEach(s => obs.observe(s));
+$('#foot').textContent = `Built ${D.meta.built} from banyan_screen/policy.py (${D.meta.n_roles} roles, ${D.meta.policy_tests} policy tests in a ${D.meta.suite_tests}-test suite) and reports/iam_hierarchy.md. Sample record is synthetic.`;
+</script>

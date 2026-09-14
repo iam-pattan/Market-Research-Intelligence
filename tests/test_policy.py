@@ -91,3 +91,18 @@ def test_pitch_narrative_is_sales_bd_only():
     assert not pitch_visible("c_suite_leadership")
     assert not pitch_visible("platform_admin")
     assert not pitch_visible("unknown_role")
+
+
+def test_enforce_agrees_with_pitch_gate_on_narrative_fields():
+    # Field-level engine must give the same answer as the coarse gate: pitch
+    # narrative reaches Sales/BD only, regardless of the tier a name-pattern
+    # would otherwise assign (it used to fall to the CONFIDENTIAL default).
+    rec = {"name": "Acme Health", "pitch": "Hi Jane…", "pitch_subject": "Your niche",
+           "outreach_email": "…", "revenue_est_usd": 1}
+    for role in ("sales_rep", "sales_manager"):
+        out = enforce(role, rec)
+        assert out["pitch"] == "Hi Jane…" and "pitch_subject" in out and "outreach_email" in out
+    for role in ("finance_analyst", "c_suite_leadership", "ds_analyst", "platform_admin"):
+        out = enforce(role, rec)
+        assert "pitch" not in out and "pitch_subject" not in out and "outreach_email" not in out
+    assert "pitch" not in enforce("unknown_role", rec)

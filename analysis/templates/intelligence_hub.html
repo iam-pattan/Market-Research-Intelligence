@@ -1,0 +1,658 @@
+<meta charset="utf-8">
+<title>Banyan Target Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f5f7f4; --surface:#ffffff; --surface-2:#eef2ee; --ink:#14211b; --ink-2:#55645c; --muted:#8a958e;
+  --line:#dde3de; --line-strong:#c5cec8; --accent:#1e6b4a; --accent-ink:#ffffff; --accent-soft:#dcebe2; --accent-bar:#2f8a62; --accent-light:#a9d4bf;
+  --good:#0ca30c; --good-text:#006300; --warn:#fab219; --warn-text:#7a5200; --serious:#ec835a; --crit:#d03b3b; --crit-text:#a32222;
+  --neutral-bar:#b9c3bc; --shadow:0 1px 2px rgba(20,33,27,.06),0 8px 24px -12px rgba(20,33,27,.18);
+  --display:'Sora',system-ui,sans-serif; --body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --bg:#0f1411; --surface:#171d19; --surface-2:#1f2722; --ink:#eef2ee; --ink-2:#aab5ae; --muted:#7d887f;
+  --line:#2a332d; --line-strong:#3a463e; --accent:#4fb383; --accent-ink:#0f1411; --accent-soft:#1d3328; --accent-bar:#4fb383; --accent-light:#2f5c47;
+  --good:#0ca30c; --good-text:#5fd668; --warn:#fab219; --warn-text:#f2c35a; --serious:#ec835a; --crit:#e05a5a; --crit-text:#ff8a8a;
+  --neutral-bar:#3f4b44; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0f1411; --surface:#171d19; --surface-2:#1f2722; --ink:#eef2ee; --ink-2:#aab5ae; --muted:#7d887f;
+  --line:#2a332d; --line-strong:#3a463e; --accent:#4fb383; --accent-ink:#0f1411; --accent-soft:#1d3328; --accent-bar:#4fb383; --accent-light:#2f5c47;
+  --good:#0ca30c; --good-text:#5fd668; --warn:#fab219; --warn-text:#f2c35a; --serious:#ec835a; --crit:#e05a5a; --crit-text:#ff8a8a;
+  --neutral-bar:#3f4b44; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.2}
+h2{font-size:20px;font-weight:600}
+h3{font-size:15px;font-weight:600}
+p{margin:0}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---- top bar ---- */
+.topbar{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1320px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:24px;min-height:56px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:10px;padding-block:10px}
+.brand .name{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em}
+.brand .sub{font-size:12px;color:var(--ink-2)}
+nav.tabs{display:flex;gap:2px;margin-left:auto;overflow-x:auto;max-width:100%}
+nav.tabs button{background:none;border:0;padding:18px 12px 16px;border-bottom:2px solid transparent;font-weight:500;color:var(--ink-2);cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+nav.tabs button:hover{color:var(--ink)}
+
+main{max-width:1320px;margin:0 auto;padding:28px 24px 64px}
+section.tab{display:none}
+section.tab.active{display:block}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.section-head p{color:var(--ink-2);max-width:68ch}
+
+/* ---- overview ---- */
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:start;margin-bottom:28px}
+.hero h1{font-size:30px;font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.hero .lede{font-size:15px;color:var(--ink-2);max-width:62ch}
+.hero .lede b{color:var(--ink);font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:28px}
+@media (max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.kpi .v{font-family:var(--mono);font-size:26px;font-weight:500;letter-spacing:-.02em;line-height:1.1}
+.kpi .l{font-size:12px;color:var(--ink-2);margin-top:6px}
+.kpi.hi{background:var(--accent-soft);border-color:transparent}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-bottom:28px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.panel h3{margin-bottom:4px}
+.panel .hint{font-size:12px;color:var(--ink-2);margin-bottom:14px}
+.bars{display:grid;gap:8px}
+.bar-row{display:grid;grid-template-columns:minmax(120px,190px) 1fr 48px;align-items:center;gap:10px;font-size:13px}
+.bar-row .lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{height:14px;background:var(--surface-2);border-radius:0 4px 4px 0;position:relative}
+.bar-fill{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent-bar)}
+.bar-fill.outer{background:var(--accent-light)}
+.bar-fill.sub{background:var(--accent-bar)}
+.bar-fill.neutral{background:var(--neutral-bar)}
+.bar-fill.crit{background:var(--crit)}
+.bar-fill.warn{background:var(--warn)}
+.bar-fill.good{background:var(--good)}
+.bar-row .val{text-align:right;color:var(--ink-2)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);margin-top:12px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.list-ranked{display:grid;gap:10px;counter-reset:hg}
+.hg{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.hg:first-child{border-top:0;padding-top:0}
+.hg .n{font-family:var(--mono);color:var(--muted);font-size:13px;padding-top:2px}
+.hg .t{font-weight:600}
+.hg .a{font-size:12px;color:var(--accent);font-weight:600;margin-left:8px}
+.hg .r{font-size:13px;color:var(--ink-2);margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line-strong);border-radius:999px;padding:4px 10px;font-size:12px;background:var(--surface);cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.callout{border-left:3px solid var(--accent);background:var(--surface);padding:12px 16px;border-radius:0 8px 8px 0;font-size:13px;color:var(--ink-2)}
+.callout b{color:var(--ink)}
+
+/* ---- pills ---- */
+.pill{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 8px;font-size:11px;font-weight:600;letter-spacing:.02em;line-height:1.5;white-space:nowrap;font-family:var(--mono)}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.pill.tA,.pill.tB{background:color-mix(in srgb,var(--good) 14%,transparent);color:var(--good-text)}
+.pill.tC{background:var(--surface-2);color:var(--ink-2)}
+.pill.trejected{background:color-mix(in srgb,var(--crit) 14%,transparent);color:var(--crit-text)}
+.pill.tinsufficient_data{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn-text)}
+.pill.send{background:color-mix(in srgb,var(--good) 14%,transparent);color:var(--good-text)}
+.pill.route-to-growth{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn-text)}
+.pill.do-not-contact{background:color-mix(in srgb,var(--crit) 14%,transparent);color:var(--crit-text)}
+.tag{display:inline-block;border:1px solid var(--line-strong);border-radius:4px;padding:1px 6px;font-size:11px;color:var(--ink-2);font-family:var(--mono)}
+.tag.acc{border-color:var(--accent);color:var(--accent)}
+
+/* ---- targets table ---- */
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.filters input[type=search],.filters select{font:inherit;font-size:13px;padding:7px 10px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface);color:var(--ink);min-width:0}
+.filters input[type=search]{flex:1 1 220px}
+.filters label.cb{display:inline-flex;gap:6px;align-items:center;font-size:13px;color:var(--ink-2)}
+.filters .count{margin-left:auto;font-size:13px;color:var(--ink-2)}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table.tgt{border-collapse:collapse;width:100%;min-width:1080px;font-size:13px}
+table.tgt th{position:sticky;top:0;background:var(--surface);text-align:left;font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);padding:10px 10px;border-bottom:1px solid var(--line);white-space:nowrap;z-index:1}
+table.tgt th.sort{cursor:pointer;user-select:none}
+table.tgt th.sort:hover{color:var(--ink)}
+table.tgt th.sort[data-dir]::after{content:" ↓";color:var(--accent)}
+table.tgt th.sort[data-dir="asc"]::after{content:" ↑"}
+table.tgt td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.tgt tr.row{cursor:pointer}
+table.tgt tr.row:hover td{background:var(--surface-2)}
+table.tgt tr.row[aria-expanded="true"] td{background:var(--accent-soft)}
+table.tgt td.r{text-align:right}
+table.tgt .co{font-weight:600}
+table.tgt .co small{display:block;font-weight:400;color:var(--muted);font-family:var(--mono);font-size:11px}
+table.tgt .vert{max-width:240px}
+table.tgt .vert small{display:block;color:var(--muted);font-size:11px}
+.score{display:inline-grid;grid-template-columns:auto 1fr;gap:6px;align-items:center;min-width:110px}
+.score .track{height:6px;background:var(--surface-2);border-radius:3px;position:relative;width:60px}
+.score .track i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--accent-bar)}
+.score .track i.muted{background:var(--neutral-bar)}
+.conf{color:var(--muted);font-size:11px;font-family:var(--mono)}
+tr.detail td{background:var(--surface-2);padding:18px 20px 22px}
+.detail-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:22px}
+.detail-grid h4{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px;font-family:var(--body)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px}
+.kv dt{color:var(--ink-2)}
+.kv dd{margin:0}
+.crit{display:grid;gap:6px}
+.crit-row{display:grid;grid-template-columns:130px 1fr 46px 42px;gap:8px;align-items:center;font-size:12px}
+.crit-row .t{height:8px;background:var(--surface);border-radius:4px;position:relative;border:1px solid var(--line)}
+.crit-row .t i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:var(--accent-bar)}
+.crit-row .w{color:var(--muted);font-family:var(--mono);text-align:right}
+.crit-row .s{font-family:var(--mono);text-align:right}
+.formula{font-family:var(--mono);font-size:12px;color:var(--ink-2);margin-top:8px;line-height:1.7}
+.linkbtn{background:none;border:1px solid var(--accent);color:var(--accent);border-radius:6px;padding:5px 10px;font-size:12px;font-weight:600;cursor:pointer}
+.linkbtn:hover{background:var(--accent);color:var(--accent-ink)}
+.pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;padding:12px 0 0;font-size:13px;color:var(--ink-2)}
+.pager button{border:1px solid var(--line-strong);background:var(--surface);border-radius:6px;padding:5px 10px;cursor:pointer}
+.pager button:disabled{opacity:.4;cursor:default}
+
+/* ---- dossiers ---- */
+.doss-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.doss-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;cursor:pointer;display:grid;gap:8px;text-align:left;width:100%}
+.doss-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.doss-card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.doss-card .nm{font-family:var(--display);font-weight:600;font-size:15px}
+.doss-card .vt{font-size:12px;color:var(--ink-2)}
+.doss-card .th{font-size:13px;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.doss-card .ft{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--muted)}
+.doss-detail{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px 28px;display:grid;gap:22px}
+.doss-detail .head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.doss-detail .head h2{font-size:24px}
+.doss-detail .head .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.doss-cols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:26px}
+.doss-sec{display:grid;gap:6px;margin-bottom:16px}
+.doss-sec h4{font-family:var(--body);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.doss-sec p{font-size:14px;max-width:72ch;white-space:pre-line}
+.pitch{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:18px 20px;position:sticky;top:76px}
+.pitch .subj{font-family:var(--mono);font-size:13px;margin-bottom:10px}
+.pitch .subj b{color:var(--ink-2);font-weight:500}
+.pitch pre{white-space:pre-wrap;font:inherit;font-size:13.5px;line-height:1.55;margin:0 0 14px;max-width:60ch}
+.pitch .note{font-size:12px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:10px}
+.pitch .wc{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.srcs{font-size:12px;color:var(--ink-2);display:grid;gap:4px}
+.srcs a{word-break:break-all}
+.back{background:none;border:0;color:var(--accent);font-weight:600;cursor:pointer;padding:0;margin-bottom:14px;font-size:13px}
+
+/* ---- market ---- */
+.seg-table{width:100%;border-collapse:collapse;font-size:13px}
+.seg-table th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);padding:8px 10px;border-bottom:1px solid var(--line)}
+.seg-table td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+.seg-table td.att{white-space:nowrap;font-weight:600}
+.seg-table .rat{color:var(--ink-2);max-width:78ch}
+details.brief{border:1px solid var(--line);border-radius:10px;background:var(--surface);margin-bottom:10px}
+details.brief summary{cursor:pointer;padding:14px 18px;font-family:var(--display);font-weight:600;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+details.brief summary::-webkit-details-marker{display:none}
+details.brief summary::after{content:"+";font-family:var(--mono);color:var(--muted)}
+details.brief[open] summary::after{content:"–"}
+details.brief .body{padding:0 18px 18px;display:grid;gap:14px;border-top:1px solid var(--line);padding-top:14px}
+details.brief .body h4{font-family:var(--body);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-bottom:4px}
+details.brief .body p{max-width:80ch;font-size:13.5px;white-space:pre-line}
+details.brief .body ul{margin:0;padding-left:18px;font-size:13.5px;max-width:80ch}
+details.brief .body li{margin-bottom:4px}
+ol.plain{padding-left:20px;margin:0;display:grid;gap:8px;font-size:13.5px;max-width:80ch}
+ul.plain{padding-left:20px;margin:0;display:grid;gap:8px;font-size:13.5px;max-width:80ch}
+
+/* ---- markdown (playbook) ---- */
+.md{max-width:78ch;font-size:14px}
+.md h1{font-size:22px;margin:0 0 12px}
+.md h2{font-size:17px;margin:26px 0 10px;padding-top:18px;border-top:1px solid var(--line)}
+.md h3{font-size:14px;margin:18px 0 8px}
+.md p{margin:0 0 10px}
+.md ul,.md ol{margin:0 0 12px;padding-left:22px}
+.md li{margin-bottom:5px}
+.md code{font-family:var(--mono);font-size:12px;background:var(--surface-2);padding:1px 5px;border-radius:4px}
+.md pre{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto;font-family:var(--body);font-size:13.5px;line-height:1.55;white-space:pre-wrap;margin:0 0 14px}
+.md pre code{background:none;padding:0;font:inherit}
+.md hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+.md blockquote{margin:0 0 12px;padding-left:14px;border-left:3px solid var(--accent);color:var(--ink-2)}
+.play-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.play-side{position:sticky;top:76px;display:grid;gap:12px}
+.play-side .panel{padding:14px 16px}
+.play-side .panel p{font-size:13px;color:var(--ink-2)}
+.play-side code{font-family:var(--mono);font-size:12px;background:var(--surface-2);padding:2px 6px;border-radius:4px;display:block;margin-top:6px;overflow-x:auto}
+.subtabs{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap}
+.subtabs button{border:1px solid var(--line-strong);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer}
+.subtabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+/* ---- method ---- */
+.rub-table{width:100%;border-collapse:collapse;font-size:13px}
+.rub-table th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);padding:8px 10px;border-bottom:1px solid var(--line)}
+.rub-table td{padding:8px 10px;border-bottom:1px solid var(--line)}
+.rub-table td.r{text-align:right}
+.method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.stat-row{display:flex;gap:20px;flex-wrap:wrap}
+.stat{min-width:120px}
+.stat .v{font-family:var(--mono);font-size:22px}
+.stat .l{font-size:12px;color:var(--ink-2)}
+.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;font-family:var(--mono)}
+.flow span{border:1px solid var(--line-strong);border-radius:6px;padding:6px 10px;background:var(--surface)}
+.flow em{font-style:normal;color:var(--muted)}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* tooltip */
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;padding:6px 9px;border-radius:6px;z-index:50;max-width:260px;display:none;font-family:var(--body)}
+#tip b{font-family:var(--mono);font-weight:500}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .detail-grid{grid-template-columns:1fr}
+  .doss-cols{grid-template-columns:1fr}
+  .pitch{position:static}
+  .play-grid{grid-template-columns:1fr}
+  .play-side{position:static}
+}
+@media (max-width:600px){
+  main{padding:20px 16px 48px}
+  .topbar-in{padding:0 16px}
+  .hero h1{font-size:24px}
+  nav.tabs button{padding:14px 9px 12px;font-size:13px}
+  .bar-row{grid-template-columns:100px 1fr 40px}
+  .crit-row{grid-template-columns:100px 1fr 40px 36px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .bar-fill,.score .track i,.crit-row .t i{transition:width .35s ease}
+}
+</style>
+
+<div class="topbar"><div class="topbar-in">
+  <div class="brand"><span class="name">Banyan Target Intelligence</span><span class="sub">M&amp;A screening · public-web sourced</span></div>
+  <nav class="tabs" role="tablist" id="tabs">
+    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button role="tab" data-tab="targets">Top 250</button>
+    <button role="tab" data-tab="dossiers">Dossiers &amp; Pitches</button>
+    <button role="tab" data-tab="market">Market Map</button>
+    <button role="tab" data-tab="playbook">Outreach Playbook</button>
+    <button role="tab" data-tab="method">Method &amp; QC</button>
+  </nav>
+</div></div>
+
+<main>
+<!-- ================= OVERVIEW ================= -->
+<section class="tab active" id="tab-overview">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Acquisition screen · buy-and-hold-forever thesis</div>
+      <h1>The screened universe, one place.</h1>
+      <p class="lede" id="lede"></p>
+    </div>
+    <div class="callout" id="hero-callout"></div>
+  </div>
+  <div class="kpis" id="kpis"></div>
+  <div class="grid2">
+    <div class="panel">
+      <h3>Banyan tier distribution</h3>
+      <div class="hint">Confidence-discounted tier under the buy-and-hold rubric. Tier C is the expected landing zone for private companies whose financials can't be verified from the public web — C ≠ bad fit.</div>
+      <div class="bars" id="tier-bars"></div>
+    </div>
+    <div class="panel">
+      <h3>Where the fit is</h3>
+      <div class="hint">Companies screened per macro-segment, with the number confirmed Banyan-fit (tier B) inside each.</div>
+      <div class="bars" id="seg-bars"></div>
+      <div class="legend"><span><i style="background:var(--accent-light)"></i>Screened</span><span><i style="background:var(--accent-bar)"></i>Tier B (Banyan-fit)</span></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="panel">
+      <h3>Hunting grounds, ranked</h3>
+      <div class="hint">Segment attractiveness from the 14-brief market synthesis.</div>
+      <div class="list-ranked" id="hunting"></div>
+    </div>
+    <div class="panel">
+      <h3>Prioritized shortlist</h3>
+      <div class="hint">The analyst shortlist from the market synthesis — click a name to open its screen row.</div>
+      <div class="chips" id="shortlist"></div>
+      <h3 style="margin-top:22px">Competing permanent-hold consolidators</h3>
+      <div class="hint">Who Banyan actually bids against for founder-owned sub-$100M software.</div>
+      <ul class="plain" id="consolidators-short"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TARGETS ================= -->
+<section class="tab" id="tab-targets">
+  <div class="section-head">
+    <div><h2>Top 250 screened companies</h2><p>Default order is the curated best-of-both ranking from the screen. Sort by <b>Banyan score</b> to surface buy-and-hold targets; click any row for the per-criterion rationale, revenue estimate and profitability signal.</p></div>
+  </div>
+  <div class="filters">
+    <input type="search" id="q" placeholder="Search company, vertical, notes…" aria-label="Search">
+    <select id="f-seg" aria-label="Segment"><option value="">All segments</option></select>
+    <select id="f-tier" aria-label="Banyan tier"><option value="">All Banyan tiers</option><option value="B">Tier B</option><option value="C">Tier C</option><option value="rejected">Rejected</option><option value="insufficient_data">Insufficient data</option></select>
+    <select id="f-own" aria-label="Ownership"><option value="">All ownership</option></select>
+    <select id="f-region" aria-label="Region"><option value="">All regions</option></select>
+    <label class="cb"><input type="checkbox" id="f-doss"> Has dossier</label>
+    <label class="cb"><input type="checkbox" id="f-pub"> Hide public / acquired</label>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="tablewrap">
+    <table class="tgt" id="tgt">
+      <thead><tr>
+        <th class="sort" data-key="rank" data-dir="asc">#</th>
+        <th class="sort" data-key="name">Company</th>
+        <th>Vertical · segment</th>
+        <th>Region</th>
+        <th>Ownership</th>
+        <th class="sort" data-key="rev">Revenue est.</th>
+        <th>Profitability signal</th>
+        <th class="sort" data-key="badj">Banyan score</th>
+        <th class="sort" data-key="gadj">Growth score</th>
+        <th>Flags</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="pager" id="pager"></div>
+</section>
+
+<!-- ================= DOSSIERS ================= -->
+<section class="tab" id="tab-dossiers">
+  <div id="doss-list">
+    <div class="section-head">
+      <div><h2>Banyan top-25 dossiers &amp; outreach pitches</h2><p id="doss-lede"></p></div>
+    </div>
+    <div class="subtabs" id="doss-filter">
+      <button data-b="" aria-selected="true">All</button>
+      <button data-b="send">Send</button>
+      <button data-b="route-to-growth">Route to growth mandate</button>
+      <button data-b="do-not-contact">Do not contact</button>
+    </div>
+    <div class="doss-grid" id="doss-grid"></div>
+  </div>
+  <div id="doss-view" hidden></div>
+</section>
+
+<!-- ================= MARKET ================= -->
+<section class="tab" id="tab-market">
+  <div class="section-head"><div><h2>Market map — 14 macro-segments</h2><p id="market-exec"></p></div></div>
+  <div class="panel" style="margin-bottom:20px"><h3>Segments ranked by attractiveness</h3><div class="hint">From the 29-agent market synthesis workflow.</div>
+    <div style="overflow-x:auto"><table class="seg-table" id="seg-ranked"></table></div></div>
+  <div class="grid2">
+    <div class="panel"><h3>Cross-segment themes</h3><ol class="plain" id="themes" style="margin-top:10px"></ol></div>
+    <div class="panel"><h3>Whitespace — under-hunted niches</h3><ol class="plain" id="whitespace" style="margin-top:10px"></ol></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Competing consolidators</h3><ul class="plain" id="consolidators" style="margin-top:10px"></ul></div>
+    <div class="panel"><h3>Prioritized shortlist (20)</h3><ol class="plain" id="shortlist-full" style="margin-top:10px"></ol></div>
+  </div>
+  <h3 style="margin:8px 0 12px">Segment briefs</h3>
+  <div id="briefs"></div>
+  <div class="panel" style="margin-top:20px"><h3>Caveats</h3><ul class="plain" id="market-caveats" style="margin-top:10px"></ul></div>
+</section>
+
+<!-- ================= PLAYBOOK ================= -->
+<section class="tab" id="tab-playbook">
+  <div class="section-head"><div><h2>Outreach playbook — the <code style="font-family:var(--mono);font-size:15px">banyan-sales-pitch</code> skill</h2><p>The exact rules, templates and compliance guardrails the pitches above were generated with. Sales/BD use this to draft first-touch and follow-up emails; the skill is IAM-gated to Sales/BD roles.</p></div></div>
+  <div class="play-grid">
+    <div>
+      <div class="subtabs" id="play-tabs">
+        <button data-p="skill" aria-selected="true">Skill rules</button>
+        <button data-p="templates">Templates &amp; frameworks</button>
+        <button data-p="playbook">Thesis, voice &amp; compliance</button>
+      </div>
+      <div class="panel md" id="play-body"></div>
+    </div>
+    <aside class="play-side">
+      <div class="panel"><h3>Install the skill</h3><p>Copy the folder into your Claude Code skills directory, then invoke it with a lead name and intent to contact.</p><code>cp -r skills/banyan-sales-pitch ~/.claude/skills/</code></div>
+      <div class="panel"><h3>Output contract</h3><p>Every pitch returns <span class="num">subject</span> · <span class="num">body</span> (50–125 words) · <span class="num">personalization_note</span> · <span class="num">thesis</span> · <span class="num">send_recommendation</span>.</p></div>
+      <div class="panel"><h3>Access gate</h3><p>Lead identity + pitch content is Sales/BD data. Output must pass <span class="num">policy.guard(role, …)</span>; Data Science and Finance never receive it. See the companion <i>Layered Data Access Architecture</i> page.</p></div>
+      <div class="panel"><h3>Results on this list</h3><p id="play-stats"></p></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= METHOD ================= -->
+<section class="tab" id="tab-method">
+  <div class="section-head"><div><h2>Method, validation &amp; caveats</h2><p>How every number on this page was produced, and how far it can be trusted.</p></div></div>
+  <div class="panel" style="margin-bottom:20px"><h3>Pipeline</h3><div class="hint">Deterministic scoring core, separate from the LLM: extractors propose per-criterion scores with confidence; the rubric engine alone computes the tier.</div>
+    <div class="flow"><span>codex web_search discovery (12 vertical batches)</span><em>→</em><span>333 records</span><em>→</em><span>ingest → CriterionScore × confidence</span><em>→</em><span>rubric_engine: composite → discount → gates → tier</span><em>→</em><span>curate top 250</span><em>→</em><span>25 deep dossiers + pitches</span><em>→</em><span>3-pass triangulation</span><em>→</em><span>2 QC rounds + grounding check</span></div></div>
+  <div class="method-grid">
+    <div class="panel"><h3>Banyan rubric (config.yaml)</h3><div class="hint">Weights derived from Banyan's stated criteria (banyansoftware.com/faq, self-reported). Defaults — tunable.</div><table class="rub-table" id="rub-banyan"></table><div class="formula" id="rub-banyan-rules"></div></div>
+    <div class="panel"><h3>Growth rubric (config.growth.yaml)</h3><div class="hint">Contrast rubric for scaling / VC-backed companies. Not Banyan's thesis — used to catch non-targets.</div><table class="rub-table" id="rub-growth"></table><div class="formula" id="rub-growth-rules"></div></div>
+    <div class="panel"><h3>Confidence discount</h3><div class="formula">adjusted = composite × (floor + (1 − floor) × overall_confidence)<br>floor = 0.5 → an unverifiable company can lose at most half its composite<br>Gates: loss evidence → REJECTED · revenue &lt; $2M → cap tier C · coverage &lt; 50% → INSUFFICIENT_DATA</div>
+      <p style="font-size:13px;color:var(--ink-2);margin-top:10px">This is why genuine private targets land at tier C: profitability and retention are rarely verifiable from the public web, so confidence is low and the score is discounted. Tier C flags "verify in diligence", not "bad fit".</p></div>
+    <div class="panel"><h3>Validation</h3><div class="stat-row" id="val-stats"></div>
+      <p style="font-size:13px;color:var(--ink-2);margin-top:12px" id="val-notes"></p></div>
+    <div class="panel"><h3>Triangulation (3 independent discovery passes)</h3><div class="stat-row" id="tri-stats"></div>
+      <p style="font-size:13px;color:var(--ink-2);margin-top:12px">Pass 1 vertical discovery · Pass 2 acquirer-adjacency · Pass 3 OSINT/registries. A coverage-and-ownership check, not financial verification — except where registries hold filed accounts (UK Companies House, EU registries).</p></div>
+    <div class="panel"><h3>What the data can and cannot say</h3><ul class="plain" style="margin-top:8px">
+      <li><b>Revenue</b> figures are web-research estimates (Growjo/Owler/codex) at ~0.25–0.55 confidence — directional, never underwrite from them.</li>
+      <li><b>Margin / profit</b> are not available as numbers for private companies. The screen carries a <i>profitability signal</i> (0–1 score + confidence + loss-evidence flag); real PBT exists only where accounts are filed (e.g. UK/EU registry names surfaced in pass 3).</li>
+      <li><b>Ownership</b> calls are time-sensitive; 11 false "founder-owned" labels were caught in triangulation (e.g. Vagaro = PE, Agiloft = FTV). Confirm cap tables before outreach.</li>
+      <li><b>Banyan's "120+ acquired / 0 sold"</b> is self-reported positioning, not audited.</li>
+      <li><b>Sources:</b> public web + official registries only. No PitchBook, Crunchbase or Grata.</li>
+    </ul></div>
+  </div>
+  <div class="foot"><span id="foot-left"></span><span>Repo: Market-Research-Intelligence · reports/intelligence_hub.html</span></div>
+</section>
+</main>
+<div id="tip" role="tooltip"></div>
+
+<script>
+const D = /*__DATA__*/null;
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtUSD = v => v == null ? '—' : v >= 1e9 ? '$' + (v/1e9).toFixed(1) + 'B' : v >= 1e6 ? '$' + Math.round(v/1e6) + 'M' : '$' + Math.round(v/1e3) + 'K';
+const pct = v => v == null ? '—' : Math.round(v*100) + '%';
+const tierLabel = t => ({A:'Tier A',B:'Tier B',C:'Tier C',rejected:'Rejected',insufficient_data:'Insufficient data'})[t] || t;
+const tierPill = t => `<span class="pill t${t}">${tierLabel(t)}</span>`;
+const sendLabel = b => ({send:'SEND','route-to-growth':'Route to growth','do-not-contact':'Do not contact'})[b];
+const sendPill = b => `<span class="pill ${b}">${sendLabel(b)}</span>`;
+const critName = k => ({recurring_revenue:'Recurring revenue',profitability:'Profitability',revenue_band:'Revenue band',niche_leadership:'Niche leadership',retention:'Retention',ownership_fit:'Ownership fit',team_stability:'Team stability',revenue_growth:'Revenue growth',market_size:'Market size',funding_momentum:'Funding momentum',hiring_velocity:'Hiring velocity'})[k] || k;
+const profitLabel = p => p.loss ? 'Loss evidence' : p.score == null ? '—' : p.score >= 0.7 ? 'Profitable (signal)' : p.score >= 0.45 ? 'Likely / unclear' : 'Weak';
+const wc = s => (s || '').trim().split(/\s+/).filter(Boolean).length;
+
+/* ---------- tooltip ---------- */
+const tip = $('#tip');
+document.addEventListener('mousemove', e => { if (tip.style.display === 'block') { tip.style.left = Math.min(e.clientX + 12, innerWidth - 280) + 'px'; tip.style.top = (e.clientY + 14) + 'px'; } });
+function bindTips(root) { $$('[data-tip]', root).forEach(el => { el.addEventListener('mouseenter', () => { tip.innerHTML = el.dataset.tip; tip.style.display = 'block'; }); el.addEventListener('mouseleave', () => tip.style.display = 'none'); }); }
+
+/* ---------- tabs ---------- */
+function showTab(id) {
+  $$('#tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.tab === id));
+  $$('section.tab').forEach(s => s.classList.toggle('active', s.id === 'tab-' + id));
+  if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+  window.scrollTo({top: 0});
+}
+$('#tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) showTab(b.dataset.tab); });
+
+/* ---------- overview ---------- */
+const M = D.meta, C = D.companies;
+$('#lede').innerHTML = `<b>${M.n_companies}</b> companies curated from <b>${M.n_records}</b> discovered records across <b>${M.n_verticals}</b> micro-verticals and <b>${M.n_segments}</b> macro-segments — scored under Banyan's buy-and-hold rubric and a contrasting growth rubric, triangulated across three independent discovery passes, with <b>${M.n_dossiers}</b> deep dossiers and thesis-appropriate outreach pitches. Built from public web and official registries only.`;
+$('#hero-callout').innerHTML = `<b>Rubric choice decides the outreach list.</b> Ranked best-of-both, the top of the screen is VC-backed AI infrastructure — non-targets. Ranked by the Banyan rubric, the top-25 yields <b>${M.send} SEND</b> recommendations. Every genuine private target sits at tier C by construction (unverifiable financials), so read tier C as "verify", not "reject".`;
+const kpis = [
+  [M.n_companies, 'companies screened', ''],
+  [M.banyan_tiers.B, 'tier B — confirmed Banyan-fit', 'hi'],
+  [M.banyan_tiers.rejected, 'rejected (loss evidence)', ''],
+  [M.n_dossiers, 'deep dossiers + pitches', ''],
+  [M.send, 'SEND recommendations', 'hi'],
+  [M.crossmatch.corroborated, 'corroborated by ≥2 passes', ''],
+  [M.crossmatch.strong_net_new, 'strong net-new (unscored)', ''],
+  [pct(M.grounding.rate), 'dossier facts grounded', ''],
+];
+$('#kpis').innerHTML = kpis.map(([v,l,c]) => `<div class="kpi ${c}"><div class="v">${v}</div><div class="l">${l}</div></div>`).join('');
+
+function barRows(rows, max, cls) {
+  return rows.map(r => `<div class="bar-row" data-tip="${esc(r.tip || esc(r.label) + ': ' + r.value)}"><span class="lbl">${esc(r.label)}</span><div class="bar-track"><div class="bar-fill ${r.cls || cls || ''}" style="width:${(r.value/max*100).toFixed(1)}%"></div>${r.sub != null ? `<div class="bar-fill sub" style="width:${(r.sub/max*100).toFixed(1)}%"></div>` : ''}</div><span class="val num">${r.value}${r.sub != null ? ' / ' + r.sub : ''}</span></div>`).join('');
+}
+const tierRows = [['B','Tier B','good'],['C','Tier C','neutral'],['rejected','Rejected','crit'],['insufficient_data','Insufficient data','warn']].map(([k,l,c]) => ({label:l, value:M.banyan_tiers[k], cls:c, tip:`${l}: <b>${M.banyan_tiers[k]}</b> companies`}));
+$('#tier-bars').innerHTML = barRows(tierRows, Math.max(...tierRows.map(r => r.value)));
+const segRows = [...D.segments].sort((a,b) => b.n - a.n).map(s => ({label:s.name, value:s.n, sub:s.fit_count, tip:`${esc(s.name)}<br>Screened: <b>${s.n}</b> · Tier B: <b>${s.fit_count}</b> · fit density <b>${pct(s.fit_density)}</b>`}));
+$('#seg-bars').innerHTML = barRows(segRows, Math.max(...segRows.map(r => r.value)), 'outer');
+$('#hunting').innerHTML = D.market.segments_ranked.slice(0, 7).map((s, i) => `<div class="hg"><span class="n">${String(i+1).padStart(2,'0')}</span><div><span class="t">${esc(s.segment.split(' (')[0])}</span><span class="a">${esc(s.attractiveness)}</span><div class="r">${esc(s.rationale)}</div></div></div>`).join('');
+$('#shortlist').innerHTML = D.market.prioritized_shortlist.map(s => `<button class="chip" data-tip="${esc(esc(s.why))}" data-name="${esc(s.company)}">${esc(s.company)}</button>`).join('');
+$('#consolidators-short').innerHTML = D.market.competing_consolidators.slice(0, 4).map(c => `<li>${esc(c)}</li>`).join('');
+$('#shortlist').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; showTab('targets'); $('#q').value = b.dataset.name; resetFilters(false); render(); });
+bindTips(document);
+
+/* ---------- targets ---------- */
+const state = { q:'', seg:'', tier:'', own:'', region:'', doss:false, pub:false, sort:'rank', dir:'asc', page:0, open:null };
+const PAGE = 50;
+function opts(sel, vals) { vals.forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = v; sel.appendChild(o); }); }
+opts($('#f-seg'), [...new Set(C.map(c => c.segment))].sort());
+opts($('#f-own'), [...new Set(C.map(c => c.ownership))].sort());
+opts($('#f-region'), [...new Set(C.map(c => c.region))].sort());
+['q','f-seg','f-tier','f-own','f-region','f-doss','f-pub'].forEach(id => $('#' + id).addEventListener('input', () => {
+  state.q = $('#q').value.trim().toLowerCase(); state.seg = $('#f-seg').value; state.tier = $('#f-tier').value; state.own = $('#f-own').value; state.region = $('#f-region').value; state.doss = $('#f-doss').checked; state.pub = $('#f-pub').checked; state.page = 0; state.open = null; render();
+}));
+function resetFilters(clearQ) { if (clearQ) $('#q').value = ''; ['f-seg','f-tier','f-own','f-region'].forEach(id => $('#' + id).value = ''); $('#f-doss').checked = false; $('#f-pub').checked = false; state.q = $('#q').value.trim().toLowerCase(); state.seg = state.tier = state.own = state.region = ''; state.doss = state.pub = false; state.page = 0; }
+$$('#tgt th.sort').forEach(th => th.addEventListener('click', () => {
+  const k = th.dataset.key;
+  if (state.sort === k) state.dir = state.dir === 'asc' ? 'desc' : 'asc'; else { state.sort = k; state.dir = (k === 'rank' || k === 'name') ? 'asc' : 'desc'; }
+  $$('#tgt th.sort').forEach(t => t.removeAttribute('data-dir')); th.dataset.dir = state.dir; state.page = 0; render();
+}));
+const sortVal = { rank: c => c.rank, name: c => c.name.toLowerCase(), rev: c => c.revenue.value ?? -1, badj: c => c.banyan.adj, gadj: c => c.growth.adj };
+function filtered() {
+  return C.filter(c => (!state.q || (c.name + ' ' + c.vertical + ' ' + c.notes + ' ' + c.domain + ' ' + c.segment).toLowerCase().includes(state.q))
+    && (!state.seg || c.segment === state.seg) && (!state.tier || c.banyan.tier === state.tier) && (!state.own || c.ownership === state.own)
+    && (!state.region || c.region === state.region) && (!state.doss || c.dossier != null) && (!state.pub || !c.public_or_acquired))
+    .sort((a, b) => { const va = sortVal[state.sort](a), vb = sortVal[state.sort](b); const r = va < vb ? -1 : va > vb ? 1 : a.rank - b.rank; return state.dir === 'asc' ? r : -r; });
+}
+function scoreCell(s, muted) { return `<span class="score"><span class="num">${s.adj.toFixed(3)}</span><span class="track"><i class="${muted ? 'muted' : ''}" style="width:${(s.adj*100).toFixed(0)}%"></i></span></span><br>${tierPill(s.tier)} <span class="conf">conf ${s.conf.toFixed(2)}</span>`; }
+function rowHTML(c) {
+  const rv = c.revenue, pf = c.profit;
+  const flags = [c.dossier != null ? `<span class="tag acc">dossier</span>` : '', c.dossier != null ? sendPill(D.dossiers[c.dossier].pitch.bucket) : '', c.corroborated ? `<span class="tag" data-tip="Independently surfaced by ≥2 discovery passes">corroborated</span>` : '', c.public_or_acquired ? `<span class="tag" data-tip="Already public or acquired">public/acq.</span>` : '', c.banyan.gate.rejected_on_loss ? `<span class="tag" style="color:var(--crit-text);border-color:var(--crit)">loss gate</span>` : '', c.banyan.gate.revenue_capped ? `<span class="tag">rev &lt; $2M cap</span>` : ''].filter(Boolean).join(' ');
+  return `<tr class="row" data-rank="${c.rank}" aria-expanded="${state.open === c.rank}">
+    <td class="num r">${c.rank}</td>
+    <td class="co">${esc(c.name)}<small>${esc(c.domain)}</small></td>
+    <td class="vert">${esc(c.vertical)}<small>${esc(c.segment)}</small></td>
+    <td>${esc(c.region)}</td>
+    <td>${esc(c.ownership)}</td>
+    <td class="num">${fmtUSD(rv.value)} <span class="conf" data-tip="${esc(esc('Source: ' + (rv.source || 'n/a')))}">±${rv.conf != null ? rv.conf.toFixed(2) : '—'}</span></td>
+    <td>${profitLabel(pf)} <span class="conf">${pf.score != null ? pf.score.toFixed(1) + ' @ ' + pf.conf.toFixed(2) : ''}</span></td>
+    <td>${scoreCell(c.banyan)}</td>
+    <td>${scoreCell(c.growth, true)}</td>
+    <td>${flags}</td></tr>`;
+}
+function critHTML(s) {
+  return `<div class="crit">${s.criteria.map(k => `<div class="crit-row"><span>${critName(k.k)}</span><span class="t"><i style="width:${(k.score*100).toFixed(0)}%;opacity:${(0.35 + k.confidence*0.65).toFixed(2)}"></i></span><span class="s">${k.score.toFixed(2)}</span><span class="w">w ${k.weight.toFixed(2)}</span></div>`).join('')}</div>
+  <div class="formula">composite ${s.composite.toFixed(3)} × discount ${s.discount.toFixed(3)} = <b>${s.adj.toFixed(3)}</b> · coverage ${pct(s.coverage)}${s.gate.max_tier ? ' · capped at ' + s.gate.max_tier : ''}${s.gate.rejected_on_loss ? ' · REJECTED on loss evidence' : ''}</div>`;
+}
+function detailHTML(c) {
+  const d = c.dossier != null ? D.dossiers[c.dossier] : null;
+  return `<tr class="detail"><td colspan="10"><div class="detail-grid">
+    <div><h4>What they do</h4><p style="max-width:60ch">${esc(c.notes) || '—'}</p>
+      <h4 style="margin-top:14px">Facts (public-web estimates)</h4><dl class="kv">
+        <dt>Revenue est.</dt><dd class="num">${fmtUSD(c.revenue.value)} <span class="conf">conf ${c.revenue.conf ?? '—'} · ${esc(c.revenue.source || 'n/a')}</span></dd>
+        <dt>Profitability</dt><dd>${profitLabel(c.profit)} <span class="conf">score ${c.profit.score ?? '—'} · conf ${c.profit.conf ?? '—'} · ${esc(c.profit.source || 'n/a')}</span></dd>
+        <dt>Recurring rev.</dt><dd><span class="conf">${esc(c.recurring_source || 'n/a')}</span></dd>
+        <dt>Ownership</dt><dd>${esc(c.ownership)}${c.last_funding ? ` <span class="conf">· ${esc(c.last_funding)}</span>` : ''}</dd>
+        <dt>Region</dt><dd>${esc(c.region)}</dd>
+      </dl>
+      ${d ? `<div style="margin-top:14px"><button class="linkbtn" data-doss="${d.idx}">Open dossier &amp; pitch → ${sendLabel(d.pitch.bucket)}</button></div>` : ''}</div>
+    <div><h4>Banyan rubric · ${tierPill(c.banyan.tier)}</h4>${critHTML(c.banyan)}</div>
+    <div><h4>Growth rubric · ${tierPill(c.growth.tier)}</h4>${critHTML(c.growth)}<p class="conf" style="margin-top:8px">Bar opacity encodes confidence in each criterion score.</p></div>
+  </div></td></tr>`;
+}
+function render() {
+  const rows = filtered(); const pages = Math.max(1, Math.ceil(rows.length / PAGE)); state.page = Math.min(state.page, pages - 1);
+  const slice = rows.slice(state.page * PAGE, (state.page + 1) * PAGE);
+  $('#tbody').innerHTML = slice.map(c => rowHTML(c) + (state.open === c.rank ? detailHTML(c) : '')).join('');
+  $('#count').textContent = `${rows.length} of ${C.length}`;
+  $('#pager').innerHTML = `<span>Page ${state.page + 1} of ${pages}</span><button id="pg-prev" ${state.page === 0 ? 'disabled' : ''}>‹ Prev</button><button id="pg-next" ${state.page >= pages - 1 ? 'disabled' : ''}>Next ›</button>`;
+  $('#pg-prev').onclick = () => { state.page--; state.open = null; render(); };
+  $('#pg-next').onclick = () => { state.page++; state.open = null; render(); };
+  bindTips($('#tbody'));
+}
+$('#tbody').addEventListener('click', e => {
+  const b = e.target.closest('[data-doss]'); if (b) { openDossier(+b.dataset.doss); showTab('dossiers'); return; }
+  const tr = e.target.closest('tr.row'); if (!tr) return;
+  const r = +tr.dataset.rank; state.open = state.open === r ? null : r; render();
+  if (state.open) $(`tr.row[data-rank="${r}"]`)?.scrollIntoView({block:'nearest'});
+});
+render();
+
+/* ---------- dossiers ---------- */
+$('#doss-lede').textContent = `The top 25 under the Banyan rubric, each researched via public web only and pitched with the thesis-appropriate angle. ${M.send} send · ${M.route} route to growth mandate · ${M.dnc} do not contact. Revenue figures are internal estimates and never appear in the pitch text.`;
+let dossFilter = '';
+function dossCards() {
+  $('#doss-grid').innerHTML = D.dossiers.filter(d => !dossFilter || d.pitch.bucket === dossFilter).map(d => `<button class="doss-card" data-doss="${d.idx}">
+    <div class="top"><span class="nm">${esc(d.name)}</span>${sendPill(d.pitch.bucket)}</div>
+    <div class="vt">${esc(d.vertical)} · ${esc(d.region)}</div>
+    <div class="th">${esc(d.thesis)}</div>
+    <div class="ft">${tierPill(d.banyan_tier)}<span class="num">Banyan ${d.banyan_adj.toFixed(3)} · Growth ${d.growth_adj.toFixed(3)}</span></div></button>`).join('');
+}
+dossCards();
+$('#doss-filter').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; dossFilter = b.dataset.b; $$('#doss-filter button').forEach(x => x.setAttribute('aria-selected', x === b)); dossCards(); });
+$('#doss-grid').addEventListener('click', e => { const b = e.target.closest('[data-doss]'); if (b) openDossier(+b.dataset.doss); });
+const secOrder = [['business_model','Business model'],['niche_position','Niche position'],['ownership_funding','Ownership & funding'],['revenue_profitability','Revenue & profitability'],['moat','Moat'],['competitors','Competitors'],['risks','Risks'],['personalization_hook','Personalization hook']];
+function openDossier(i) {
+  const d = D.dossiers[i], p = d.pitch, ds = d.dossier;
+  const list = v => Array.isArray(v) ? `<ul class="plain">${v.map(x => `<li>${esc(typeof x === 'string' ? x : JSON.stringify(x))}</li>`).join('')}</ul>` : `<p>${esc(typeof v === 'string' ? v : JSON.stringify(v))}</p>`;
+  $('#doss-view').innerHTML = `<button class="back" id="doss-back">← All dossiers</button><div class="doss-detail">
+    <div class="head"><div><div class="eyebrow">${esc(d.company_label)}</div><h2>${esc(d.name)}</h2><div class="meta">${tierPill(d.banyan_tier)} <span class="num" style="font-size:12px">Banyan ${d.banyan_adj.toFixed(3)} · Growth ${d.growth_adj.toFixed(3)}</span> <span class="tag">${esc(d.vertical)}</span> <span class="tag">${esc(d.region)}</span> <a class="tag" href="https://${esc(d.domain)}" target="_blank" rel="noopener">${esc(d.domain)}</a></div></div>${sendPill(p.bucket)}</div>
+    <div class="doss-cols"><div>
+      <div class="doss-sec"><h4>Thesis</h4><p>${esc(d.thesis)}</p></div>
+      <div class="doss-sec"><h4>Fit assessment</h4><p>${esc(d.fit_assessment)}</p></div>
+      ${secOrder.filter(([k]) => ds[k]).map(([k, l]) => `<div class="doss-sec"><h4>${l}</h4>${list(ds[k])}</div>`).join('')}
+      ${ds.sources ? `<div class="doss-sec"><h4>Sources (${ds.sources.length})</h4><div class="srcs">${ds.sources.map(s => { const m = String(s).match(/^(https?:\/\/\S+)\s*(.*)$/); return m ? `<span><a href="${esc(m[1])}" target="_blank" rel="noopener">${esc(m[1])}</a> ${esc(m[2])}</span>` : `<span>${esc(s)}</span>`; }).join('')}</div></div>` : ''}
+    </div><div><div class="pitch">
+      <div class="eyebrow" style="margin-bottom:10px">Outreach pitch · ${sendLabel(p.bucket)}</div>
+      <div class="subj"><b>Subject:</b> ${esc(p.subject)}</div>
+      <pre>${esc(p.body)}</pre>
+      <div class="wc">${wc(p.body)} words · target 50–125</div>
+      <div class="note" style="margin-top:10px"><b>Recommendation:</b> ${esc(p.send_recommendation)}</div>
+      <div class="note"><b>Personalization:</b> ${esc(p.personalization_note)}</div>
+    </div></div></div></div>`;
+  $('#doss-list').hidden = true; $('#doss-view').hidden = false;
+  $('#doss-back').onclick = () => { $('#doss-view').hidden = true; $('#doss-list').hidden = false; };
+  window.scrollTo({top: 0});
+}
+
+/* ---------- market ---------- */
+$('#market-exec').textContent = D.market.executive_summary;
+$('#seg-ranked').innerHTML = `<thead><tr><th>#</th><th>Segment</th><th>Attractiveness</th><th>Rationale</th></tr></thead><tbody>${D.market.segments_ranked.map((s, i) => `<tr><td class="num">${i+1}</td><td><b>${esc(s.segment)}</b></td><td class="att">${esc(s.attractiveness)}</td><td class="rat">${esc(s.rationale)}</td></tr>`).join('')}</tbody>`;
+$('#themes').innerHTML = D.market.cross_segment_themes.map(t => `<li>${esc(t)}</li>`).join('');
+$('#whitespace').innerHTML = D.market.whitespace_ranked.map(t => `<li>${esc(t)}</li>`).join('');
+$('#consolidators').innerHTML = D.market.competing_consolidators.map(t => `<li>${esc(t)}</li>`).join('');
+$('#shortlist-full').innerHTML = D.market.prioritized_shortlist.map(s => `<li><b>${esc(s.company)}</b> <span class="tag">${esc(s.segment)}</span><br><span style="color:var(--ink-2)">${esc(s.why)}</span></li>`).join('');
+$('#market-caveats').innerHTML = D.market.caveats.map(t => `<li>${esc(t)}</li>`).join('');
+const briefKeys = [['market_overview','Market overview'],['consolidation_state','Consolidation state'],['banyan_fit_read','Banyan-fit read'],['top_targets','Top targets'],['whitespace','Whitespace'],['precedent_ma','Precedent M&A'],['competing_acquirers','Competing acquirers'],['risks','Risks'],['sources','Sources']];
+$('#briefs').innerHTML = D.briefs.map(b => `<details class="brief"><summary><span>${esc(b.segment.split(' — ')[0].split(' (')[0])}</span></summary><div class="body">
+  ${briefKeys.filter(([k]) => b[k]).map(([k, l]) => { const v = b[k]; const body = Array.isArray(v) ? `<ul>${v.map(x => `<li>${typeof x === 'object' ? `<b>${esc(x.name)}</b> — ${esc(x.why)}` : esc(x)}</li>`).join('')}</ul>` : `<p>${esc(v)}</p>`; return `<div><h4>${l}</h4>${body}</div>`; }).join('')}
+</div></details>`).join('');
+
+/* ---------- playbook (tiny markdown) ---------- */
+function md(src) {
+  const lines = src.replace(/\r/g, '').split('\n'); let out = [], i = 0, list = null;
+  const inline = s => esc(s).replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<i>$1</i>');
+  const closeList = () => { if (list) { out.push(`</${list}>`); list = null; } };
+  while (i < lines.length) {
+    const l = lines[i];
+    if (l.startsWith('```')) { closeList(); let buf = []; i++; while (i < lines.length && !lines[i].startsWith('```')) buf.push(lines[i++]); out.push(`<pre><code>${esc(buf.join('\n'))}</code></pre>`); i++; continue; }
+    const h = l.match(/^(#{1,4})\s+(.*)/); if (h) { closeList(); out.push(`<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`); i++; continue; }
+    if (/^---+$/.test(l.trim())) { closeList(); out.push('<hr>'); i++; continue; }
+    const ul = l.match(/^\s*[-*]\s+(.*)/), ol = l.match(/^\s*\d+\.\s+(.*)/);
+    if (ul || ol) { const t = ul ? 'ul' : 'ol'; if (list !== t) { closeList(); out.push(`<${t}>`); list = t; } out.push(`<li>${inline((ul || ol)[1])}</li>`); i++; continue; }
+    if (l.startsWith('>')) { closeList(); out.push(`<blockquote>${inline(l.slice(1).trim())}</blockquote>`); i++; continue; }
+    if (!l.trim()) { closeList(); i++; continue; }
+    closeList(); let para = [l]; while (i + 1 < lines.length && lines[i+1].trim() && !/^(#|```|---|\s*[-*]\s|\s*\d+\.\s|>)/.test(lines[i+1])) para.push(lines[++i]); out.push(`<p>${inline(para.join(' '))}</p>`); i++;
+  }
+  closeList(); return out.join('\n');
+}
+function showPlay(k) { $$('#play-tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.p === k)); $('#play-body').innerHTML = md(D.playbook[k]); }
+$('#play-tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) showPlay(b.dataset.p); });
+showPlay('skill');
+const bodies = D.dossiers.map(d => wc(d.pitch.body)); const inRange = bodies.filter(w => w >= 50 && w <= 125).length;
+$('#play-stats').innerHTML = `${M.n_dossiers} pitches generated · <b>${M.send}</b> send, ${M.route} routed to growth mandate, ${M.dnc} do-not-contact.<br>${inRange} of ${bodies.length} bodies inside the 50–125-word rule (min ${Math.min(...bodies)}, max ${Math.max(...bodies)}).`;
+
+/* ---------- method ---------- */
+function rubTable(cfg) { const w = cfg.weights; return `<thead><tr><th>Criterion</th><th style="text-align:right">Weight</th></tr></thead><tbody>${Object.entries(w).map(([k, v]) => `<tr><td>${critName(k)}</td><td class="r num">${v.toFixed(2)}</td></tr>`).join('')}<tr><td><b>Total</b></td><td class="r num"><b>${Object.values(w).reduce((a, b) => a + b, 0).toFixed(2)}</b></td></tr></tbody>`; }
+function rubRules(cfg) { const g = cfg.gates, s = cfg.scoring, t = cfg.tiers; return `Tier A ≥ ${t.a_threshold} · Tier B ≥ ${t.b_threshold} · else C<br>reject_on_loss_evidence: ${g.reject_on_loss_evidence} · revenue floor: ${g.revenue_floor_usd ? fmtUSD(g.revenue_floor_usd) + ' (cap ' + g.revenue_below_floor_max_tier + ')' : 'none'}<br>confidence floor ${s.min_confidence_floor} · coverage threshold ${s.coverage_threshold} · min signal confidence ${s.min_signal_confidence}`; }
+$('#rub-banyan').innerHTML = rubTable(D.rubrics.banyan); $('#rub-banyan-rules').innerHTML = rubRules(D.rubrics.banyan);
+$('#rub-growth').innerHTML = rubTable(D.rubrics.growth); $('#rub-growth-rules').innerHTML = rubRules(D.rubrics.growth);
+const q = M.qc, g = M.grounding, x = M.crossmatch;
+$('#val-stats').innerHTML = [[q.tests, 'pytest suite passing'], [q.policy_tests, 'IAM policy tests'], [`${g.grounded}/${g.total}`, `dossier facts grounded (${pct(g.rate)})`], [q.round2.review, 'QC round 2 review score'], [q.round2.glm + ' / ' + q.round2.kimi, 'judge split (GLM / Kimi)']].map(([v, l]) => `<div class="stat"><div class="v">${v}</div><div class="l">${l}</div></div>`).join('');
+$('#val-notes').textContent = `Two second-model QC rounds (round 1: ${q.round1.review}; round 2: ${q.round2.review} after fixing a cross-match bucket bug, hardening the ownership classifier and adding the runtime IAM gate). Judges diverged by ${(q.round2.glm - q.round2.kimi).toFixed(1)} points in round 2, so the composite is low-confidence. The grounding check compares every dossier fact against the paired raw research: all 6 flags were extractor false-positives, not hallucinations.`;
+$('#tri-stats').innerHTML = [[x.union_total, 'union of 3 passes'], [x.corroborated, 'corroborated (≥2 passes)'], [x.strong_net_new, 'strong net-new'], [x.pe_vc_caught, 'false "founder-owned" caught'], [x.verifications, 'registry verifications']].map(([v, l]) => `<div class="stat"><div class="v">${v}</div><div class="l">${l}</div></div>`).join('');
+$('#foot-left').textContent = `Built ${M.built} from data/screen, data/records, data/research and skills/. All figures public-web estimates unless marked filed.`;
+
+/* ---------- boot ---------- */
+const h = location.hash.replace('#', ''); if (['overview','targets','dossiers','market','playbook','method'].includes(h)) showTab(h);
+</script>

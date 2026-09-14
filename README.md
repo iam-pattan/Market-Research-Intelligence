@@ -23,7 +23,7 @@ banyan-ma-research/
 │   └── policy.py          # IAM enforcement layer (RBAC + field classification)
 ├── config.yaml            # Banyan buy-and-hold rubric  (loaded by relative path)
 ├── config.growth.yaml     # Growth/scaling rubric
-├── tests/                 # pytest suite (46 tests)
+├── tests/                 # pytest suite (47 tests)
 ├── data/
 │   ├── records/           # Input company records (12 vertical JSON files, ~333 rows)
 │   ├── screen/            # Screen outputs used as pipeline inputs (results.json, ranked.csv)
@@ -36,6 +36,9 @@ banyan-ma-research/
 │   ├── build_crossmatch.py  # 3-way discovery triangulation
 │   ├── validate_grounding.py# Grounding check: deliverables vs raw codex research
 │   ├── osint_wikidata.py    # OSINT firmographic enrichment (Wikidata)
+│   ├── build_intelligence_hub.py    # One-stop hub (top-250 + dossiers + market + playbook)
+│   ├── build_access_architecture.py # Layered IAM/data-access page (live role lens)
+│   ├── templates/           # HTML templates the two builders inject data into
 │   └── workflows/           # Multi-agent orchestration scripts (*.js, Claude Code Workflow tool)
 ├── reports/               # Self-contained HTML deliverables (open in a browser)
 ├── skills/                # banyan-sales-pitch (reusable Claude Code skill)
@@ -47,7 +50,7 @@ banyan-ma-research/
 ```bash
 pip install -r requirements.txt
 
-# Run the full test suite (46 tests)
+# Run the full test suite (47 tests)
 python -m pytest -q
 
 # Score the record set under both rubrics, curate to top 250, write deliverables
@@ -61,6 +64,8 @@ python analysis/build_dossiers.py                       # best-of-both dossiers
 python analysis/build_dossiers.py data/research/raw_dossiers_banyan.json \
        data/research/top25_banyan.json reports/banyan_dossiers_pitches.html
 python analysis/validate_grounding.py                   # faithfulness check
+python analysis/build_intelligence_hub.py               # reports/intelligence_hub.html
+python analysis/build_access_architecture.py            # reports/access_architecture.html
 ```
 
 Scripts anchor on `ROOT = __file__.parent.parent`, so they must stay one level
@@ -71,6 +76,8 @@ loaded by **relative path** from `run.py` and the tests, so they stay at the roo
 
 | File | What |
 |------|------|
+| `intelligence_hub.html` | **One-stop hub**: top-250 (both rubrics, per-criterion rationale, revenue/profitability signals), 25 dossiers + pitches, market map, outreach playbook, method & QC |
+| `access_architecture.html` | Layered data-access architecture (identity → classification → PDP → enforcement → consumers → audit), role × tier matrix, live role lens from `policy.py`, Claude-user guidance |
 | `dashboard.html` | Top-250 dual-rubric screen |
 | `market_synthesis.html` | 14-segment market map, shortlist, whitespace, competing consolidators |
 | `banyan_dossiers_pitches.html` | Banyan-rubric top-25 dossiers + outreach pitches (**18 SEND**) |

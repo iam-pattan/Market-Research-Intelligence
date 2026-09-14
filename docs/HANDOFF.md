@@ -1,6 +1,6 @@
 # HANDOFF — Banyan Software M&A Screening
 
-**Repo:** `~/banyan-ma-research/` · **Last updated:** 2026-09-13 · **Git:** not a repo (nothing committed; workspace policy = commit only when asked).
+**Repo:** `~/Market-Research-Intelligence/` (github.com/iam-pattan/Market-Research-Intelligence) · **Last updated:** 2026-09-14 · **Git:** committed on `main`; workspace policy = commit only when asked.
 This is the authoritative session handoff. Deep chronological detail lives in the auto-memory `~/.claude/projects/-Users-pahmed/memory/project_banyan_ma_research.md`; the design/plan live in `docs/superpowers/`. **Architecture:** see `docs/HLD.md` (system-level) and `docs/LLD.md` (module-level). **Tooling used to build this:** see `docs/TOOLING_LOG.md`.
 
 ---
@@ -52,6 +52,15 @@ Deterministic scoring core **separate from the LLM**: extractors propose per-cri
 ## 7. Repository cleanup (this session)
 
 Reorganized from a flat `leads/` grab-bag into an industry-standard layout (see `README.md`): `analysis/` (scripts) + `analysis/workflows/`, `data/{records,screen,research}`, `reports/` (all HTML), config at root. Removed junk (`__pycache__`, `.pytest_cache`, `.DS_Store`, `.firecrawl`, empty stray files). Rewrote the 6 pipeline scripts' hardcoded paths to centralized constants; added `requirements.txt`, proper `.gitignore`, updated `pyproject.toml` (added pandas/openpyxl) and `README.md`. The orphaned early hospitality-leads table was kept as `data/research/orphaned_hospitality_leads.md`.
+
+## 7b. Consolidated deliverables (2026-09-14 session)
+
+Two one-stop HTML pages, published as Claude artifacts and regenerable from `analysis/`:
+
+- **`reports/intelligence_hub.html`** (`build_intelligence_hub.py` + `templates/intelligence_hub.html`) — top-250 in the curated best-of-both order (Banyan score sortable, per user decision), joined to the raw record the screen actually scored (`run.dedup()` rule), per-criterion rationale, revenue estimate + confidence, profitability *signal* (no margin/profit numbers exist for private targets — stated honestly), 25 dossiers + pitches, 14-segment market map, the pitch skill verbatim, method & QC. Full unfiltered data — Leadership/tech-lead audience; share accordingly.
+- **`reports/access_architecture.html`** (`build_access_architecture.py` + template) — six-layer IAM design (identity → classification → PDP → PEP → consumers → audit), role × tier matrix and a **live role lens computed by the real `policy.py`** on a synthetic record, plus the answer to "what do Claude users need": SSO identity + an MCP/API enforcement point running `guard()` *before* data enters the model; nothing inside Claude.
+- **QC:** own re-derivation script (50 checks) + `validation-loop:qc-reviewer` second-model review (verdict REVIEW → all findings fixed: wrong duplicate-domain record join for 4 top-40 rows, overclaiming tier copy, tooltip HTML sink, hardcoded test counts). `validation-loop:validate` misfired (stale session marker) — run the reviewer agent directly instead.
+- **Policy fix:** the lens exposed that `enforce()` filed pitch narrative under the Confidential default (shown to Finance, dropped for Sales — opposite of `pitch_visible()`). `policy.py` now gates `_PITCH_KEYS` through `pitch_visible()` inside `enforce()`; regression test added (suite = 47).
 
 ## 8. Outstanding / next steps (none blocking)
 

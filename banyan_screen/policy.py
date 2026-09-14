@@ -43,6 +43,9 @@ _INTERNAL_SAFE = ("name", "domain", "vertical", "region", "hq", "country",
                   "score", "confidence", "tier", "rank")
 
 _DEFAULT_TIER = Tier.CONFIDENTIAL_FINANCIAL  # conservative: unknown fields are NOT free to leak
+# Outreach narrative is Sales/BD-owned content, not a data tier: gated by
+# pitch_visible() inside enforce(), before tier classification (see below).
+_PITCH_KEYS = ("pitch", "outreach", "email_body", "cold_email")
 
 
 def classify(key: str) -> Tier:
@@ -120,6 +123,12 @@ def enforce(role: str, record: dict[str, Any]) -> dict[str, Any]:
         return {}
     out: dict[str, Any] = {}
     for key, value in record.items():
+        if any(p in str(key).lower() for p in _PITCH_KEYS):
+            # Narrative fields follow the coarse Sales/BD gate, not a tier —
+            # so the field engine and pitch_visible() never disagree.
+            if pitch_visible(role):
+                out[key] = value
+            continue
         tier = classify(key)
         if isinstance(value, dict):
             # Nested object: classify by the sub-keys too; keep the higher of the
