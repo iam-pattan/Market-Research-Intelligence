@@ -203,6 +203,7 @@ ul.plain{padding-left:20px;margin:0;display:grid;gap:8px;font-size:13.5px;max-wi
 /* ---- market ---- */
 .mk-sub{display:none}
 .mk-sub.active{display:block}
+.mk-sub .plain{max-width:none}
 .reading{max-width:92ch}
 .prose-lg{font-size:14.5px;line-height:1.6;color:var(--ink)}
 .prose-lg p+p{margin-top:10px}
@@ -408,19 +409,19 @@ ol.plain.numbered li::before{content:counter(n,decimal-leading-zero);font-family
     <div id="briefs"></div>
   </div>
   <div class="mk-sub" id="mk-themes">
-    <div class="panel reading"><h3>Cross-segment themes</h3><div class="hint">Patterns that recur across all 14 briefs.</div><ol class="plain numbered" id="themes"></ol></div>
+    <div class="panel"><h3>Cross-segment themes</h3><div class="hint">Patterns that recur across all 14 briefs.</div><ol class="plain numbered" id="themes"></ol></div>
   </div>
   <div class="mk-sub" id="mk-whitespace">
-    <div class="panel reading"><h3>Whitespace — under-hunted niches, ranked</h3><div class="hint">Niches that fit the profile and that venture capital and the big roll-ups are not chasing.</div><ol class="plain numbered" id="whitespace"></ol></div>
+    <div class="panel"><h3>Whitespace — under-hunted niches, ranked</h3><div class="hint">Niches that fit the profile and that venture capital and the big roll-ups are not chasing.</div><ol class="plain numbered" id="whitespace"></ol></div>
   </div>
   <div class="mk-sub" id="mk-shortlist">
     <h3 style="margin-bottom:4px">Prioritized shortlist</h3>
     <p class="hint" style="margin-bottom:14px">The analyst shortlist from the synthesis, in priority order. Click a card to open the company in the Top 250.</p>
     <div class="sl-grid" id="shortlist-full"></div>
-    <div class="panel reading" style="margin-top:24px"><h3>Competing consolidators</h3><div class="hint">Who Banyan actually bids against for founder-owned sub-$100M vertical software.</div><ul class="plain" id="consolidators"></ul></div>
+    <div class="panel" style="margin-top:24px"><h3>Competing consolidators</h3><div class="hint">Who Banyan actually bids against for founder-owned sub-$100M vertical software.</div><ul class="plain" id="consolidators"></ul></div>
   </div>
   <div class="mk-sub" id="mk-caveats">
-    <div class="panel reading"><h3>Caveats</h3><div class="hint">Read before acting on any name above.</div><ul class="plain" id="market-caveats"></ul></div>
+    <div class="panel"><h3>Caveats</h3><div class="hint">Read before acting on any name above.</div><ul class="plain" id="market-caveats"></ul></div>
   </div>
 </section>
 
