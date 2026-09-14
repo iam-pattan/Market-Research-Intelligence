@@ -1,7 +1,7 @@
 """Re-derive every figure shown on the consolidated pages from the source data.
 
-Reads the JSON payload embedded in reports/intelligence_hub.html and
-reports/access_architecture.html and checks it against data/, the
+Reads the JSON payload embedded in outcome/intelligence_hub.html and
+outcome/access_architecture.html and checks it against data/, the
 screen's own dedup rule and banyan_screen.policy. Exits non-zero on any
 mismatch so it can run in CI after the builders.
 
@@ -43,7 +43,7 @@ def load(p):
 
 
 def qc_hub() -> None:
-    P, H = payload(ROOT / "reports" / "intelligence_hub.html")
+    P, H = payload(ROOT / "outcome" / "intelligence_hub.html")
     res = load(DATA / "screen" / "results.json")
     recs = [r for f in sorted(glob.glob(str(DATA / "records" / "*.json"))) for r in load(f)]
     tiers = collections.Counter(r["banyan"]["tier"] for r in res)
@@ -117,7 +117,7 @@ def qc_hub() -> None:
 
 
 def qc_access() -> None:
-    A, HA = payload(ROOT / "reports" / "access_architecture.html")
+    A, HA = payload(ROOT / "outcome" / "access_architecture.html")
     rec = A["lens"]["record"]
     check("matrix roles == policy.ROLES", {m["role"] for m in A["matrix"]} == set(policy.ROLES))
     check("n_roles", A["meta"]["n_roles"] == len(policy.ROLES))

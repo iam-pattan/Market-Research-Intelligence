@@ -2,7 +2,7 @@ from banyan_screen.models import Company, Criterion, CriterionScore, Tier
 from banyan_screen.config import RubricConfig
 from banyan_screen.rubric_engine import score_company
 
-CFG = RubricConfig.from_yaml("config.yaml")
+CFG = RubricConfig.from_yaml("config/banyan.yaml")
 CO = Company(id="acme", name="Acme")
 
 

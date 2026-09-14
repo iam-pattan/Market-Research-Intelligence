@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Unit tests (scoring core, policy, builders)
+        run: python -m pytest -q
+      - name: Rebuild the outcome pages from data/
+        run: |
+          python analysis/build_intelligence_hub.py
+          python analysis/build_access_architecture.py
+          python analysis/build_walkthrough_docx.py
+      - name: Re-derive every figure on the pages from source data
+        run: python analysis/qc_consolidated_pages.py

@@ -52,6 +52,6 @@ def test_seed_records_score_through_pipeline(tmp_path):
     p = tmp_path / "seed.csv"
     p.write_text("Company,Revenue,Ownership\nAcme,$8M,Founder-owned\n")
     recs = load_seed(str(p))
-    cfg = RubricConfig.from_yaml("config.yaml")
+    cfg = RubricConfig.from_yaml("config/banyan.yaml")
     r = score_company(company_from_record(recs[0]), banyan_scores(recs[0]), cfg)
     assert r.tier is not None

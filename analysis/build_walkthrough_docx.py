@@ -1,6 +1,6 @@
-"""Build the project walkthrough as a Word document (docs/How_the_Banyan_Screen_Was_Built.docx).
+"""Build the project walkthrough as a Word document (outcome/How_the_Banyan_Screen_Was_Built.docx).
 
-Same nine-stage narrative as reports/project_walkthrough.html; charts are
+Same nine-stage narrative as outcome/project_walkthrough.html; charts are
 rendered with matplotlib and embedded as images. Figures are the same ones
 the HTML page carries (data/ + docs/TOOLING_LOG.md + docs/HANDOFF.md).
 
@@ -24,7 +24,7 @@ from docx.shared import Inches, Pt, RGBColor  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-OUT = ROOT / "docs" / "How_the_Banyan_Screen_Was_Built.docx"
+OUT = ROOT / "outcome" / "How_the_Banyan_Screen_Was_Built.docx"
 TMP = Path(tempfile.mkdtemp(prefix="walkthrough_"))
 
 ACCENT, LIGHT, NEUTRAL = "#0f6e75", "#9ccdd2", "#c9c5b9"
@@ -336,9 +336,9 @@ def main() -> None:
     D.rich([("The work opened with the ", {}), ("superpowers:brainstorming", {"code": True}),
             (" skill (scope the pipeline and the IAM model with the user, one question at a time) and ", {}),
             ("superpowers:writing-plans", {"code": True}),
-            (" (a task-by-task plan for the scoring core). The rubric became ", {}), ("config.yaml", {"code": True}),
+            (" (a task-by-task plan for the scoring core). The rubric became ", {}), ("config/banyan.yaml", {"code": True}),
             (": seven criteria with weights derived from banyansoftware.com's stated FAQ, two hard gates, a confidence floor "
-             "and tier thresholds. A second, contrasting rubric (", {}), ("config.growth.yaml", {"code": True}),
+             "and tier thresholds. A second, contrasting rubric (", {}), ("config/growth.yaml", {"code": True}),
             (") exists purely to catch companies that look impressive but are the wrong shape — VC-backed, scaling, unprofitable.", {})])
     D.fig(hbar("rubric", ["Recurring revenue", "Profitability", "Niche leadership", "Revenue band ($2M–$100M)",
                           "Customer retention", "Ownership fit (founder/family)", "Team stability"],
@@ -500,12 +500,13 @@ def main() -> None:
     D.h("Where everything lives", 1)
     D.table(["Path", "What it is"], [
         ["banyan_screen/", f"The deterministic core — models, rubric engine, ingest, run CLI, and policy.py (IAM). {F['tests']} tests in tests/."],
-        ["config.yaml · config.growth.yaml", "The two rubrics: weights, gates, thresholds."],
+        ["config/banyan.yaml · config/growth.yaml", "The two rubrics: weights, gates, thresholds."],
         ["data/records/", f"{F['n_records']} discovered company records from the {F['n_batches']} vertical batches."],
         ["data/screen/", "The scored, curated top-250 (results.json, ranked.csv)."],
         ["data/research/", "Passes 2–3, cross-match, dossiers, market synthesis, grounding results, and the verbatim codex research audit trail."],
         ["analysis/", "Reporting scripts and the four multi-agent workflow scripts; templates/ for the consolidated pages."],
-        ["reports/", "Self-contained HTML deliverables: the intelligence hub, the access architecture, the walkthrough, and the earlier dashboards."],
+        ["outcome/", "The consolidated deliverables: intelligence hub, access architecture, this walkthrough (HTML + Word)."],
+        ["reports/", "Earlier self-contained HTML dashboards (screen, market synthesis, dossiers, cross-match, IAM model)."],
         ["skills/banyan-sales-pitch/", "The reusable outreach skill (rules, templates, playbook)."],
         ["docs/", "HLD, LLD, tooling log, session handoff, this document, and the original design spec and plan."],
     ], widths=[2.2, 4.3], mono_cols=(0,))

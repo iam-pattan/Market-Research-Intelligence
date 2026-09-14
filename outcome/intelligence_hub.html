@@ -450,8 +450,8 @@ ol.plain.numbered li::before{content:counter(n,decimal-leading-zero);font-family
   <div class="panel" style="margin-bottom:20px"><h3>Pipeline</h3><div class="hint">Deterministic scoring core, separate from the LLM: extractors propose per-criterion scores with confidence; the rubric engine alone computes the tier.</div>
     <div class="flow"><span>codex web_search discovery (12 vertical batches)</span><em>→</em><span>333 records</span><em>→</em><span>ingest → CriterionScore × confidence</span><em>→</em><span>rubric_engine: composite → discount → gates → tier</span><em>→</em><span>curate top 250</span><em>→</em><span>25 deep dossiers + pitches</span><em>→</em><span>3-pass triangulation</span><em>→</em><span>2 QC rounds + grounding check</span></div></div>
   <div class="method-grid">
-    <div class="panel"><h3>Banyan rubric (config.yaml)</h3><div class="hint">Weights derived from Banyan's stated criteria (banyansoftware.com/faq, self-reported). Defaults — tunable.</div><table class="rub-table" id="rub-banyan"></table><div class="formula" id="rub-banyan-rules"></div></div>
-    <div class="panel"><h3>Growth rubric (config.growth.yaml)</h3><div class="hint">Contrast rubric for scaling / VC-backed companies. Not Banyan's thesis — used to catch non-targets.</div><table class="rub-table" id="rub-growth"></table><div class="formula" id="rub-growth-rules"></div></div>
+    <div class="panel"><h3>Banyan rubric (config/banyan.yaml)</h3><div class="hint">Weights derived from Banyan's stated criteria (banyansoftware.com/faq, self-reported). Defaults — tunable.</div><table class="rub-table" id="rub-banyan"></table><div class="formula" id="rub-banyan-rules"></div></div>
+    <div class="panel"><h3>Growth rubric (config/growth.yaml)</h3><div class="hint">Contrast rubric for scaling / VC-backed companies. Not Banyan's thesis — used to catch non-targets.</div><table class="rub-table" id="rub-growth"></table><div class="formula" id="rub-growth-rules"></div></div>
     <div class="panel"><h3>Confidence discount</h3><div class="formula">adjusted = composite × (floor + (1 − floor) × overall_confidence)<br>floor = 0.5 → an unverifiable company can lose at most half its composite<br>Gates: loss evidence → REJECTED · revenue &lt; $2M → cap tier C · coverage &lt; 50% → INSUFFICIENT_DATA</div>
       <p style="font-size:13px;color:var(--ink-2);margin-top:10px">This is why genuine private targets land at tier C: profitability and retention are rarely verifiable from the public web, so confidence is low and the score is discounted. Tier C flags "verify in diligence", not "bad fit".</p></div>
     <div class="panel"><h3>Validation</h3><div class="stat-row" id="val-stats"></div>
@@ -466,7 +466,7 @@ ol.plain.numbered li::before{content:counter(n,decimal-leading-zero);font-family
       <li><b>Sources:</b> public web + official registries only. No PitchBook, Crunchbase or Grata.</li>
     </ul></div>
   </div>
-  <div class="foot"><span id="foot-left"></span><span>Repo: Market-Research-Intelligence · reports/intelligence_hub.html</span></div>
+  <div class="foot"><span id="foot-left"></span><span>Repo: Market-Research-Intelligence · outcome/intelligence_hub.html</span></div>
 </section>
 </main>
 <div id="tip" role="tooltip"></div>

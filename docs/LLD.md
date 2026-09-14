@@ -101,14 +101,14 @@ classDiagram
 
 `Signal`/`CriterionScore` both validate their `score`/`confidence` fields to `[0.0, 1.0]` in `__post_init__` — an out-of-range value raises `ValueError` at construction, not silently clamps. **11 criteria total: 7 Banyan-fit + 4 growth-thesis**, sharing one enum so a criterion computed once (e.g. `RECURRING_REVENUE`, `NICHE_LEADERSHIP`, `RETENTION` appear in both rubrics) is reused, not recomputed.
 
-## 3. Rubric configuration (`config.py` + `config.yaml`)
+## 3. Rubric configuration (`config.py` + `config/banyan.yaml`)
 
 `RubricConfig` is loaded from YAML and **validated at load time** (`validate()`):
 - `weights` must be a non-empty subset of `Criterion` and **sum to 1.0 ± 1e-3**.
 - `a_threshold >= b_threshold`.
 - Every threshold/floor value in `[0, 1]`.
 
-YAML shape (from `config.yaml`, the Banyan rubric):
+YAML shape (from `config/banyan.yaml`, the Banyan rubric):
 ```yaml
 weights:
   recurring_revenue: 0.25
@@ -130,7 +130,7 @@ tiers:
   a_threshold: 0.75
   b_threshold: 0.55
 ```
-`config.growth.yaml` mirrors this shape with a different criteria set (adds `revenue_growth`/`hiring_velocity`/`funding_momentum`/`market_size`), **`revenue_below_floor_max_tier: null`** (profitability/revenue-ceiling is not a gate for growth targets), and different weights.
+`config/growth.yaml` mirrors this shape with a different criteria set (adds `revenue_growth`/`hiring_velocity`/`funding_momentum`/`market_size`), **`revenue_below_floor_max_tier: null`** (profitability/revenue-ceiling is not a gate for growth targets), and different weights.
 
 ## 4. Scoring algorithm (`rubric_engine.score_company`)
 
@@ -337,7 +337,7 @@ Key contract details, consistent across all four workflow files:
 | `test_models.py` | `models.py` | Dataclass validation (`[0,1]` bounds) |
 | `test_config.py` | `config.py` | YAML loading, weight-sum/threshold validation |
 | `test_rubric_engine.py` | `rubric_engine.py` | Composite/discount/gate/tier logic (Banyan rubric) |
-| `test_growth_rubric.py` | `rubric_engine.py` + `config.growth.yaml` | Same engine, growth rubric (no profitability gate) |
+| `test_growth_rubric.py` | `rubric_engine.py` + `config/growth.yaml` | Same engine, growth rubric (no profitability gate) |
 | `test_ingest.py` | `ingest.py` | Record → CriterionScore mapping, revenue-ceiling and niche-damping formulas |
 | `test_input_loader.py` | `input_loader.py` | Column auto-mapping, money parsing, seed-confidence signals |
 | `test_policy.py` | `policy.py` | 10 tests: field classification precedence, all 4 role classes (DS/Sales/Finance/Leadership), fail-closed unknown role, `guard()` list/dict/aggregate-only dispatch, `pitch_visible()` coarse gate |

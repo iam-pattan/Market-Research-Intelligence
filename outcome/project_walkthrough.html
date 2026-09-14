@@ -162,7 +162,7 @@ table.map td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
   <div>
     <h2>Turn the thesis into a rubric before touching any data</h2>
     <p class="why">Banyan's buy criteria are public and specific. Writing them down as weighted, gated criteria first meant every later step had a fixed target to score against — and the LLM never got to decide what "good" means.</p>
-    <div class="prose"><p>The work opened with the <code>superpowers:brainstorming</code> skill (scope the pipeline and the IAM model with the user, one question at a time) and <code>superpowers:writing-plans</code> (a task-by-task plan for the scoring core). The rubric became <code>config.yaml</code>: seven criteria with weights derived from banyansoftware.com's stated FAQ, two hard gates, a confidence floor and tier thresholds. A second, contrasting rubric (<code>config.growth.yaml</code>) exists purely to catch companies that look impressive but are the wrong shape — VC-backed, scaling, unprofitable.</p></div>
+    <div class="prose"><p>The work opened with the <code>superpowers:brainstorming</code> skill (scope the pipeline and the IAM model with the user, one question at a time) and <code>superpowers:writing-plans</code> (a task-by-task plan for the scoring core). The rubric became <code>config/banyan.yaml</code>: seven criteria with weights derived from banyansoftware.com's stated FAQ, two hard gates, a confidence floor and tier thresholds. A second, contrasting rubric (<code>config/growth.yaml</code>) exists purely to catch companies that look impressive but are the wrong shape — VC-backed, scaling, unprofitable.</p></div>
     <div class="fig"><h3>The Banyan rubric, as weights</h3><div class="cap">What a company is scored on under the buy-and-hold thesis. Gates apply before the tier: loss evidence → rejected; revenue under $2M → capped at tier C.</div>
       <div class="bars">
         <div class="bar"><span class="l">Recurring revenue</span><div class="t"><i style="width:100%"></i></div><span class="v">0.25</span></div>
@@ -393,12 +393,13 @@ table.map td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <thead><tr><th>Path</th><th>What it is</th></tr></thead>
       <tbody>
         <tr><td class="mono">banyan_screen/</td><td>The deterministic core — models, rubric engine, ingest, run CLI, and <code>policy.py</code> (IAM). 53 tests in <code>tests/</code>.</td></tr>
-        <tr><td class="mono">config.yaml · config.growth.yaml</td><td>The two rubrics: weights, gates, thresholds.</td></tr>
+        <tr><td class="mono">config/banyan.yaml · config/growth.yaml</td><td>The two rubrics: weights, gates, thresholds.</td></tr>
         <tr><td class="mono">data/records/</td><td>333 discovered company records from the 12 vertical batches.</td></tr>
         <tr><td class="mono">data/screen/</td><td>The scored, curated top-250 (<code>results.json</code>, <code>ranked.csv</code>).</td></tr>
         <tr><td class="mono">data/research/</td><td>Passes 2–3, cross-match, dossiers, market synthesis, grounding results, and the verbatim codex research audit trail.</td></tr>
         <tr><td class="mono">analysis/</td><td>Reporting scripts and the four multi-agent workflow scripts; <code>templates/</code> for the consolidated pages.</td></tr>
-        <tr><td class="mono">reports/</td><td>Self-contained HTML deliverables: the intelligence hub, the access architecture, this walkthrough, and the earlier dashboards.</td></tr>
+        <tr><td class="mono">outcome/</td><td>The consolidated deliverables: intelligence hub, access architecture, this walkthrough (HTML + Word).</td></tr>
+        <tr><td class="mono">reports/</td><td>Earlier self-contained HTML dashboards (screen, market synthesis, dossiers, cross-match, IAM model).</td></tr>
         <tr><td class="mono">skills/banyan-sales-pitch/</td><td>The reusable outreach skill (rules, templates, playbook).</td></tr>
         <tr><td class="mono">docs/</td><td>HLD, LLD, tooling log, session handoff, and the original design spec and plan.</td></tr>
       </tbody></table></div></div>

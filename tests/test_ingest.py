@@ -4,8 +4,8 @@ from banyan_screen.config import RubricConfig
 from banyan_screen.ingest import company_from_record, banyan_scores, growth_scores
 from banyan_screen.rubric_engine import score_company
 
-BANYAN = RubricConfig.from_yaml("config.yaml")
-GROWTH = RubricConfig.from_yaml("config.growth.yaml")
+BANYAN = RubricConfig.from_yaml("config/banyan.yaml")
+GROWTH = RubricConfig.from_yaml("config/growth.yaml")
 
 
 def _rec(**over):

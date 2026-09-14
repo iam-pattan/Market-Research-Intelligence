@@ -1,4 +1,4 @@
-"""Build the one-stop Banyan Target Intelligence hub (reports/intelligence_hub.html).
+"""Build the one-stop Banyan Target Intelligence hub (outcome/intelligence_hub.html).
 
 Consolidates every deliverable in data/ into a single self-contained HTML page:
 top-250 screen (both rubrics, per-criterion rationale), joined raw-record
@@ -27,7 +27,7 @@ sys.path.insert(0, str(ROOT))
 from banyan_screen.run import _norm_domain, dedup  # noqa: E402  (same collapse rule as the screen)
 DATA = ROOT / "data"
 TEMPLATE = ROOT / "analysis" / "templates" / "intelligence_hub.html"
-OUT = ROOT / "reports" / "intelligence_hub.html"
+OUT = ROOT / "outcome" / "intelligence_hub.html"
 
 BANYAN_CRITERIA = ["recurring_revenue", "profitability", "revenue_band", "niche_leadership",
                    "retention", "ownership_fit", "team_stability"]
@@ -139,8 +139,8 @@ def main() -> None:
     top25 = load_json(DATA / "research" / "top25_banyan.json")
     synthesis = load_json(DATA / "research" / "market_synthesis.json")
     grounding = load_json(DATA / "research" / "grounding_validation.json")
-    banyan_cfg = yaml.safe_load(open(ROOT / "config.yaml"))
-    growth_cfg = yaml.safe_load(open(ROOT / "config.growth.yaml"))
+    banyan_cfg = yaml.safe_load(open(ROOT / "config" / "banyan.yaml"))
+    growth_cfg = yaml.safe_load(open(ROOT / "config" / "growth.yaml"))
 
     dossiers = build_dossiers(raw_dossiers, top25)
     dossier_idx_by_domain = {d["domain"].lower(): d["idx"] for d in dossiers}

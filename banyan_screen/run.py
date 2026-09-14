@@ -99,8 +99,8 @@ def main(argv: list[str]) -> int:
         print("usage: python -m banyan_screen.run <records.json ...> [--top=N] [--out=DIR]")
         print("   or: python -m banyan_screen.run --seed=list.csv [--top=N] [--out=DIR]")
         return 1
-    banyan = RubricConfig.from_yaml("config.yaml")
-    growth = RubricConfig.from_yaml("config.growth.yaml")
+    banyan = RubricConfig.from_yaml("config/banyan.yaml")
+    growth = RubricConfig.from_yaml("config/growth.yaml")
     if seed:
         from banyan_screen.input_loader import load_seed
         recs = load_seed(seed)

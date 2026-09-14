@@ -1,4 +1,4 @@
-"""Build the Layered Data Access Architecture page (reports/access_architecture.html).
+"""Build the Layered Data Access Architecture page (outcome/access_architecture.html).
 
 Embeds the REAL enforcement outputs of banyan_screen.policy (role matrix,
 field classification, guard() applied to a synthetic record for every role)
@@ -20,7 +20,7 @@ sys.path.insert(0, str(ROOT))
 from banyan_screen import policy  # noqa: E402
 
 TEMPLATE = ROOT / "analysis" / "templates" / "access_architecture.html"
-OUT = ROOT / "reports" / "access_architecture.html"
+OUT = ROOT / "outcome" / "access_architecture.html"
 
 # Synthetic record — no real company or person. Field names are chosen to hit
 # every classification tier so the lens shows each rule firing.

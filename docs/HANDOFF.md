@@ -1,6 +1,6 @@
 # HANDOFF — Banyan Software M&A Screening
 
-**Repo:** `~/Market-Research-Intelligence/` (github.com/iam-pattan/Market-Research-Intelligence) · **Last updated:** 2026-09-14 · **Git:** work committed on branch `consolidated-deliverables` (unpushed; merge to `main` when approved); workspace policy = commit only when asked.
+**Repo:** `~/Market-Research-Intelligence/` (github.com/iam-pattan/Market-Research-Intelligence) · **Last updated:** 2026-09-14 · **Git:** on `main` at github.com/iam-pattan/Market-Research-Intelligence; workspace policy = commit only when asked.
 This is the authoritative session handoff. Deep chronological detail lives in the auto-memory `~/.claude/projects/-Users-pahmed/memory/project_banyan_ma_research.md`; the design/plan live in `docs/superpowers/`. **Architecture:** see `docs/HLD.md` (system-level) and `docs/LLD.md` (module-level). **Tooling used to build this:** see `docs/TOOLING_LOG.md`.
 
 ---
@@ -14,11 +14,11 @@ Build a working agentic market-research + target-screening solution for **Banyan
 - **Public web + official registries only — NO paid data providers** (no PitchBook/Crunchbase/Grata). User has no existing list → discovery-first.
 - **Private-company financials are mostly unverifiable from public web** → the screen confidence-discounts them (most genuine targets land at **tier C; C ≠ bad fit**). Only registries with *filed accounts* (UK Companies House, EU) give real private revenue.
 - **Discovery engine = codex `web_search`** (model `gpt-5.6-sol`, ChatGPT-authed, no API key). Must run **FOREGROUND, sandbox OFF** (`dangerouslyDisableSandbox: true`). WebSearch/firecrawl/perplexity are all blocked/auth-walled here.
-- **Sandbox gotchas:** `/tmp`→use `$TMPDIR`; GUI `open`, PyPI installs, and most `.claude/` writes need sandbox off; `config.yaml` is loaded by *relative path* (tests + `run.py`) so it must stay at repo root.
+- **Sandbox gotchas:** `/tmp`→use `$TMPDIR`; GUI `open`, PyPI installs, and most `.claude/` writes need sandbox off; `config/banyan.yaml` is loaded by *relative path* (tests + `run.py`) so it must stay at repo root.
 
 ## 3. Architecture
 
-Deterministic scoring core **separate from the LLM**: extractors propose per-criterion `CriterionScore`s *with confidence*; `rubric_engine` alone computes `composite → confidence-discount → gates → tier`. Confidence discount: `adjusted = composite × (floor + (1−floor)×overall_conf)`, floor 0.5. Gates: loss→REJECTED, rev<$2M→cap C, thin coverage→INSUFFICIENT_DATA. Dual rubric: `config.yaml` (Banyan) + `config.growth.yaml` (growth). Every score carries an audit `rationale`.
+Deterministic scoring core **separate from the LLM**: extractors propose per-criterion `CriterionScore`s *with confidence*; `rubric_engine` alone computes `composite → confidence-discount → gates → tier`. Confidence discount: `adjusted = composite × (floor + (1−floor)×overall_conf)`, floor 0.5. Gates: loss→REJECTED, rev<$2M→cap C, thin coverage→INSUFFICIENT_DATA. Dual rubric: `config/banyan.yaml` (Banyan) + `config/growth.yaml` (growth). Every score carries an audit `rationale`.
 
 **IAM enforcement layer** (`banyan_screen/policy.py`) — a real filter on output, two layers:
 - Field classification (`classify`): 5 tiers PUBLIC→INTERNAL→CONFIDENTIAL_FINANCIAL→RESTRICTED_PII→RESTRICTED_MNPI; unknown fields fail-closed to CONFIDENTIAL_FINANCIAL.
@@ -57,10 +57,14 @@ Reorganized from a flat `leads/` grab-bag into an industry-standard layout (see 
 
 Two one-stop HTML pages, published as Claude artifacts and regenerable from `analysis/`:
 
-- **`reports/intelligence_hub.html`** (`build_intelligence_hub.py` + `templates/intelligence_hub.html`) — top-250 in the curated best-of-both order (Banyan score sortable, per user decision), joined to the raw record the screen actually scored (`run.dedup()` rule), per-criterion rationale, revenue estimate + confidence, profitability *signal* (no margin/profit numbers exist for private targets — stated honestly), 25 dossiers + pitches, 14-segment market map, the pitch skill verbatim, method & QC. Full unfiltered data — Leadership/tech-lead audience; share accordingly.
-- **`reports/access_architecture.html`** (`build_access_architecture.py` + template) — six-layer IAM design (identity → classification → PDP → PEP → consumers → audit), role × tier matrix and a **live role lens computed by the real `policy.py`** on a synthetic record, plus the answer to "what do Claude users need": SSO identity + an MCP/API enforcement point running `guard()` *before* data enters the model; nothing inside Claude.
+- **`outcome/intelligence_hub.html`** (`build_intelligence_hub.py` + `templates/intelligence_hub.html`) — top-250 in the curated best-of-both order (Banyan score sortable, per user decision), joined to the raw record the screen actually scored (`run.dedup()` rule), per-criterion rationale, revenue estimate + confidence, profitability *signal* (no margin/profit numbers exist for private targets — stated honestly), 25 dossiers + pitches, 14-segment market map, the pitch skill verbatim, method & QC. Full unfiltered data — Leadership/tech-lead audience; share accordingly.
+- **`outcome/access_architecture.html`** (`build_access_architecture.py` + template) — six-layer IAM design (identity → classification → PDP → PEP → consumers → audit), role × tier matrix and a **live role lens computed by the real `policy.py`** on a synthetic record, plus the answer to "what do Claude users need": SSO identity + an MCP/API enforcement point running `guard()` *before* data enters the model; nothing inside Claude.
 - **QC:** `analysis/qc_consolidated_pages.py` (re-derives every figure on both pages from data/ and policy.py; exits non-zero on mismatch) + `validation-loop:qc-reviewer` second-model review (verdict REVIEW → all findings fixed: wrong duplicate-domain record join for 4 top-40 rows, overclaiming tier copy, tooltip HTML sink, hardcoded test counts). `validation-loop:validate` misfired (stale session marker) — run the reviewer agent directly instead.
 - **Policy fix:** the lens exposed that `enforce()` filed pitch narrative under the Confidential default (shown to Finance, dropped for Sales — opposite of `pitch_visible()`). `policy.py` now gates `_PITCH_KEYS` through `pitch_visible()` inside `enforce()` (PII/MNPI patterns still win; narrative dicts keep copy but mask/drop contacts and deal state). A second `/validate` round also found `classify('recurring_revenue')` falling to Confidential because `revenue` matched first — fixed. Tests: `tests/test_policy.py` (13) + `tests/test_builders.py` (4); suite = 53.
+
+## 7c. Repository layout (2026-09-14, final)
+
+`config/` (both rubrics, loaded by relative path from the repo root) · `banyan_screen/` (core) · `analysis/` (builders, QC script, workflows, templates) · `data/` · **`outcome/`** (the consolidated deliverables: hub, access architecture, walkthrough HTML + Word) · `reports/` (earlier dashboards) · `docs/` · `skills/` · `tests/` · `.github/workflows/ci.yml` (pytest → builders → QC script). Work merged to `main` and pushed.
 
 ## 8. Outstanding / next steps (none blocking)
 
