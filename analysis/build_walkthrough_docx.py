@@ -23,6 +23,7 @@ from docx.oxml.ns import qn  # noqa: E402
 from docx.shared import Inches, Pt, RGBColor  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data"
 OUT = ROOT / "docs" / "How_the_Banyan_Screen_Was_Built.docx"
 TMP = Path(tempfile.mkdtemp(prefix="walkthrough_"))
 
@@ -132,12 +133,64 @@ def flow_chart():
     return p
 
 
-def funnel_chart():
+def funnel_chart(F):
     labels = ["Records discovered", "After dedup (best-sourced wins)", "Curated top-N (best-of-both)",
-              "Deep-researched (Banyan top-25)", "Outreach recommended (SEND)"]
-    vals = [333, 318, 250, 25, 18]
+              f"Deep-researched (Banyan top-{F['n_dossiers']})", "Outreach recommended (SEND)"]
+    vals = [F["n_records"], F["n_dedup"], F["n_screen"], F["n_dossiers"], F["send"]]
     colors = [ACCENT, ACCENT, LIGHT, LIGHT, GOOD]
     return hbar("funnel", labels, vals, colors, xlabel="companies")
+
+
+# --------------------------------------------------------------- figures ---
+OSINT_LABELS = {
+    "uk-ireland-filed-accounts": ("UK / Ireland Companies House", True),
+    "eu-registries-filed": ("EU registries (filed accounts)", True),
+    "anz-canada-registries": ("ANZ / Canada registries", False),
+    "us-registry-sec-osint": ("US registries / SEC EDGAR", False),
+    "github-tech-footprint": ("GitHub tech footprint", False),
+    "careers-hiring-osint": ("Careers & hiring signals", False),
+    "product-directory-leaders": ("Product directory leaders", False),
+}
+
+
+def load_figures() -> dict:
+    """Every number the document shows, read from the same files the HTML pages use."""
+    import collections
+    import glob
+    import json
+    import re
+    import sys
+
+    sys.path.insert(0, str(ROOT))
+    from banyan_screen.run import dedup
+
+    results = json.load(open(DATA / "screen" / "results.json"))
+    records = [r for f in sorted(glob.glob(str(DATA / "records" / "*.json"))) for r in json.load(open(f))]
+    tiers = collections.Counter(r["banyan"]["tier"] for r in results)
+    dossiers = json.load(open(DATA / "research" / "raw_dossiers_banyan.json"))
+    cm = json.load(open(DATA / "research" / "crossmatch.json"))["summary"]
+    osint = json.load(open(DATA / "research" / "osint_results.json"))
+    ind = json.load(open(DATA / "research" / "independent_results.json"))
+    grounding = json.load(open(DATA / "research" / "grounding_validation.json"))
+    tests = sum(len(re.findall(r"^def test_", f.read_text(), re.M)) for f in (ROOT / "tests").glob("test_*.py"))
+    workflows = len(list((ROOT / "analysis" / "workflows").glob("*.js")))
+    osint_angles = sorted(((OSINT_LABELS[a["angle"]][0], len(a["companies"]), OSINT_LABELS[a["angle"]][1])
+                           for a in osint["discovery"]), key=lambda x: -x[1])
+    return {
+        "n_records": len(records), "n_dedup": len(dedup(records)), "n_screen": len(results),
+        "n_dossiers": len(dossiers),
+        "send": sum(1 for d in dossiers if d["pitch"]["send_recommendation"].lower().startswith("send")),
+        "tiers": {t: tiers.get(t, 0) for t in ("B", "C", "rejected", "insufficient_data")},
+        "n_batches": len(glob.glob(str(DATA / "records" / "*.json"))),
+        "p1": cm["p1_universe"], "p2": cm["p2_candidates"], "p3": cm["p3_candidates"],
+        "p2_angles": len(ind["angles"]), "osint_angles": osint_angles,
+        "verifications": len(osint["verification"]),
+        "union": cm["union_total"], "ours_only": cm["ours_only"], "net_new": cm["net_new"],
+        "strong": cm["strong_net_new"], "corroborated": cm["corroborated"], "pe_vc_caught": cm["pe_vc_caught"],
+        "grounded": grounding["grounded"], "facts": grounding["total_facts"],
+        "grounding_pct": round(grounding["overall_rate"] * 100, 1),
+        "tests": tests, "workflows": workflows,
+    }
 
 
 # ------------------------------------------------------------------ docx ---
@@ -254,6 +307,7 @@ class Doc:
 
 
 def main() -> None:
+    F = load_figures()
     D = Doc()
 
     # ---- title
@@ -266,7 +320,7 @@ def main() -> None:
         "number was checked before it reached a deliverable.", size=12, color=INK2, after=10)
     D.table(["Companies discovered", "Curated & scored", "Deep dossiers", "Triangulated universe",
              "Multi-agent workflows", "Unit tests", "Paid data sources"],
-            [[333, 250, 25, 602, 4, 53, 0]])
+            [[F["n_records"], F["n_screen"], F["n_dossiers"], F["union"], F["workflows"], F["tests"], 0]])
     D.h("Four constraints that shaped every decision", 2)
     D.bullets([
         ("Public web + registries only. ", "No PitchBook, Crunchbase or Grata. Every fact traces to a company site, a filed government record, or a cited search result."),
@@ -296,19 +350,18 @@ def main() -> None:
             "One discovery method has blind spots. Three methods that do not share a source can be cross-checked against "
             "each other — that is where \"founder-owned\" claims get verified rather than believed.")
     D.fig(hbar("passes", ["Pass 1 · Vertical discovery", "Pass 2 · Acquirer adjacency", "Pass 3 · OSINT & registries"],
-               [318, 285, 152], xlabel="candidates surfaced (before de-duplication)"),
-          "Figure 2 — Candidates per discovery pass. The union across all three is 602 companies.")
+               [F["p1"], F["p2"], F["p3"]], xlabel="candidates surfaced (before de-duplication)"),
+          f"Figure 2 — Candidates per discovery pass. The union across all three is {F['union']} companies.")
     D.bullets([
-        ("Pass 1 ", "searched the public web vertical by vertical — 12 batches: construction, healthcare practice management, K-12 systems, manufacturing ERP and so on."),
-        ("Pass 2 ", "asked a different question: what do Constellation, Valsoft and Everfield already own, and who are the peers of those companies? Ten angles."),
+        ("Pass 1 ", f"searched the public web vertical by vertical — {F['n_batches']} batches: construction, healthcare practice management, K-12 systems, manufacturing ERP and so on."),
+        ("Pass 2 ", f"asked a different question: what do Constellation, Valsoft and Everfield already own, and who are the peers of those companies? {F['p2_angles']} angles."),
         ("Pass 3 ", "avoided search engines altogether and went to primary records — registries, filed accounts, GitHub, hiring pages, product directories."),
     ])
-    D.fig(hbar("osint", ["GitHub tech footprint", "Product directory leaders", "ANZ / Canada registries", "Careers & hiring signals",
-                         "US registries / SEC EDGAR", "EU registries (filed accounts)", "UK / Ireland Companies House"],
-               [31, 31, 24, 22, 20, 19, 5], colors=[ACCENT] * 5 + [GOOD] * 2, xlabel="candidates",
+    D.fig(hbar("osint", [a[0] for a in F["osint_angles"]], [a[1] for a in F["osint_angles"]],
+               colors=[GOOD if a[2] else ACCENT for a in F["osint_angles"]], xlabel="candidates",
                note="Green = filed financial statements available — the only place a private company's real revenue and profit exist."),
-          "Figure 3 — Inside pass 3: the seven OSINT angles. Pass 3 also ran 34 ownership verifications against registers, "
-          "which caught 11 companies described as \"founder-owned\" on their own websites that are actually PE- or VC-controlled.")
+          f"Figure 3 — Inside pass 3: the {len(F['osint_angles'])} OSINT angles. Pass 3 also ran {F['verifications']} ownership verifications against registers, "
+          f"which caught {F['pe_vc_caught']} companies described as \"founder-owned\" on their own websites that are actually PE- or VC-controlled.")
     D.h("What was deliberately not used", 2)
     D.table(["Tool", "Role", "Status"], [
         ["PitchBook · Crunchbase · Grata", "Paid private-company databases", "Excluded by design"],
@@ -330,9 +383,9 @@ def main() -> None:
             (" was loaded before every workflow was written.", {})])
     D.h("The workflows", 2)
     D.table(["Workflow", "Fan-out", "Question it answered", "Output"], [
-        ["vertical discovery (12 batches)", "12 batches", "Which vertical software companies exist in each niche, with per-criterion signals and confidence?", "data/records/*.json (333)"],
-        ["independent_discovery_wf.js", "10 angles", "Who do the permanent-hold consolidators already own, and who are their peers?", "independent_results.json (285)"],
-        ["osint_discovery_wf.js", "7 angles + verify", "What do registries, filed accounts, GitHub and hiring data say — and is \"founder-owned\" true?", "osint_results.json (152 + 34 checks)"],
+        [f"vertical discovery ({F['n_batches']} batches)", f"{F['n_batches']} batches", "Which vertical software companies exist in each niche, with per-criterion signals and confidence?", f"data/records/*.json ({F['n_records']})"],
+        ["independent_discovery_wf.js", f"{F['p2_angles']} angles", "Who do the permanent-hold consolidators already own, and who are their peers?", f"independent_results.json ({F['p2']})"],
+        ["osint_discovery_wf.js", f"{len(F['osint_angles'])} angles + verify", "What do registries, filed accounts, GitHub and hiring data say — and is \"founder-owned\" true?", f"osint_results.json ({F['p3']} + {F['verifications']} checks)"],
         ["market_synthesis_wf.js", "29 agents", "What does each of the 14 macro-segments look like as a hunting ground?", "market_synthesis.json"],
         ["banyan25_dossiers_wf.js", "50 agents", "For each top-25 target: business model, ownership, moat, risks, sources — and a thesis-appropriate outreach email.", "raw_dossiers_banyan.json"],
     ], widths=[1.7, 0.9, 2.6, 1.3], mono_cols=(0, 3))
@@ -342,10 +395,12 @@ def main() -> None:
             "The research agents propose signals with confidence; a hand-written, unit-tested Python package (banyan_screen/) turns them "
             "into scores and tiers. No model call happens inside the scoring — so the same record always produces the same tier, and every "
             "result carries a rationale you can audit.")
-    D.fig(funnel_chart(), "Figure 5 — From discovery to the ranked list. Each bar is a step in banyan_screen.run.")
-    D.fig(hbar("tiers", ["Tier B", "Tier C", "Rejected (loss evidence)", "Insufficient data"], [23, 202, 24, 1],
-               colors=[GOOD, NEUTRAL, CRIT, WARN], xlabel="companies (of 250)"),
-          "Figure 6 — Where the 250 landed under the Banyan rubric. Tier C is the expected home of a genuine private target whose books are not public — it means \"verify\", not \"reject\".")
+    D.fig(funnel_chart(F), "Figure 5 — From discovery to the ranked list. Each bar is a step in banyan_screen.run.")
+    T = F["tiers"]
+    D.fig(hbar("tiers", ["Tier B", "Tier C", "Rejected (loss evidence)", "Insufficient data"],
+               [T["B"], T["C"], T["rejected"], T["insufficient_data"]],
+               colors=[GOOD, NEUTRAL, CRIT, WARN], xlabel=f"companies (of {F['n_screen']})"),
+          f"Figure 6 — Where the {F['n_screen']} landed under the Banyan rubric. Tier C is the expected home of a genuine private target whose books are not public — it means \"verify\", not \"reject\".")
     D.rich([("adjusted = composite × (0.5 + 0.5 × confidence)", {"code": True}),
             (" — a company nobody can verify loses at most half its composite score, never all of it.", {})])
 
@@ -355,9 +410,10 @@ def main() -> None:
             "what is new, and where the ownership story changes.")
     D.fig(hbar("xmatch", ["Union of all passes", "Found by pass 1 only", "Net-new from passes 2–3",
                           "…of which strong (founder-owned or filed accounts)", "Corroborated by ≥ 2 passes", "False \"founder-owned\" caught"],
-               [602, 240, 284, 176, 90, 11], colors=[LIGHT, LIGHT, ACCENT, ACCENT, GOOD, CRIT], xlabel="companies"),
+               [F["union"], F["ours_only"], F["net_new"], F["strong"], F["corroborated"], F["pe_vc_caught"]],
+               colors=[LIGHT, LIGHT, ACCENT, ACCENT, GOOD, CRIT], xlabel="companies"),
           "Figure 7 — Outcome of the cross-match (data/research/crossmatch.json).")
-    D.p("The 176 strong net-new names (Bromcom, CDL Group, Open Dental, Planning Center, GIRO, Maptek and the EU registry names among "
+    D.p(f"The {F['strong']} strong net-new names (Bromcom, CDL Group, Open Dental, Planning Center, GIRO, Maptek and the EU registry names among "
         "them) are the highest-value unfinished work: they have not yet been scored through the rubric.")
 
     # ---- 6 gate
@@ -383,8 +439,9 @@ def main() -> None:
                       "Round 2 followed fixes to a cross-match bug, the ownership classifier and the runtime IAM gate. "
                       "The judges disagreed by 28 points in round 2, so the composite is low-confidence — the disagreement is reported, not averaged away.")
     D.table(["Check", "Result", "What it means"], [
-        ["Grounding (analysis/validate_grounding.py)", "409 / 415 facts (98.6%)", "Dossier claims trace to the raw research; the 6 unmatched were extractor false-positives, not invention"],
-        ["Unit tests", "53 passing", "Scoring core, policy layer and page builders"],
+        ["Grounding (analysis/validate_grounding.py)", f"{F['grounded']} / {F['facts']} facts ({F['grounding_pct']}%)",
+         f"Dossier claims trace to the raw research; the {F['facts'] - F['grounded']} unmatched were extractor false-positives, not invention"],
+        ["Unit tests", f"{F['tests']} in the suite", "Scoring core, policy layer and page builders"],
         ["Page re-derivation (analysis/qc_consolidated_pages.py)", "0 mismatches", "Every figure on the consolidated pages recomputed from data/ and policy.py"],
         ["Cross-pass name check", "1 discrepancy caught", "A founder's name (QT9) was wrong in the OSINT pass — never trust a single-pass ownership name"],
     ], widths=[2.3, 1.4, 2.8])
@@ -442,9 +499,9 @@ def main() -> None:
     # ---- map
     D.h("Where everything lives", 1)
     D.table(["Path", "What it is"], [
-        ["banyan_screen/", "The deterministic core — models, rubric engine, ingest, run CLI, and policy.py (IAM). 53 tests in tests/."],
+        ["banyan_screen/", f"The deterministic core — models, rubric engine, ingest, run CLI, and policy.py (IAM). {F['tests']} tests in tests/."],
         ["config.yaml · config.growth.yaml", "The two rubrics: weights, gates, thresholds."],
-        ["data/records/", "333 discovered company records from the 12 vertical batches."],
+        ["data/records/", f"{F['n_records']} discovered company records from the {F['n_batches']} vertical batches."],
         ["data/screen/", "The scored, curated top-250 (results.json, ranked.csv)."],
         ["data/research/", "Passes 2–3, cross-match, dossiers, market synthesis, grounding results, and the verbatim codex research audit trail."],
         ["analysis/", "Reporting scripts and the four multi-agent workflow scripts; templates/ for the consolidated pages."],

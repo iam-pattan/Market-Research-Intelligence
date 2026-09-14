@@ -1,6 +1,6 @@
 # HANDOFF — Banyan Software M&A Screening
 
-**Repo:** `~/Market-Research-Intelligence/` (github.com/iam-pattan/Market-Research-Intelligence) · **Last updated:** 2026-09-14 · **Git:** committed on `main`; workspace policy = commit only when asked.
+**Repo:** `~/Market-Research-Intelligence/` (github.com/iam-pattan/Market-Research-Intelligence) · **Last updated:** 2026-09-14 · **Git:** work committed on branch `consolidated-deliverables` (unpushed; merge to `main` when approved); workspace policy = commit only when asked.
 This is the authoritative session handoff. Deep chronological detail lives in the auto-memory `~/.claude/projects/-Users-pahmed/memory/project_banyan_ma_research.md`; the design/plan live in `docs/superpowers/`. **Architecture:** see `docs/HLD.md` (system-level) and `docs/LLD.md` (module-level). **Tooling used to build this:** see `docs/TOOLING_LOG.md`.
 
 ---
