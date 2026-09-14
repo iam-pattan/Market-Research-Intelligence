@@ -67,6 +67,7 @@ python analysis/validate_grounding.py                   # faithfulness check
 python analysis/build_intelligence_hub.py               # reports/intelligence_hub.html
 python analysis/build_access_architecture.py            # reports/access_architecture.html
 python analysis/qc_consolidated_pages.py                # re-derive every figure on both pages; non-zero on mismatch
+python analysis/build_walkthrough_docx.py               # docs/How_the_Banyan_Screen_Was_Built.docx (Word version of the walkthrough)
 ```
 
 Scripts anchor on `ROOT = __file__.parent.parent`, so they must stay one level
