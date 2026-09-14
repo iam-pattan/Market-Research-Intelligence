@@ -98,11 +98,33 @@ def test_enforce_agrees_with_pitch_gate_on_narrative_fields():
     # narrative reaches Sales/BD only, regardless of the tier a name-pattern
     # would otherwise assign (it used to fall to the CONFIDENTIAL default).
     rec = {"name": "Acme Health", "pitch": "Hi Jane…", "pitch_subject": "Your niche",
-           "outreach_email": "…", "revenue_est_usd": 1}
+           "outreach_note": "…", "revenue_est_usd": 1}
     for role in ("sales_rep", "sales_manager"):
         out = enforce(role, rec)
-        assert out["pitch"] == "Hi Jane…" and "pitch_subject" in out and "outreach_email" in out
+        assert out["pitch"] == "Hi Jane…" and "pitch_subject" in out and "outreach_note" in out
     for role in ("finance_analyst", "c_suite_leadership", "ds_analyst", "platform_admin"):
         out = enforce(role, rec)
-        assert "pitch" not in out and "pitch_subject" not in out and "outreach_email" not in out
+        assert "pitch" not in out and "pitch_subject" not in out and "outreach_note" not in out
     assert "pitch" not in enforce("unknown_role", rec)
+
+
+def test_recurring_revenue_signal_is_internal_not_financial():
+    # 'recurring_revenue' is a 0-1 signal score, listed in _INTERNAL_SAFE; the
+    # broader 'revenue' financial pattern must not swallow it.
+    assert classify("recurring_revenue") == Tier.INTERNAL
+    assert classify("revenue_est_usd") == Tier.CONFIDENTIAL_FINANCIAL
+    assert "recurring_revenue" in enforce("ds_analyst", {"recurring_revenue": {"score": 0.9}})
+
+
+def test_pitch_gate_does_not_bypass_pii_or_mnpi_classification():
+    # The real dossier shape: pitch is a dict of copy + a stray contact.
+    rec = {"pitch": {"subject": "Your niche", "body": "Hi…", "send_recommendation": "send",
+                     "contact_email": "j@acme.example", "deal_stage": "diligence"},
+           "outreach_email": "jane@acme.example", "pitch_deal_stage": "diligence"}
+    out = enforce("sales_rep", rec)
+    assert out["pitch"]["subject"] == "Your niche" and out["pitch"]["body"] == "Hi…"
+    assert out["pitch"]["contact_email"] == "***@acme.example"   # PII inside narrative masked
+    assert "deal_stage" not in out["pitch"]                        # MNPI inside narrative dropped
+    assert out["outreach_email"] == "***@acme.example"             # PII pattern beats pitch gate
+    assert "pitch_deal_stage" not in out                           # MNPI pattern beats pitch gate
+    assert "pitch" not in enforce("finance_analyst", rec)

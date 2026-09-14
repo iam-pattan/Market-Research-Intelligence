@@ -218,7 +218,7 @@ table.grid td.mono{font-size:12px}
     <div class="answer">
       <div class="a yes"><div class="k">Yes — two things, both outside Claude</div><p><b>Identity</b> (the user signs in through the company IdP, and their role and scope travel as claims) and <b>an enforcement point between the data and the model</b> — a service that authenticates the caller, resolves the role, and runs <code>policy.guard(role, payload)</code> before anything is returned. Claude is a <b>client</b> of that service, never the custodian of the raw dataset.</p></div>
       <div class="a no"><div class="k">No — nothing inside Claude</div><p>No per-role Claude instances, no "system prompt says don't reveal financials", no output scrubbing after the fact. Once a field is in the model's context it has already been disclosed to that user. Prompt instructions are guidance, not access control; the filter must run <b>before</b> the data reaches the context window.</p></div>
-      <div class="a"><div class="k">Already built in this repo</div><p><code>banyan_screen/policy.py</code> is the policy decision point: 5 classification tiers, 14 roles, deny-by-default, 11 tests. <code>build_dossiers.py</code> fails closed on role. What is missing for production is the substrate around it — an identity source, the MCP/API enforcement point, storage-level tagging, and audit. Sections below are that map.</p></div>
+      <div class="a"><div class="k">Already built in this repo</div><p><code>banyan_screen/policy.py</code> is the policy decision point: 5 classification tiers, <span id="hero-roles">14</span> roles, deny-by-default, <span id="hero-tests">11</span> tests. <code>build_dossiers.py</code> fails closed on role. What is missing for production is the substrate around it — an identity source, the MCP/API enforcement point, storage-level tagging, and audit. Sections below are that map.</p></div>
     </div>
   </div>
 
@@ -395,5 +395,6 @@ showRole('sales_rep');
 const links = $$('aside.nav a');
 const obs = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id)); }), {rootMargin: '-20% 0px -70% 0px'});
 $$('main section, main .hero').forEach(s => obs.observe(s));
+$('#hero-roles').textContent = D.meta.n_roles; $('#hero-tests').textContent = D.meta.policy_tests;
 $('#foot').textContent = `Built ${D.meta.built} from banyan_screen/policy.py (${D.meta.n_roles} roles, ${D.meta.policy_tests} policy tests in a ${D.meta.suite_tests}-test suite) and reports/iam_hierarchy.md. Sample record is synthetic.`;
 </script>

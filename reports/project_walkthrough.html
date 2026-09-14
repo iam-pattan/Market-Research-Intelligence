@@ -147,7 +147,7 @@ table.map td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
   <div class="eyebrow">Project walkthrough · Banyan M&amp;A screening</div>
   <h1>How the Banyan screen was built, and why it looks the way it does.</h1>
   <p class="lede">A guided tour of the thinking behind the pipeline: which sources were trusted, how the data was pulled without a single paid database, which agents, skills and hooks did the work, and how every number was checked before it reached a deliverable.</p>
-  <div class="facts"><span><b>333</b> companies discovered</span><span><b>250</b> curated &amp; scored</span><span><b>25</b> deep dossiers</span><span><b>602</b> triangulated universe</span><span><b>4</b> multi-agent workflows</span><span><b>47</b> unit tests</span><span><b>0</b> paid data sources</span></div>
+  <div class="facts"><span><b>333</b> companies discovered</span><span><b>250</b> curated &amp; scored</span><span><b>25</b> deep dossiers</span><span><b>602</b> triangulated universe</span><span><b>4</b> multi-agent workflows</span><span><b>53</b> unit tests</span><span><b>0</b> paid data sources</span></div>
   <div class="constraints">
     <div class="con"><div class="k">Public web + registries only</div><p>No PitchBook, Crunchbase or Grata. Every fact traces to a company site, a filed government record, or a cited search result.</p></div>
     <div class="con"><div class="k">Uncertainty must be visible</div><p>Private-company financials are mostly unknowable from outside. The design carries a confidence on every signal and discounts scores instead of guessing.</p></div>
@@ -318,7 +318,7 @@ table.map td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
         <div class="stats">
           <div class="stat"><div class="v">409<span style="color:var(--muted);font-weight:500">/415</span></div><div class="l">dossier facts found in raw research (98.6%)</div></div>
           <div class="stat"><div class="v">6</div><div class="l">flags — all extractor false-positives, no hallucinations</div></div>
-          <div class="stat"><div class="v">47</div><div class="l">unit tests on the scoring core and policy</div></div>
+          <div class="stat"><div class="v">53</div><div class="l">unit tests on the scoring core, policy and page builders</div></div>
         </div>
         <div class="foot">The grounding check also caught one cross-pass discrepancy in a founder's name (QT9), which the OSINT pass had wrong — an argument for never trusting a single-pass ownership name.</div></div>
     </div>
@@ -392,7 +392,7 @@ table.map td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
     <div class="fig"><div class="tw"><table class="map">
       <thead><tr><th>Path</th><th>What it is</th></tr></thead>
       <tbody>
-        <tr><td class="mono">banyan_screen/</td><td>The deterministic core — models, rubric engine, ingest, run CLI, and <code>policy.py</code> (IAM). 47 tests in <code>tests/</code>.</td></tr>
+        <tr><td class="mono">banyan_screen/</td><td>The deterministic core — models, rubric engine, ingest, run CLI, and <code>policy.py</code> (IAM). 53 tests in <code>tests/</code>.</td></tr>
         <tr><td class="mono">config.yaml · config.growth.yaml</td><td>The two rubrics: weights, gates, thresholds.</td></tr>
         <tr><td class="mono">data/records/</td><td>333 discovered company records from the 12 vertical batches.</td></tr>
         <tr><td class="mono">data/screen/</td><td>The scored, curated top-250 (<code>results.json</code>, <code>ranked.csv</code>).</td></tr>

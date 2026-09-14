@@ -54,6 +54,8 @@ def classify(key: str) -> Tier:
         return Tier.RESTRICTED_MNPI
     if any(p in k for p in _PII_KEYS):
         return Tier.RESTRICTED_PII
+    if "recurring_revenue" in k:
+        return Tier.INTERNAL  # a 0-1 signal score, not a financial figure; must beat "revenue"
     if any(p in k for p in _FIN_KEYS):
         return Tier.CONFIDENTIAL_FINANCIAL
     if any(p in k for p in _INTERNAL_SAFE):
@@ -112,6 +114,23 @@ def _mask_value(tier: Tier, value: Any) -> Any:
     return _REDACTED.get(tier, "[REDACTED]")
 
 
+def _enforce_narrative(role: str, narrative: dict[str, Any]) -> dict[str, Any]:
+    """A narrative object (subject/body/notes…) is kept whole for a pitch-visible
+    role, except that PII/MNPI-classified sub-fields still follow the role's
+    tier policy — copy is Sales content, contacts and deal state are not."""
+    policy = ROLES[role]
+    out: dict[str, Any] = {}
+    for key, value in narrative.items():
+        tier = classify(key)
+        if tier in (Tier.RESTRICTED_PII, Tier.RESTRICTED_MNPI):
+            if tier not in policy.allowed:
+                continue
+            out[key] = _mask_value(tier, value) if tier in policy.masked else value
+        else:
+            out[key] = _enforce_narrative(role, value) if isinstance(value, dict) else value
+    return out
+
+
 def enforce(role: str, record: dict[str, Any]) -> dict[str, Any]:
     """Return a copy of `record` filtered to what `role` may receive.
 
@@ -123,13 +142,15 @@ def enforce(role: str, record: dict[str, Any]) -> dict[str, Any]:
         return {}
     out: dict[str, Any] = {}
     for key, value in record.items():
-        if any(p in str(key).lower() for p in _PITCH_KEYS):
-            # Narrative fields follow the coarse Sales/BD gate, not a tier —
-            # so the field engine and pitch_visible() never disagree.
-            if pitch_visible(role):
-                out[key] = value
-            continue
         tier = classify(key)
+        if (any(p in str(key).lower() for p in _PITCH_KEYS)
+                and tier not in (Tier.RESTRICTED_PII, Tier.RESTRICTED_MNPI)):
+            # Narrative fields follow the coarse Sales/BD gate, not a tier —
+            # so the field engine and pitch_visible() never disagree. PII/MNPI
+            # patterns still win (an "outreach_email" is a contact, not copy).
+            if pitch_visible(role):
+                out[key] = _enforce_narrative(role, value) if isinstance(value, dict) else value
+            continue
         if isinstance(value, dict):
             # Nested object: classify by the sub-keys too; keep the higher of the
             # container tier and any child tier by recursing, then gate the whole.

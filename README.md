@@ -23,7 +23,7 @@ banyan-ma-research/
 │   └── policy.py          # IAM enforcement layer (RBAC + field classification)
 ├── config.yaml            # Banyan buy-and-hold rubric  (loaded by relative path)
 ├── config.growth.yaml     # Growth/scaling rubric
-├── tests/                 # pytest suite (47 tests)
+├── tests/                 # pytest suite (53 tests)
 ├── data/
 │   ├── records/           # Input company records (12 vertical JSON files, ~333 rows)
 │   ├── screen/            # Screen outputs used as pipeline inputs (results.json, ranked.csv)
@@ -50,7 +50,7 @@ banyan-ma-research/
 ```bash
 pip install -r requirements.txt
 
-# Run the full test suite (47 tests)
+# Run the full test suite (53 tests)
 python -m pytest -q
 
 # Score the record set under both rubrics, curate to top 250, write deliverables
@@ -66,6 +66,7 @@ python analysis/build_dossiers.py data/research/raw_dossiers_banyan.json \
 python analysis/validate_grounding.py                   # faithfulness check
 python analysis/build_intelligence_hub.py               # reports/intelligence_hub.html
 python analysis/build_access_architecture.py            # reports/access_architecture.html
+python analysis/qc_consolidated_pages.py                # re-derive every figure on both pages; non-zero on mismatch
 ```
 
 Scripts anchor on `ROOT = __file__.parent.parent`, so they must stay one level
