@@ -1,0 +1,408 @@
+<meta charset="utf-8">
+<title>How the Banyan Screen Was Built</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f7f6f2; --surface:#ffffff; --surface-2:#eeece5; --ink:#1c1b18; --ink-2:#5b5852; --muted:#8d8981;
+  --line:#e2dfd6; --line-strong:#c9c5b9; --accent:#0f6e75; --accent-ink:#ffffff; --accent-soft:#dcecee; --accent-light:#9ccdd2;
+  --warn:#fab219; --warn-text:#8a5a00; --crit:#d03b3b; --crit-text:#a32222; --good:#0ca30c; --good-text:#0a6b0a;
+  --s1:#2a78d6; --s2:#eb6834; --grid:#e1e0d9;
+  --display:'Bricolage Grotesque','Source Sans 3',system-ui,sans-serif; --body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --bg:#141412; --surface:#1d1d1a; --surface-2:#26261f; --ink:#f1efe8; --ink-2:#b5b1a6; --muted:#7f7b72;
+  --line:#2f2e29; --line-strong:#45433c; --accent:#5fc0c7; --accent-ink:#141412; --accent-soft:#183a3d; --accent-light:#2f6b70;
+  --warn:#fab219; --warn-text:#f2c35a; --crit:#e05a5a; --crit-text:#ff8a8a; --good:#0ca30c; --good-text:#5fd668;
+  --s1:#3987e5; --s2:#d95926; --grid:#2c2c2a; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#141412; --surface:#1d1d1a; --surface-2:#26261f; --ink:#f1efe8; --ink-2:#b5b1a6; --muted:#7f7b72;
+  --line:#2f2e29; --line-strong:#45433c; --accent:#5fc0c7; --accent-ink:#141412; --accent-soft:#183a3d; --accent-light:#2f6b70;
+  --warn:#fab219; --warn-text:#f2c35a; --crit:#e05a5a; --crit-text:#ff8a8a; --good:#0ca30c; --good-text:#5fd668;
+  --s1:#3987e5; --s2:#d95926; --grid:#2c2c2a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.15}
+p{margin:0}
+code{font-family:var(--mono);font-size:.85em;background:var(--surface-2);padding:1px 5px;border-radius:4px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px 72px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+
+/* hero */
+.hero{padding:56px 0 36px;border-bottom:1px solid var(--line);margin-bottom:40px}
+.hero h1{font-size:44px;font-weight:800;letter-spacing:-.025em;margin:10px 0 16px;max-width:18ch}
+.hero .lede{font-size:19px;color:var(--ink-2);max-width:60ch}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14px;color:var(--ink-2)}
+.hero .facts b{color:var(--ink);font-family:var(--mono);font-weight:500}
+.constraints{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:26px}
+.con{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.con .k{font-family:var(--display);font-weight:700;font-size:14px;margin-bottom:4px}
+.con p{font-size:14px;color:var(--ink-2)}
+
+/* stages */
+.stage{display:grid;grid-template-columns:72px minmax(0,1fr);gap:24px;padding:36px 0;border-top:1px solid var(--line)}
+.stage:first-of-type{border-top:0}
+.stage .n{font-family:var(--display);font-weight:800;font-size:40px;line-height:1;color:var(--accent);letter-spacing:-.03em}
+.stage .n small{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-family:var(--body)}
+.stage h2{font-size:26px;font-weight:700;letter-spacing:-.015em;margin-bottom:8px}
+.stage .why{font-size:17px;color:var(--ink-2);max-width:66ch;margin-bottom:18px}
+.prose{max-width:70ch;font-size:16px}
+.prose p{margin-bottom:12px}
+.prose ul{margin:0 0 12px;padding-left:22px}
+.prose li{margin-bottom:6px}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:18px 0}
+.fig h3{font-size:15px;font-weight:700;margin-bottom:2px}
+.fig .cap{font-size:13px;color:var(--ink-2);margin-bottom:14px}
+.fig .foot{font-size:12.5px;color:var(--muted);margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+
+/* bars */
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:minmax(140px,230px) 1fr 54px;gap:12px;align-items:center;font-size:14px}
+.bar .l{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .t{height:16px;background:var(--surface-2);border-radius:0 4px 4px 0;position:relative}
+.bar .t i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:0 4px 4px 0}
+.bar .t i.light{background:var(--accent-light)}
+.bar .t i.neutral{background:var(--line-strong)}
+.bar .t i.crit{background:var(--crit)}
+.bar .t i.warn{background:var(--warn)}
+.bar .t i.good{background:var(--good)}
+.bar .v{text-align:right;color:var(--ink-2);font-family:var(--mono);font-size:13px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-2);margin-top:12px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+
+/* funnel */
+.funnel{display:grid;gap:6px}
+.fstep{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;font-size:14px}
+.fstep .lbl{color:var(--ink-2);text-align:right;line-height:1.25}
+.fstep .blk{height:38px;background:var(--accent);color:var(--accent-ink);border-radius:6px;display:flex;align-items:center;padding:0 12px;font-family:var(--mono);font-size:13px;white-space:nowrap;min-width:64px}
+.fstep .blk.dim{background:var(--accent-light);color:var(--ink)}
+.fstep .blk.end{background:var(--good);color:#fff}
+
+/* flow diagram (html) */
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:stretch;counter-reset:f}
+@media (max-width:640px){.flow{grid-template-columns:1fr}}
+.node{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px 12px 10px 34px;font-size:13px;position:relative;counter-increment:f}
+.node::before{content:counter(f);position:absolute;left:11px;top:10px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.node b{display:block;font-family:var(--display);font-weight:700;font-size:13.5px;margin-bottom:3px}
+.node .m{display:block;margin-top:4px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.node.hi{background:var(--accent-soft);border-color:var(--accent)}
+.node.out{border-style:dashed}
+.arrowrow{display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--mono);font-size:12px;padding:4px 0}
+
+/* tool cards */
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:4px;align-content:start}
+.tool .nm{font-family:var(--mono);font-size:12.5px;font-weight:500}
+.tool .role{font-size:13px;color:var(--ink-2)}
+.tool .st{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;display:inline-flex;gap:5px;align-items:center;margin-top:2px}
+.tool .st::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.st.used{color:var(--good-text)} .st.pattern{color:var(--accent)} .st.failed{color:var(--crit-text)} .st.idle{color:var(--muted)} .st.new{color:var(--warn-text)}
+.group-h{font-family:var(--display);font-weight:700;font-size:15px;margin:22px 0 10px;display:flex;align-items:baseline;gap:10px}
+.group-h span{font-size:12.5px;color:var(--ink-2);font-weight:400;font-family:var(--body)}
+
+/* qc chart */
+.qc{display:grid;gap:10px}
+.qcrow{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:center;font-size:14px}
+.qcrow .pair{display:grid;gap:3px}
+.qcrow .tr{height:12px;background:var(--surface-2);border-radius:0 3px 3px 0;position:relative}
+.qcrow .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 3px 3px 0}
+.qcrow .tr i.r1{background:var(--s1)} .qcrow .tr i.r2{background:var(--s2)}
+.qcrow .tr span{position:absolute;left:calc(var(--w) + 6px);top:-2px;font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+.stats{display:flex;gap:26px;flex-wrap:wrap}
+.stat .v{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.02em}
+.stat .l{font-size:13px;color:var(--ink-2)}
+
+/* lessons */
+.lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.lesson{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;border-top:3px solid var(--accent)}
+.lesson h3{font-size:16px;margin-bottom:6px}
+.lesson p{font-size:14px;color:var(--ink-2)}
+table.map{width:100%;border-collapse:collapse;font-size:14px}
+table.map th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);padding:8px 10px;border-bottom:1px solid var(--line)}
+table.map td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.map td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+.tw{overflow-x:auto}
+.end{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+
+@media (max-width:700px){
+  .wrap{padding:0 16px 48px}
+  .hero h1{font-size:32px}
+  .stage{grid-template-columns:1fr;gap:8px;padding:28px 0}
+  .stage .n{font-size:28px;display:flex;gap:10px;align-items:baseline}
+  .stage .n small{margin:0}
+  .bar{grid-template-columns:110px 1fr 46px}
+  .fstep{grid-template-columns:90px 1fr}
+  .qcrow{grid-template-columns:80px 1fr}
+}
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">Project walkthrough · Banyan M&amp;A screening</div>
+  <h1>How the Banyan screen was built, and why it looks the way it does.</h1>
+  <p class="lede">A guided tour of the thinking behind the pipeline: which sources were trusted, how the data was pulled without a single paid database, which agents, skills and hooks did the work, and how every number was checked before it reached a deliverable.</p>
+  <div class="facts"><span><b>333</b> companies discovered</span><span><b>250</b> curated &amp; scored</span><span><b>25</b> deep dossiers</span><span><b>602</b> triangulated universe</span><span><b>4</b> multi-agent workflows</span><span><b>47</b> unit tests</span><span><b>0</b> paid data sources</span></div>
+  <div class="constraints">
+    <div class="con"><div class="k">Public web + registries only</div><p>No PitchBook, Crunchbase or Grata. Every fact traces to a company site, a filed government record, or a cited search result.</p></div>
+    <div class="con"><div class="k">Uncertainty must be visible</div><p>Private-company financials are mostly unknowable from outside. The design carries a confidence on every signal and discounts scores instead of guessing.</p></div>
+    <div class="con"><div class="k">Discovery-first</div><p>There was no seed list. The system had to find the universe before it could rank it.</p></div>
+    <div class="con"><div class="k">Four audiences, four entitlements</div><p>Sales, Finance, Data Science and Leadership each see a different slice. Access control is part of the output, not an afterthought.</p></div>
+  </div>
+</header>
+
+<!-- ============ STAGE 1 ============ -->
+<section class="stage" id="frame">
+  <div class="n">1<small>Frame</small></div>
+  <div>
+    <h2>Turn the thesis into a rubric before touching any data</h2>
+    <p class="why">Banyan's buy criteria are public and specific. Writing them down as weighted, gated criteria first meant every later step had a fixed target to score against — and the LLM never got to decide what "good" means.</p>
+    <div class="prose"><p>The work opened with the <code>superpowers:brainstorming</code> skill (scope the pipeline and the IAM model with the user, one question at a time) and <code>superpowers:writing-plans</code> (a task-by-task plan for the scoring core). The rubric became <code>config.yaml</code>: seven criteria with weights derived from banyansoftware.com's stated FAQ, two hard gates, a confidence floor and tier thresholds. A second, contrasting rubric (<code>config.growth.yaml</code>) exists purely to catch companies that look impressive but are the wrong shape — VC-backed, scaling, unprofitable.</p></div>
+    <div class="fig"><h3>The Banyan rubric, as weights</h3><div class="cap">What a company is scored on under the buy-and-hold thesis. Gates apply before the tier: loss evidence → rejected; revenue under $2M → capped at tier C.</div>
+      <div class="bars">
+        <div class="bar"><span class="l">Recurring revenue</span><div class="t"><i style="width:100%"></i></div><span class="v">0.25</span></div>
+        <div class="bar"><span class="l">Profitability</span><div class="t"><i style="width:80%"></i></div><span class="v">0.20</span></div>
+        <div class="bar"><span class="l">Niche leadership</span><div class="t"><i style="width:80%"></i></div><span class="v">0.20</span></div>
+        <div class="bar"><span class="l">Revenue band ($2M–$100M)</span><div class="t"><i style="width:40%"></i></div><span class="v">0.10</span></div>
+        <div class="bar"><span class="l">Customer retention</span><div class="t"><i style="width:40%"></i></div><span class="v">0.10</span></div>
+        <div class="bar"><span class="l">Ownership fit (founder/family)</span><div class="t"><i style="width:40%"></i></div><span class="v">0.10</span></div>
+        <div class="bar"><span class="l">Team stability</span><div class="t"><i style="width:20%"></i></div><span class="v">0.05</span></div>
+      </div></div>
+  </div>
+</section>
+
+<!-- ============ STAGE 2 ============ -->
+<section class="stage" id="sources">
+  <div class="n">2<small>Sources</small></div>
+  <div>
+    <h2>Three independent ways of finding companies</h2>
+    <p class="why">One discovery method has blind spots. Three methods that do not share a source can be cross-checked against each other — that is where "founder-owned" claims get verified rather than believed.</p>
+    <div class="fig"><h3>Discovery passes and what they pulled from</h3><div class="cap">Candidates surfaced per pass, before de-duplication. The union across all three is 602 companies.</div>
+      <div class="bars">
+        <div class="bar"><span class="l">Pass 1 · Vertical discovery</span><div class="t"><i style="width:100%"></i></div><span class="v">318</span></div>
+        <div class="bar"><span class="l">Pass 2 · Acquirer adjacency</span><div class="t"><i style="width:89.6%"></i></div><span class="v">285</span></div>
+        <div class="bar"><span class="l">Pass 3 · OSINT &amp; registries</span><div class="t"><i style="width:47.8%"></i></div><span class="v">152</span></div>
+      </div>
+      <div class="foot"><b>Pass 1</b> searched the public web vertical by vertical (12 batches: construction, healthcare practice management, K-12 systems, manufacturing ERP…). <b>Pass 2</b> asked a different question: what do Constellation, Valsoft and Everfield already own, and who are the peers of those companies? <b>Pass 3</b> avoided search engines altogether and went to primary records.</div></div>
+    <div class="fig"><h3>Inside pass 3 — the OSINT angles</h3><div class="cap">Where 152 candidates came from when the search engine was taken out of the loop. Filed accounts are the only place a private company's real revenue and profit exist.</div>
+      <div class="bars">
+        <div class="bar"><span class="l">GitHub tech footprint</span><div class="t"><i style="width:100%"></i></div><span class="v">31</span></div>
+        <div class="bar"><span class="l">Product directory leaders</span><div class="t"><i style="width:100%"></i></div><span class="v">31</span></div>
+        <div class="bar"><span class="l">ANZ / Canada registries</span><div class="t"><i style="width:77.4%"></i></div><span class="v">24</span></div>
+        <div class="bar"><span class="l">Careers &amp; hiring signals</span><div class="t"><i style="width:71%"></i></div><span class="v">22</span></div>
+        <div class="bar"><span class="l">US registries / SEC EDGAR</span><div class="t"><i style="width:64.5%"></i></div><span class="v">20</span></div>
+        <div class="bar"><span class="l">EU registries (filed accounts)</span><div class="t"><i class="good" style="width:61.3%"></i></div><span class="v">19</span></div>
+        <div class="bar"><span class="l">UK / Ireland Companies House</span><div class="t"><i class="good" style="width:16.1%"></i></div><span class="v">5</span></div>
+      </div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Discovery signal</span><span><i style="background:var(--good)"></i>Filed financials available (highest-confidence source)</span></div>
+      <div class="foot">Pass 3 also ran 34 ownership verifications against registers — this is what caught 11 companies described as "founder-owned" on their own websites that are actually PE- or VC-controlled (e.g. Vagaro, Agiloft, Tripleseat). Wikidata was used for a light firmographic overlay on the top-25.</div></div>
+    <div class="fig"><h3>What was deliberately not used</h3><div class="cap">Two tools were tried and failed on authentication; the pivot is recorded, not hidden.</div>
+      <div class="tools">
+        <div class="tool"><span class="nm">PitchBook · Crunchbase · Grata</span><span class="role">Paid private-company databases</span><span class="st idle">excluded by design</span></div>
+        <div class="tool"><span class="nm">perplexity-research</span><span class="role">Attempted as a discovery engine</span><span class="st failed">failed — no API key</span></div>
+        <div class="tool"><span class="nm">firecrawl-scrape</span><span class="role">Attempted as a scraping engine</span><span class="st failed">failed — CLI not authenticated</span></div>
+        <div class="tool"><span class="nm">WebSearch (built-in)</span><span class="role">Blocked in the sandboxed environment</span><span class="st failed">unavailable</span></div>
+      </div></div>
+  </div>
+</section>
+
+<!-- ============ STAGE 3 ============ -->
+<section class="stage" id="mechanism">
+  <div class="n">3<small>Mechanism</small></div>
+  <div>
+    <h2>How the data was actually pulled</h2>
+    <p class="why">The engine is the OpenAI Codex CLI with web search turned on, driven by Claude Code's multi-agent Workflow tool. Every research call returns cited findings that a second agent turns into structured JSON under a schema — so the raw research is kept as an audit trail and the structured record can be checked against it later.</p>
+    <div class="fig"><h3>One research workflow, end to end</h3><div class="cap">The same shape ran four times with different prompts and fan-out sizes.</div>
+      <div class="flow">
+        <div class="node"><b>Workflow script</b>analysis/workflows/*.js<span class="m">pipeline / parallel primitives, concurrency cap, cached resume</span></div>
+        <div class="node"><b>N research agents</b>Claude Code subagents in parallel<span class="m">one vertical, one company, or one segment each</span></div>
+        <div class="node hi"><b>codex --search</b>OpenAI Codex CLI via Bash<span class="m">ChatGPT-authenticated, no API key; foreground, sandbox off</span></div>
+        <div class="node"><b>Cited findings</b>raw research text saved<span class="m">data/research/codex_research/ — the audit trail</span></div>
+        <div class="node"><b>Synthesis agent</b>JSON-schema-forced output<span class="m">records, dossiers, briefs</span></div>
+        <div class="node out"><b>data/*.json</b>plain files, no hidden state<span class="m">re-runnable from disk</span></div>
+      </div>
+      <div class="foot">The <code>ai-hub-web-search:codex-websearch</code> skill supplied the pattern (dispatch search from a subagent, sanitise the query, cite sources). Its shipped script was bypassed — it hard-coded invalid model ids and a blocked <code>/tmp</code> path — so the CLI was called directly with corrected flags. <code>workflow-authoring</code> was loaded before every workflow was written.</div></div>
+    <div class="fig"><h3>The four workflows</h3><div class="cap">Each is a versioned script in <code>analysis/workflows/</code>; agent counts are the fan-out at run time.</div>
+      <div class="tw"><table class="map">
+        <thead><tr><th>Workflow</th><th>Fan-out</th><th>Question it answered</th><th>Output</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">vertical discovery (12 batches)</td><td>12 batches</td><td>Which vertical software companies exist in each niche, with per-criterion signals and confidence?</td><td class="mono">data/records/*.json (333)</td></tr>
+          <tr><td class="mono">independent_discovery_wf.js</td><td>10 angles</td><td>Who do the permanent-hold consolidators already own, and who are their peers?</td><td class="mono">independent_results.json (285)</td></tr>
+          <tr><td class="mono">osint_discovery_wf.js</td><td>7 angles + verify</td><td>What do registries, filed accounts, GitHub and hiring data say — and is "founder-owned" true?</td><td class="mono">osint_results.json (152 + 34 checks)</td></tr>
+          <tr><td class="mono">market_synthesis_wf.js</td><td>29 agents</td><td>What does each of the 14 macro-segments look like as a hunting ground?</td><td class="mono">market_synthesis.json</td></tr>
+          <tr><td class="mono">banyan25_dossiers_wf.js</td><td>50 agents (25 × research + pitch)</td><td>For each top-25 target: business model, ownership, moat, risks, sources — and a thesis-appropriate outreach email.</td><td class="mono">raw_dossiers_banyan.json</td></tr>
+        </tbody></table></div></div>
+  </div>
+</section>
+
+<!-- ============ STAGE 4 ============ -->
+<section class="stage" id="scoring">
+  <div class="n">4<small>Score</small></div>
+  <div>
+    <h2>A deterministic core the LLM cannot touch</h2>
+    <p class="why">The research agents propose signals with confidence; a hand-written, unit-tested Python package (<code>banyan_screen/</code>) turns them into scores and tiers. No model call happens inside the scoring — so the same record always produces the same tier, and every result carries a rationale you can audit.</p>
+    <div class="two">
+      <div class="fig"><h3>From discovery to the ranked list</h3><div class="cap">Each row is a step in <code>banyan_screen.run</code>.</div>
+        <div class="funnel">
+          <div class="fstep"><span class="lbl">Records discovered</span><div class="blk" style="width:100%">333</div></div>
+          <div class="fstep"><span class="lbl">After dedup (best-sourced duplicate wins)</span><div class="blk" style="width:95.5%">318</div></div>
+          <div class="fstep"><span class="lbl">Scored under both rubrics</span><div class="blk" style="width:95.5%">318 × 2</div></div>
+          <div class="fstep"><span class="lbl">Curated top-N, best-of-both</span><div class="blk dim" style="width:75%">250</div></div>
+          <div class="fstep"><span class="lbl">Deep-researched (Banyan rubric top-25)</span><div class="blk dim" style="width:22%">25</div></div>
+          <div class="fstep"><span class="lbl">Outreach recommended</span><div class="blk end" style="width:17%">18 SEND</div></div>
+        </div></div>
+      <div class="fig"><h3>Where the 250 landed</h3><div class="cap">Banyan-rubric tier after the confidence discount. Tier C is the expected home of a genuine private target whose books are not public — it means "verify", not "reject".</div>
+        <div class="bars">
+          <div class="bar"><span class="l">Tier B</span><div class="t"><i class="good" style="width:11.4%"></i></div><span class="v">23</span></div>
+          <div class="bar"><span class="l">Tier C</span><div class="t"><i class="neutral" style="width:100%"></i></div><span class="v">202</span></div>
+          <div class="bar"><span class="l">Rejected (loss evidence)</span><div class="t"><i class="crit" style="width:11.9%"></i></div><span class="v">24</span></div>
+          <div class="bar"><span class="l">Insufficient data</span><div class="t"><i class="warn" style="width:1%"></i></div><span class="v">1</span></div>
+        </div>
+        <div class="foot"><span class="num">adjusted = composite × (0.5 + 0.5 × confidence)</span> — a company nobody can verify loses at most half its composite score, never all of it.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAGE 5 ============ -->
+<section class="stage" id="triangulate">
+  <div class="n">5<small>Triangulate</small></div>
+  <div>
+    <h2>Cross-match the three passes</h2>
+    <p class="why">Matching by domain and normalised name, <code>build_crossmatch.py</code> sorts the 602-company union into what is corroborated, what is new, and where the ownership story changes.</p>
+    <div class="fig"><h3>Outcome of the cross-match</h3><div class="cap">Counts from <code>data/research/crossmatch.json</code>.</div>
+      <div class="bars">
+        <div class="bar"><span class="l">Union of all passes</span><div class="t"><i class="light" style="width:100%"></i></div><span class="v">602</span></div>
+        <div class="bar"><span class="l">Found by pass 1 only</span><div class="t"><i class="light" style="width:39.9%"></i></div><span class="v">240</span></div>
+        <div class="bar"><span class="l">Net-new from passes 2–3</span><div class="t"><i style="width:47.2%"></i></div><span class="v">284</span></div>
+        <div class="bar"><span class="l">…of which strong (founder-owned or filed accounts)</span><div class="t"><i style="width:29.2%"></i></div><span class="v">176</span></div>
+        <div class="bar"><span class="l">Corroborated by ≥ 2 passes</span><div class="t"><i class="good" style="width:15%"></i></div><span class="v">90</span></div>
+        <div class="bar"><span class="l">False "founder-owned" caught</span><div class="t"><i class="crit" style="width:1.8%"></i></div><span class="v">11</span></div>
+      </div>
+      <div class="foot">The 176 strong net-new names (Bromcom, CDL Group, Open Dental, Planning Center, GIRO, Maptek and the EU registry names among them) are the highest-value unfinished work: they have not yet been scored through the rubric.</div></div>
+  </div>
+</section>
+
+<!-- ============ STAGE 6 ============ -->
+<section class="stage" id="gate">
+  <div class="n">6<small>Gate</small></div>
+  <div>
+    <h2>Decide who sees what, in code</h2>
+    <p class="why">The IAM model was designed conceptually first — 5 classification tiers, 14 roles, red-teamed from three angles — and then written as a real filter, <code>banyan_screen/policy.py</code>, that every artifact passes through. Deny by default: an unknown role or an unrecognised field gets nothing.</p>
+    <div class="prose"><ul>
+      <li><b>Data Science</b> — aggregates only; a per-record request is refused outright.</li><li><b>Finance</b> — financials, no contacts, no deal intent.</li><li><b>Sales / BD</b> — contacts masked, the outreach pitch, no financials.</li><li><b>Leadership</b> — deal intent, with contacts and financials masked.</li></ul>
+      <p>The companion page <i>Layered Data Access Architecture</i> shows the live policy per role and explains what a Claude user needs to sit behind this wall (an SSO identity and an enforcement point in front of the data — nothing inside the model).</p></div>
+  </div>
+</section>
+
+<!-- ============ STAGE 7 ============ -->
+<section class="stage" id="validate">
+  <div class="n">7<small>Validate</small></div>
+  <div>
+    <h2>Check the work with a different model, then check the model against the sources</h2>
+    <p class="why">Two independent checks close the loop. A second-model QC judge scores the session's changes; a grounding script confirms that what the dossiers say actually appears in the raw research text.</p>
+    <div class="two">
+      <div class="fig"><h3>Second-model QC — two rounds</h3><div class="cap"><code>validation-loop:validate</code>, GLM 5.2 primary with Kimi 2.7 as tie-breaker. Round 2 followed fixes to a cross-match bug, the ownership classifier and the runtime IAM gate.</div>
+        <div class="qc">
+          <div class="qcrow"><span>Review score</span><div class="pair"><div class="tr"><i class="r1" style="width:65.9%"></i><span style="--w:65.9%">65.9</span></div><div class="tr"><i class="r2" style="width:66.9%"></i><span style="--w:66.9%">66.9</span></div></div></div>
+          <div class="qcrow"><span>GLM 5.2</span><div class="pair"><div class="tr"><i class="r1" style="width:74.6%"></i><span style="--w:74.6%">74.6</span></div><div class="tr"><i class="r2" style="width:81%"></i><span style="--w:81%">81.0</span></div></div></div>
+          <div class="qcrow"><span>Kimi 2.7</span><div class="pair"><div class="tr"><i class="r1" style="width:57.2%"></i><span style="--w:57.2%">57.2</span></div><div class="tr"><i class="r2" style="width:52.8%"></i><span style="--w:52.8%">52.8</span></div></div></div>
+        </div>
+        <div class="legend"><span><i style="background:var(--s1)"></i>Round 1</span><span><i style="background:var(--s2)"></i>Round 2</span></div>
+        <div class="foot">The judges disagreed by 28 points in round 2, so the composite is low-confidence — the disagreement itself is reported, not averaged away.</div></div>
+      <div class="fig"><h3>Grounding and tests</h3><div class="cap">Does the synthesis say anything the research did not?</div>
+        <div class="stats">
+          <div class="stat"><div class="v">409<span style="color:var(--muted);font-weight:500">/415</span></div><div class="l">dossier facts found in raw research (98.6%)</div></div>
+          <div class="stat"><div class="v">6</div><div class="l">flags — all extractor false-positives, no hallucinations</div></div>
+          <div class="stat"><div class="v">47</div><div class="l">unit tests on the scoring core and policy</div></div>
+        </div>
+        <div class="foot">The grounding check also caught one cross-pass discrepancy in a founder's name (QT9), which the OSINT pass had wrong — an argument for never trusting a single-pass ownership name.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAGE 8 ============ -->
+<section class="stage" id="tooling">
+  <div class="n">8<small>Tooling</small></div>
+  <div>
+    <h2>The skills, agents, hooks and tools behind it</h2>
+    <p class="why">Everything below is from <code>docs/TOOLING_LOG.md</code> and this consolidation session. Status is honest: some things were used, some supplied only a pattern, some failed, and some were available but never called.</p>
+    <div class="group-h">Skills <span>invoked through Claude Code's Skill tool</span></div>
+    <div class="tools">
+      <div class="tool"><span class="nm">superpowers:brainstorming</span><span class="role">Scoped the pipeline and the IAM model before any code</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">superpowers:writing-plans</span><span class="role">Task-by-task plan for the scoring core</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">workflow-authoring</span><span class="role">Reference for every multi-agent Workflow script</span><span class="st used">used ×10</span></div>
+      <div class="tool"><span class="nm">ai-hub-web-search:codex-websearch</span><span class="role">The research-dispatch pattern; its script was bypassed</span><span class="st pattern">pattern only</span></div>
+      <div class="tool"><span class="nm">banyan-sales-pitch</span><span class="role">Project's own skill: thesis-branched, IAM-gated outreach</span><span class="st used">built here</span></div>
+      <div class="tool"><span class="nm">validation-loop:validate</span><span class="role">Second-model QC, two rounds</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">handoff</span><span class="role">Produced docs/HANDOFF.md</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">artifact-design · dataviz</span><span class="role">Design and chart rules for the consolidated pages</span><span class="st new">this session</span></div>
+    </div>
+    <div class="group-h">Agents &amp; orchestration <span>who did the parallel work</span></div>
+    <div class="tools">
+      <div class="tool"><span class="nm">Workflow tool</span><span class="role">~10 runs: pipeline/parallel fan-out with cached resume</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">Agent (general-purpose)</span><span class="role">Subagents executing the codex search pattern</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">validation-loop:qc-reviewer</span><span class="role">Independent second-model review of the consolidated pages</span><span class="st new">this session</span></div>
+      <div class="tool"><span class="nm">codex CLI (gpt-5.6-sol, --search)</span><span class="role">The discovery engine — external, not a Claude tool</span><span class="st used">load-bearing</span></div>
+    </div>
+    <div class="group-h">Hooks <span>automation that fired without being asked</span></div>
+    <div class="tools">
+      <div class="tool"><span class="nm">Stop-hook goal</span><span class="role">Nudged for visible build progress when the session goal was unmet</span><span class="st used">fired</span></div>
+      <div class="tool"><span class="nm">PostToolUse marker (validation-loop)</span><span class="role">Tracks changed files so /validate reviews only this session's work</span><span class="st used">silent</span></div>
+      <div class="tool"><span class="nm">ai-qc-guardrails auto-review</span><span class="role">Workspace-wide automatic Stop-hook QC</span><span class="st idle">available, manual /validate used instead</span></div>
+    </div>
+    <div class="group-h">Built-in tools &amp; MCP <span>the plumbing</span></div>
+    <div class="tools">
+      <div class="tool"><span class="nm">Bash</span><span class="role">Every codex call, pytest, file operations — sandbox off where network was needed</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">Read · Write · Edit</span><span class="role">All source, config and docs</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">AskUserQuestion</span><span class="role">Scope decisions at each fork: sources, depth, rubric choice</span><span class="st used">used</span></div>
+      <div class="tool"><span class="nm">MCP servers (original build)</span><span class="role">None — zero mcp__ calls; all external access via codex CLI</span><span class="st idle">none</span></div>
+      <div class="tool"><span class="nm">playwright · context-mode MCP</span><span class="role">Screenshots for layout review; large-output analysis kept out of context</span><span class="st new">this session</span></div>
+      <div class="tool"><span class="nm">Artifact tool</span><span class="role">Publishing the hub, the access page and this walkthrough</span><span class="st new">this session</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAGE 9 ============ -->
+<section class="stage" id="lessons">
+  <div class="n">9<small>Lessons</small></div>
+  <div>
+    <h2>What the build taught us</h2>
+    <p class="why">The decisions that mattered most were not technical — they were about which question to ask and how much to trust an answer.</p>
+    <div class="lessons">
+      <div class="lesson"><h3>The rubric decides the outreach list</h3><p>Ranked best-of-both, the top-25 produced 2 SEND recommendations — dominated by VC-backed AI infrastructure. Ranked by the Banyan rubric alone, the same pipeline produced 18. The scoring lens is the product.</p></div>
+      <div class="lesson"><h3>Tier C is not a bad grade</h3><p>Genuine private targets land at C by construction: their financials cannot be verified from outside, so confidence is low and the score is discounted. Low verified density in a segment is a verification artifact, not absence of fit.</p></div>
+      <div class="lesson"><h3>"Privately held" is not "founder-owned"</h3><p>Eleven companies said one thing on their websites and another in the registers. Ownership must be checked against a second source before anyone sends an email.</p></div>
+      <div class="lesson"><h3>Keep the raw research</h3><p>Because every dossier's source text was saved, a script could later prove 98.6% of dossier facts were grounded — and show the 6 flags were the extractor's fault, not invention.</p></div>
+      <div class="lesson"><h3>Record the failures</h3><p>Perplexity and Firecrawl failed on authentication and were abandoned for codex. The pivot is in the tooling log so the next person does not repeat it.</p></div>
+      <div class="lesson"><h3>Separate judgment from arithmetic</h3><p>The LLM proposes signals with confidence; deterministic code computes the tier. That split is what makes every score reproducible and every rationale auditable.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHERE ============ -->
+<section class="stage" id="map">
+  <div class="n">+<small>Map</small></div>
+  <div>
+    <h2>Where everything lives</h2>
+    <div class="fig"><div class="tw"><table class="map">
+      <thead><tr><th>Path</th><th>What it is</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">banyan_screen/</td><td>The deterministic core — models, rubric engine, ingest, run CLI, and <code>policy.py</code> (IAM). 47 tests in <code>tests/</code>.</td></tr>
+        <tr><td class="mono">config.yaml · config.growth.yaml</td><td>The two rubrics: weights, gates, thresholds.</td></tr>
+        <tr><td class="mono">data/records/</td><td>333 discovered company records from the 12 vertical batches.</td></tr>
+        <tr><td class="mono">data/screen/</td><td>The scored, curated top-250 (<code>results.json</code>, <code>ranked.csv</code>).</td></tr>
+        <tr><td class="mono">data/research/</td><td>Passes 2–3, cross-match, dossiers, market synthesis, grounding results, and the verbatim codex research audit trail.</td></tr>
+        <tr><td class="mono">analysis/</td><td>Reporting scripts and the four multi-agent workflow scripts; <code>templates/</code> for the consolidated pages.</td></tr>
+        <tr><td class="mono">reports/</td><td>Self-contained HTML deliverables: the intelligence hub, the access architecture, this walkthrough, and the earlier dashboards.</td></tr>
+        <tr><td class="mono">skills/banyan-sales-pitch/</td><td>The reusable outreach skill (rules, templates, playbook).</td></tr>
+        <tr><td class="mono">docs/</td><td>HLD, LLD, tooling log, session handoff, and the original design spec and plan.</td></tr>
+      </tbody></table></div></div>
+    <div class="end">Companion pages: <i>Banyan Target Intelligence</i> (the one-stop hub) and <i>Layered Data Access Architecture</i>. Figures on this page are taken from the repository's data files and docs as of 2026-09-14; Banyan's "120+ acquired, 0 sold" is self-reported positioning, not audited.</div>
+  </div>
+</section>
+</div>

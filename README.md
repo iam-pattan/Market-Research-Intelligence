@@ -78,6 +78,7 @@ loaded by **relative path** from `run.py` and the tests, so they stay at the roo
 |------|------|
 | `intelligence_hub.html` | **One-stop hub**: top-250 (both rubrics, per-criterion rationale, revenue/profitability signals), 25 dossiers + pitches, market map, outreach playbook, method & QC |
 | `access_architecture.html` | Layered data-access architecture (identity → classification → PDP → enforcement → consumers → audit), role × tier matrix, live role lens from `policy.py`, Claude-user guidance |
+| `project_walkthrough.html` | Nine-stage explainer of how the project was built: sources, research mechanism, scoring, triangulation, gating, validation, tooling |
 | `dashboard.html` | Top-250 dual-rubric screen |
 | `market_synthesis.html` | 14-segment market map, shortlist, whitespace, competing consolidators |
 | `banyan_dossiers_pitches.html` | Banyan-rubric top-25 dossiers + outreach pitches (**18 SEND**) |
