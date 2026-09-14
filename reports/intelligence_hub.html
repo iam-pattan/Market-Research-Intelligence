@@ -399,7 +399,7 @@ ol.plain.numbered li::before{content:counter(n,decimal-leading-zero);font-family
     <button data-m="caveats">Caveats</button>
   </div>
   <div class="mk-sub active" id="mk-summary">
-    <div class="panel reading" style="margin-bottom:20px"><h3>Executive summary</h3><p class="prose-lg" id="market-exec"></p></div>
+    <div class="panel" style="margin-bottom:20px"><h3>Executive summary</h3><p class="prose-lg" id="market-exec"></p></div>
     <div class="panel"><h3>Segments ranked by attractiveness</h3><div class="hint">Top pick first. Rationale summarises the brief's Banyan-fit read.</div>
       <div style="overflow-x:auto"><table class="seg-table" id="seg-ranked"></table></div></div>
   </div>
@@ -427,15 +427,13 @@ ol.plain.numbered li::before{content:counter(n,decimal-leading-zero);font-family
 <!-- ================= PLAYBOOK ================= -->
 <section class="tab" id="tab-playbook">
   <div class="section-head"><div><h2>Outreach playbook — the <code style="font-family:var(--mono);font-size:15px">banyan-sales-pitch</code> skill</h2><p>The exact rules, templates and compliance guardrails the pitches above were generated with. Sales/BD use this to draft first-touch and follow-up emails; the skill is IAM-gated to Sales/BD roles.</p></div></div>
+  <div class="subtabs" id="play-tabs">
+    <button data-p="skill" aria-selected="true">Skill rules</button>
+    <button data-p="templates">Templates &amp; frameworks</button>
+    <button data-p="playbook">Thesis, voice &amp; compliance</button>
+  </div>
   <div class="play-grid">
-    <div>
-      <div class="subtabs" id="play-tabs">
-        <button data-p="skill" aria-selected="true">Skill rules</button>
-        <button data-p="templates">Templates &amp; frameworks</button>
-        <button data-p="playbook">Thesis, voice &amp; compliance</button>
-      </div>
-      <div class="panel md" id="play-body"></div>
-    </div>
+    <div class="panel md" id="play-body"></div>
     <aside class="play-side">
       <div class="panel"><h3>Install the skill</h3><p>Copy the folder into your Claude Code skills directory, then invoke it with a lead name and intent to contact.</p><code>cp -r skills/banyan-sales-pitch ~/.claude/skills/</code></div>
       <div class="panel"><h3>Output contract</h3><p>Every pitch returns <span class="num">subject</span> · <span class="num">body</span> (50–125 words) · <span class="num">personalization_note</span> · <span class="num">thesis</span> · <span class="num">send_recommendation</span>.</p></div>
